@@ -1,0 +1,49 @@
+<svg width="520" height="120" viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg">
+<title>Dreamglade header logo</title>
+<desc>Dreamglade logo with ornate Shipibo medallion and gold text, transparent background</desc>
+<g transform="translate(60, 60)">
+  <circle cx="0" cy="0" r="48" fill="none" stroke="#C9A961" stroke-width="0.8" opacity="0.35"/>
+  <circle cx="0" cy="0" r="42" fill="none" stroke="#C9A961" stroke-width="0.6" opacity="0.28"/>
+  <circle cx="0" cy="0" r="36" fill="none" stroke="#B89850" stroke-width="0.5" opacity="0.22"/>
+  <circle cx="0" cy="0" r="28" fill="none" stroke="#C9A961" stroke-width="0.4" opacity="0.18"/>
+  <g opacity="0.3" stroke="#C9A961" fill="none" stroke-width="0.7">
+    <path d="M0,-45 C8,-34 14,-22 8,-10 C2,0 -2,0 -8,-10 C-14,-22 -8,-34 0,-45"/>
+    <path d="M0,45 C8,34 14,22 8,10 C2,0 -2,0 -8,10 C-14,22 -8,34 0,45"/>
+    <path d="M-45,0 C-34,8 -22,14 -10,8 C0,2 0,-2 -10,-8 C-22,-14 -34,-8 -45,0"/>
+    <path d="M45,0 C34,8 22,14 10,8 C0,2 0,-2 10,-8 C22,-14 34,-8 45,0"/>
+  </g>
+  <g opacity="0.25" stroke="#C9A961" fill="none" stroke-width="0.5">
+    <path d="M-32,-32 C-20,-26 -12,-12 0,-16 C12,-12 20,-26 32,-32"/>
+    <path d="M-32,32 C-20,26 -12,12 0,16 C12,12 20,26 32,32"/>
+    <path d="M32,-32 C26,-20 12,-12 16,0 C12,12 26,20 32,32"/>
+    <path d="M-32,-32 C-26,-20 -12,-12 -16,0 C-12,12 -26,20 -32,32"/>
+  </g>
+  <g opacity="0.22" stroke="#D4B56A" fill="none" stroke-width="0.4">
+    <path d="M-24,-40 Q-14,-28 0,-36 Q14,-28 24,-40"/>
+    <path d="M-24,40 Q-14,28 0,36 Q14,28 24,40"/>
+    <path d="M-40,-24 Q-28,-14 -36,0 Q-28,14 -40,24"/>
+    <path d="M40,-24 Q28,-14 36,0 Q28,14 40,24"/>
+  </g>
+  <g opacity="0.2" stroke="#C9A961" fill="none" stroke-width="0.4">
+    <path d="M0,-20 C6,-14 14,-6 14,0 C14,6 6,14 0,20 C-6,14 -14,6 -14,0 C-14,-6 -6,-14 0,-20"/>
+    <path d="M0,-12 C4,-8 8,-4 8,0 C8,4 4,8 0,12 C-4,8 -8,4 -8,0 C-8,-4 -4,-8 0,-12"/>
+  </g>
+  <g opacity="0.3" fill="#C9A961">
+    <path d="M0,-6 C3,-3 6,0 3,3 C0,6 -3,3 -6,0 C-3,-3 0,-6 0,-6Z"/>
+  </g>
+  <g opacity="0.28" fill="#C9A961">
+    <circle cx="0" cy="-46" r="2"/><circle cx="0" cy="46" r="2"/>
+    <circle cx="-46" cy="0" r="2"/><circle cx="46" cy="0" r="2"/>
+    <circle cx="-33" cy="-33" r="1.5"/><circle cx="33" cy="-33" r="1.5"/>
+    <circle cx="-33" cy="33" r="1.5"/><circle cx="33" cy="33" r="1.5"/>
+  </g>
+  <g opacity="0.35" fill="#C9A961">
+    <path d="M-6,-44 C-4,-40 0,-36 0,-36 C0,-36 4,-40 6,-44 C4,-46 2,-48 0,-50 C-2,-48 -4,-46 -6,-44Z"/>
+    <path d="M-10,-42 C-8,-38 -4,-36 0,-34 C-4,-36 -8,-38 -10,-42Z" opacity="0.6"/>
+    <path d="M10,-42 C8,-38 4,-36 0,-34 C4,-36 8,-38 10,-42Z" opacity="0.6"/>
+  </g>
+</g>
+<line x1="108" y1="60" x2="150" y2="60" stroke="#C9A961" stroke-width="0.6" opacity="0.3"/>
+<circle cx="108" cy="60" r="1.5" fill="#C9A961" opacity="0.25"/>
+<text x="164" y="60" font-family="'Cormorant Garamond', 'Lora', 'Playfair Display', Georgia, serif" font-size="46" font-weight="500" fill="#C9A961" letter-spacing="2" dominant-baseline="central">Dreamglade</text>
+</svg>

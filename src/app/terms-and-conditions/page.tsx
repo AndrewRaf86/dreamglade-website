@@ -3,7 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions",
+  title: "Terms and Conditions | DreamGlade",
   description:
     "DreamGlade Terms and Conditions. Public-readable terms for transparency. Final agreement is signed on the private Stage 2 registration form.",
   alternates: { canonical: "https://dreamglade.com/terms-and-conditions" },
@@ -17,7 +17,7 @@ export default function TermsAndConditions() {
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">Terms and Conditions</span>
-          <h1>Terms and <em>conditions.</em></h1>
+          <h1>Terms and conditions.</h1>
           <p className="page-hero__sub">
             These terms are published for transparency. The final, binding agreement is signed during Stage 2 registration, which Paul sends by email to approved applicants only.
           </p>
@@ -58,20 +58,22 @@ export default function TermsAndConditions() {
 
             <h2>3. Pricing</h2>
             <p>
-              Prices for retreats at DreamGlade are quoted in US dollars per person per day. As of the current season:
+              Prices for retreats at DreamGlade are quoted in Peruvian Soles (S/.) per person per day. Current pricing is shown on the <Link href="/#pricing">pricing section</Link> of the home page and is confirmed in writing during Stage 2 registration. Any USD equivalent shown on the site is approximate and based on the exchange rate at time of display.
             </p>
-            <ul>
-              <li><strong>Shared tambo:</strong> $200 USD per person per day.</li>
-              <li><strong>Single tambo:</strong> $220 USD per person per day.</li>
-            </ul>
             <p>
-              Prices include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, integration support, group transport from Fitzcarraldo Restaurant in Iquitos on arrival, and drop-off at Iquitos airport for departures after 3:30 PM. Prices do not include flights, airport pickup, travel insurance, visas, vaccinations, additional activities (such as Kambo), or personal expenses.
+              Prices include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, integration support, group transport from the designated city meeting point in Iquitos on arrival, and drop-off at Iquitos airport for departures after 3 PM on the last day. Prices do not include flights, airport pickup, travel insurance, visas, vaccinations, additional activities (such as Kambo), or personal expenses.
             </p>
 
             <h2>4. Deposit, payment, and cancellation</h2>
             <p>
               A <strong>50% deposit</strong> is required to confirm a place at a retreat. The remaining balance is due before or on arrival, in accordance with the terms set out in the signed Stage 2 agreement.
             </p>
+            <div className="notice notice--medical" style={{ margin: "16px 0" }}>
+              <span className="notice__label">Placeholder — needs legal confirmation</span>
+              <p style={{ margin: 0 }}>
+                The cancellation policy below is provisional and has not yet been legally confirmed. The figures shown (7-day window, 100 USD fee) should be verified by Wade, Clarisa, or legal counsel before this page is relied upon. The binding cancellation terms are those in the signed Stage 2 agreement.
+              </p>
+            </div>
             <p>
               Cancellations made <strong>within seven (7) days of the deposit being paid</strong> are eligible for a refund of the deposit less a 100 USD administrative fee.
             </p>

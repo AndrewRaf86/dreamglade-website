@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "Apply",
+  title: "Begin Your Inquiry | DreamGlade",
   description:
     "Begin your DreamGlade application. Paul, our integration coach, reviews every inquiry personally. This is the first step in a conversation.",
   alternates: { canonical: "https://dreamglade.com/apply" },
@@ -21,7 +21,7 @@ export default function Apply() {
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">Stage 1 — inquiry</span>
-          <h1>Begin your <em>DreamGlade</em> application.</h1>
+          <h1>Begin your <em>inquiry.</em></h1>
           <p className="page-hero__sub">
             Paul, our integration coach, reviews every application personally. This is the first step in a conversation.
           </p>
