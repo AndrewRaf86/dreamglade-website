@@ -9,14 +9,14 @@
   --forest: #1F3A2E;
   --forest-deep: #16291F;
   --forest-mid: #2A4A3B;
-  --beige: #E8DCC4;
-  --beige-warm: #D9C8A4;
+  --beige: #E8D9BE;
+  --beige-warm: #DCCA9A;
   --cream: #FAF7F0;
-  --cream-warm: #F2EBDA;
+  --cream-warm: #F4EDDB;
   --brown: #6B5444;
   --brown-dark: #4A3A2E;
-  --gold: #C9A961;
-  --gold-deep: #A8893E;
+  --gold: #C4922E;
+  --gold-deep: #9A6C1C;
   --ink: var(--forest);
   --body: #3F352B;
   --muted: var(--brown);
@@ -183,23 +183,17 @@ p + p { margin-top: 0.6em; }
   gap: 24px;
 }
 .site-header__wordmark {
-  font-family: var(--font-display);
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--ink);
-  line-height: 1;
   display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
+  line-height: 1;
 }
-.site-header__wordmark .mark {
-  display: inline-block;
-  width: 6px; height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-  margin-right: 4px;
-  transform: translateY(-2px);
+.site-header__wordmark img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .site-header__wordmark img { height: 40px; }
 }
 .site-header__nav {
   display: flex; gap: clamp(18px, 2.6vw, 36px);
@@ -913,12 +907,8 @@ p + p { margin-top: 0.6em; }
 .site-footer ul li { padding: 6px 0; font-size: 14px; }
 .site-footer ul li a { color: var(--beige); border-bottom: 1px solid transparent; transition: border-color 220ms ease, color 220ms ease; }
 .site-footer ul li a:hover { color: var(--cream); border-bottom-color: var(--gold); }
-.site-footer__brand { font-family: var(--font-display); font-size: 32px; color: var(--cream); margin: 0 0 16px; line-height: 1; }
-.site-footer__brand .mark {
-  display: inline-block; width: 6px; height: 6px;
-  background: var(--gold); border-radius: 50%;
-  margin-right: 6px; transform: translateY(-4px);
-}
+.site-footer__brand { margin: 0 0 20px; line-height: 1; }
+.site-footer__brand img { height: 64px; width: auto; display: block; }
 .site-footer__desc { font-size: 14px; color: var(--beige); line-height: 1.6; max-width: 380px; margin: 0 0 24px; opacity: 0.85; }
 .site-footer__contact { font-size: 13px; line-height: 1.7; color: var(--beige-warm); }
 .site-footer__contact strong { color: var(--cream); font-weight: 500; }

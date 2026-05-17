@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="site-footer__top">
           <div>
-            <p className="site-footer__brand"><span className="mark" />DreamGlade</p>
+            <p className="site-footer__brand"><img src="/images/logo-dreamglade.png" alt="DreamGlade" /></p>
             <p className="site-footer__desc">
               A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on twenty hectares of lakeside Amazon rainforest.
             </p>
