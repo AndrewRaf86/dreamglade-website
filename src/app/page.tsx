@@ -186,10 +186,10 @@ export default function Home() {
       <section className="section section--cream" id="healers">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">The team</span>
-            <h2 className="display">Shipibo-led, <em>by name.</em></h2>
+            <span className="eyebrow">The healers &amp; team</span>
+            <h2 className="display">The people <em>holding the work.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              Ceremonies are led by Maestra Dominga and Maestro Raul. Paul, our integration coach, reads every application and stays in touch with each guest — before, during, and after.
+              Ceremonies are led by Maestra Dominga and Maestro Raul, both rooted in the Shipibo tradition of the Peruvian Amazon. Each guest is supported before arrival, throughout the retreat, and in the weeks after.
             </p>
           </div>
           <div className="healers">
@@ -200,7 +200,7 @@ export default function Home() {
               <h3 className="healer__name">Maestra <em>Dominga</em></h3>
               <p className="healer__role">Shipibo maestra · Lead healer</p>
               <p style={{ fontSize: 16, color: "var(--body)", maxWidth: 460 }}>
-                Maestra Dominga leads ceremony in the Shipibo tradition. The icaros, the pace of the night, the care of each person in the room — she carries it.
+                Maestra Dominga leads ceremony in the Shipibo tradition. Through her icaros — the sacred healing songs — she reads and guides the energy of each room, holding every participant with precision and care throughout the night.
               </p>
             </article>
             <article className="healer">
@@ -210,7 +210,7 @@ export default function Home() {
               <h3 className="healer__name">Maestro <em>Raul</em></h3>
               <p className="healer__role">Shipibo maestro · Lead healer</p>
               <p style={{ fontSize: 16, color: "var(--body)", maxWidth: 460 }}>
-                Maestro Raul leads ceremony alongside Maestra Dominga. Their partnership shapes the room — the singing, the silence, and the small attentions that hold a night together.
+                Maestro Raul co-leads ceremony alongside Maestra Dominga. Together, their singing and silence shape the rhythm of the night — the moments of movement and the moments of stillness that hold each individual journey.
               </p>
             </article>
           </div>
@@ -219,10 +219,10 @@ export default function Home() {
               <img src="/images/people-paul.png" alt="Paul, integration coach at DreamGlade" />
             </figure>
             <div>
-              <span className="eyebrow">And the rest of the team</span>
-              <h3 style={{ marginTop: 12 }}>And <em>Paul,</em> our integration coach.</h3>
+              <span className="eyebrow">Integration support</span>
+              <h3 style={{ marginTop: 12 }}><em>Paul,</em> integration coach.</h3>
               <p>
-                Paul reads every application personally — usually within a day. He stays in touch with each guest before arrival, on the land between ceremonies, and again two weeks after the retreat ends. Integration is the longer work, and that is the work he holds.
+                Paul personally reviews every application — usually within 24 hours. He supports each guest through the full arc: before arrival, between ceremonies on the land, and for weeks after the retreat ends. Integration is where insight becomes lasting change. That is the work he holds.
               </p>
             </div>
           </div>
