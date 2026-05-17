@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "Safety & Preparation",
+  title: "Safety & Preparation | DreamGlade",
   description:
     "How DreamGlade approaches safety, screening, contraindications, and the pre-retreat dieta. Honest preparation for a Shipibo-led ayahuasca retreat in Peru.",
   alternates: { canonical: "https://dreamglade.com/safety-preparation" },
@@ -21,7 +21,7 @@ export default function SafetyPreparation() {
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">Safety, first and always</span>
-          <h1>Honest preparation<br /><em>is the work, too.</em></h1>
+          <h1>Safety and preparation <em>before your retreat.</em></h1>
           <p className="page-hero__sub">
             A retreat is only as safe as the conversations that happen before it begins. Here is how DreamGlade approaches screening, contraindication review, the pre-retreat dieta, and what happens on the land.
           </p>

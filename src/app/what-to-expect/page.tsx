@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "What to Expect",
+  title: "What to Expect | DreamGlade",
   description:
     "A typical week at DreamGlade: arrival from Iquitos, ceremonies, dieta days, accommodation in private tambos, food, sauna, and integration support.",
   alternates: { canonical: "https://dreamglade.com/what-to-expect" },
@@ -21,7 +21,7 @@ export default function WhatToExpect() {
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">What to expect</span>
-          <h1>A week here, <em>more or less.</em></h1>
+          <h1>What the retreat <em>experience is like.</em></h1>
           <p className="page-hero__sub">
             No two retreats are the same, but the shape is steady. Ceremonies on Monday, Wednesday and Friday; slow days in between; private tambos to sleep in; meals together at Mapacho, the communal house.
           </p>
@@ -42,7 +42,7 @@ export default function WhatToExpect() {
                 <p>We pick you up in Iquitos at the designated meeting point on the first day of your retreat and bring you the rest of the way by 4x4 — about 15 km out, past Maralillos, down the road toward Nauta. We aim to arrive at the property around 1 PM. Transport on arrival day is included.</p>
                 <p>The afternoon is for settling in — you will see your tambo, meet the team, and find your bearings. A ceremony is held on the first night of your retreat, so the timing of the day is built around it: a light early meal, quiet time from 6 PM, ceremony at 7.</p>
                 <p><strong>We recommend arriving in Iquitos one or two nights before your retreat.</strong> It gives you time to rest after travel and avoids the risk of a delayed flight pushing you past the 1 PM transfer. A night or two in Iquitos afterward is also worth considering.</p>
-                <p><strong>Airport pickup is not included.</strong> If you are flying in, we will help you arrange a taxi from the airport to your hotel. <strong>Drop-off at Iquitos airport is included</strong> for departures after 3:30 PM on the last day.</p>
+                <p><strong>Airport pickup is not included.</strong> If you are flying in, we will help you arrange a taxi from the airport to your hotel. <strong>Drop-off at Iquitos airport is included</strong> for departures after 3 PM on the last day.</p>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function WhatToExpect() {
                 <p>Off-days are not empty. They are the most important days of the retreat.</p>
                 <p>The hours after ceremony — and the day in between — are where the work settles. Most guests read, write in a journal, talk slowly over coffee at Mapacho, or sit by the lake. Long, unstructured stretches give whatever came up in the night somewhere to go.</p>
                 <p>Mornings hold plant baths, sauna and sweat lodge, yoga and breathwork — gentle ways to come back into the body. Plant dietas are available for guests who want a deeper, longer commitment to a single teacher plant.</p>
-                <p>There is no Wi-Fi in guest rooms and very little phone signal on the property — by design. The first day without a screen can feel strange. By the second day, most guests stop reaching for one. Many tell us afterward that the quiet was the most unexpected, refreshing part of the whole week — and that the chance to genuinely step away from everything is half the reason to come.</p>
+                <p>There is no electricity or Wi-Fi anywhere on the property — by design. The first day without a screen can feel strange. By the second day, most guests stop reaching for one. Many tell us afterward that the quiet was the most unexpected, refreshing part of the whole week — and that the chance to genuinely step away from everything is half the reason to come.</p>
                 <p>If you want company, Mapacho is always open and there is usually someone there. If you do not, no one will come looking.</p>
               </div>
               <p style={{ marginTop: 24, fontSize: 14, color: "var(--muted)" }}>
@@ -121,7 +121,7 @@ export default function WhatToExpect() {
             <article className="col-item">
               <img src="/images/mapacho-mainhouse.jpg" alt="Mapacho — the communal house at DreamGlade, with thatched roof and palm surroundings" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <h3 style={{ marginTop: 6 }}>Mapacho, the communal house</h3>
-              <p>The center of the day. Meals, conversation, reading, the kitchen. The communal house has the only Wi-Fi on the property and is where you can charge a phone if you need to.</p>
+              <p>The center of the day. Meals, conversation, reading, the kitchen. There is no electricity or Wi-Fi in guest rooms or anywhere on the property — Mapacho is the gathering point, and the quiet is part of what people come for.</p>
             </article>
             <article className="col-item">
               <img src="/images/solar.jpg" alt="Solar panels at DreamGlade, providing 100 percent of the property's power" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
@@ -165,12 +165,12 @@ export default function WhatToExpect() {
             <article className="col-item">
               <span className="col-item__num">01 / Last morning</span>
               <h3>A final circle, then transport</h3>
-              <p>We close the retreat with a quiet circle on the last morning, then a group transfer back to Iquitos airport for flights after 3:30 PM, or to the city if you are staying on.</p>
+              <p>We close the retreat with a quiet circle on the last morning, then a group transfer back to Iquitos airport for flights after 3 PM, or to the city if you are staying on.</p>
             </article>
             <article className="col-item">
               <span className="col-item__num">02 / Two-week check-in</span>
               <h3>Paul writes to you</h3>
-              <p>Paul reaches out about two weeks after you leave. Nothing formal — a short note to see how the landing has been, and to answer anything that has come up.</p>
+              <p>Paul reaches out within a month of you leaving — a short note to see how the landing has been and to answer anything that has come up. Ongoing support by WhatsApp or email is available if you want it.</p>
             </article>
             <article className="col-item">
               <img src="/images/jungle-sun.jpg" alt="Sunlight through the Amazon canopy at DreamGlade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />

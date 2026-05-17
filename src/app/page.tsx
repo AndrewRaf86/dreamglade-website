@@ -4,11 +4,12 @@ import Script from "next/script";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
 import JotformCTA from "@/components/JotformCTA";
+import PricingSection from "@/components/PricingSection";
 
 export const metadata: Metadata = {
-  title: "DreamGlade — Small-Group Ayahuasca Retreat near Iquitos, Peru",
+  title: "Small-Group Ayahuasca Retreat Near Iquitos, Peru | DreamGlade",
   description:
-    "A grounded ayahuasca retreat in the Peruvian Amazon. Shipibo-led ceremonies, maximum 10 guests, on 20 hectares of rainforest near Iquitos.",
+    "DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru. Learn about safety, preparation, and how to begin an inquiry.",
   alternates: { canonical: "https://dreamglade.com" },
   openGraph: { url: "https://dreamglade.com", images: [{ url: "/images/lake-overview.jpg" }] },
 };
@@ -277,65 +278,7 @@ export default function Home() {
       </section>
 
       {/* ── 6. PRICING ── */}
-      <section className="section section--cream" id="pricing">
-        <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">Pricing</span>
-            <h2 className="display">Two ways to <em>stay.</em></h2>
-            <p className="lede" style={{ marginTop: 12 }}>
-              Prices are per person, per day, all-inclusive of accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support.
-            </p>
-          </div>
-          <div className="pricing-grid">
-            <article className="pricing-card">
-              <div className="pricing-card__photo">
-                <img src="/images/sharetambo-front.jpg" alt="A shared tambo with thatched roof near the Mapacho communal house" />
-              </div>
-              <span className="pricing-card__eyebrow">Shared tambo</span>
-              <h3 className="pricing-card__name">Two-bed tambo</h3>
-              <p className="pricing-card__price">
-                <span className="pricing-card__price-num">$200</span>
-                <span className="pricing-card__price-unit">USD / person / day</span>
-              </p>
-              <p style={{ color: "var(--muted)", fontSize: 14, margin: "0 0 20px" }}>
-                A private thatched cabin shared with one other guest of the same retreat. Steps from the maloka and the communal house.
-              </p>
-              <ul className="pricing-card__features">
-                <li>All meals, ceremonies, plant dieta, yoga, breathwork, sauna</li>
-                <li>Integration support throughout your stay</li>
-                <li>Transport included from Fitzcarraldo Restaurant, Iquitos</li>
-              </ul>
-            </article>
-            <article className="pricing-card">
-              <div className="pricing-card__photo">
-                <img src="/images/tambo-lakeview.jpg" alt="A single tambo at DreamGlade with a view of the lake and palms" />
-              </div>
-              <span className="pricing-card__eyebrow">Single tambo</span>
-              <h3 className="pricing-card__name">Private tambo</h3>
-              <p className="pricing-card__price">
-                <span className="pricing-card__price-num">$220</span>
-                <span className="pricing-card__price-unit">USD / person / day</span>
-              </p>
-              <p style={{ color: "var(--muted)", fontSize: 14, margin: "0 0 20px" }}>
-                A private thatched cabin to yourself. Most have lake or jungle views; all are quiet, solar-powered, and away from any road.
-              </p>
-              <ul className="pricing-card__features">
-                <li>All meals, ceremonies, plant dieta, yoga, breathwork, sauna</li>
-                <li>Integration support throughout your stay</li>
-                <li>Transport included from Fitzcarraldo Restaurant, Iquitos</li>
-              </ul>
-            </article>
-          </div>
-          <div style={{ marginTop: 48, display: "grid", gap: 16, maxWidth: 760 }}>
-            <p style={{ fontSize: 14, color: "var(--muted)" }}>
-              <strong style={{ color: "var(--ink)", fontWeight: 600 }}>Minimum 5 nights</strong> (3 ceremonies). <strong style={{ color: "var(--ink)", fontWeight: 600 }}>Maximum 2 weeks</strong> (6 ceremonies). 50% deposit confirms your place.
-            </p>
-            <p style={{ fontSize: 14, color: "var(--muted)" }}>
-              Drop-off at Iquitos airport is included for flights after 3:30 PM. Airport pickup is not included. Additional activities — Kambo (100 soles), sweat lodge, plant dietas — can be added on request.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PricingSection />
 
       {/* ── 7. AVAILABILITY ── */}
       <section className="section section--beige" id="availability">
@@ -397,17 +340,14 @@ export default function Home() {
           </div>
           <div className="review-grid">
             {[
-              { paul: true, text: "Excerpt from a real Google review that specifically mentions Paul, our integration coach, and the care of his correspondence before and after the retreat." },
-              { paul: false, text: "Excerpt from a real Google review about the overall retreat experience." },
-              { paul: false, text: "Excerpt from a real Google review — about the healers, the maloka, or the ceremonies." },
-              { paul: true, text: "Excerpt from a real Google review that mentions Paul by name — his screening, his preparation help, or his check-ins after the retreat." },
-              { paul: false, text: "Excerpt from a real Google review — about the land, the lake, or the quiet of the property." },
-              { paul: false, text: "Excerpt from a real Google review — about food, accommodation, or daily rhythm." },
-              { paul: true, text: "Excerpt from a real Google review where Paul is mentioned — particularly around integration and support after returning home." },
-              { paul: false, text: "Excerpt from a real Google review — about returning home, integration, or the longer-term effect of the retreat." },
-            ].map(({ paul, text }, i) => (
-              <article key={i} className={`review-card${paul ? " review-card--paul" : ""}`} aria-label={paul ? "Placeholder for a Google review mentioning Paul" : "Placeholder Google review"}>
-                <span className="review-card__badge">Verified Google review — to be added</span>
+              { text: "Review excerpt to be added — emphasising Paul's care and the quality of preparation support." },
+              { text: "Review excerpt to be added — about the healers, the maloka, or the ceremony experience." },
+              { text: "Review excerpt to be added — about the land, the lake, or the quiet of the property." },
+              { text: "Review excerpt to be added — about safety, the small group, and feeling well held." },
+              { text: "Review excerpt to be added — about integration support and the follow-up after leaving." },
+            ].map(({ text }, i) => (
+              <article key={i} className="review-card" aria-label="Placeholder Google review">
+                <span className="review-card__badge">Verified Google review — to be confirmed with Paul</span>
                 <p className="review-card__quote review-card__placeholder">{text}</p>
                 <div className="review-card__meta"><span>Reviewer name</span><span>Date</span></div>
               </article>
@@ -431,7 +371,7 @@ export default function Home() {
               <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights, starting at 7 PM and running for five to six hours, with quiet time beginning at 6 PM.</p>
             </FAQItem>
             <FAQItem question="What does the price include?">
-              <p>$200 USD per day for a shared tambo, $220 USD per day for a single tambo. Both include accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Transport is included from Fitzcarraldo Restaurant in Iquitos, and drop-off at Iquitos airport is included for flights after 3:30 PM. Airport pickup is not included.</p>
+              <p>Prices are in Peruvian Soles (S/.) per person per day. Both shared and single tambos include accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
             </FAQItem>
             <FAQItem question="How do I apply?">
               <p>The first step is a short inquiry — about eight questions, no medical history. Paul, our integration coach, reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>

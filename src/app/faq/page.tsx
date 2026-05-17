@@ -5,7 +5,7 @@ import FAQItem from "@/components/FAQItem";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "FAQ | DreamGlade",
   description:
     "Answers to common questions about a safe small-group ayahuasca retreat near Iquitos, Peru: Shipibo ceremonies, screening, dieta, pricing, and Paul's support.",
   alternates: { canonical: "https://dreamglade.com/faq" },
@@ -27,14 +27,14 @@ const faqJsonLd = {
     { "@type": "Question", name: "How long does a ceremony last?", acceptedAnswer: { "@type": "Answer", text: "Quiet time begins at 6 PM and ceremony begins at 7 PM. Each ceremony runs five to six hours, with the healers and a small support team present throughout." } },
     { "@type": "Question", name: "What is the minimum age?", acceptedAnswer: { "@type": "Answer", text: "Eighteen. DreamGlade does not accept guests under the age of 18." } },
     { "@type": "Question", name: "How does the application process work?", acceptedAnswer: { "@type": "Answer", text: "The first step is a short inquiry — about eight questions, no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. Full registration and a signed agreement come later, by email, before your arrival date is confirmed." } },
-    { "@type": "Question", name: "How much does it cost?", acceptedAnswer: { "@type": "Answer", text: "$200 USD per person per day for a shared tambo, $220 USD per person per day for a single tambo. Both include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support." } },
-    { "@type": "Question", name: "What is included in the price?", acceptedAnswer: { "@type": "Answer", text: "Accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna and sweat lodge, and integration support. Group transport from Iquitos and drop-off at Iquitos airport (for flights after 3:30 PM) are included. Flights, airport pickup, travel insurance, visas, and vaccinations are not included." } },
+    { "@type": "Question", name: "How much does it cost?", acceptedAnswer: { "@type": "Answer", text: "Prices are in Peruvian Soles (S/.) per person per day. Both shared and single tambos include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Confirm current pricing by submitting an inquiry." } },
+    { "@type": "Question", name: "What is included in the price?", acceptedAnswer: { "@type": "Answer", text: "Accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna and sweat lodge, and integration support. Group transport from the city meeting point in Iquitos and drop-off at Iquitos airport (for flights after 3 PM) are included. Flights, airport pickup, travel insurance, visas, and vaccinations are not included." } },
     { "@type": "Question", name: "Should I book my flights before my application is confirmed?", acceptedAnswer: { "@type": "Answer", text: "No. We recommend waiting until Paul has reviewed your application and confirmed your dates before you book flights." } },
     { "@type": "Question", name: "What is the deposit and cancellation policy?", acceptedAnswer: { "@type": "Answer", text: "A 50% deposit confirms your place. Cancellations within seven days of paying the deposit receive a refund less 100 USD. Specifics are confirmed in the Stage 2 registration and agreement." } },
-    { "@type": "Question", name: "Is transport included?", acceptedAnswer: { "@type": "Answer", text: "Yes. We pick you up in Iquitos at the Fitzcarraldo Restaurant at 1 PM on the first day of your retreat. Drop-off at Iquitos airport is included for departures after 3:30 PM on the last day. Airport pickup is not included." } },
-    { "@type": "Question", name: "Is there Wi-Fi at DreamGlade?", acceptedAnswer: { "@type": "Answer", text: "Guest rooms have no electricity or Wi-Fi by design. The communal house, Mapacho, has the only Wi-Fi on the property. The whole property runs on 100% solar power." } },
+    { "@type": "Question", name: "Is transport included?", acceptedAnswer: { "@type": "Answer", text: "Yes. We pick you up at the designated city meeting point in Iquitos at 1 PM on the first day of your retreat. Drop-off at Iquitos airport is included for departures after 3 PM on the last day. Airport pickup from the airport on arrival is not included." } },
+    { "@type": "Question", name: "Is there Wi-Fi at DreamGlade?", acceptedAnswer: { "@type": "Answer", text: "There is no electricity or Wi-Fi in guest rooms or anywhere at the centre. The whole property runs on 100% solar power. The quiet and disconnection are part of why people come." } },
     { "@type": "Question", name: "What food is served?", acceptedAnswer: { "@type": "Answer", text: "The retreat dieta is light, low-salt, and plant-forward — rice, plantain, yuca, and fresh fruit. Nothing fried, fermented, or pork. No alcohol, caffeine, or added sugar. Vegetarian, vegan, and most allergy considerations are accommodated." } },
-    { "@type": "Question", name: "Does DreamGlade follow up after the retreat?", acceptedAnswer: { "@type": "Answer", text: "Paul reaches out about two weeks after you leave to see how the landing has been. If you want recommendations for therapists, integration groups, or further reading, we will send what we know." } },
+    { "@type": "Question", name: "Does DreamGlade follow up after the retreat?", acceptedAnswer: { "@type": "Answer", text: "Paul reaches out within a month of you leaving to see how the landing has been. Ongoing support by WhatsApp or email is available if you want it. If you want recommendations for therapists or integration groups, we will send what we know." } },
     { "@type": "Question", name: "I use cannabis regularly. Can I still attend?", acceptedAnswer: { "@type": "Answer", text: "Yes, but be honest about it on your application. For habitual users we recommend stopping cannabis four to six weeks before the retreat and staying off it for two weeks afterward." } },
     { "@type": "Question", name: "When can I arrive at DreamGlade?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade does not run fixed-date group retreats. You can start your stay on a Monday or a Friday. A Wednesday start is sometimes possible under special conditions." } },
     { "@type": "Question", name: "Can I leave the property during my stay?", acceptedAnswer: { "@type": "Answer", text: "No. Once you arrive at DreamGlade, you stay on the land for the full retreat. We do not run day trips out from the centre." } },
@@ -53,7 +53,7 @@ export default function FAQ() {
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">Frequently asked questions</span>
-          <h1>Things people ask, <em>before they apply.</em></h1>
+          <h1>Common questions <em>before applying.</em></h1>
           <p className="page-hero__sub">
             If your question is not here, write to <strong style={{ color: "var(--cream)" }}>booking@dreamglade.com</strong>. Paul, our integration coach, reads every message personally.
           </p>
@@ -159,10 +159,10 @@ export default function FAQ() {
           </div>
           <div className="faq-list">
             <FAQItem question="How much does it cost?">
-              <p>$200 USD per person per day for a shared tambo, $220 USD per person per day for a single tambo. Both include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support.</p>
+              <p>Prices are in Peruvian Soles (S/.) per person per day — current pricing is shown on the <a href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>pricing section</a> of the home page. Both shared and single tambos include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support.</p>
             </FAQItem>
             <FAQItem question="What is included in the price?">
-              <p>Accommodation in a private or shared thatched tambo, all meals, ceremonies, plant dieta, yoga, breathwork, sauna and sweat lodge, and integration support throughout your stay. Group transport from Iquitos on the first day of your retreat and drop-off at Iquitos airport at the end (for flights after 3:30 PM) are included.</p>
+              <p>Accommodation in a private or shared thatched tambo, all meals, ceremonies, plant dieta, yoga, breathwork, sauna and sweat lodge, and integration support throughout your stay. Group transport from the designated city meeting point in Iquitos on the first day of your retreat and drop-off at Iquitos airport at the end (for flights after 3 PM) are included.</p>
               <p>Not included: international and domestic flights, airport pickup on arrival, travel insurance, visas, and vaccinations. Additional activities such as Kambo (100 soles) and deeper plant dietas can be added on request.</p>
             </FAQItem>
             <FAQItem question="Should I book my flights before my application is confirmed?">
@@ -181,7 +181,7 @@ export default function FAQ() {
               <p>We strongly recommend arriving in Iquitos one or two nights before your retreat begins. It gives you time to rest after travel and removes the risk of a delayed flight pushing you past the 1 PM transfer to the property. A ceremony is held on the first night of your retreat, so arriving rested matters.</p>
             </FAQItem>
             <FAQItem question="Is transport included?">
-              <p>Yes. We pick you up in Iquitos at the Fitzcarraldo Restaurant at 1 PM on the first day of your retreat and bring you to the property by 4x4. Drop-off at Iquitos airport is included for departures after 3:30 PM on the last day. Airport pickup is not included; if you are flying in, we will help you arrange a taxi from the airport to your hotel.</p>
+              <p>Yes. We pick you up at the designated city meeting point in Iquitos at 1 PM on the first day of your retreat and bring you to the property by 4x4. Drop-off at Iquitos airport is included for departures after 3 PM on the last day. Airport pickup is not included; if you are flying in, we will help you arrange a taxi from the airport to your hotel.</p>
             </FAQItem>
             <FAQItem question="Can I leave the property during my stay?">
               <p>No — once you arrive at DreamGlade, you stay on the land for the full retreat. We do not run day trips out from the centre. The reason is integration: the work each ceremony opens needs unbroken quiet to settle, and a few hours back in the city undoes a surprising amount of it.</p>
@@ -205,7 +205,7 @@ export default function FAQ() {
           </div>
           <div className="faq-list">
             <FAQItem question="Is there Wi-Fi or electricity in my room?">
-              <p>No. Guest rooms have no electricity or Wi-Fi, by design. The communal house, Mapacho, has Wi-Fi and outlets for charging. The whole property runs on 100% solar power.</p>
+              <p>No. There is no electricity or Wi-Fi in guest rooms or anywhere at the centre, by design. The whole property runs on 100% solar power. Most guests find the disconnection is part of what makes the week work.</p>
             </FAQItem>
             <FAQItem question="What food is served?">
               <p>The retreat dieta is light, low-salt, and plant-forward, built around what grows locally — rice, plantain, yuca, and fresh fruit. Nothing fried, fermented, or pork. No alcohol, caffeine, or added sugar. Vegetarian, vegan, and most allergy considerations are accommodated — please tell us when you apply.</p>
