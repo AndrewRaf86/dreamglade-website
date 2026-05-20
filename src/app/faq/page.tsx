@@ -21,7 +21,7 @@ const faqJsonLd = {
   mainEntity: [
     { "@type": "Question", name: "Who runs DreamGlade?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade was founded by Stace and is currently owned and stewarded by Wade Bucher and Clarisa Gutierrez. Paul, our integration coach, reviews every application personally." } },
     { "@type": "Question", name: "How many guests are at a retreat?", acceptedAnswer: { "@type": "Answer", text: "A maximum of ten guests per retreat. We do not run larger groups." } },
-    { "@type": "Question", name: "Where is DreamGlade located?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is twenty hectares of lakeside rainforest." } },
+    { "@type": "Question", name: "Where is DreamGlade located?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is 25 hectares of lakeside rainforest." } },
     { "@type": "Question", name: "Who leads the ceremonies?", acceptedAnswer: { "@type": "Answer", text: "Ceremonies are led by Maestra Dominga and Maestro Raul in the Shipibo tradition." } },
     { "@type": "Question", name: "How many ceremonies will I have, and when?", acceptedAnswer: { "@type": "Answer", text: "Ceremonies are held on Monday, Wednesday, and Friday nights. The minimum stay of five nights includes three ceremonies. A Friday start typically means a six-night stay with three ceremonies. The maximum stay of two weeks includes up to six ceremonies." } },
     { "@type": "Question", name: "How long does a ceremony last?", acceptedAnswer: { "@type": "Answer", text: "Quiet time begins at 6 PM and ceremony begins at 7 PM. Each ceremony runs five to six hours, with the healers and a small support team present throughout." } },
@@ -72,7 +72,7 @@ export default function FAQ() {
               <p>DreamGlade was founded by Stace and is currently owned and stewarded by Wade Bucher and Clarisa Gutierrez. Paul, our integration coach, reviews every application personally.</p>
             </FAQItem>
             <FAQItem question="Where is DreamGlade located?">
-              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is twenty hectares of lakeside rainforest.</p>
+              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is 25 hectares of lakeside rainforest.</p>
             </FAQItem>
             <FAQItem question="How many guests are at a retreat?">
               <p>A maximum of ten guests per retreat. We do not run larger groups.</p>

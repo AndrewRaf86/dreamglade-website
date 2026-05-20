@@ -19,7 +19,7 @@ const orgJsonLd = {
   "@type": "Organization",
   name: "DreamGlade",
   description:
-    "A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 20 hectares of Amazon rainforest.",
+    "A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 25 hectares of Amazon rainforest.",
   url: "https://dreamglade.com",
   logo: "https://dreamglade.com/images/logo-original.jpeg",
   email: "booking@dreamglade.com",
@@ -62,7 +62,7 @@ export default function Home() {
             </div>
             <div>
               <p className="hero__subtitle">
-                DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, twenty hectares of rainforest beside a still black-water lake.
+                DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest beside a still black-water lake.
               </p>
               <div className="hero__actions">
                 <JotformCTA />
@@ -112,7 +112,7 @@ export default function Home() {
                   DreamGlade was founded by Stace and later came under the care of Wade Bucher and Clarisa Gutierrez.
                 </p>
                 <p>
-                  Today, Wade and Clarisa own and manage the center as a small, grounded retreat on twenty hectares of Amazon rainforest near Iquitos. The feeling is personal, human, and real.
+                  Today, Wade and Clarisa own and manage the center as a small, grounded retreat on 25 hectares of Amazon rainforest near Iquitos. The feeling is personal, human, and real.
                 </p>
                 <p>
                   This is not a corporate retreat brand or a high-volume booking machine. It is a small place where the people who run it are directly responsible for the guest experience, the land, the team, and the integrity of the work.
@@ -129,7 +129,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">03</span>
-                  <span className="facts__text"><strong>20 hectares of Amazon rainforest,</strong> lakeside.</span>
+                  <span className="facts__text"><strong>25 hectares of Amazon rainforest,</strong> lakeside.</span>
                 </li>
                 <li>
                   <span className="facts__num">04</span>
@@ -253,7 +253,7 @@ export default function Home() {
               <img src="/images/jungle-sun.jpg" alt="Late-afternoon sunlight breaking through the Amazon canopy at DreamGlade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">03 / The land</span>
               <h3>Lake, jungle, Mapacho</h3>
-              <p>Twenty hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal house, Mapacho, where meals and conversation happen.</p>
+              <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal house, Mapacho, where meals and conversation happen.</p>
             </article>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
@@ -377,7 +377,7 @@ export default function Home() {
               <p>The first step is a short inquiry — about eight questions, no medical history. Paul, our integration coach, reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
             </FAQItem>
             <FAQItem question="Where exactly is DreamGlade?">
-              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is twenty hectares of lakeside rainforest. Guest rooms have no electricity or Wi-Fi by design; the property runs on 100% solar power.</p>
+              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is 25 hectares of lakeside rainforest. Guest rooms have no electricity or Wi-Fi by design; the property runs on 100% solar power.</p>
             </FAQItem>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>

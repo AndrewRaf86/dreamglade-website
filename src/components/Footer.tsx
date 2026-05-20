@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <p className="site-footer__brand"><img src="/images/logo.svg" alt="DreamGlade" /></p>
             <p className="site-footer__desc">
-              A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on twenty hectares of lakeside Amazon rainforest.
+              A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 25 hectares of lakeside Amazon rainforest.
             </p>
             <p className="site-footer__contact">
               <strong>Caserio Moralillo Parcela 21</strong><br />
