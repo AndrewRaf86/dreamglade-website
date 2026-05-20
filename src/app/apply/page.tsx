@@ -3,11 +3,14 @@ import Nav from "@/components/Nav";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "Begin Your Inquiry | DreamGlade",
+  title: "Begin Your Inquiry",
   description:
-    "Begin your DreamGlade application. Paul, our integration coach, reviews every inquiry personally. This is the first step in a conversation.",
+    "Begin your DreamGlade inquiry. Paul, our integration coach, reviews every application personally. This is the first step in a conversation.",
   alternates: { canonical: "https://dreamglade.com/apply" },
   openGraph: {
+    title: "Begin Your Inquiry — DreamGlade",
+    description:
+      "Start your DreamGlade inquiry. A short first-stage application, read personally by Paul, our integration coach. Safety-first screening before any deposit.",
     url: "https://dreamglade.com/apply",
     images: [{ url: "/images/lake-overview.jpg" }],
   },

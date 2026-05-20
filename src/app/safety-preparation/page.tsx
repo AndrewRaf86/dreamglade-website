@@ -3,11 +3,14 @@ import Nav from "@/components/Nav";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "Safety & Preparation | DreamGlade",
+  title: "Safety & Preparation",
   description:
-    "How DreamGlade approaches safety, screening, contraindications, and the pre-retreat dieta. Honest preparation for a Shipibo-led ayahuasca retreat in Peru.",
+    "How DreamGlade screens guests, reviews contraindications, and runs the pre-retreat dieta. Honest preparation for a Shipibo-led ayahuasca retreat in Peru.",
   alternates: { canonical: "https://dreamglade.com/safety-preparation" },
   openGraph: {
+    title: "Safety & Preparation — DreamGlade",
+    description:
+      "How DreamGlade screens guests, reviews medications and contraindications, and prepares you safely for a Shipibo-led ayahuasca retreat near Iquitos, Peru.",
     url: "https://dreamglade.com/safety-preparation",
     images: [{ url: "/images/maloka-exterior.jpg" }],
   },
@@ -34,7 +37,7 @@ export default function SafetyPreparation() {
             <span className="notice__label">Medical disclaimer</span>
             <h3>DreamGlade is a retreat center, not a medical provider.</h3>
             <p>
-              DreamGlade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, or cures for any physical or mental health condition. Participants are responsible for consulting their healthcare providers regarding any medical concerns. Ayahuasca is not appropriate for everyone.
+              DreamGlade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, detox, or cures for any physical or mental health condition. Ayahuasca is not appropriate for everyone. Paul reviews every inquiry manually, but he is not a substitute for medical advice: any decision about your medications or a medical condition must come from Paul together with a qualified healthcare professional. Participants are responsible for consulting their own doctor before applying.
             </p>
           </div>
         </div>
