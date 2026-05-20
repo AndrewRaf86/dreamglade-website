@@ -3,10 +3,16 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | DreamGlade",
+  title: "Terms & Conditions",
   description:
-    "DreamGlade Terms and Conditions. Public-readable terms for transparency. Final agreement is signed on the private Stage 2 registration form.",
+    "DreamGlade Terms and Conditions. Public-readable terms for transparency. The final agreement is signed on the private Stage 2 registration form.",
   alternates: { canonical: "https://dreamglade.com/terms-and-conditions" },
+  openGraph: {
+    title: "Terms & Conditions — DreamGlade",
+    description:
+      "DreamGlade's public-readable Terms and Conditions, published for transparency. The final binding agreement is signed during private Stage 2 registration.",
+    url: "https://dreamglade.com/terms-and-conditions",
+  },
 };
 
 export default function TermsAndConditions() {
@@ -58,7 +64,7 @@ export default function TermsAndConditions() {
 
             <h2>3. Pricing</h2>
             <p>
-              Prices for retreats at DreamGlade are quoted in Peruvian Soles (S/.) per person per day. Current pricing is shown on the <Link href="/#pricing">pricing section</Link> of the home page and is confirmed in writing during Stage 2 registration. Any USD equivalent shown on the site is approximate and based on the exchange rate at time of display.
+              Prices for retreats at DreamGlade are listed in US dollars (USD) per person per day. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Current pricing is shown on the <Link href="/#pricing">pricing section</Link> of the home page and is confirmed in writing during Stage 2 registration.
             </p>
             <p>
               Prices include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, integration support, group transport from the designated city meeting point in Iquitos on arrival, and drop-off at Iquitos airport for departures after 3 PM on the last day. Prices do not include flights, airport pickup, travel insurance, visas, vaccinations, additional activities (such as Kambo), or personal expenses.

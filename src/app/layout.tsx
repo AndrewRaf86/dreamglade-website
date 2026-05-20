@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s — DreamGlade",
   },
   description:
-    "A grounded ayahuasca retreat in the Peruvian Amazon. Shipibo-led ceremonies, maximum 10 guests, on 20 hectares of rainforest near Iquitos.",
+    "A grounded ayahuasca retreat in the Peruvian Amazon. Shipibo-led ceremonies, maximum 10 guests, on 25 hectares of rainforest near Iquitos.",
   keywords: [
     "ayahuasca retreat Iquitos Peru",
     "small group ayahuasca retreat",

@@ -7,11 +7,17 @@ import JotformCTA from "@/components/JotformCTA";
 import PricingSection from "@/components/PricingSection";
 
 export const metadata: Metadata = {
-  title: "Small-Group Ayahuasca Retreat Near Iquitos, Peru | DreamGlade",
+  title: "Ayahuasca Retreat Near Iquitos, Peru | DreamGlade",
   description:
-    "DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru. Learn about safety, preparation, and how to begin an inquiry.",
+    "DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — max 10 guests, Shipibo-led ceremonies, 25 hectares of Amazon rainforest.",
   alternates: { canonical: "https://dreamglade.com" },
-  openGraph: { url: "https://dreamglade.com", images: [{ url: "/images/lake-overview.jpg" }] },
+  openGraph: {
+    title: "DreamGlade — Small-Group Ayahuasca Retreat Near Iquitos, Peru",
+    description:
+      "A small-group, Shipibo-led ayahuasca retreat near Iquitos, Peru. Maximum 10 guests, 25 hectares of Amazon rainforest, every inquiry reviewed personally.",
+    url: "https://dreamglade.com",
+    images: [{ url: "/images/lake-overview.jpg" }],
+  },
 };
 
 const orgJsonLd = {
@@ -19,7 +25,7 @@ const orgJsonLd = {
   "@type": "Organization",
   name: "DreamGlade",
   description:
-    "A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 20 hectares of Amazon rainforest.",
+    "A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 25 hectares of Amazon rainforest.",
   url: "https://dreamglade.com",
   logo: "https://dreamglade.com/images/logo-original.jpeg",
   email: "booking@dreamglade.com",
@@ -62,7 +68,7 @@ export default function Home() {
             </div>
             <div>
               <p className="hero__subtitle">
-                DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, twenty hectares of rainforest beside a still black-water lake.
+                DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest beside a still black-water lake.
               </p>
               <div className="hero__actions">
                 <JotformCTA />
@@ -112,7 +118,7 @@ export default function Home() {
                   DreamGlade was founded by Stace and later came under the care of Wade Bucher and Clarisa Gutierrez.
                 </p>
                 <p>
-                  Today, Wade and Clarisa own and manage the center as a small, grounded retreat on twenty hectares of Amazon rainforest near Iquitos. The feeling is personal, human, and real.
+                  Today, Wade and Clarisa own and manage the center as a small, grounded retreat on 25 hectares of Amazon rainforest near Iquitos. The feeling is personal, human, and real.
                 </p>
                 <p>
                   This is not a corporate retreat brand or a high-volume booking machine. It is a small place where the people who run it are directly responsible for the guest experience, the land, the team, and the integrity of the work.
@@ -129,7 +135,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">03</span>
-                  <span className="facts__text"><strong>20 hectares of Amazon rainforest,</strong> lakeside.</span>
+                  <span className="facts__text"><strong>25 hectares of Amazon rainforest,</strong> lakeside.</span>
                 </li>
                 <li>
                   <span className="facts__num">04</span>
@@ -253,7 +259,7 @@ export default function Home() {
               <img src="/images/jungle-sun.jpg" alt="Late-afternoon sunlight breaking through the Amazon canopy at DreamGlade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">03 / The land</span>
               <h3>Lake, jungle, Mapacho</h3>
-              <p>Twenty hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal house, Mapacho, where meals and conversation happen.</p>
+              <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal house, Mapacho, where meals and conversation happen.</p>
             </article>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
@@ -371,13 +377,13 @@ export default function Home() {
               <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights, starting at 7 PM and running for five to six hours, with quiet time beginning at 6 PM.</p>
             </FAQItem>
             <FAQItem question="What does the price include?">
-              <p>Prices are in Peruvian Soles (S/.) per person per day. Both shared and single tambos include accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
+              <p>Prices are listed in USD per person per day, the same daily rate for the whole stay. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Both shared and single tambos include accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
             </FAQItem>
             <FAQItem question="How do I apply?">
               <p>The first step is a short inquiry — about eight questions, no medical history. Paul, our integration coach, reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
             </FAQItem>
             <FAQItem question="Where exactly is DreamGlade?">
-              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is twenty hectares of lakeside rainforest. Guest rooms have no electricity or Wi-Fi by design; the property runs on 100% solar power.</p>
+              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is 25 hectares of lakeside rainforest. Guest rooms have no electricity or Wi-Fi by design; the property runs on 100% solar power.</p>
             </FAQItem>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>

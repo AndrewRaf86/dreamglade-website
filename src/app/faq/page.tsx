@@ -5,11 +5,14 @@ import FAQItem from "@/components/FAQItem";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "FAQ | DreamGlade",
+  title: "Frequently Asked Questions",
   description:
-    "Answers to common questions about a safe small-group ayahuasca retreat near Iquitos, Peru: Shipibo ceremonies, screening, dieta, pricing, and Paul's support.",
+    "Answers about DreamGlade: a safe small-group ayahuasca retreat near Iquitos, Peru. Ceremonies, screening, cost, transport, accommodation, and integration.",
   alternates: { canonical: "https://dreamglade.com/faq" },
   openGraph: {
+    title: "Frequently Asked Questions — DreamGlade",
+    description:
+      "Common questions about DreamGlade, a small-group ayahuasca retreat near Iquitos, Peru: safety, ceremonies, cost, getting there, accommodation, and integration.",
     url: "https://dreamglade.com/faq",
     images: [{ url: "/images/lake-overview.jpg" }],
   },
@@ -21,20 +24,24 @@ const faqJsonLd = {
   mainEntity: [
     { "@type": "Question", name: "Who runs DreamGlade?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade was founded by Stace and is currently owned and stewarded by Wade Bucher and Clarisa Gutierrez. Paul, our integration coach, reviews every application personally." } },
     { "@type": "Question", name: "How many guests are at a retreat?", acceptedAnswer: { "@type": "Answer", text: "A maximum of ten guests per retreat. We do not run larger groups." } },
-    { "@type": "Question", name: "Where is DreamGlade located?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is twenty hectares of lakeside rainforest." } },
+    { "@type": "Question", name: "Where is DreamGlade located?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is 25 hectares of lakeside rainforest." } },
+    { "@type": "Question", name: "Is DreamGlade good for first-time ayahuasca guests?", acceptedAnswer: { "@type": "Answer", text: "Yes. Many guests come to DreamGlade for their first ayahuasca experience. The small group of no more than ten, the Shipibo-led ceremonies, and Paul's personal screening and preparation are designed to make a first time feel safe and well supported. The minimum stay of five nights includes three ceremonies, which is enough to gently find your footing." } },
+    { "@type": "Question", name: "Is airport pickup included?", acceptedAnswer: { "@type": "Answer", text: "No. Airport pickup when you fly into Iquitos is not included. We will help you arrange a taxi from the airport to your hotel, and you then meet us at the designated city meeting point in Iquitos on your first retreat day. Airport drop-off at the end is included for flights departing after 3 PM." } },
+    { "@type": "Question", name: "How do I get to DreamGlade from Iquitos?", acceptedAnswer: { "@type": "Answer", text: "You make your own way to Iquitos, and we take it from there. After your application is confirmed, we meet you at a designated city meeting point in Iquitos and drive you the roughly 15 km to the property by 4x4. There is no public route to the centre — arrival transport is arranged by us and included." } },
+    { "@type": "Question", name: "What are the accommodations like?", acceptedAnswer: { "@type": "Answer", text: "Guests sleep in private thatched tambos — single or two-bed cabins, raised off the ground, with mosquito-screened sleeping and most overlooking the lake or jungle. Comfort is simple and clean rather than luxury: a real bed, quiet, and the forest right outside. Meals and gathering happen at Mapacho, the communal house." } },
     { "@type": "Question", name: "Who leads the ceremonies?", acceptedAnswer: { "@type": "Answer", text: "Ceremonies are led by Maestra Dominga and Maestro Raul in the Shipibo tradition." } },
     { "@type": "Question", name: "How many ceremonies will I have, and when?", acceptedAnswer: { "@type": "Answer", text: "Ceremonies are held on Monday, Wednesday, and Friday nights. The minimum stay of five nights includes three ceremonies. A Friday start typically means a six-night stay with three ceremonies. The maximum stay of two weeks includes up to six ceremonies." } },
     { "@type": "Question", name: "How long does a ceremony last?", acceptedAnswer: { "@type": "Answer", text: "Quiet time begins at 6 PM and ceremony begins at 7 PM. Each ceremony runs five to six hours, with the healers and a small support team present throughout." } },
     { "@type": "Question", name: "What is the minimum age?", acceptedAnswer: { "@type": "Answer", text: "Eighteen. DreamGlade does not accept guests under the age of 18." } },
     { "@type": "Question", name: "How does the application process work?", acceptedAnswer: { "@type": "Answer", text: "The first step is a short inquiry — about eight questions, no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. Full registration and a signed agreement come later, by email, before your arrival date is confirmed." } },
-    { "@type": "Question", name: "How much does it cost?", acceptedAnswer: { "@type": "Answer", text: "Prices are in Peruvian Soles (S/.) per person per day. Both shared and single tambos include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Confirm current pricing by submitting an inquiry." } },
+    { "@type": "Question", name: "How much does it cost?", acceptedAnswer: { "@type": "Answer", text: "Prices are listed in USD per person per day, with the same daily rate for the whole stay. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Both shared and single tambos include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support." } },
     { "@type": "Question", name: "What is included in the price?", acceptedAnswer: { "@type": "Answer", text: "Accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna and sweat lodge, and integration support. Group transport from the city meeting point in Iquitos and drop-off at Iquitos airport (for flights after 3 PM) are included. Flights, airport pickup, travel insurance, visas, and vaccinations are not included." } },
     { "@type": "Question", name: "Should I book my flights before my application is confirmed?", acceptedAnswer: { "@type": "Answer", text: "No. We recommend waiting until Paul has reviewed your application and confirmed your dates before you book flights." } },
     { "@type": "Question", name: "What is the deposit and cancellation policy?", acceptedAnswer: { "@type": "Answer", text: "A 50% deposit confirms your place. Cancellations within seven days of paying the deposit receive a refund less 100 USD. Specifics are confirmed in the Stage 2 registration and agreement." } },
     { "@type": "Question", name: "Is transport included?", acceptedAnswer: { "@type": "Answer", text: "Yes. We pick you up at the designated city meeting point in Iquitos at 1 PM on the first day of your retreat. Drop-off at Iquitos airport is included for departures after 3 PM on the last day. Airport pickup from the airport on arrival is not included." } },
     { "@type": "Question", name: "Is there Wi-Fi at DreamGlade?", acceptedAnswer: { "@type": "Answer", text: "There is no electricity or Wi-Fi in guest rooms or anywhere at the centre. The whole property runs on 100% solar power. The quiet and disconnection are part of why people come." } },
     { "@type": "Question", name: "What food is served?", acceptedAnswer: { "@type": "Answer", text: "The retreat dieta is light, low-salt, and plant-forward — rice, plantain, yuca, and fresh fruit. Nothing fried, fermented, or pork. No alcohol, caffeine, or added sugar. Vegetarian, vegan, and most allergy considerations are accommodated." } },
-    { "@type": "Question", name: "Does DreamGlade follow up after the retreat?", acceptedAnswer: { "@type": "Answer", text: "Paul reaches out within a month of you leaving to see how the landing has been. Ongoing support by WhatsApp or email is available if you want it. If you want recommendations for therapists or integration groups, we will send what we know." } },
+    { "@type": "Question", name: "Does DreamGlade follow up after the retreat?", acceptedAnswer: { "@type": "Answer", text: "Yes. Paul reaches out within a month of you leaving to see how the landing has been, and ongoing support by WhatsApp or email is available if you want it. If you want recommendations for therapists, integration groups, or further reading, we will send what we know." } },
     { "@type": "Question", name: "I use cannabis regularly. Can I still attend?", acceptedAnswer: { "@type": "Answer", text: "Yes, but be honest about it on your application. For habitual users we recommend stopping cannabis four to six weeks before the retreat and staying off it for two weeks afterward." } },
     { "@type": "Question", name: "When can I arrive at DreamGlade?", acceptedAnswer: { "@type": "Answer", text: "DreamGlade does not run fixed-date group retreats. You can start your stay on a Monday or a Friday. A Wednesday start is sometimes possible under special conditions." } },
     { "@type": "Question", name: "Can I leave the property during my stay?", acceptedAnswer: { "@type": "Answer", text: "No. Once you arrive at DreamGlade, you stay on the land for the full retreat. We do not run day trips out from the centre." } },
@@ -72,7 +79,7 @@ export default function FAQ() {
               <p>DreamGlade was founded by Stace and is currently owned and stewarded by Wade Bucher and Clarisa Gutierrez. Paul, our integration coach, reviews every application personally.</p>
             </FAQItem>
             <FAQItem question="Where is DreamGlade located?">
-              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is twenty hectares of lakeside rainforest.</p>
+              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is 25 hectares of lakeside rainforest.</p>
             </FAQItem>
             <FAQItem question="How many guests are at a retreat?">
               <p>A maximum of ten guests per retreat. We do not run larger groups.</p>
@@ -115,6 +122,9 @@ export default function FAQ() {
           <div className="faq-list">
             <FAQItem question="Is DreamGlade right for me?">
               <p>Ayahuasca is not appropriate for everyone. DreamGlade tends to suit people who want a small, quiet, grounded setting and are willing to do real preparation before they arrive. Paul reviews every application personally to talk this through with you.</p>
+            </FAQItem>
+            <FAQItem question="Is DreamGlade good for first-time ayahuasca guests?">
+              <p>Yes. Many guests come to DreamGlade for their first ayahuasca experience. The small group of no more than ten, the Shipibo-led ceremonies, and Paul&apos;s personal screening and preparation are designed to make a first time feel safe and well supported. The minimum stay of five nights includes three ceremonies, which is enough to gently find your footing.</p>
             </FAQItem>
             <FAQItem question="What is the minimum age?">
               <p>Eighteen. DreamGlade does not accept guests under the age of 18.</p>
@@ -159,7 +169,7 @@ export default function FAQ() {
           </div>
           <div className="faq-list">
             <FAQItem question="How much does it cost?">
-              <p>Prices are in Peruvian Soles (S/.) per person per day — current pricing is shown on the <a href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>pricing section</a> of the home page. Both shared and single tambos include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support.</p>
+              <p>Prices are listed in USD per person per day, with the same daily rate for the whole stay. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Current pricing is shown on the <a href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>pricing section</a> of the home page. Both shared and single tambos include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support.</p>
             </FAQItem>
             <FAQItem question="What is included in the price?">
               <p>Accommodation in a private or shared thatched tambo, all meals, ceremonies, plant dieta, yoga, breathwork, sauna and sweat lodge, and integration support throughout your stay. Group transport from the designated city meeting point in Iquitos on the first day of your retreat and drop-off at Iquitos airport at the end (for flights after 3 PM) are included.</p>
@@ -183,6 +193,12 @@ export default function FAQ() {
             <FAQItem question="Is transport included?">
               <p>Yes. We pick you up at the designated city meeting point in Iquitos at 1 PM on the first day of your retreat and bring you to the property by 4x4. Drop-off at Iquitos airport is included for departures after 3 PM on the last day. Airport pickup is not included; if you are flying in, we will help you arrange a taxi from the airport to your hotel.</p>
             </FAQItem>
+            <FAQItem question="Is airport pickup included?">
+              <p>No. Airport pickup when you fly into Iquitos is not included. We will help you arrange a taxi from the airport to your hotel, and you then meet us at the designated city meeting point in Iquitos on your first retreat day. Airport drop-off at the end is included for flights departing after 3 PM.</p>
+            </FAQItem>
+            <FAQItem question="How do I get to DreamGlade from Iquitos?">
+              <p>You make your own way to Iquitos, and we take it from there. After your application is confirmed, we meet you at a designated city meeting point in Iquitos and drive you the roughly 15 km to the property by 4x4. There is no public route to the centre — arrival transport is arranged by us and included.</p>
+            </FAQItem>
             <FAQItem question="Can I leave the property during my stay?">
               <p>No — once you arrive at DreamGlade, you stay on the land for the full retreat. We do not run day trips out from the centre. The reason is integration: the work each ceremony opens needs unbroken quiet to settle, and a few hours back in the city undoes a surprising amount of it.</p>
             </FAQItem>
@@ -204,6 +220,9 @@ export default function FAQ() {
             <h2 className="display">During your <em>stay.</em></h2>
           </div>
           <div className="faq-list">
+            <FAQItem question="What are the accommodations like?">
+              <p>Guests sleep in private thatched tambos — single or two-bed cabins, raised off the ground, with mosquito-screened sleeping and most overlooking the lake or jungle. Comfort is simple and clean rather than luxury: a real bed, quiet, and the forest right outside. Meals and gathering happen at Mapacho, the communal house.</p>
+            </FAQItem>
             <FAQItem question="Is there Wi-Fi or electricity in my room?">
               <p>No. There is no electricity or Wi-Fi in guest rooms or anywhere at the centre, by design. The whole property runs on 100% solar power. Most guests find the disconnection is part of what makes the week work.</p>
             </FAQItem>
@@ -226,7 +245,7 @@ export default function FAQ() {
           </div>
           <div className="faq-list">
             <FAQItem question="Does DreamGlade follow up after the retreat?">
-              <p>Paul reaches out about two weeks after you leave to see how the landing has been. If you want recommendations for therapists, integration groups, or further reading, we will send what we know.</p>
+              <p>Yes. Paul reaches out within a month of you leaving to see how the landing has been, and ongoing support by WhatsApp or email is available if you want it. If you want recommendations for therapists, integration groups, or further reading, we will send what we know.</p>
             </FAQItem>
             <FAQItem question="Should I stay in Iquitos after the retreat?">
               <p>If you can, yes — one or two nights in Iquitos before flying home is worth it. It gives you a softer re-entry: quiet streets, simple food, and time to put words to what happened before the bigger noise of normal life starts again.</p>

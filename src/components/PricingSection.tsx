@@ -73,8 +73,8 @@ export default async function PricingSection() {
 
         <div style={{ marginTop: 32, padding: "16px 20px", background: "var(--cream-warm)", borderLeft: "3px solid var(--gold)", borderRadius: 4, maxWidth: 760 }}>
           <p style={{ fontSize: 13, color: "var(--muted)", margin: 0, lineHeight: 1.6 }}>
-            <strong style={{ color: "var(--ink)", fontWeight: 600 }}>Prices are in US dollars (USD).</strong>{" "}
-            Any Peruvian Soles equivalent shown is calculated at the day&apos;s exchange rate and is approximate — the actual S/. amount will depend on when your deposit is paid.{" "}
+            <strong style={{ color: "var(--ink)", fontWeight: 600 }}>Prices are listed in USD.</strong>{" "}
+            Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment.{" "}
             {penNote && <span>{penNote}. </span>}
             Do not book flights until Paul has confirmed your dates and registration.
           </p>

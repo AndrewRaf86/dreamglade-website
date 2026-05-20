@@ -3,11 +3,14 @@ import Nav from "@/components/Nav";
 import JotformCTA from "@/components/JotformCTA";
 
 export const metadata: Metadata = {
-  title: "What to Expect | DreamGlade",
+  title: "What to Expect",
   description:
     "A typical week at DreamGlade: arrival from Iquitos, ceremonies, dieta days, accommodation in private tambos, food, sauna, and integration support.",
   alternates: { canonical: "https://dreamglade.com/what-to-expect" },
   openGraph: {
+    title: "What to Expect — DreamGlade",
+    description:
+      "A typical week at DreamGlade: meeting in Iquitos, transport to the centre, Monday/Wednesday/Friday ceremonies, private tambos, food, sauna, and integration.",
     url: "https://dreamglade.com/what-to-expect",
     images: [{ url: "/images/maloka-exterior.jpg" }],
   },
@@ -39,7 +42,7 @@ export default function WhatToExpect() {
               <span className="eyebrow">Arrival</span>
               <h2 className="display" style={{ marginTop: 16 }}>From <em>Iquitos</em> to the land.</h2>
               <div className="flow flow--lg" style={{ marginTop: 28 }}>
-                <p>We pick you up in Iquitos at the designated meeting point on the first day of your retreat and bring you the rest of the way by 4x4 — about 15 km out, past Maralillos, down the road toward Nauta. We aim to arrive at the property around 1 PM. Transport on arrival day is included.</p>
+                <p><strong>You make your own way to Iquitos, and we take it from there.</strong> We meet you at a designated city meeting point in Iquitos on the first day of your retreat — once your application is confirmed — and bring you the rest of the way by 4x4, about 15 km out, past Maralillos, down the road toward Nauta. We aim to arrive at the property around 1 PM. Transport on arrival day is included.</p>
                 <p>The afternoon is for settling in — you will see your tambo, meet the team, and find your bearings. A ceremony is held on the first night of your retreat, so the timing of the day is built around it: a light early meal, quiet time from 6 PM, ceremony at 7.</p>
                 <p><strong>We recommend arriving in Iquitos one or two nights before your retreat.</strong> It gives you time to rest after travel and avoids the risk of a delayed flight pushing you past the 1 PM transfer. A night or two in Iquitos afterward is also worth considering.</p>
                 <p><strong>Airport pickup is not included.</strong> If you are flying in, we will help you arrange a taxi from the airport to your hotel. <strong>Drop-off at Iquitos airport is included</strong> for departures after 3 PM on the last day.</p>
