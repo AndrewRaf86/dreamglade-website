@@ -333,7 +333,7 @@ export default function Home() {
             <span className="eyebrow">Guest Reflections</span>
             <h2 className="display">What guests have <em>said.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              Every review below is a verified Google review. We do not edit, paraphrase, or invent. Until each card is populated, the placeholders remain in place.
+              Short excerpts from recent public Google reviews. Full reviews can be read on Google.
             </p>
           </div>
           <div className="rating-block">
@@ -346,16 +346,24 @@ export default function Home() {
           </div>
           <div className="review-grid">
             {[
-              { text: "Review excerpt to be added — emphasising Paul's care and the quality of preparation support." },
-              { text: "Review excerpt to be added — about the healers, the maloka, or the ceremony experience." },
-              { text: "Review excerpt to be added — about the land, the lake, or the quiet of the property." },
-              { text: "Review excerpt to be added — about safety, the small group, and feeling well held." },
-              { text: "Review excerpt to be added — about integration support and the follow-up after leaving." },
-            ].map(({ text }, i) => (
-              <article key={i} className="review-card" aria-label="Placeholder Google review">
-                <span className="review-card__badge">Verified Google review — to be confirmed with Paul</span>
-                <p className="review-card__quote review-card__placeholder">{text}</p>
-                <div className="review-card__meta"><span>Reviewer name</span><span>Date</span></div>
+              { name: "Cody", time: "a week ago", excerpt: "The DreamGlade team made my whole experience feel so special. There wasn't a single moment where I felt uncomfortable, judged, or not supported." },
+              { name: "Roberto Carneiro", time: "a month ago", excerpt: "I felt at home at DreamGlade. Wade, Clarissa, and the whole team made me feel safe throughout my stay. The small group size makes a big difference." },
+              { name: "Chocolate Chick", time: "2 months ago", excerpt: "The staff genuinely care, right from intake with Paul to after and beyond. They are very serious about ayahuasca and each person's experience." },
+              { name: "Kelley Bubnic", time: "4 months ago", excerpt: "As a solo female traveller, I felt so comfortable, safe, and surrounded by the best team to guide me through this experience." },
+              { name: "Kai Jones", time: "6 months ago", excerpt: "One of the most difficult parts was choosing the right centre. From the first enquiry, Paul was in contact by email and helped me feel prepared." },
+              { name: "T G", time: "a year ago", excerpt: "Paul helped me through the administrative process and what to expect. His emails were thoughtful and put me at ease." },
+              { name: "Paul Clarke", time: "a year ago", excerpt: "From dealing with Paul during the booking process, to getting picked up in Iquitos and settling in, I felt welcome and comfortable." },
+              { name: "Gregor Cox", time: "a year ago", excerpt: "The accommodation was clean, spacious, and free of mosquitos. The food was tasty, healthy, and plentiful. The price is more affordable compared to many other retreats." },
+              { name: "Brian Y", time: "a year ago", excerpt: "DreamGlade is not a glamorous retreat. What you get is time to work with the medicine and yourself, with caring facilitators and a quiet jungle setting." },
+            ].map(({ name, time, excerpt }, i) => (
+              <article key={i} className="review-card" aria-label={`Google review from ${name}`}>
+                <span style={{ color: "var(--gold-deep)", fontSize: "16px", letterSpacing: "0.08em" }} aria-label="5 out of 5 stars">★★★★★</span>
+                <p className="review-card__quote">{excerpt}</p>
+                <div className="review-card__meta">
+                  <span>{name}</span>
+                  <span>{time}</span>
+                </div>
+                <span className="review-card__badge">Google review</span>
               </article>
             ))}
           </div>
@@ -409,6 +417,7 @@ export default function Home() {
           </p>
         </div>
       </section>
+
     </>
   );
 }

@@ -722,7 +722,7 @@ p + p { margin-top: 0.6em; }
   gap: 20px;
 }
 @media (min-width: 700px) { .review-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1100px) { .review-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1100px) { .review-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .review-card {
   background: var(--cream);
