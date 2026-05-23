@@ -333,7 +333,7 @@ export default function Home() {
             <span className="eyebrow">Guest Reflections</span>
             <h2 className="display">What guests have <em>said.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              Every review below is a verified Google review. We do not edit, paraphrase, or invent. Until each card is populated, the placeholders remain in place.
+              Short excerpts from recent public Google reviews. Full reviews can be read on Google.
             </p>
           </div>
           <div className="rating-block">
@@ -344,18 +344,28 @@ export default function Home() {
               Read all Google reviews
             </a>
           </div>
-          <div className="embeddable-widget-wrap" style={{ marginTop: "2rem" }}>
-            <div className="embeddable-NXDv72-5je" />
-            <p style={{ marginTop: "1rem", fontSize: "0.875rem", opacity: 0.7, textAlign: "center" }}>
-              <a
-                href="https://share.google/tiFj2NeKbOzgqksP4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-arrow"
-              >
-                Read our latest Google reviews
-              </a>
-            </p>
+          <div className="review-grid">
+            {[
+              { name: "Cody", time: "a week ago", excerpt: "The DreamGlade team made my whole experience feel so special. There wasn't a single moment where I felt uncomfortable, judged, or not supported." },
+              { name: "Roberto Carneiro", time: "a month ago", excerpt: "I felt at home at DreamGlade. Wade, Clarissa, and the whole team made me feel safe throughout my stay. The small group size makes a big difference." },
+              { name: "Chocolate Chick", time: "2 months ago", excerpt: "The staff genuinely care, right from intake with Paul to after and beyond. They are very serious about ayahuasca and each person's experience." },
+              { name: "Kelley Bubnic", time: "4 months ago", excerpt: "As a solo female traveller, I felt so comfortable, safe, and surrounded by the best team to guide me through this experience." },
+              { name: "Kai Jones", time: "6 months ago", excerpt: "One of the most difficult parts was choosing the right centre. From the first enquiry, Paul was in contact by email and helped me feel prepared." },
+              { name: "T G", time: "a year ago", excerpt: "Paul helped me through the administrative process and what to expect. His emails were thoughtful and put me at ease." },
+              { name: "Paul Clarke", time: "a year ago", excerpt: "From dealing with Paul during the booking process, to getting picked up in Iquitos and settling in, I felt welcome and comfortable." },
+              { name: "Gregor Cox", time: "a year ago", excerpt: "The accommodation was clean, spacious, and free of mosquitos. The food was tasty, healthy, and plentiful. The price is more affordable compared to many other retreats." },
+              { name: "Brian Y", time: "a year ago", excerpt: "DreamGlade is not a glamorous retreat. What you get is time to work with the medicine and yourself, with caring facilitators and a quiet jungle setting." },
+            ].map(({ name, time, excerpt }, i) => (
+              <article key={i} className="review-card" aria-label={`Google review from ${name}`}>
+                <span style={{ color: "var(--gold-deep)", fontSize: "16px", letterSpacing: "0.08em" }} aria-label="5 out of 5 stars">★★★★★</span>
+                <p className="review-card__quote">{excerpt}</p>
+                <div className="review-card__meta">
+                  <span>{name}</span>
+                  <span>{time}</span>
+                </div>
+                <span className="review-card__badge">Google review</span>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -408,11 +418,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Embeddable Google Reviews widget — loaded once, deferred */}
-      <Script
-        src="https://widgets.embeddable.co/sdk/latest/embeddable.js"
-        strategy="lazyOnload"
-      />
     </>
   );
 }
