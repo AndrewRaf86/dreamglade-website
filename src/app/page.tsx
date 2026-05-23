@@ -344,20 +344,18 @@ export default function Home() {
               Read all Google reviews
             </a>
           </div>
-          <div className="review-grid">
-            {[
-              { text: "Review excerpt to be added — emphasising Paul's care and the quality of preparation support." },
-              { text: "Review excerpt to be added — about the healers, the maloka, or the ceremony experience." },
-              { text: "Review excerpt to be added — about the land, the lake, or the quiet of the property." },
-              { text: "Review excerpt to be added — about safety, the small group, and feeling well held." },
-              { text: "Review excerpt to be added — about integration support and the follow-up after leaving." },
-            ].map(({ text }, i) => (
-              <article key={i} className="review-card" aria-label="Placeholder Google review">
-                <span className="review-card__badge">Verified Google review — to be confirmed with Paul</span>
-                <p className="review-card__quote review-card__placeholder">{text}</p>
-                <div className="review-card__meta"><span>Reviewer name</span><span>Date</span></div>
-              </article>
-            ))}
+          <div className="embeddable-widget-wrap" style={{ marginTop: "2rem" }}>
+            <div className="embeddable-NXDv72-5je" />
+            <p style={{ marginTop: "1rem", fontSize: "0.875rem", opacity: 0.7, textAlign: "center" }}>
+              <a
+                href="https://share.google/tiFj2NeKbOzgqksP4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-arrow"
+              >
+                Read our latest Google reviews
+              </a>
+            </p>
           </div>
         </div>
       </section>
@@ -409,6 +407,12 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Embeddable Google Reviews widget — loaded once, deferred */}
+      <Script
+        src="https://widgets.embeddable.co/sdk/latest/embeddable.js"
+        strategy="lazyOnload"
+      />
     </>
   );
 }
