@@ -5,7 +5,7 @@ import JotformCTA from "@/components/JotformCTA";
 export const metadata: Metadata = {
   title: "Safety & Preparation",
   description:
-    "How DreamGlade screens guests, reviews contraindications, and runs the pre-retreat dieta. Honest preparation for a Shipibo-led ayahuasca retreat in Peru.",
+    "Learn about ayahuasca safety, medication screening, preparation, and how DreamGlade reviews each guest before confirmation.",
   alternates: { canonical: "https://dreamglade.com/safety-preparation" },
   openGraph: {
     title: "Safety & Preparation — DreamGlade",
@@ -72,6 +72,21 @@ export default function SafetyPreparation() {
         </div>
       </section>
 
+      <section className="section section--cream-warm">
+        <div className="container container--narrow">
+          <div className="section-head">
+            <span className="eyebrow">Medication &amp; health screening</span>
+            <h2 className="display">Medication and <em>health screening.</em></h2>
+          </div>
+          <div className="flow flow--lg" style={{ marginTop: 28 }}>
+            <p>Ayahuasca contains naturally occurring MAOIs — Monoamine Oxidase Inhibitors. MAOIs can interact dangerously with certain medications and substances. For this reason, DreamGlade requires every guest to complete a health and medication disclosure before being accepted.</p>
+            <p>Some medication groups may make ayahuasca unsafe, including antidepressants and anxiety medications such as SSRIs and SNRIs, tricyclic antidepressants, MAOIs, stimulants, sedatives, certain prescription pain medications, heart and blood pressure medications, and blood thinners. Cough, cold, and allergy medications may also be relevant — some formulas contain active ingredients such as DXM or pseudoephedrine.</p>
+            <p>This list is not exhaustive. Guests must disclose all current and recent medications, supplements, physical health history, mental health history, substance use, and relevant conditions. Paul reviews disclosures personally and may ask follow-up questions before confirming whether the next step is appropriate.</p>
+            <p>DreamGlade does not provide medical advice, diagnosis, treatment, therapy, detox, cures, or medical clearance. Do not stop, taper, or change any prescription medication without speaking with the healthcare professional who prescribed it. Ayahuasca is not appropriate for everyone.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="section section--beige">
         <div className="container">
           <div className="section-head">
@@ -98,6 +113,9 @@ export default function SafetyPreparation() {
               <p>Most guests find it helpful to spend the last week noting what they are bringing — questions, grief, gratitude, the things they want to look at honestly. You will not be quizzed; the noting is for you.</p>
             </article>
           </div>
+          <p style={{ marginTop: 32, fontSize: 14, color: "var(--muted)" }}>
+            Alcohol, cannabis, recreational drugs, and other substances may affect preparation and safety. These are reviewed during the intake process, and guests may receive individual guidance before confirmation.
+          </p>
         </div>
       </section>
 
