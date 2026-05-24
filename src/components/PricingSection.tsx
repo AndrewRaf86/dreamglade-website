@@ -47,7 +47,7 @@ export default async function PricingSection() {
 
           <article className="pricing-card">
             <div className="pricing-card__photo">
-              <img src="/images/tambo-lakeview.jpg" alt="A single tambo at DreamGlade with a view of the lake and palms" />
+              <img src="/images/tambo7-lakeview.jpg" alt="Private tambo at DreamGlade" />
             </div>
             <span className="pricing-card__eyebrow">Single tambo</span>
             <h3 className="pricing-card__name">Private tambo</h3>

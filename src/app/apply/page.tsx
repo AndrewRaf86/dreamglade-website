@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
-import JotformCTA from "@/components/JotformCTA";
+import TermsGateCTA from "@/components/TermsGateCTA";
 
 export const metadata: Metadata = {
   title: "Begin Your Inquiry",
@@ -29,7 +29,7 @@ export default function Apply() {
             Paul, our integration coach, reviews every application personally. This is the first step in a conversation.
           </p>
           <div style={{ marginTop: 16 }}>
-            <JotformCTA />
+            <TermsGateCTA />
           </div>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function Apply() {
           <p className="lede" style={{ color: "var(--cream)", margin: "16px auto 40px", maxWidth: 640 }}>
             The inquiry opens in a small window. It takes about five minutes. You can save it for later if you need to.
           </p>
-          <JotformCTA />
+          <TermsGateCTA />
           <p style={{ marginTop: 32, fontSize: 14, color: "var(--beige)", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>
             After your application is reviewed, Paul will email you the full registration and signed agreement before your arrival date is confirmed.
           </p>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
-import JotformCTA from "@/components/JotformCTA";
+import TermsGateCTA from "@/components/TermsGateCTA";
 
 export const metadata: Metadata = {
   title: "What to Expect",
@@ -183,7 +183,7 @@ export default function WhatToExpect() {
             </article>
           </div>
           <div style={{ marginTop: "clamp(48px, 5vw, 64px)", textAlign: "center" }}>
-            <JotformCTA />
+            <TermsGateCTA />
           </div>
         </div>
       </section>

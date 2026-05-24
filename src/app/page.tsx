@@ -3,7 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
-import JotformCTA from "@/components/JotformCTA";
+import TermsGateCTA from "@/components/TermsGateCTA";
 import PricingSection from "@/components/PricingSection";
 
 export const metadata: Metadata = {
@@ -71,7 +71,7 @@ export default function Home() {
                 DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest beside a still black-water lake.
               </p>
               <div className="hero__actions">
-                <JotformCTA />
+                <TermsGateCTA />
                 <a href="#about" className="ghost-link">Read more first</a>
               </div>
             </div>
@@ -191,34 +191,39 @@ export default function Home() {
       {/* ── 4. HEALERS ── */}
       <section className="section section--cream" id="healers">
         <div className="container">
-          <div className="section-head">
-            <span className="eyebrow">The healers &amp; team</span>
-            <h2 className="display">The people <em>holding the work.</em></h2>
-            <p className="lede" style={{ marginTop: 12 }}>
-              Ceremonies are led by Maestra Dominga and Maestro Raul, both rooted in the Shipibo tradition of the Peruvian Amazon. Each guest is supported before arrival, throughout the retreat, and in the weeks after.
-            </p>
-          </div>
-          <div className="healers">
-            <article className="healer">
-              <figure className="healer__portrait">
-                <img src="/images/people-dominga.jpg" alt="Maestra Dominga, Shipibo healer at DreamGlade, in traditional dress" />
-              </figure>
-              <h3 className="healer__name">Maestra <em>Dominga</em></h3>
-              <p className="healer__role">Shipibo maestra · Lead healer</p>
-              <p style={{ fontSize: 16, color: "var(--body)", maxWidth: 460 }}>
-                Maestra Dominga leads ceremony in the Shipibo tradition. Through her icaros — the sacred healing songs — she reads and guides the energy of each room, holding every participant with precision and care throughout the night.
+          <div className="healer-pair">
+            {/* Text — appears first in DOM so mobile shows heading before photos */}
+            <div className="healer-pair__text">
+              <span className="eyebrow">Shipibo ceremonial lineage</span>
+              <h2 className="display">Maestra Dominga <em>&amp; Maestro Raúl</em></h2>
+              <p className="healer-pair__bio">
+                Maestra Dominga and Maestro Raúl are a married Shipibo ceremonial couple who have shared more than 40 years of life, family, and service to their community. They come from Vista Alegre, a small village upriver from Pucallpa, and both were raised in families where plant medicine, ceremonial song, and spiritual healing traditions were passed down through parents and grandparents. Their work carries the balance of their shared path: Dominga brings softness, grounding, and feminine strength, while Raúl brings steadiness, protection, and ceremonial depth. Through their icaros and limpiezas, they help hold a careful ceremonial space rooted in lineage, humility, and respect for the traditions that came before them.
               </p>
-            </article>
-            <article className="healer">
-              <figure className="healer__portrait">
-                <img src="/images/people-raul-5.jpg" alt="Maestro Raul, Shipibo healer at DreamGlade, in a quiet moment with a praying mantis on his sleeve" />
-              </figure>
-              <h3 className="healer__name">Maestro <em>Raul</em></h3>
-              <p className="healer__role">Shipibo maestro · Lead healer</p>
-              <p style={{ fontSize: 16, color: "var(--body)", maxWidth: 460 }}>
-                Maestro Raul co-leads ceremony alongside Maestra Dominga. Together, their singing and silence shape the rhythm of the night — the moments of movement and the moments of stillness that hold each individual journey.
+              <p className="healer-pair__note">
+                Together, they carry a living Shipibo tradition shaped by family, community, song, and decades of practice.
               </p>
-            </article>
+            </div>
+            {/* Photos — pushed left via order:-1 on desktop */}
+            <div className="healer-pair__photos">
+              <div className="healer-pair__photo">
+                <figure className="healer-pair__portrait">
+                  <img src="/images/dominga2.jpg" alt="Maestra Dominga at DreamGlade" />
+                </figure>
+                <div>
+                  <p className="healer-pair__name">Maestra <em>Dominga</em></p>
+                  <p className="healer-pair__role">Shipibo maestra</p>
+                </div>
+              </div>
+              <div className="healer-pair__photo">
+                <figure className="healer-pair__portrait">
+                  <img src="/images/raul-old-website-photo.jpg" alt="Maestro Raúl at DreamGlade" />
+                </figure>
+                <div>
+                  <p className="healer-pair__name">Maestro <em>Raúl</em></p>
+                  <p className="healer-pair__role">Shipibo maestro</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="team-aside">
             <figure className="team-aside__portrait">
@@ -256,7 +261,7 @@ export default function Home() {
               <p>Off-days are where the work settles — sauna, plant baths, yoga, and long unhurried hours by the lake with a book or a journal. No phones, no signal. Most guests find the quiet to be the most unexpected gift of the week.</p>
             </article>
             <article className="col-item">
-              <img src="/images/jungle-sun.jpg" alt="Late-afternoon sunlight breaking through the Amazon canopy at DreamGlade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <img src="/images/lake-overview.jpg" alt="Aerial view of the lake and thatched structures at DreamGlade, surrounded by Amazon rainforest" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">03 / The land</span>
               <h3>Lake, jungle, Mapacho</h3>
               <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal house, Mapacho, where meals and conversation happen.</p>
@@ -272,12 +277,18 @@ export default function Home() {
       <section className="section section--cream-warm" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="gallery-strip">
-            <figure><img src="/images/food.jpg" alt="A simple lunch at DreamGlade — a small bowl of soup and watermelon, looking out across the lake" loading="lazy" /></figure>
-            <figure><img src="/images/deck-rockingchairs.jpg" alt="Two rocking chairs on a wooden deck at the edge of the lake at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/corredor.jpg" alt="A thatched walkway between buildings at DreamGlade, with a cat resting in the shade" loading="lazy" /></figure>
-            <figure><img src="/images/dogs-puente.jpg" alt="Three property dogs running along the covered bridge at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/cat-max.jpg" alt="A property cat resting on the walkway between tambos" loading="lazy" /></figure>
-            <figure><img src="/images/tajin-deck.jpg" alt="A property dog resting on the wooden walkway above the lake" loading="lazy" /></figure>
+            <figure><img src="/images/food.jpg" alt="Simple dieta meal at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/corredor-william.jpg" alt="Lake and tambos at DreamGlade, seen from the covered bridge" loading="lazy" /></figure>
+            <figure><img src="/images/deck-rockingchairs.jpg" alt="Rocking chairs on the deck at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/bobinsana-flower.jpg" alt="Bobinsana flower at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/jungle-flower2.jpg" alt="Tropical flower in the Amazon forest at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/bighouse-sunlight.jpg" alt="Main house at DreamGlade in afternoon light" loading="lazy" /></figure>
+            <figure><img src="/images/antoherlake-tambo3.jpg" alt="Lake and tambos at DreamGlade near Iquitos" loading="lazy" /></figure>
+            <figure><img src="/images/manta-hallway.jpg" alt="Hallway with Shipibo manta at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/tambo7-bed.jpg" alt="Tambo bedroom at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/lakeview-tambo4.jpg" alt="Tambos and lake at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/jungle-jeff.jpg" alt="Sunlight through the Amazon forest at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/tambo5-lakeview.jpg" alt="Private tambo at DreamGlade" loading="lazy" /></figure>
           </div>
           <p className="gallery-strip__caption">Daily life on the land</p>
         </div>
@@ -357,7 +368,7 @@ export default function Home() {
               { name: "Brian Y", time: "a year ago", excerpt: "DreamGlade is not a glamorous retreat. What you get is time to work with the medicine and yourself, with caring facilitators and a quiet jungle setting." },
             ].map(({ name, time, excerpt }, i) => (
               <article key={i} className="review-card" aria-label={`Google review from ${name}`}>
-                <span style={{ color: "var(--gold-deep)", fontSize: "16px", letterSpacing: "0.08em" }} aria-label="5 out of 5 stars">★★★★★</span>
+                <span style={{ color: "#E6A700", fontSize: "16px", letterSpacing: "0.08em" }} aria-label="5 out of 5 stars">★★★★★</span>
                 <p className="review-card__quote">{excerpt}</p>
                 <div className="review-card__meta">
                   <span>{name}</span>
@@ -403,7 +414,7 @@ export default function Home() {
       {/* ── 10. APPLY CTA ── */}
       <section className="bleed-cta" id="apply-cta">
         <div className="bleed-cta__media">
-          <img src="/images/hero-alt-bighouse-rain.jpg" alt="Rain falling on the lake at DreamGlade, with thatched malokas in the Amazon" />
+          <img src="/images/hero-alt-overview.jpg" alt="An overview of DreamGlade — thatched structures beside the lake, surrounded by Amazon rainforest" />
         </div>
         <div>
           <span className="bleed-cta__eyebrow">The first step is a conversation</span>
@@ -411,7 +422,7 @@ export default function Home() {
           <p className="bleed-cta__sub">
             Paul reads every inquiry. It takes about eight questions to get started — no medical history at this stage.
           </p>
-          <JotformCTA />
+          <TermsGateCTA />
           <p className="bleed-cta__note">
             After your application is reviewed, Paul will email you the full registration and signed agreement before your arrival date is confirmed.
           </p>

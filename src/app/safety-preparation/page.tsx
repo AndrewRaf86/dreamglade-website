@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
-import JotformCTA from "@/components/JotformCTA";
+import TermsGateCTA from "@/components/TermsGateCTA";
 
 export const metadata: Metadata = {
   title: "Safety & Preparation",
@@ -149,7 +149,7 @@ export default function SafetyPreparation() {
             </p>
           </div>
           <div className="center" style={{ marginTop: 40 }}>
-            <JotformCTA />
+            <TermsGateCTA />
           </div>
         </div>
       </section>

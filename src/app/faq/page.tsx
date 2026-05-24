@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
-import JotformCTA from "@/components/JotformCTA";
+import TermsGateCTA from "@/components/TermsGateCTA";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
@@ -310,7 +310,7 @@ export default function FAQ() {
             </p>
           </div>
           <div className="center" style={{ marginTop: 32 }}>
-            <JotformCTA />
+            <TermsGateCTA />
           </div>
         </div>
       </section>
