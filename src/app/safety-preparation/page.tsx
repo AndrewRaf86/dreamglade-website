@@ -5,12 +5,12 @@ import TermsGateCTA from "@/components/TermsGateCTA";
 export const metadata: Metadata = {
   title: "Safety & Preparation",
   description:
-    "Learn about ayahuasca safety, medication screening, preparation, and how DreamGlade reviews each guest before confirmation.",
+    "Learn about ayahuasca safety, medication screening, preparation, and how Dreamglade reviews each guest before confirmation.",
   alternates: { canonical: "https://dreamglade.com/safety-preparation" },
   openGraph: {
-    title: "Safety & Preparation — DreamGlade",
+    title: "Safety & Preparation — Dreamglade",
     description:
-      "How DreamGlade screens guests, reviews medications and contraindications, and prepares you safely for a Shipibo-led ayahuasca retreat near Iquitos, Peru.",
+      "How Dreamglade screens guests, reviews medications and contraindications, and prepares you safely for a Shipibo-led ayahuasca retreat near Iquitos, Peru.",
     url: "https://dreamglade.com/safety-preparation",
     images: [{ url: "/images/maloka-exterior.jpg" }],
   },
@@ -26,7 +26,7 @@ export default function SafetyPreparation() {
           <span className="page-hero__eyebrow">Safety, first and always</span>
           <h1>Safety and preparation <em>before your retreat.</em></h1>
           <p className="page-hero__sub">
-            A retreat is only as safe as the conversations that happen before it begins. Here is how DreamGlade approaches screening, contraindication review, the pre-retreat dieta, and what happens on the land.
+            A retreat is only as safe as the conversations that happen before it begins. Here is how Dreamglade approaches screening, contraindication review, the pre-retreat dieta, and what happens on the land.
           </p>
         </div>
       </section>
@@ -35,9 +35,9 @@ export default function SafetyPreparation() {
         <div className="container container--narrow">
           <div className="notice notice--medical">
             <span className="notice__label">Medical disclaimer</span>
-            <h3>DreamGlade is a retreat center, not a medical provider.</h3>
+            <h3>Dreamglade is a retreat center, not a medical provider.</h3>
             <p>
-              DreamGlade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, detox, or cures for any physical or mental health condition. Ayahuasca is not appropriate for everyone. Paul reviews every inquiry manually, but he is not a substitute for medical advice: any decision about your medications or a medical condition must come from Paul together with a qualified healthcare professional. Participants are responsible for consulting their own doctor before applying.
+              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, detox, or cures for any physical or mental health condition. Ayahuasca is not appropriate for everyone. Paul reviews every inquiry manually, but he is not a substitute for medical advice: any decision about your medications or a medical condition must come from Paul together with a qualified healthcare professional. Participants are responsible for consulting their own doctor before applying.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function SafetyPreparation() {
               </p>
             </div>
             <div className="two-col__media two-col__media--wide">
-              <img src="/images/jungle-flower.jpg" alt="A pink jungle flower at DreamGlade" />
+              <img src="/images/jungle-flower.jpg" alt="A pink jungle flower at Dreamglade" />
               <p className="two-col__caption">Bobinsana, in flower near the maloka</p>
             </div>
           </div>
@@ -79,10 +79,10 @@ export default function SafetyPreparation() {
             <h2 className="display">Medication and <em>health screening.</em></h2>
           </div>
           <div className="flow flow--lg" style={{ marginTop: 28 }}>
-            <p>Ayahuasca contains naturally occurring MAOIs — Monoamine Oxidase Inhibitors. MAOIs can interact dangerously with certain medications and substances. For this reason, DreamGlade requires every guest to complete a health and medication disclosure before being accepted.</p>
+            <p>Ayahuasca contains naturally occurring MAOIs — Monoamine Oxidase Inhibitors. MAOIs can interact dangerously with certain medications and substances. For this reason, Dreamglade requires every guest to complete a health and medication disclosure before being accepted.</p>
             <p>Some medication groups may make ayahuasca unsafe, including antidepressants and anxiety medications such as SSRIs and SNRIs, tricyclic antidepressants, MAOIs, stimulants, sedatives, certain prescription pain medications, heart and blood pressure medications, and blood thinners. Cough, cold, and allergy medications may also be relevant — some formulas contain active ingredients such as DXM or pseudoephedrine.</p>
             <p>This list is not exhaustive. Guests must disclose all current and recent medications, supplements, physical health history, mental health history, substance use, and relevant conditions. Paul reviews disclosures personally and may ask follow-up questions before confirming whether the next step is appropriate.</p>
-            <p>DreamGlade does not provide medical advice, diagnosis, treatment, therapy, detox, cures, or medical clearance. Do not stop, taper, or change any prescription medication without speaking with the healthcare professional who prescribed it. Ayahuasca is not appropriate for everyone.</p>
+            <p>Dreamglade does not provide medical advice, diagnosis, treatment, therapy, detox, cures, or medical clearance. Do not stop, taper, or change any prescription medication without speaking with the healthcare professional who prescribed it. Ayahuasca is not appropriate for everyone.</p>
           </div>
         </div>
       </section>
@@ -123,14 +123,14 @@ export default function SafetyPreparation() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img src="/images/maloka-exterior.jpg" alt="The ceremony maloka at DreamGlade, raised on stilts with a thatched roof" />
+              <img src="/images/maloka-exterior.jpg" alt="The ceremony maloka at Dreamglade, raised on stilts with a thatched roof" />
               <p className="two-col__caption">The maloka, where ceremony is held</p>
             </div>
             <div>
               <span className="eyebrow">On the land</span>
               <h2 className="display" style={{ marginTop: 16 }}>What we do, <em>on a ceremony night.</em></h2>
               <div className="flow flow--lg" style={{ marginTop: 28 }}>
-                <p>Quiet time begins at 6 PM. The maloka opens at 7 PM. Each ceremony runs five to six hours, with Maestra Dominga and Maestro Raul leading, and a small support team present throughout.</p>
+                <p>Quiet time begins at 6 PM. The maloka opens at 7 PM. Each ceremony runs five to six hours, with Maestra Dominga and Maestro Raúl leading, and a support team present throughout.</p>
                 <p>Each guest has their own mat, blanket, and bucket within arm&apos;s reach. The room is held with attention rather than theatrics — singing, silence, slow walking. We never run a ceremony beyond ten guests.</p>
                 <p>The morning after, we share a slow breakfast and a circle. Whatever came up the night before, you do not have to carry it alone.</p>
               </div>
@@ -145,7 +145,7 @@ export default function SafetyPreparation() {
             <span className="eyebrow eyebrow--center" style={{ justifySelf: "center" }}>When in doubt</span>
             <h2 className="display" style={{ color: "var(--cream)" }}>Ask Paul, <em>before you book.</em></h2>
             <p className="lede" style={{ color: "var(--cream)", marginTop: 16 }}>
-              Paul is our integration coach. He reads every inquiry and answers in writing — usually within a day. There is no automated screening, no funnel.
+              Paul reads every inquiry and answers in writing — usually within a day. There is no automated screening, no funnel.
             </p>
           </div>
           <div className="center" style={{ marginTop: 40 }}>

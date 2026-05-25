@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="site-footer__top">
           <div>
-            <p className="site-footer__brand"><img src="/images/logo.svg" alt="DreamGlade" /></p>
+            <p className="site-footer__brand"><img src="/images/logo.svg" alt="Dreamglade" /></p>
             <p className="site-footer__desc">
               A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 25 hectares of lakeside Amazon rainforest.
             </p>
@@ -16,7 +16,8 @@ export default function Footer() {
               Iquitos, Peru<br />
               <br />
               <strong>booking@dreamglade.com</strong><br />
-              +51 920 478 240
+              +51 920 478 240<br />
+              +51 924 866 141
             </p>
           </div>
           <div>
@@ -48,8 +49,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="site-footer__bottom">
-          <span>© 2026 DreamGlade. All rights reserved.</span>
-          <span>Stewarded by Wade Bucher &amp; Clarisa Gutierrez · Founded by Stace.</span>
+          <span>© 2026 Dreamglade. All rights reserved.</span>
+          <span>Managed by Wade Bucher &amp; Clarisa Gutierrez · Founded by Stacy Povey.</span>
         </div>
       </div>
     </footer>

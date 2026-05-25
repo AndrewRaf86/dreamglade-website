@@ -5,12 +5,12 @@ import Nav from "@/components/Nav";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
-    "DreamGlade Terms and Conditions. Public-readable terms for transparency. The final agreement is signed on the private Stage 2 registration form.",
+    "Dreamglade Terms and Conditions. Public-readable terms for transparency. The final agreement is signed on the private Stage 2 registration form.",
   alternates: { canonical: "https://dreamglade.com/terms-and-conditions" },
   openGraph: {
-    title: "Terms & Conditions — DreamGlade",
+    title: "Terms & Conditions — Dreamglade",
     description:
-      "DreamGlade's public-readable Terms and Conditions, published for transparency. The final binding agreement is signed during private Stage 2 registration.",
+      "Dreamglade's public-readable Terms and Conditions, published for transparency. The final binding agreement is signed during private Stage 2 registration.",
     url: "https://dreamglade.com/terms-and-conditions",
   },
 };
@@ -34,19 +34,19 @@ export default function TermsAndConditions() {
         <div className="container container--narrow">
           <div className="notice notice--medical" style={{ marginBottom: "clamp(48px, 5vw, 72px)" }}>
             <span className="notice__label">Medical disclaimer</span>
-            <h3>DreamGlade is a retreat center, not a medical provider.</h3>
+            <h3>Dreamglade is a retreat center, not a medical provider.</h3>
             <p>
-              DreamGlade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, or cures for any physical or mental health condition. Participants are responsible for consulting their healthcare providers regarding any medical concerns. Ayahuasca is not appropriate for everyone.
+              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, or cures for any physical or mental health condition. Participants are responsible for consulting their healthcare providers regarding any medical concerns. Ayahuasca is not appropriate for everyone.
             </p>
           </div>
 
           <div className="prose">
             <h2>1. About these terms</h2>
             <p>
-              These Terms and Conditions describe the relationship between DreamGlade and any person who applies to attend, or attends, a retreat at DreamGlade. They are published on this page for transparency. They do not constitute a signed agreement on their own.
+              These Terms and Conditions describe the relationship between Dreamglade and any person who applies to attend, or attends, a retreat at Dreamglade. They are published on this page for transparency. They do not constitute a signed agreement on their own.
             </p>
             <p>
-              The binding agreement is signed electronically during Stage 2 registration, which is sent by email to approved applicants only after Paul has reviewed and accepted the Stage 1 inquiry. A PDF copy of the signed agreement is provided to the applicant and retained by DreamGlade at <strong>booking@dreamglade.com</strong>.
+              The binding agreement is signed electronically during Stage 2 registration, which is sent by email to approved applicants only after Paul has reviewed and accepted the Stage 1 inquiry. A PDF copy of the signed agreement is provided to the applicant and retained by Dreamglade at <strong>booking@dreamglade.com</strong>.
             </p>
 
             <h2>2. Application and acceptance</h2>
@@ -59,15 +59,15 @@ export default function TermsAndConditions() {
               <li>the deposit has been received.</li>
             </ul>
             <p>
-              DreamGlade may decline an application at its discretion, including on safety, contraindication, or capacity grounds.
+              Dreamglade may decline an application at its discretion, including on safety, contraindication, or capacity grounds.
             </p>
 
             <h2>3. Pricing</h2>
             <p>
-              Prices for retreats at DreamGlade are listed in US dollars (USD) per person per day. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Current pricing is shown on the <Link href="/#pricing">pricing section</Link> of the home page and is confirmed in writing during Stage 2 registration.
+              Prices for retreats at Dreamglade are listed in US dollars (USD) per person per day. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Current pricing is shown on the <Link href="/#pricing">pricing section</Link> of the home page and is confirmed in writing during Stage 2 registration.
             </p>
             <p>
-              Prices include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, integration support, group transport from the designated city meeting point in Iquitos on arrival, and drop-off at Iquitos airport for departures after 3 PM on the last day. Prices do not include flights, airport pickup, travel insurance, visas, vaccinations, additional activities (such as Kambo), or personal expenses.
+              Prices include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, integration support, group transport from the designated city meeting point in Iquitos on arrival, and drop-off at Iquitos airport for departures after 3 PM on the last day. Prices do not include flights, airport pickup, travel insurance, visas, vaccinations, or personal expenses.
             </p>
 
             <h2>4. Deposit, payment, and cancellation</h2>
@@ -84,15 +84,15 @@ export default function TermsAndConditions() {
               Cancellations made <strong>within seven (7) days of the deposit being paid</strong> are eligible for a refund of the deposit less a 100 USD administrative fee.
             </p>
             <p>
-              The handling of cancellations made after this window, no-shows, early departures, and DreamGlade-initiated cancellations is set out in detail in the Stage 2 agreement. This page does not vary or replace that agreement.
+              The handling of cancellations made after this window, no-shows, early departures, and Dreamglade-initiated cancellations is set out in detail in the Stage 2 agreement. This page does not vary or replace that agreement.
             </p>
 
             <h2>5. Health, contraindications, and disclosure</h2>
             <p>
-              DreamGlade requires every guest to make a full, honest disclosure of their physical and mental health history, current medications, and any conditions that may bear on participation. This information is collected in the Stage 2 registration form and is treated as sensitive personal data.
+              Dreamglade requires every guest to make a full, honest disclosure of their physical and mental health history, current medications, and any conditions that may bear on participation. This information is collected in the Stage 2 registration form and is treated as sensitive personal data.
             </p>
             <p>
-              Ayahuasca interacts with many medications and conditions. DreamGlade may decline a guest&apos;s participation, at any stage, on safety grounds. A non-exhaustive list of conditions and medications that require careful consideration is published on the <Link href="/safety-preparation">Safety &amp; Preparation</Link> page.
+              Ayahuasca interacts with many medications and conditions. Dreamglade may decline a guest&apos;s participation, at any stage, on safety grounds. A non-exhaustive list of conditions and medications that require careful consideration is published on the <Link href="/safety-preparation">Safety &amp; Preparation</Link> page.
             </p>
             <p>
               Participants confirm that they have consulted, or will consult, their own healthcare provider before attending, and that they assume responsibility for any health decision they make in connection with the retreat.
@@ -100,7 +100,7 @@ export default function TermsAndConditions() {
 
             <h2>6. Conduct on the property</h2>
             <p>
-              DreamGlade is a small, shared retreat center. Guests are expected to behave in a way that respects:
+              Dreamglade is a small, shared retreat center. Guests are expected to behave in a way that respects:
             </p>
             <ul>
               <li>The healers, staff, and other guests.</li>
@@ -108,12 +108,12 @@ export default function TermsAndConditions() {
               <li>The Shipibo tradition under which ceremonies are held.</li>
             </ul>
             <p>
-              DreamGlade reserves the right to end a guest&apos;s stay, without refund, in cases of conduct that endangers the safety of others, disrupts the ceremony, or otherwise materially breaches the agreement. Detailed conduct provisions are set out in the Stage 2 agreement.
+              Dreamglade reserves the right to end a guest&apos;s stay, without refund, in cases of conduct that endangers the safety of others, disrupts the ceremony, or otherwise materially breaches the agreement. Detailed conduct provisions are set out in the Stage 2 agreement.
             </p>
 
             <h2>7. Photography, video, and privacy</h2>
             <p>
-              DreamGlade respects the privacy of every guest. Photographs or videos showing identifiable guests will not be used publicly without that guest&apos;s written permission, even if taken on the property.
+              Dreamglade respects the privacy of every guest. Photographs or videos showing identifiable guests will not be used publicly without that guest&apos;s written permission, even if taken on the property.
             </p>
             <p>
               Guests are asked, in turn, to respect the privacy of other guests and of the healers and staff — and to refrain from taking photographs or video of any other person without their consent, particularly during ceremony, integration circles, or any moment of personal vulnerability.
@@ -131,12 +131,12 @@ export default function TermsAndConditions() {
 
             <h2>10. Limitation of liability</h2>
             <p>
-              The limits of DreamGlade&apos;s liability are set out in detail in the Stage 2 agreement, subject to applicable law in Peru. Nothing on this page is intended to exclude any liability that cannot lawfully be excluded.
+              The limits of Dreamglade&apos;s liability are set out in detail in the Stage 2 agreement, subject to applicable law in Peru. Nothing on this page is intended to exclude any liability that cannot lawfully be excluded.
             </p>
 
             <h2>11. Changes to retreats and to these terms</h2>
             <p>
-              DreamGlade may, on rare occasions, need to change retreat dates, accommodation arrangements, or program details for reasons outside its reasonable control (including weather, illness, or other force majeure events). Where this happens, DreamGlade will communicate with affected guests as quickly as possible and work in good faith to find a fair resolution.
+              Dreamglade may, on rare occasions, need to change retreat dates, accommodation arrangements, or program details for reasons outside its reasonable control (including weather, illness, or other force majeure events). Where this happens, Dreamglade will communicate with affected guests as quickly as possible and work in good faith to find a fair resolution.
             </p>
             <p>
               These public terms may be updated from time to time. The version that governs your retreat is the version of the Stage 2 agreement you sign.

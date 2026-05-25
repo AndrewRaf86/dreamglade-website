@@ -7,12 +7,12 @@ import TermsGateCTA from "@/components/TermsGateCTA";
 import PricingSection from "@/components/PricingSection";
 
 export const metadata: Metadata = {
-  title: "Ayahuasca Retreat Near Iquitos, Peru | DreamGlade",
+  title: "Ayahuasca Retreat Near Iquitos, Peru | Dreamglade",
   description:
-    "DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — max 10 guests, Shipibo-led ceremonies, 25 hectares of Amazon rainforest.",
+    "Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — max 10 guests, Shipibo-led ceremonies, 25 hectares of Amazon rainforest.",
   alternates: { canonical: "https://dreamglade.com" },
   openGraph: {
-    title: "DreamGlade — Small-Group Ayahuasca Retreat Near Iquitos, Peru",
+    title: "Dreamglade — Small-Group Ayahuasca Retreat Near Iquitos, Peru",
     description:
       "A small-group, Shipibo-led ayahuasca retreat near Iquitos, Peru. Maximum 10 guests, 25 hectares of Amazon rainforest, every inquiry reviewed personally.",
     url: "https://dreamglade.com",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "DreamGlade",
+  name: "Dreamglade",
   description:
     "A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 25 hectares of Amazon rainforest.",
   url: "https://dreamglade.com",
@@ -55,7 +55,7 @@ export default function Home() {
         <div className="hero__media">
           <img
             src="/images/hero-alt-bighouse-rain.jpg"
-            alt="Rain falling on the lake at DreamGlade, with thatched malokas and palms in soft Amazon light"
+            alt="Rain falling on the lake at Dreamglade, with thatched malokas and palms in soft Amazon light"
           />
         </div>
         <div className="container hero__inner">
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div>
               <p className="hero__subtitle">
-                DreamGlade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest beside a still black-water lake.
+                Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest lakeside.
               </p>
               <div className="hero__actions">
                 <TermsGateCTA />
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="hero__meta-item">
               <dt className="hero__meta-label">Location</dt>
-              <dd className="hero__meta-value">15 km from Iquitos</dd>
+              <dd className="hero__meta-value">Under an hour from Iquitos</dd>
             </div>
             <div className="hero__meta-item">
               <dt className="hero__meta-label">Tradition</dt>
@@ -103,22 +103,22 @@ export default function Home() {
           <div className="two-col">
             <div className="two-col__media">
               <img
-                src="/images/people-clarisa-wade-ns.jpg"
-                alt="Clarisa Gutierrez and Wade Bucher, stewards of DreamGlade, photographed in Lima"
+                src="/images2/IMG-20240820-WA0003.jpg"
+                alt="Wade and Clarisa"
               />
-              <p className="two-col__caption">Clarisa Gutierrez &amp; Wade Bucher</p>
+              <p className="two-col__caption">Wade and Clarisa</p>
             </div>
             <div>
               <span className="eyebrow">The people who run it</span>
               <h2 className="display" style={{ marginTop: 16 }}>
-                Stewarded by <em>Wade and Clarisa.</em>
+                <em>Wade and Clarisa</em>
               </h2>
               <div className="flow flow--lg" style={{ marginTop: 28, maxWidth: 560 }}>
                 <p className="lede">
-                  DreamGlade was founded by Stace and later came under the care of Wade Bucher and Clarisa Gutierrez.
+                  Dreamglade was founded by Stacy Povey and later came under the care of Wade Bucher and Clarisa Gutierrez.
                 </p>
                 <p>
-                  Today, Wade and Clarisa own and manage the center as a small, grounded retreat on 25 hectares of Amazon rainforest near Iquitos. The feeling is personal, human, and real.
+                  Today, Wade and Clarisa own and manage Dreamglade as a small, grounded retreat on 25 hectares of Amazon rainforest near Iquitos. The feeling is personal, human, and real.
                 </p>
                 <p>
                   This is not a corporate retreat brand or a high-volume booking machine. It is a small place where the people who run it are directly responsible for the guest experience, the land, the team, and the integrity of the work.
@@ -131,7 +131,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">02</span>
-                  <span className="facts__text"><strong>Near Maralillos,</strong> about 15 km outside Iquitos.</span>
+                  <span className="facts__text"><strong>Near Maralillos,</strong> under an hour's drive from Iquitos.</span>
                 </li>
                 <li>
                   <span className="facts__num">03</span>
@@ -139,11 +139,11 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">04</span>
-                  <span className="facts__text"><strong>Shipibo-led ceremonies</strong> with Maestra Dominga and Maestro Raul.</span>
+                  <span className="facts__text"><strong>Shipibo-led ceremonies</strong> with Maestra Dominga and Maestro Raúl.</span>
                 </li>
                 <li>
                   <span className="facts__num">05</span>
-                  <span className="facts__text"><strong>Paul, our integration coach,</strong> reviews every application personally.</span>
+                  <span className="facts__text"><strong>Paul</strong> reviews every application personally.</span>
                 </li>
               </ol>
             </div>
@@ -167,7 +167,7 @@ export default function Home() {
             <article className="col-item">
               <span className="col-item__num">01 / Screening</span>
               <h3>A real conversation, not a checkbox</h3>
-              <p>Every inquiry is read by Paul, our integration coach. If something on your health history needs a closer look, we will tell you — gently and clearly — before a deposit is ever discussed.</p>
+              <p>Every inquiry is read by Paul personally. If something on your health history needs a closer look, we will tell you — gently and clearly — before a deposit is ever discussed.</p>
             </article>
             <article className="col-item">
               <span className="col-item__num">02 / Preparation</span>
@@ -177,7 +177,7 @@ export default function Home() {
             <article className="col-item">
               <span className="col-item__num">03 / In ceremony</span>
               <h3>Shipibo-led, never alone</h3>
-              <p>Maestra Dominga and Maestro Raul lead every ceremony with a small support team. The room is held with attention, not theatrics, and never beyond a small group.</p>
+              <p>Maestra Dominga and Maestro Raúl lead every ceremony with a support team. The room is held with attention, not theatrics, and never beyond a small group.</p>
             </article>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
@@ -207,7 +207,7 @@ export default function Home() {
             <div className="healer-pair__photos">
               <div className="healer-pair__photo">
                 <figure className="healer-pair__portrait">
-                  <img src="/images/dominga2.jpg" alt="Maestra Dominga at DreamGlade" />
+                  <img src="/images/dominga2.jpg" alt="Maestra Dominga at Dreamglade" />
                 </figure>
                 <div>
                   <p className="healer-pair__name">Maestra <em>Dominga</em></p>
@@ -216,7 +216,7 @@ export default function Home() {
               </div>
               <div className="healer-pair__photo">
                 <figure className="healer-pair__portrait">
-                  <img src="/images/raul-old-website-photo.jpg" alt="Maestro Raúl at DreamGlade" />
+                  <img src="/images/raul-old-website-photo.jpg" alt="Maestro Raúl at Dreamglade" />
                 </figure>
                 <div>
                   <p className="healer-pair__name">Maestro <em>Raúl</em></p>
@@ -227,13 +227,11 @@ export default function Home() {
           </div>
           <div className="team-aside">
             <figure className="team-aside__portrait">
-              <img src="/images/people-paul.png" alt="Paul, integration coach at DreamGlade" />
+              <img src="/images/people-paul.png" alt="Paul" />
             </figure>
             <div>
-              <span className="eyebrow">Integration support</span>
-              <h3 style={{ marginTop: 12 }}><em>Paul,</em> integration coach.</h3>
               <p>
-                Paul personally reviews every application — usually within 24 hours. He supports each guest through the full arc: before arrival, between ceremonies on the land, and for weeks after the retreat ends. Integration is where insight becomes lasting change. That is the work he holds.
+                Paul, he reviews every application personally and helps guests understand whether Dreamglade is the right fit before anything is confirmed. He supports the inquiry and preparation process with clear communication, practical guidance, and integration support after the retreat.
               </p>
             </div>
           </div>
@@ -249,22 +247,22 @@ export default function Home() {
           </div>
           <div className="grid-3">
             <article className="col-item">
-              <img src="/images/maloka-exterior.jpg" alt="The maloka ceremony house at DreamGlade, raised on stilts beside the lake" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <img src="/images/maloka-exterior.jpg" alt="The maloka ceremony house at Dreamglade, raised on stilts beside the lake" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">01 / Ceremony nights</span>
               <h3>Monday, Wednesday, Friday</h3>
               <p>Quiet time at 6 PM. Ceremony begins at 7 PM and runs five to six hours, in the maloka, with the healers and the support team present throughout.</p>
             </article>
             <article className="col-item">
-              <img src="/images/trampoline-pillows.jpg" alt="A canopied trampoline-deck with pillows looking out across the lake at DreamGlade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <img src="/images/trampoline-pillows.jpg" alt="A canopied trampoline-deck with pillows looking out across the lake at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">02 / Off-days</span>
               <h3>Quiet time to process</h3>
               <p>Off-days are where the work settles — sauna, plant baths, yoga, and long unhurried hours by the lake with a book or a journal. No phones, no signal. Most guests find the quiet to be the most unexpected gift of the week.</p>
             </article>
             <article className="col-item">
-              <img src="/images/lake-overview.jpg" alt="Aerial view of the lake and thatched structures at DreamGlade, surrounded by Amazon rainforest" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <img src="/images/lake-overview.jpg" alt="Aerial view of the lake and thatched structures at Dreamglade, surrounded by Amazon rainforest" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">03 / The land</span>
-              <h3>Lake, jungle, Mapacho</h3>
-              <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal house, Mapacho, where meals and conversation happen.</p>
+              <h3>Lake, jungle, communal big house</h3>
+              <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal big house where meals and conversation happen.</p>
             </article>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
@@ -277,18 +275,18 @@ export default function Home() {
       <section className="section section--cream-warm" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="gallery-strip">
-            <figure><img src="/images/food.jpg" alt="Simple dieta meal at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/corredor-william.jpg" alt="Lake and tambos at DreamGlade, seen from the covered bridge" loading="lazy" /></figure>
-            <figure><img src="/images/deck-rockingchairs.jpg" alt="Rocking chairs on the deck at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/bobinsana-flower.jpg" alt="Bobinsana flower at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/jungle-flower2.jpg" alt="Tropical flower in the Amazon forest at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/bighouse-sunlight.jpg" alt="Main house at DreamGlade in afternoon light" loading="lazy" /></figure>
-            <figure><img src="/images/antoherlake-tambo3.jpg" alt="Lake and tambos at DreamGlade near Iquitos" loading="lazy" /></figure>
-            <figure><img src="/images/manta-hallway.jpg" alt="Hallway with Shipibo manta at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/tambo7-bed.jpg" alt="Tambo bedroom at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/lakeview-tambo4.jpg" alt="Tambos and lake at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/jungle-jeff.jpg" alt="Sunlight through the Amazon forest at DreamGlade" loading="lazy" /></figure>
-            <figure><img src="/images/tambo5-lakeview.jpg" alt="Private tambo at DreamGlade" loading="lazy" /></figure>
+            <figure><img src="/images/food.jpg" alt="Simple dieta meal at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/corredor-william.jpg" alt="Lake and tambos at Dreamglade, seen from the covered bridge" loading="lazy" /></figure>
+            <figure><img src="/images/deck-rockingchairs.jpg" alt="Rocking chairs on the deck at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/bobinsana-flower.jpg" alt="Bobinsana flower at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/jungle-flower2.jpg" alt="Tropical flower in the Amazon forest at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/bighouse-sunlight.jpg" alt="Main house at Dreamglade in afternoon light" loading="lazy" /></figure>
+            <figure><img src="/images/antoherlake-tambo3.jpg" alt="Lake and tambos at Dreamglade near Iquitos" loading="lazy" /></figure>
+            <figure><img src="/images/manta-hallway.jpg" alt="Hallway with Shipibo manta at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/tambo7-bed.jpg" alt="Tambo bedroom at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/lakeview-tambo4.jpg" alt="Tambos and lake at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/jungle-jeff.jpg" alt="Sunlight through the Amazon forest at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images/tambo5-lakeview.jpg" alt="Private tambo at Dreamglade" loading="lazy" /></figure>
           </div>
           <p className="gallery-strip__caption">Daily life on the land</p>
         </div>
@@ -357,15 +355,15 @@ export default function Home() {
           </div>
           <div className="review-grid">
             {[
-              { name: "Cody", time: "a week ago", excerpt: "The DreamGlade team made my whole experience feel so special. There wasn't a single moment where I felt uncomfortable, judged, or not supported." },
-              { name: "Roberto Carneiro", time: "a month ago", excerpt: "I felt at home at DreamGlade. Wade, Clarissa, and the whole team made me feel safe throughout my stay. The small group size makes a big difference." },
+              { name: "Cody", time: "a week ago", excerpt: "The Dreamglade team made my whole experience feel so special. There wasn't a single moment where I felt uncomfortable, judged, or not supported." },
+              { name: "Roberto Carneiro", time: "a month ago", excerpt: "I felt at home at Dreamglade. Wade, Clarissa, and the whole team made me feel safe throughout my stay. The small group size makes a big difference." },
               { name: "Chocolate Chick", time: "2 months ago", excerpt: "The staff genuinely care, right from intake with Paul to after and beyond. They are very serious about ayahuasca and each person's experience." },
               { name: "Kelley Bubnic", time: "4 months ago", excerpt: "As a solo female traveller, I felt so comfortable, safe, and surrounded by the best team to guide me through this experience." },
               { name: "Kai Jones", time: "6 months ago", excerpt: "One of the most difficult parts was choosing the right centre. From the first enquiry, Paul was in contact by email and helped me feel prepared." },
               { name: "T G", time: "a year ago", excerpt: "Paul helped me through the administrative process and what to expect. His emails were thoughtful and put me at ease." },
               { name: "Paul Clarke", time: "a year ago", excerpt: "From dealing with Paul during the booking process, to getting picked up in Iquitos and settling in, I felt welcome and comfortable." },
               { name: "Gregor Cox", time: "a year ago", excerpt: "The accommodation was clean, spacious, and free of mosquitos. The food was tasty, healthy, and plentiful. The price is more affordable compared to many other retreats." },
-              { name: "Brian Y", time: "a year ago", excerpt: "DreamGlade is not a glamorous retreat. What you get is time to work with the medicine and yourself, with caring facilitators and a quiet jungle setting." },
+              { name: "Brian Y", time: "a year ago", excerpt: "Dreamglade is not a glamorous retreat. What you get is time to work with the medicine and yourself, with caring facilitators and a quiet jungle setting." },
             ].map(({ name, time, excerpt }, i) => (
               <article key={i} className="review-card" aria-label={`Google review from ${name}`}>
                 <span style={{ color: "#E6A700", fontSize: "16px", letterSpacing: "0.08em" }} aria-label="5 out of 5 stars">★★★★★</span>
@@ -389,8 +387,8 @@ export default function Home() {
             <h2 className="display" style={{ color: "var(--cream)" }}>Before you <em>ask.</em></h2>
           </div>
           <div className="faq-list" role="list">
-            <FAQItem question="Is DreamGlade right for me?">
-              <p>DreamGlade is a small-group retreat — a maximum of ten guests at a time. It tends to suit people who want a quiet, grounded setting, who are willing to do real preparation before they arrive, and who are open to a traditional Shipibo-led ceremony rather than a Western program. Ayahuasca is not appropriate for everyone. Paul reviews every application personally to talk this through with you.</p>
+            <FAQItem question="Is Dreamglade right for me?">
+              <p>Dreamglade is a small-group retreat — a maximum of ten guests at a time. It tends to suit people who want a quiet, grounded setting, who are willing to do real preparation before they arrive, and who are open to a traditional Shipibo-led ceremony rather than a Western program. Ayahuasca is not appropriate for everyone. Paul reviews every application personally to talk this through with you.</p>
             </FAQItem>
             <FAQItem question="How long is a retreat, and how many ceremonies?">
               <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights, starting at 7 PM and running for five to six hours, with quiet time beginning at 6 PM.</p>
@@ -399,10 +397,10 @@ export default function Home() {
               <p>Prices are listed in USD per person per day, the same daily rate for the whole stay. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Both shared and single tambos include accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
             </FAQItem>
             <FAQItem question="How do I apply?">
-              <p>The first step is a short inquiry — about eight questions, no medical history. Paul, our integration coach, reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
+              <p>The first step is a short inquiry — about eight questions, no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
             </FAQItem>
-            <FAQItem question="Where exactly is DreamGlade?">
-              <p>DreamGlade is near Maralillos, about 15 km outside Iquitos in the Peruvian Amazon. The property is 25 hectares of lakeside rainforest. Guest rooms have no electricity or Wi-Fi by design; the property runs on 100% solar power.</p>
+            <FAQItem question="Where exactly is Dreamglade?">
+              <p>Dreamglade is near Maralillos, under an hour's drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside. Guest rooms have no electricity or Wi-Fi by design; the property runs on 100% solar power.</p>
             </FAQItem>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
@@ -414,11 +412,11 @@ export default function Home() {
       {/* ── 10. APPLY CTA ── */}
       <section className="bleed-cta" id="apply-cta">
         <div className="bleed-cta__media">
-          <img src="/images/hero-alt-overview.jpg" alt="An overview of DreamGlade — thatched structures beside the lake, surrounded by Amazon rainforest" />
+          <img src="/images/hero-alt-overview.jpg" alt="An overview of Dreamglade — thatched structures beside the lake, surrounded by Amazon rainforest" />
         </div>
         <div>
           <span className="bleed-cta__eyebrow">The first step is a conversation</span>
-          <h2 className="bleed-cta__title">Begin your <em>DreamGlade</em> application.</h2>
+          <h2 className="bleed-cta__title">Begin your <em>Dreamglade</em> application.</h2>
           <p className="bleed-cta__sub">
             Paul reads every inquiry. It takes about eight questions to get started — no medical history at this stage.
           </p>

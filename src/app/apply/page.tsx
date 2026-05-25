@@ -5,12 +5,12 @@ import TermsGateCTA from "@/components/TermsGateCTA";
 export const metadata: Metadata = {
   title: "Begin Your Inquiry",
   description:
-    "Begin your DreamGlade inquiry. Paul, our integration coach, reviews every application personally. This is the first step in a conversation.",
+    "Begin your Dreamglade inquiry. Paul reviews every application personally. This is the first step in a conversation.",
   alternates: { canonical: "https://dreamglade.com/apply" },
   openGraph: {
-    title: "Begin Your Inquiry — DreamGlade",
+    title: "Begin Your Inquiry — Dreamglade",
     description:
-      "Start your DreamGlade inquiry. A short first-stage application, read personally by Paul, our integration coach. Safety-first screening before any deposit.",
+      "Start your Dreamglade inquiry. A short first-stage application, read personally by Paul. Safety-first screening before any deposit.",
     url: "https://dreamglade.com/apply",
     images: [{ url: "/images/lake-overview.jpg" }],
   },
@@ -26,7 +26,7 @@ export default function Apply() {
           <span className="page-hero__eyebrow">Stage 1 — inquiry</span>
           <h1>Begin your <em>inquiry.</em></h1>
           <p className="page-hero__sub">
-            Paul, our integration coach, reviews every application personally. This is the first step in a conversation.
+            Paul reviews every application personally. This is the first step in a conversation.
           </p>
           <div style={{ marginTop: 16 }}>
             <TermsGateCTA />
@@ -89,8 +89,8 @@ export default function Apply() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img src="/images/lake-from-bighouse.jpg" alt="The still lake at DreamGlade seen from the communal house" />
-              <p className="two-col__caption">From the porch at Mapacho</p>
+              <img src="/images/lake-from-bighouse.jpg" alt="The still lake at Dreamglade seen from the communal big house" />
+              <p className="two-col__caption">From the porch of the communal big house</p>
             </div>
             <div>
               <span className="eyebrow">What we&apos;ll ask</span>
