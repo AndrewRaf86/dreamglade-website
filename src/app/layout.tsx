@@ -27,8 +27,8 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "DreamGlade — Small-Group Ayahuasca Retreat near Iquitos, Peru",
-    template: "%s — DreamGlade",
+    default: "Dreamglade — Small-Group Ayahuasca Retreat near Iquitos, Peru",
+    template: "%s — Dreamglade",
   },
   description:
     "A grounded ayahuasca retreat in the Peruvian Amazon. Shipibo-led ceremonies, maximum 10 guests, on 25 hectares of rainforest near Iquitos.",
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     "safe ayahuasca retreat",
     "Shipibo ayahuasca retreat",
     "ayahuasca retreat Peru jungle",
-    "DreamGlade",
+    "Dreamglade",
   ],
   metadataBase: new URL("https://dreamglade.com"),
   openGraph: {
     type: "website",
-    siteName: "DreamGlade",
+    siteName: "Dreamglade",
     locale: "en_US",
     images: [{ url: "/images/lake-overview.jpg" }],
   },

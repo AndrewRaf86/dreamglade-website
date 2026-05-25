@@ -46,7 +46,7 @@ export default function TermsGateCTA({ label = "Begin Your Application" }: { lab
               Please review the Terms &amp; Conditions
             </h2>
             <p className="terms-gate-body">
-              DreamGlade is a traditional ayahuasca retreat with important health, safety, preparation, payment, cancellation, and participation terms. Please review these before starting your inquiry.
+              Dreamglade is a traditional ayahuasca retreat with important health, safety, preparation, payment, cancellation, and participation terms. Please review these before starting your inquiry.
             </p>
             <a
               href="/terms-and-conditions"

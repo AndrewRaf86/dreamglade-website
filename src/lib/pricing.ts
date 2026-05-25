@@ -1,14 +1,15 @@
-// Official prices confirmed by Paul — quoted in USD per person per day.
+// Official prices confirmed — quoted in USD per person per day.
 // PEN equivalent is calculated at the live exchange rate and is approximate.
 export const USD_PRICES = {
-  shared: 200,
+  communal: 200,
+  twoPersonTambo: 210,
   single: 220,
 } as const;
 
 export type PricingData = {
   usd: typeof USD_PRICES;
   penRate: number | null;
-  pen: { shared: number | null; single: number | null };
+  pen: { communal: number | null; twoPersonTambo: number | null; single: number | null };
 };
 
 export async function getPricing(): Promise<PricingData> {
@@ -17,7 +18,8 @@ export async function getPricing(): Promise<PricingData> {
     usd: USD_PRICES,
     penRate,
     pen: {
-      shared: penRate ? Math.round(USD_PRICES.shared * penRate) : null,
+      communal: penRate ? Math.round(USD_PRICES.communal * penRate) : null,
+      twoPersonTambo: penRate ? Math.round(USD_PRICES.twoPersonTambo * penRate) : null,
       single: penRate ? Math.round(USD_PRICES.single * penRate) : null,
     },
   };
