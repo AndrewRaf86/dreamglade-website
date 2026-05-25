@@ -89,7 +89,7 @@ export default async function PricingSection() {
               </p>
             )}
             <p style={{ color: "var(--muted)", fontSize: 14, margin: "0 0 20px" }}>
-              A private thatched cabin to yourself, with a private compost toilet. Most have lake or jungle views; all are quiet and solar-powered.
+              A private thatched cabin to yourself, with a private compost toilet. Most have lake or jungle views — quiet, simple, and private.
             </p>
             <ul className="pricing-card__features">
               <li>All meals, ceremonies, plant dieta, yoga, breathwork, sauna</li>

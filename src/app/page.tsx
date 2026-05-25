@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div>
               <p className="hero__subtitle">
-                Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest lakeside.
+                Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest surrounding our man-made lake.
               </p>
               <div className="hero__actions">
                 <TermsGateCTA />
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="hero__meta-item">
               <dt className="hero__meta-label">Location</dt>
-              <dd className="hero__meta-value">Under an hour from Iquitos</dd>
+              <dd className="hero__meta-value">Short drive from Iquitos</dd>
             </div>
             <div className="hero__meta-item">
               <dt className="hero__meta-label">Tradition</dt>
@@ -225,13 +225,35 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* Image strip between healers and Paul */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(12px, 2vw, 24px)", margin: "clamp(40px, 5vw, 64px) 0" }}>
+            <figure style={{ margin: 0 }}>
+              <img
+                src="/images2/PLANTBATHGUEST5.jpg"
+                alt="Plant bath at Dreamglade"
+                loading="lazy"
+                style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
+              />
+            </figure>
+            <figure style={{ margin: 0 }}>
+              <img
+                src="/images2/HUG4.jpg"
+                alt="Ceremonial support at Dreamglade"
+                loading="lazy"
+                style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
+              />
+            </figure>
+          </div>
+
           <div className="team-aside">
             <figure className="team-aside__portrait">
               <img src="/images/people-paul.png" alt="Paul" />
             </figure>
             <div>
+              <h3><em>Paul</em></h3>
+              <p className="healer-pair__role">Integration support</p>
               <p>
-                Paul, he reviews every application personally and helps guests understand whether Dreamglade is the right fit before anything is confirmed. He supports the inquiry and preparation process with clear communication, practical guidance, and integration support after the retreat.
+                He reviews every application personally and helps guests understand whether Dreamglade is the right fit before anything is confirmed. He supports the inquiry and preparation process with clear communication, practical guidance, and integration support after the retreat.
               </p>
             </div>
           </div>
@@ -275,18 +297,18 @@ export default function Home() {
       <section className="section section--cream-warm" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="gallery-strip">
-            <figure><img src="/images/food.jpg" alt="Simple dieta meal at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/corredor-william.jpg" alt="Lake and tambos at Dreamglade, seen from the covered bridge" loading="lazy" /></figure>
-            <figure><img src="/images/deck-rockingchairs.jpg" alt="Rocking chairs on the deck at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/bobinsana-flower.jpg" alt="Bobinsana flower at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/jungle-flower2.jpg" alt="Tropical flower in the Amazon forest at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/bighouse-sunlight.jpg" alt="Main house at Dreamglade in afternoon light" loading="lazy" /></figure>
-            <figure><img src="/images/antoherlake-tambo3.jpg" alt="Lake and tambos at Dreamglade near Iquitos" loading="lazy" /></figure>
-            <figure><img src="/images/manta-hallway.jpg" alt="Hallway with Shipibo manta at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/tambo7-bed.jpg" alt="Tambo bedroom at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/lakeview-tambo4.jpg" alt="Tambos and lake at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/jungle-jeff.jpg" alt="Sunlight through the Amazon forest at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images/tambo5-lakeview.jpg" alt="Private tambo at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/BIGHOUSE-KENTA.jpg" alt="Communal big house at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/DECK-MALOKA-REMI.jpg" alt="Deck near the maloka at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/IMG-20240708-WA0018.jpg" alt="Simple dieta meal at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/DOGS%20-%20Puente.jpg" alt="Dogs on the bridge at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/IMG-20240326-WA0011.jpg" alt="Retreat grounds at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/LAKE%20-%20TAMBO3.jpg" alt="Lake and tambo at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/MALOKABEDS.jpg" alt="Maloka beds at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/PAINT-TAMBOS-JESSICA.jpg" alt="Painted tambos at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/CORREDOR-WILLIAM.jpg" alt="Open-air corridor at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/IMG-20240708-WA0016.jpg" alt="Dreamglade grounds" loading="lazy" /></figure>
+            <figure><img src="/images2/TAMBO%205%20_%20CAT.jpg" alt="Cat near a tambo at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/LAKE3-IVETA.jpg" alt="Lake at Dreamglade" loading="lazy" /></figure>
           </div>
           <p className="gallery-strip__caption">Daily life on the land</p>
         </div>
