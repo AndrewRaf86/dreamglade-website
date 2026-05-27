@@ -770,19 +770,10 @@ p + p { margin-top: 0.6em; }
   font-family: var(--font-display);
   font-size: 17px;
   line-height: 1.65;
-  color: var(--ink);
+  color: var(--body);
+  font-weight: 400;
   flex: 1;
   position: relative;
-  padding-top: 12px;
-}
-.review-card__quote::before {
-  content: "\201C";
-  font-size: 56px;
-  font-family: var(--font-display);
-  color: var(--gold);
-  line-height: 0.4;
-  display: block;
-  margin-bottom: 12px;
 }
 .review-card__meta {
   border-top: 1px solid var(--rule);
