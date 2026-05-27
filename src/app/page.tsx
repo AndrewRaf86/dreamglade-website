@@ -398,7 +398,7 @@ export default function Home() {
             ].map(({ name, time, excerpt }, i) => (
               <article key={i} className="review-card" aria-label={`Google review from ${name}`}>
                 <span style={{ color: "#E6A700", fontSize: "16px", letterSpacing: "0.08em" }} aria-label="5 out of 5 stars">★★★★★</span>
-                <p className="review-card__quote">{excerpt}</p>
+                <p className="review-card__quote">&ldquo;{excerpt}&rdquo;</p>
                 <div className="review-card__meta">
                   <span>{name}</span>
                   <span>{time}</span>
