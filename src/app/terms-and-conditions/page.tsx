@@ -67,7 +67,7 @@ export default function TermsAndConditions() {
               Prices for retreats at Dreamglade are listed in US dollars (USD) per person per day. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Current pricing is shown on the <Link href="/#pricing">pricing section</Link> of the home page and is confirmed in writing during Stage 2 registration.
             </p>
             <p>
-              Prices include accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, integration support, group transport from the designated city meeting point in Iquitos on arrival, and drop-off at Iquitos airport for departures after 3 PM on the last day. Prices do not include flights, airport pickup, travel insurance, visas, vaccinations, or personal expenses.
+              Prices include accommodation, meals, ceremonies, plant dieta, breathwork, sauna, integration support, group transport from the designated city meeting point in Iquitos on arrival, and drop-off at Iquitos airport for departures after 3 PM on the last day. Prices do not include flights, airport pickup, travel insurance, visas, vaccinations, or personal expenses.
             </p>
 
             <h2>4. Deposit, payment, and cancellation</h2>

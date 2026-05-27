@@ -45,7 +45,7 @@ export default function WhatToExpect() {
                 <p><strong>You make your own way to Iquitos, and we take it from there.</strong> We meet you at a designated city meeting point in Iquitos on the first day of your retreat — once your application is confirmed — and bring you the rest of the way by 4x4, past Maralillos, down the road toward Nauta, under an hour from the city. We aim to arrive at the property around 1 PM. Transport on arrival day is included.</p>
                 <p>The afternoon is for settling in — you will see your tambo, meet the team, and find your bearings. A ceremony is held on the first night of your retreat, so the timing of the day is built around it: a light early meal, quiet time from 6 PM, ceremony at 7.</p>
                 <p><strong>We recommend arriving in Iquitos one or two nights before your retreat.</strong> It gives you time to rest after travel and avoids the risk of a delayed flight pushing you past the 1 PM transfer. A night or two in Iquitos afterward is also worth considering.</p>
-                <p><strong>Airport pickup is not included.</strong> Helpful travel tip: make sure to have soles cash with you for motor taxis, which usually cost about 40–70 soles from the airport to hotels in Iquitos. <strong>Drop-off at Iquitos airport is included</strong> for departures after 3 PM on the last day.</p>
+                <p><strong>Airport pickup is not included.</strong> Uber is available in Iquitos, but it is smart to bring cash in soles in case Uber is not working or a driver asks for cash. Motor taxis from the airport to hotels in Iquitos usually cost about 40–70 soles. <strong>Drop-off at Iquitos airport is included</strong> for departures after 3 PM on the last day.</p>
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function WhatToExpect() {
               <div className="flow flow--lg" style={{ marginTop: 28 }}>
                 <p>Off-days are not empty. They are the most important days of the retreat.</p>
                 <p>The hours after ceremony — and the day in between — are where the work settles. Most guests read, write in a journal, talk slowly over coffee at the communal big house, or sit by the lake. Long, unstructured stretches give whatever came up in the night somewhere to go.</p>
-                <p>Mornings hold plant baths, sauna and sweat lodge, yoga and breathwork — gentle ways to come back into the body. Plant dietas are available for guests who want a deeper, longer commitment to a single teacher plant.</p>
+                <p>Mornings hold plant baths, sauna, and breathwork — gentle ways to come back into the body. Plant dietas are available for guests who want a deeper, longer commitment to a single teacher plant.</p>
                 <p>There is no electricity or Wi-Fi anywhere on the property — by design. The first day without a screen can feel strange. By the second day, most guests stop reaching for one. Many tell us afterward that the quiet was the most unexpected, refreshing part of the whole week — and that the chance to genuinely step away from everything is half the reason to come.</p>
                 <p>If you want company, the communal big house is always open and there is usually someone there. If you do not, no one will come looking.</p>
               </div>

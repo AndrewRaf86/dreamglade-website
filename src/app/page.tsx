@@ -9,12 +9,12 @@ import PricingSection from "@/components/PricingSection";
 export const metadata: Metadata = {
   title: "Ayahuasca Retreat Near Iquitos, Peru | Dreamglade",
   description:
-    "Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — max 10 guests, Shipibo-led ceremonies, 25 hectares of Amazon rainforest.",
+    "Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — max 10 guests, traditional Shipibo-led ceremonies, 25 hectares of Amazon rainforest.",
   alternates: { canonical: "https://dreamglade.com" },
   openGraph: {
     title: "Dreamglade — Small-Group Ayahuasca Retreat Near Iquitos, Peru",
     description:
-      "A small-group, Shipibo-led ayahuasca retreat near Iquitos, Peru. Maximum 10 guests, 25 hectares of Amazon rainforest, every inquiry reviewed personally.",
+      "A small-group, traditional Shipibo-led ayahuasca retreat near Iquitos, Peru. Maximum 10 guests, 25 hectares of Amazon rainforest, every inquiry reviewed personally.",
     url: "https://dreamglade.com",
     images: [{ url: "/images/lake-overview.jpg" }],
   },
@@ -25,7 +25,7 @@ const orgJsonLd = {
   "@type": "Organization",
   name: "Dreamglade",
   description:
-    "A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 25 hectares of Amazon rainforest.",
+    "A small-group ayahuasca retreat near Iquitos, Peru. Traditional Shipibo-led ceremonies on 25 hectares of Amazon rainforest.",
   url: "https://dreamglade.com",
   logo: "https://dreamglade.com/images/logo-original.jpeg",
   email: "booking@dreamglade.com",
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div>
               <p className="hero__subtitle">
-                Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, Shipibo-led ceremonies, 25 hectares of rainforest surrounding our man-made lake.
+                Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, traditional Shipibo-led ceremonies, 25 hectares of rainforest surrounding our man-made lake.
               </p>
               <div className="hero__actions">
                 <TermsGateCTA />
@@ -139,7 +139,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">04</span>
-                  <span className="facts__text"><strong>Shipibo-led ceremonies</strong> with Maestra Dominga and Maestro Raúl.</span>
+                  <span className="facts__text"><strong>Traditional Shipibo-led ceremonies</strong> with Maestra Dominga and Maestro Raúl.</span>
                 </li>
                 <li>
                   <span className="facts__num">05</span>
@@ -176,7 +176,7 @@ export default function Home() {
             </article>
             <article className="col-item">
               <span className="col-item__num">03 / In ceremony</span>
-              <h3>Shipibo-led, never alone</h3>
+              <h3>Traditional Shipibo-led, never alone</h3>
               <p>Maestra Dominga and Maestro Raúl lead every ceremony with a support team. The room is held with attention, not theatrics, and never beyond a small group.</p>
             </article>
           </div>
@@ -194,7 +194,7 @@ export default function Home() {
           <div className="healer-pair">
             {/* Text — appears first in DOM so mobile shows heading before photos */}
             <div className="healer-pair__text">
-              <span className="eyebrow">Shipibo ceremonial lineage</span>
+              <span className="eyebrow">Traditional Shipibo ceremonial lineage</span>
               <h2 className="display">Maestra Dominga <em>&amp; Maestro Raúl</em></h2>
               <p className="healer-pair__bio">
                 Maestra Dominga and Maestro Raúl are a married Shipibo ceremonial couple who have shared more than 40 years of life, family, and service to their community. They come from Vista Alegre, a small village upriver from Pucallpa, and both were raised in families where plant medicine, ceremonial song, and spiritual healing traditions were passed down through parents and grandparents. Their work carries the balance of their shared path: Dominga brings softness, grounding, and feminine strength, while Raúl brings steadiness, protection, and ceremonial depth. Through their icaros and limpiezas, they help hold a careful ceremonial space rooted in lineage, humility, and respect for the traditions that came before them.
@@ -278,7 +278,7 @@ export default function Home() {
               <img src="/images/trampoline-pillows.jpg" alt="A canopied trampoline-deck with pillows looking out across the lake at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">02 / Off-days</span>
               <h3>Quiet time to process</h3>
-              <p>Off-days are where the work settles — sauna, plant baths, yoga, and long unhurried hours by the lake with a book or a journal. No phones, no signal. Most guests find the quiet to be the most unexpected gift of the week.</p>
+              <p>Off-days are where the work settles — sauna, plant baths, and long unhurried hours by the lake with a book or a journal. No phones, no signal. Most guests find the quiet to be the most unexpected gift of the week.</p>
             </article>
             <article className="col-item">
               <img src="/images/lake-overview.jpg" alt="Aerial view of the lake and thatched structures at Dreamglade, surrounded by Amazon rainforest" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
@@ -324,7 +324,7 @@ export default function Home() {
             <span className="eyebrow">Availability — 2026</span>
             <h2 className="display">Six open <em>windows.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              Each window below is a continuous retreat period. Guests join weekly and stay between five nights and two weeks. Dates outside these windows are closed.
+              Each window below is a continuous retreat period. Guests join Monday to Friday and can stay up to 2 weeks if approved. Dates outside these windows are closed.
             </p>
           </div>
           <div className="avail-grid">
@@ -341,18 +341,27 @@ export default function Home() {
                   <span className="dot" /> {limited ? "Limited availability" : "Available"}
                 </span>
                 <h3 className="avail-card__dates">{dates}</h3>
-                <p className="avail-card__detail">Weekly stays available</p>
-                <p className="avail-card__detail">Max 2 weeks per guest</p>
+                <p className="avail-card__detail">Guests join Monday to Friday</p>
+                <p className="avail-card__detail">Max 2 weeks if approved</p>
                 <div className="avail-card__spots">
                   <span className="avail-card__spots-label">Spots left</span>
-                  <span className="avail-card__verify">VERIFY WITH PAUL</span>
+                  <a
+                    href={`mailto:booking@dreamglade.com?subject=${encodeURIComponent(`Dreamglade availability inquiry: ${dates}`)}`}
+                    className="avail-card__verify"
+                  >
+                    VERIFY WITH PAUL
+                  </a>
                 </div>
-                <Link href="/apply" className="avail-card__cta">Ask About This Retreat</Link>
+                <TermsGateCTA
+                  label="Ask About This Retreat"
+                  subject={`Dreamglade availability inquiry: ${dates}`}
+                  className="avail-card__cta"
+                />
               </article>
             ))}
           </div>
           <p style={{ marginTop: 40, fontSize: 13, color: "var(--muted)", maxWidth: 760, letterSpacing: "0.02em" }}>
-            Maximum 10 guests on the land at any time. Personal stays are five nights to two weeks. Dates between the windows above are closed. Paul confirms all dates and spaces personally after reviewing your inquiry.
+            Maximum 10 guests on the land at any time. Guests join Monday to Friday and can stay up to 2 weeks if approved. Dates between the windows above are closed. Paul confirms all dates and spaces personally after reviewing your inquiry.
           </p>
         </div>
       </section>
@@ -416,7 +425,7 @@ export default function Home() {
               <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights, starting at 7 PM and running for five to six hours, with quiet time beginning at 6 PM.</p>
             </FAQItem>
             <FAQItem question="What does the price include?">
-              <p>Prices are listed in USD per person per day, the same daily rate for the whole stay. Approximate Peruvian Soles equivalents are shown for convenience and may vary with the exchange rate at the time of payment. Both shared and single tambos include accommodation, all meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
+              <p>Current pricing is shown in the <a href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>pricing section</a> of the home page. All tambos include accommodation, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
             </FAQItem>
             <FAQItem question="How do I apply?">
               <p>The first step is a short inquiry — about eight questions, no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
