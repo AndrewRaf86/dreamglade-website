@@ -1,7 +1,15 @@
 "use client";
 import { useState } from "react";
 
-export default function TermsGateCTA({ label = "Begin Your Application" }: { label?: string }) {
+export default function TermsGateCTA({
+  label = "Begin Your Application",
+  subject = "Dreamglade retreat inquiry",
+  className,
+}: {
+  label?: string;
+  subject?: string;
+  className?: string;
+}) {
   const [open, setOpen] = useState(false);
   const [checked, setChecked] = useState(false);
 
@@ -16,18 +24,14 @@ export default function TermsGateCTA({ label = "Begin Your Application" }: { lab
   }
 
   function handleContinue() {
-    window.open(
-      "https://form.jotform.com/261348683042054",
-      "_blank",
-      "scrollbars=yes,toolbar=no,width=700,height=500"
-    );
+    window.location.href = `mailto:booking@dreamglade.com?subject=${encodeURIComponent(subject)}`;
     setOpen(false);
     setChecked(false);
   }
 
   return (
     <>
-      <button className="cta-button" onClick={handleOpen}>
+      <button className={className ?? "cta-button"} onClick={handleOpen}>
         {label}
         <span className="arrow" aria-hidden="true" />
       </button>

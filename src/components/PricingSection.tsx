@@ -15,7 +15,7 @@ export default async function PricingSection() {
           <span className="eyebrow">Pricing</span>
           <h2 className="display">Three ways to <em>stay.</em></h2>
           <p className="lede" style={{ marginTop: 12 }}>
-            Priced in US dollars per person per day. All-inclusive: accommodation, meals, ceremonies, plant dieta, yoga, breathwork, sauna, and integration support.
+            Priced in US dollars per person per day. All-inclusive: accommodation, meals, ceremonies, plant dieta, breathwork, sauna, and integration support.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export default async function PricingSection() {
               Up to 6 people. A shared thatched cabin steps from the maloka. Bathrooms are a short walk away — there is no private toilet in the tambo.
             </p>
             <ul className="pricing-card__features">
-              <li>All meals, ceremonies, plant dieta, yoga, breathwork, sauna</li>
+              <li>All meals, ceremonies, plant dieta, breathwork, sauna</li>
               <li>Integration support throughout your stay</li>
               <li>Group transport from the city meeting point in Iquitos</li>
             </ul>
@@ -66,7 +66,7 @@ export default async function PricingSection() {
               For family, couples, or friends wanting to stay together. Has a private dry compost toilet.
             </p>
             <ul className="pricing-card__features">
-              <li>All meals, ceremonies, plant dieta, yoga, breathwork, sauna</li>
+              <li>All meals, ceremonies, plant dieta, breathwork, sauna</li>
               <li>Integration support throughout your stay</li>
               <li>Group transport from the city meeting point in Iquitos</li>
             </ul>
@@ -92,7 +92,7 @@ export default async function PricingSection() {
               A private thatched cabin to yourself, with a private compost toilet. Most have lake or jungle views — quiet, simple, and private.
             </p>
             <ul className="pricing-card__features">
-              <li>All meals, ceremonies, plant dieta, yoga, breathwork, sauna</li>
+              <li>All meals, ceremonies, plant dieta, breathwork, sauna</li>
               <li>Integration support throughout your stay</li>
               <li>Group transport from the city meeting point in Iquitos</li>
             </ul>

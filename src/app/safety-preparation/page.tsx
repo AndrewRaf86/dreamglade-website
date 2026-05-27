@@ -65,7 +65,7 @@ export default function SafetyPreparation() {
               </p>
             </div>
             <div className="two-col__media two-col__media--wide">
-              <img src="/images/jungle-flower.jpg" alt="A pink jungle flower at Dreamglade" />
+              <img src="/images/bobinsana-flower.jpg" alt="Bobinsana flower at Dreamglade" />
               <p className="two-col__caption">Bobinsana, in flower near the maloka</p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function SafetyPreparation() {
             <span className="eyebrow">The pre-retreat dieta</span>
             <h2 className="display">Two weeks of <em>quiet preparation.</em></h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              The dieta is not punishment. It is the traditional way to arrive ready — softer in body, quieter in mind, with the work already partway begun.
+              The dieta is the traditional way to arrive ready — softer in body, quieter in mind, with the work already partway begun.
             </p>
           </div>
           <div className="grid-3">
@@ -130,9 +130,9 @@ export default function SafetyPreparation() {
               <span className="eyebrow">On the land</span>
               <h2 className="display" style={{ marginTop: 16 }}>What we do, <em>on a ceremony night.</em></h2>
               <div className="flow flow--lg" style={{ marginTop: 28 }}>
-                <p>Quiet time begins at 6 PM. The maloka opens at 7 PM. Each ceremony runs five to six hours, with Maestra Dominga and Maestro Raúl leading, and a support team present throughout.</p>
+                <p>By 6 PM, everyone is in the maloka for quiet time, and the ceremony begins not long after that. Each ceremony runs five to six hours, with Maestra Dominga and Maestro Raúl leading, and a support team present throughout.</p>
                 <p>Each guest has their own mat, blanket, and bucket within arm&apos;s reach. The room is held with attention rather than theatrics — singing, silence, slow walking. We never run a ceremony beyond ten guests.</p>
-                <p>The morning after, we share a slow breakfast and a circle. Whatever came up the night before, you do not have to carry it alone.</p>
+                <p>The morning after, we enjoy a slow breakfast and then prepare for share circle. Whatever came up the night before, you do not have to carry it alone.</p>
               </div>
             </div>
           </div>
