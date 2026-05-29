@@ -324,17 +324,17 @@ export default function Home() {
             <span className="eyebrow">Availability — 2026–2027</span>
             <h2 className="display">Six open <em>windows.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              Each window below is a continuous retreat period. Guests join the retreat on Monday or Friday and can stay up to 2 weeks if approved. Dates outside these windows are closed.
+              Each window below is a continuous retreat period. Guests join the retreat on Monday or Friday and can stay up to 2 weeks. Dates outside these windows are closed.
             </p>
           </div>
           <div className="avail-grid">
             {[
-              { dates: "January 18 – February 13, 2027", limited: false },
               { dates: "June 22 – July 18, 2026", limited: false },
               { dates: "July 27 – August 22, 2026", limited: false },
               { dates: "Aug 31 – Sept 26, 2026", limited: false },
               { dates: "Oct 19 – Nov 14, 2026", limited: false },
               { dates: "Nov 23 – Dec 19, 2026", limited: false },
+              { dates: "January 18 – February 13, 2027", limited: false },
             ].map(({ dates, limited }) => (
               <article key={dates} className="avail-card">
                 <span className={`avail-card__status${limited ? " avail-card__status--limited" : ""}`}>
