@@ -117,7 +117,7 @@ export default async function PricingSection() {
           <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>
             Drop-off at Iquitos airport is included for flights departing after 3 PM on the last day.
             Airport pickup on arrival is not included.
-            Helpful travel tip: Uber is available in Iquitos, but it is smart to bring soles cash in case Uber is not working or you need to pay a motor taxi in cash. Motor taxis from the airport to hotels in Iquitos usually cost about 40–70 soles.
+            Helpful travel tip: Uber is available in Iquitos, but it is smart to bring soles cash in case Uber is not working or you need to pay a motor taxi in cash. Motor taxis from the airport to hotels in Iquitos usually cost about 30–70 soles.
           </p>
           <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>
             <Link href="/apply" style={{ color: "var(--gold-deep)", borderBottom: "1px solid var(--gold-deep)" }}>Begin an inquiry</Link> to confirm availability and pricing.

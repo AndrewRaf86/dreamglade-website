@@ -115,7 +115,7 @@ export default function Home() {
               </h2>
               <div className="flow flow--lg" style={{ marginTop: 28, maxWidth: 560 }}>
                 <p className="lede">
-                  Dreamglade was founded by Stacy Povey and later came under the care of Wade Bucher and Clarisa Gutierrez.
+                  Dreamglade was founded by Stacy Povey in 2013 and later came under the care of Wade Bucher and Clarisa Gutierrez in 2023.
                 </p>
                 <p>
                   Today, Wade and Clarisa own and manage Dreamglade as a small, grounded retreat on 25 hectares of Amazon rainforest near Iquitos. The feeling is personal, human, and real.
@@ -131,7 +131,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">02</span>
-                  <span className="facts__text"><strong>Near Maralillos,</strong> under an hour's drive from Iquitos.</span>
+                  <span className="facts__text"><strong>Near Moralillo,</strong> under an hour's drive from Iquitos.</span>
                 </li>
                 <li>
                   <span className="facts__num">03</span>
@@ -143,7 +143,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">05</span>
-                  <span className="facts__text"><strong>Paul</strong> reviews every application personally.</span>
+                  <span className="facts__text"><strong>Paul,</strong> our integration support specialist, reviews every application personally.</span>
                 </li>
               </ol>
             </div>
@@ -160,7 +160,7 @@ export default function Home() {
               We screen every applicant<br /><em>before we say yes.</em>
             </h2>
             <p className="lede" style={{ marginTop: 16 }}>
-              Ayahuasca is not appropriate for everyone. Honest preparation — yours and ours — is what makes a retreat safe.
+              Honest preparation — yours and ours — is what makes a retreat safe.
             </p>
           </div>
           <div className="grid-3">
@@ -272,7 +272,7 @@ export default function Home() {
               <img src="/images/maloka-exterior.jpg" alt="The maloka ceremony house at Dreamglade, raised on stilts beside the lake" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">01 / Ceremony nights</span>
               <h3>Monday, Wednesday, Friday</h3>
-              <p>Quiet time at 6 PM. Ceremony begins at 7 PM and runs five to six hours, in the maloka, with the healers and the support team present throughout.</p>
+              <p>Preparation for ceremony begins at 6pm. Ceremony starts shortly after. Each ceremony runs five to six hours in the maloka, led by the healers.</p>
             </article>
             <article className="col-item">
               <img src="/images/trampoline-pillows.jpg" alt="A canopied trampoline-deck with pillows looking out across the lake at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
@@ -321,15 +321,15 @@ export default function Home() {
       <section className="section section--beige" id="availability">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Availability — 2026</span>
+            <span className="eyebrow">Availability — 2026–2027</span>
             <h2 className="display">Six open <em>windows.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              Each window below is a continuous retreat period. Guests join Monday to Friday and can stay up to 2 weeks if approved. Dates outside these windows are closed.
+              Each window below is a continuous retreat period. Guests join the retreat on Monday or Friday and can stay up to 2 weeks if approved. Dates outside these windows are closed.
             </p>
           </div>
           <div className="avail-grid">
             {[
-              { dates: "May 4 – May 30, 2026", limited: true },
+              { dates: "January 18 – February 13, 2027", limited: false },
               { dates: "June 22 – July 18, 2026", limited: false },
               { dates: "July 27 – August 22, 2026", limited: false },
               { dates: "Aug 31 – Sept 26, 2026", limited: false },
@@ -341,7 +341,7 @@ export default function Home() {
                   <span className="dot" /> {limited ? "Limited availability" : "Available"}
                 </span>
                 <h3 className="avail-card__dates">{dates}</h3>
-                <p className="avail-card__detail">Guests join Monday to Friday</p>
+                <p className="avail-card__detail">Guests join Monday or Friday</p>
                 <p className="avail-card__detail">Max 2 weeks if approved</p>
                 <div className="avail-card__spots">
                   <span className="avail-card__spots-label">Spots left</span>
@@ -361,7 +361,7 @@ export default function Home() {
             ))}
           </div>
           <p style={{ marginTop: 40, fontSize: 13, color: "var(--muted)", maxWidth: 760, letterSpacing: "0.02em" }}>
-            Maximum 10 guests on the land at any time. Guests join Monday to Friday and can stay up to 2 weeks if approved. Dates between the windows above are closed. Paul confirms all dates and spaces personally after reviewing your inquiry.
+            Maximum 10 guests on the land at any time. Guests join the retreat on Monday or Friday and can stay up to 2 weeks if approved. Dates between the windows above are closed. Paul confirms all dates and spaces personally after reviewing your inquiry.
           </p>
         </div>
       </section>
@@ -419,10 +419,10 @@ export default function Home() {
           </div>
           <div className="faq-list" role="list">
             <FAQItem question="Is Dreamglade right for me?">
-              <p>Dreamglade is a small-group retreat — a maximum of ten guests at a time. It tends to suit people who want a quiet, grounded setting, who are willing to do real preparation before they arrive, and who are open to a traditional Shipibo-led ceremony rather than a Western program. Ayahuasca is not appropriate for everyone. Paul reviews every application personally to talk this through with you.</p>
+              <p>Dreamglade is a small-group retreat — a maximum of ten guests at a time. It tends to suit people who want a quiet, grounded setting, who are willing to do real preparation before they arrive, and who are open to a traditional Shipibo-led ceremony rather than a Western program. Paul reviews every application personally to talk this through with you.</p>
             </FAQItem>
             <FAQItem question="How long is a retreat, and how many ceremonies?">
-              <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights, starting at 7 PM and running for five to six hours, with quiet time beginning at 6 PM.</p>
+              <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights. Preparation for ceremony begins at 6pm and ceremony starts shortly after, running for five to six hours.</p>
             </FAQItem>
             <FAQItem question="What does the price include?">
               <p>Current pricing is shown in the <a href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>pricing section</a> of the home page. All tambos include accommodation, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
@@ -431,7 +431,7 @@ export default function Home() {
               <p>The first step is a short inquiry — about eight questions, no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
             </FAQItem>
             <FAQItem question="Where exactly is Dreamglade?">
-              <p>Dreamglade is near Maralillos, under an hour's drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside. Guest rooms have no electricity or Wi-Fi by design. Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life.</p>
+              <p>Dreamglade is near Moralillo, under an hour's drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside. Guest rooms have no electricity or Wi-Fi by design. Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life.</p>
             </FAQItem>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
