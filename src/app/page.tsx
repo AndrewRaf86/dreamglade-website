@@ -431,7 +431,7 @@ export default function Home() {
               <p>The first step is a short inquiry — about eight questions, no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
             </FAQItem>
             <FAQItem question="Where exactly is Dreamglade?">
-              <p>Dreamglade is near Maralillos, under an hour's drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside. Guest rooms have no electricity or Wi-Fi by design; the property runs on 100% solar power.</p>
+              <p>Dreamglade is near Maralillos, under an hour's drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside. Guest rooms have no electricity or Wi-Fi by design. Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life.</p>
             </FAQItem>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>

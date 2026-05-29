@@ -124,9 +124,9 @@ export default function WhatToExpect() {
               <p>The center of the day. Meals, conversation, reading, the kitchen. There is no electricity or Wi-Fi in guest rooms or anywhere on the property — the communal big house is the gathering point, and the quiet is part of what people come for.</p>
             </article>
             <article className="col-item">
-              <img src="/images/solar.jpg" alt="Solar panels at Dreamglade, providing 100 percent of the property's power" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
-              <h3 style={{ marginTop: 6 }}>100% solar</h3>
-              <p>The whole property runs on solar power. Guest rooms have no outlets and no signal — and most guests, by the second day, are very glad about that.</p>
+              <img src="/images/solar.jpg" alt="The simple, limited electricity setup at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <h3 style={{ marginTop: 6 }}>Limited electricity</h3>
+              <p>Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life. Guest rooms have no outlets and no signal — and most guests, by the second day, are very glad about that.</p>
             </article>
           </div>
         </div>
