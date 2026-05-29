@@ -449,7 +449,7 @@ export default function Home() {
           <span className="bleed-cta__eyebrow">The first step is a conversation</span>
           <h2 className="bleed-cta__title">Begin your <em>Dreamglade</em> application.</h2>
           <p className="bleed-cta__sub">
-            Paul reads every inquiry. It takes about eight questions to get started — no medical history at this stage.
+            Paul reads every inquiry. A short inquiry is all it takes to get started — no medical history at this stage.
           </p>
           <TermsGateCTA />
           <p className="bleed-cta__note">

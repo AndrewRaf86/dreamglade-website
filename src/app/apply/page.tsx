@@ -40,7 +40,7 @@ export default function Apply() {
             <span className="eyebrow">How it works</span>
             <h2 className="display">Three small <em>steps.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              We do not lock dates on a calendar or take a payment up front. The first thing is a short inquiry — about eight questions, no medical history at this stage.
+              We do not lock dates on a calendar or take a payment up front. The first thing is a short inquiry — no medical history at this stage.
             </p>
           </div>
           <div className="steps">
