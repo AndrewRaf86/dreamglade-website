@@ -37,7 +37,7 @@ export default function SafetyPreparation() {
             <span className="notice__label">Medical disclaimer</span>
             <h3>Dreamglade is a retreat center, not a medical provider.</h3>
             <p>
-              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, detox, or cures for any physical or mental health condition. Ayahuasca is not appropriate for everyone. Paul reviews every inquiry manually, but he is not a substitute for medical advice: any decision about your medications or a medical condition must come from Paul together with a qualified healthcare professional. Participants are responsible for consulting their own doctor before applying.
+              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, detox, or cures for any physical or mental health condition. Paul reviews every inquiry manually, but he is not a substitute for medical advice: any decision about your medications or a medical condition must come from Paul together with a qualified healthcare professional. Participants are responsible for consulting their own doctor before applying.
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function SafetyPreparation() {
             <p>Ayahuasca contains naturally occurring MAOIs — Monoamine Oxidase Inhibitors. MAOIs can interact dangerously with certain medications and substances. For this reason, Dreamglade requires every guest to complete a health and medication disclosure before being accepted.</p>
             <p>Some medication groups may make ayahuasca unsafe, including antidepressants and anxiety medications such as SSRIs and SNRIs, tricyclic antidepressants, MAOIs, stimulants, sedatives, certain prescription pain medications, heart and blood pressure medications, and blood thinners. Cough, cold, and allergy medications may also be relevant — some formulas contain active ingredients such as DXM or pseudoephedrine.</p>
             <p>This list is not exhaustive. Guests must disclose all current and recent medications, supplements, physical health history, mental health history, substance use, and relevant conditions. Paul reviews disclosures personally and may ask follow-up questions before confirming whether the next step is appropriate.</p>
-            <p>Dreamglade does not provide medical advice, diagnosis, treatment, therapy, detox, cures, or medical clearance. Do not stop, taper, or change any prescription medication without speaking with the healthcare professional who prescribed it. Ayahuasca is not appropriate for everyone.</p>
+            <p>Dreamglade does not provide medical advice, diagnosis, treatment, therapy, detox, cures, or medical clearance. Do not stop, taper, or change any prescription medication without speaking with the healthcare professional who prescribed it.</p>
           </div>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function SafetyPreparation() {
               <h2 className="display" style={{ marginTop: 16 }}>What we do, <em>on a ceremony night.</em></h2>
               <div className="flow flow--lg" style={{ marginTop: 28 }}>
                 <p>By 6 PM, everyone is in the maloka for quiet time, and the ceremony begins not long after that. Each ceremony runs five to six hours, with Maestra Dominga and Maestro Raúl leading, and a support team present throughout.</p>
-                <p>Each guest has their own mat, blanket, and bucket within arm&apos;s reach. The room is held with attention rather than theatrics — singing, silence, slow walking. We never run a ceremony beyond ten guests.</p>
+                <p>Each guest has their own mattress, blanket, and bucket within arm&apos;s reach. The room is held with attention rather than theatrics — singing, silence, slow walking. We never run a ceremony beyond ten guests.</p>
                 <p>The morning after, we enjoy a slow breakfast and then prepare for share circle. Whatever came up the night before, you do not have to carry it alone.</p>
               </div>
             </div>

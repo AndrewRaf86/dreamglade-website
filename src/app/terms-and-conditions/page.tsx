@@ -36,7 +36,7 @@ export default function TermsAndConditions() {
             <span className="notice__label">Medical disclaimer</span>
             <h3>Dreamglade is a retreat center, not a medical provider.</h3>
             <p>
-              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, or cures for any physical or mental health condition. Participants are responsible for consulting their healthcare providers regarding any medical concerns. Ayahuasca is not appropriate for everyone.
+              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, or cures for any physical or mental health condition. Participants are responsible for consulting their healthcare providers regarding any medical concerns.
             </p>
           </div>
 

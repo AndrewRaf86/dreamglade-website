@@ -47,7 +47,7 @@ export default function Apply() {
             <div className="step">
               <span className="step__num">01</span>
               <h3>Apply</h3>
-              <p>A short inquiry — about eight questions. Your name, where you are from, the retreat dates you are considering, and a few words about why now. No medical history at this stage.</p>
+              <p>Let us know the dates and accommodation you would like to join us for.</p>
               <span className="step__connector" aria-hidden="true" />
             </div>
             <div className="step">
@@ -59,7 +59,7 @@ export default function Apply() {
             <div className="step">
               <span className="step__num">03</span>
               <h3>Conversation</h3>
-              <p>If it looks like a fit, Paul writes back to start a real conversation — by email, on your time. From there, the full registration, agreement, and deposit come later, also by email.</p>
+              <p>Paul writes back — by email, on your time. From there, the full registration, terms and conditions agreement, and deposit come later, also by email.</p>
             </div>
           </div>
           <div className="trust-strip">
@@ -74,10 +74,7 @@ export default function Apply() {
       <section className="section section--forest" id="begin">
         <div className="container container--narrow center">
           <span className="eyebrow eyebrow--center" style={{ justifySelf: "center" }}>Ready when you are</span>
-          <h2 className="display" style={{ color: "var(--cream)", marginTop: 16 }}>The first <em>eight questions.</em></h2>
-          <p className="lede" style={{ color: "var(--cream)", margin: "16px auto 40px", maxWidth: 640 }}>
-            The inquiry opens in a small window. It takes about five minutes. You can save it for later if you need to.
-          </p>
+          <h2 className="display" style={{ color: "var(--cream)", marginTop: 16, marginBottom: 40 }}>The first <em>step.</em></h2>
           <TermsGateCTA />
           <p style={{ marginTop: 32, fontSize: 14, color: "var(--beige)", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>
             After your application is reviewed, Paul will email you the full registration and signed agreement before your arrival date is confirmed.
@@ -89,8 +86,8 @@ export default function Apply() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img src="/images/lake-from-bighouse.jpg" alt="The still lake at Dreamglade seen from the communal big house" />
-              <p className="two-col__caption">From the porch of the communal big house</p>
+              <img src="/images/lake-from-bighouse.jpg" alt="The maloka at Dreamglade, looking across the still lake" />
+              <p className="two-col__caption">The maloka, looking across the lake</p>
             </div>
             <div>
               <span className="eyebrow">What we&apos;ll ask</span>
