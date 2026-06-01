@@ -74,6 +74,12 @@ export default function Home() {
                 <TermsGateCTA />
                 <a href="#about" className="ghost-link">Read more first</a>
               </div>
+              <div className="hero__social">
+                <span className="hero__social-label">Follow along</span>
+                <a href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <span aria-hidden="true">·</span>
+                <a href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </div>
             </div>
           </div>
           <dl className="hero__meta" aria-label="Quick facts">
@@ -410,6 +416,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── 8b. GUEST VIDEOS ── */}
+      <section className="section section--cream" id="guest-videos">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">In their own words</span>
+            <h2 className="display">Hear from <em>previous guests.</em></h2>
+            <p className="lede" style={{ marginTop: 12 }}>
+              Some guests have shared their own reflections on YouTube. These videos are personal experiences, shared in their own words.
+            </p>
+          </div>
+          <div className="video-grid">
+            <a
+              className="video-card"
+              href="https://www.youtube.com/watch?v=FoADvPQmqEc&t=138s"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="video-card__eyebrow">YouTube</span>
+              <h3 className="video-card__title">Guest reflection</h3>
+              <span className="video-card__cta">Watch on YouTube →</span>
+            </a>
+            <a
+              className="video-card"
+              href="https://www.youtube.com/watch?v=Sqe3KnHJFN4&t=38s"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="video-card__eyebrow">YouTube</span>
+              <h3 className="video-card__title">Guest reflection</h3>
+              <span className="video-card__cta">Watch on YouTube →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── 9. FAQ PREVIEW ── */}
       <section className="section section--forest" id="faq-preview">
         <div className="container">
@@ -454,6 +495,13 @@ export default function Home() {
           <TermsGateCTA />
           <p className="bleed-cta__note">
             After your application is reviewed, Paul will email you the full registration and signed agreement before your arrival date is confirmed.
+          </p>
+          <p className="bleed-cta__note">
+            You can also follow Dreamglade on{" "}
+            <a href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            {" "}and{" "}
+            <a href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer">YouTube</a>
+            {" "}for recent photos, videos, and everyday moments from the land.
           </p>
         </div>
       </section>
