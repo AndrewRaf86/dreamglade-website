@@ -19,6 +19,11 @@ export default function Footer() {
               +51 920 478 240<br />
               +51 924 866 141
             </p>
+            <p className="site-footer__social">
+              <a href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <span aria-hidden="true">·</span>
+              <a href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </p>
           </div>
           <div>
             <h4>The site</h4>
