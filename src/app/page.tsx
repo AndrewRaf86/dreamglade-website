@@ -103,6 +103,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── 1b. WHY DREAMGLADE ── */}
+      <section className="section section--cream-warm" id="why-dreamglade">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">What sets us apart</span>
+            <h2 className="display">Why <em>Dreamglade?</em></h2>
+            <p className="lede" style={{ marginTop: 12 }}>
+              Dreamglade is intentionally small, personally guided, and grounded in traditional Shipibo-led ceremony.
+            </p>
+          </div>
+          <div className="why-grid">
+            <div className="why-item">
+              <span className="why-item__label">Maximum 10 guests</span>
+              <p className="why-item__text">Never larger groups. Every guest is known by name before they arrive.</p>
+            </div>
+            <div className="why-item">
+              <span className="why-item__label">Traditional Shipibo-led ceremonies</span>
+              <p className="why-item__text">Maestra Dominga and Maestro Raúl lead every ceremony — a living Shipibo lineage passed through family and community.</p>
+            </div>
+            <div className="why-item">
+              <span className="why-item__label">Personally screened for safety</span>
+              <p className="why-item__text">Paul reviews every inquiry himself. Safety is the starting point, not an afterthought.</p>
+            </div>
+            <div className="why-item">
+              <span className="why-item__label">Owner-run, hands-on</span>
+              <p className="why-item__text">Wade and Clarisa manage the retreat directly. No management company, no outsourced staff.</p>
+            </div>
+            <div className="why-item">
+              <span className="why-item__label">Peaceful rainforest setting</span>
+              <p className="why-item__text">25 hectares of lakeside Amazon rainforest near Iquitos — quiet by design, away from the noise of ordinary life.</p>
+            </div>
+            <div className="why-item">
+              <span className="why-item__label">Integration support</span>
+              <p className="why-item__text">Paul supports guests before arrival and after the retreat. The work continues beyond the week on the land.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── 2. ABOUT ── */}
       <section className="section section--cream" id="about">
         <div className="container">
@@ -307,12 +346,12 @@ export default function Home() {
             <figure><img src="/images2/DECK-MALOKA-REMI.jpg" alt="Deck near the maloka at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/IMG-20240708-WA0018.jpg" alt="Simple dieta meal at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/DOGS%20-%20Puente.jpg" alt="Dogs on the bridge at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/IMG-20240326-WA0011.jpg" alt="Retreat grounds at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/retreat%20view.jpeg" alt="View across the Dreamglade lake and tambos" loading="lazy" /></figure>
             <figure><img src="/images2/LAKE%20-%20TAMBO3.jpg" alt="Lake and tambo at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/MALOKABEDS.jpg" alt="Maloka beds at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/PAINT-TAMBOS-JESSICA.jpg" alt="Painted tambos at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/CORREDOR-WILLIAM.jpg" alt="Open-air corridor at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/IMG-20240708-WA0016.jpg" alt="Dreamglade grounds" loading="lazy" /></figure>
+            <figure><img src="/images2/mapacho%20sunny%20view.jpeg" alt="Sunny view of the communal area at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/TAMBO%205%20_%20CAT.jpg" alt="Cat near a tambo at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/LAKE3-IVETA.jpg" alt="Lake at Dreamglade" loading="lazy" /></figure>
           </div>
@@ -328,19 +367,26 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <span className="eyebrow">Availability — 2026–2027</span>
-            <h2 className="display">Six open <em>windows.</em></h2>
+            <h2 className="display">Open <em>windows.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
               Each window below is a continuous retreat period. Guests join the retreat on Monday or Friday and can stay up to 2 weeks. Dates outside these windows are closed.
             </p>
           </div>
           <div className="avail-grid">
             {[
-              { dates: "June 22 – July 18, 2026", limited: false },
               { dates: "July 27 – August 22, 2026", limited: false },
               { dates: "Aug 31 – Sept 26, 2026", limited: false },
               { dates: "Oct 19 – Nov 14, 2026", limited: false },
               { dates: "Nov 23 – Dec 19, 2026", limited: false },
-              { dates: "January 18 – February 13, 2027", limited: false },
+              { dates: "January 11 – February 6, 2027", limited: false },
+              { dates: "February 15 – March 13, 2027", limited: false },
+              { dates: "March 22 – April 17, 2027", limited: false },
+              { dates: "May 3 – May 29, 2027", limited: false },
+              { dates: "June 21 – July 17, 2027", limited: false },
+              { dates: "July 26 – August 21, 2027", limited: false },
+              { dates: "September 6 – October 2, 2027", limited: false },
+              { dates: "October 11 – November 6, 2027", limited: false },
+              { dates: "November 15 – December 11, 2027", limited: false },
             ].map(({ dates, limited }) => (
               <article key={dates} className="avail-card">
                 <span className={`avail-card__status${limited ? " avail-card__status--limited" : ""}`}>
