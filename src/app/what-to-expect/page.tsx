@@ -113,7 +113,7 @@ export default function WhatToExpect() {
           </div>
           <div className="grid-3">
             <article className="col-item">
-              <img src="/images/tambo5-lakeview.jpg" alt="A private tambo at Dreamglade with a view of the lake" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <img src="/images2/outside%20single%20tambo%20pic.jpeg" alt="Private tambo cabin surrounded by rainforest at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <h3 style={{ marginTop: 6 }}>Private tambos</h3>
               <p>Single and double thatched cabins, raised off the ground, each with mosquito-screened sleeping. Most have lake or jungle views. All are quiet, with the forest right outside.</p>
             </article>

@@ -23,7 +23,7 @@ export default async function PricingSection() {
           {/* Communal tambo */}
           <article className="pricing-card">
             <div className="pricing-card__photo">
-              <img src="/images/sharetambo-front.jpg" alt="Communal tambo at Dreamglade" />
+              <img src="/images2/communal%20tambo%20inside.jpeg" alt="Shared communal tambo sleeping space at Dreamglade" />
             </div>
             <span className="pricing-card__eyebrow">Communal tambo</span>
             <h3 className="pricing-card__name">Communal tambo</h3>
@@ -49,7 +49,7 @@ export default async function PricingSection() {
           {/* Two-person tambo */}
           <article className="pricing-card">
             <div className="pricing-card__photo">
-              <img src="/images/tambo7-lakeview.jpg" alt="Two-person tambo at Dreamglade" />
+              <img src="/images2/double%20tambo%20inside.jpeg" alt="Two-person tambo interior with two beds at Dreamglade" />
             </div>
             <span className="pricing-card__eyebrow">Two-person tambo</span>
             <h3 className="pricing-card__name">Two-person tambo</h3>
@@ -75,7 +75,7 @@ export default async function PricingSection() {
           {/* Private tambo */}
           <article className="pricing-card">
             <div className="pricing-card__photo">
-              <img src="/images2/TAMBO%205%20-%20ENTRY.jpg" alt="Private tambo at Dreamglade" />
+              <img src="/images2/single%20tambo%20inside.jpeg" alt="Private tambo interior with bed and mosquito net at Dreamglade" />
             </div>
             <span className="pricing-card__eyebrow">Private tambo</span>
             <h3 className="pricing-card__name">Private tambo</h3>
