@@ -346,12 +346,12 @@ export default function Home() {
             <figure><img src="/images2/DECK-MALOKA-REMI.jpg" alt="Deck near the maloka at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/IMG-20240708-WA0018.jpg" alt="Simple dieta meal at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/DOGS%20-%20Puente.jpg" alt="Dogs on the bridge at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/retreat%20view.jpeg" alt="View across the Dreamglade lake and tambos" loading="lazy" /></figure>
+            <figure><img src="/images2/dreamglade-lake-tambo-view.jpeg" alt="View across the Dreamglade lake and tambos" loading="lazy" /></figure>
             <figure><img src="/images2/LAKE%20-%20TAMBO3.jpg" alt="Lake and tambo at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/MALOKABEDS.jpg" alt="Maloka beds at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/PAINT-TAMBOS-JESSICA.jpg" alt="Painted tambos at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/CORREDOR-WILLIAM.jpg" alt="Open-air corridor at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/mapacho%20sunny%20view.jpeg" alt="Sunny view of the communal area at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/dreamglade-sunny-communal-area.jpeg" alt="Sunny view of the communal area at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/TAMBO%205%20_%20CAT.jpg" alt="Cat near a tambo at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/LAKE3-IVETA.jpg" alt="Lake at Dreamglade" loading="lazy" /></figure>
           </div>
