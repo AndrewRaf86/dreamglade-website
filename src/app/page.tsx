@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div>
               <p className="hero__subtitle">
-                Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — ten guests at most, traditional Shipibo-led ceremonies, 25 hectares of rainforest surrounding our man-made lake.
+                Dreamglade is a small-group ayahuasca and plant dieta retreat near Iquitos, Peru — with no more than ten guests, traditional Shipibo-led ceremonies, personal preparation, and 25 hectares of rainforest around a quiet lake.
               </p>
               <div className="hero__actions">
                 <TermsGateCTA />
