@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { track } from "@vercel/analytics";
+import { trackEvent, type TrackedEventName } from "@/lib/analytics";
 import type { CSSProperties, ReactNode } from "react";
 
 export default function TrackedLink({
@@ -15,7 +15,7 @@ export default function TrackedLink({
   children,
 }: {
   href: string;
-  event: string;
+  event: TrackedEventName;
   properties?: Record<string, string>;
   className?: string;
   style?: CSSProperties;
@@ -23,7 +23,7 @@ export default function TrackedLink({
   rel?: string;
   children: ReactNode;
 }) {
-  const handleClick = () => track(event, properties);
+  const handleClick = () => trackEvent(event, properties);
 
   if (href.startsWith("http") || href.startsWith("mailto:")) {
     return (

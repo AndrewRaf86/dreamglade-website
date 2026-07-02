@@ -1,27 +1,27 @@
 "use client";
 import { useState } from "react";
-import { track } from "@vercel/analytics";
+import { trackEvent, type TrackedEventName } from "@/lib/analytics";
 
 export default function TermsGateCTA({
   label = "Begin Your Application",
   subject = "Dreamglade retreat inquiry",
   className,
   trackLocation = "hero",
-  trackEvent = "Apply Click",
+  trackEvent: openEvent = "Apply Click",
   trackProperties,
 }: {
   label?: string;
   subject?: string;
   className?: string;
   trackLocation?: string;
-  trackEvent?: string;
+  trackEvent?: TrackedEventName;
   trackProperties?: Record<string, string>;
 }) {
   const [open, setOpen] = useState(false);
   const [checked, setChecked] = useState(false);
 
   function handleOpen() {
-    track(trackEvent, trackProperties ?? { location: trackLocation, destination: "apply" });
+    trackEvent(openEvent, trackProperties ?? { location: trackLocation, destination: "apply" });
     setChecked(false);
     setOpen(true);
   }
@@ -32,7 +32,7 @@ export default function TermsGateCTA({
   }
 
   function handleContinue() {
-    track("Email Click", { location: trackLocation, destination: "booking" });
+    trackEvent("Email Click", { location: trackLocation, destination: "booking" });
     window.location.href = `mailto:booking@dreamglade.com?subject=${encodeURIComponent(subject)}`;
     setOpen(false);
     setChecked(false);

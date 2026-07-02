@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { track } from "@vercel/analytics";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
   const [scrolled, setScrolled] = useState(false);
@@ -72,7 +72,7 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
             href="/apply"
             className="is-cta"
             onClick={() => {
-              track("Apply Click", { location: "nav", destination: "apply" });
+              trackEvent("Apply Click", { location: "nav", destination: "apply" });
               setMenuOpen(false);
             }}
           >
