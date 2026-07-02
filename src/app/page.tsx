@@ -72,7 +72,7 @@ export default function Home() {
               </p>
               <div className="hero__actions">
                 <TermsGateCTA trackLocation="hero" />
-                <a href="#about" className="ghost-link">Read more first</a>
+                <TrackedLink href="#about" className="ghost-link" event="About Click" properties={{ location: "hero", destination: "about" }}>Read more first</TrackedLink>
               </div>
               <div className="hero__social">
                 <span className="hero__social-label">Follow along</span>
@@ -521,7 +521,7 @@ export default function Home() {
               <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights. Preparation for ceremony begins at 6pm and ceremony starts shortly after, running for five to six hours.</p>
             </FAQItem>
             <FAQItem question="What does the price include?">
-              <p>Current pricing is shown in the <a href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>pricing section</a> of the home page. All tambos include accommodation, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
+              <p>Current pricing is shown in the <TrackedLink href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Pricing Click" properties={{ location: "faq-section", destination: "pricing" }}>pricing section</TrackedLink> of the home page. All tambos include accommodation, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
             </FAQItem>
             <FAQItem question="How do I apply?">
               <p>The first step is a short inquiry — no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>

@@ -3,6 +3,7 @@ import Script from "next/script";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
 import TermsGateCTA from "@/components/TermsGateCTA";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
@@ -148,7 +149,7 @@ export default function FAQ() {
               <p>Yes, this is a common concern and it is safe. We have had many guests come and join during that time of the month.</p>
             </FAQItem>
             <FAQItem question="What medical conditions or medications need to be disclosed?">
-              <p>Guests should disclose current medications, medical history, mental health history, and recent substance use. Paul reviews this information before confirmation and may ask follow-up questions. Dreamglade does not provide medical advice or medical clearance. See <a href="/safety-preparation" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>Safety &amp; Preparation</a> for the kinds of things we look at most closely.</p>
+              <p>Guests should disclose current medications, medical history, mental health history, and recent substance use. Paul reviews this information before confirmation and may ask follow-up questions. Dreamglade does not provide medical advice or medical clearance. See <TrackedLink href="/safety-preparation" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Safety Click" properties={{ location: "faq-page", destination: "safety" }}>Safety &amp; Preparation</TrackedLink> for the kinds of things we look at most closely.</p>
             </FAQItem>
             <FAQItem question="What medications are a concern with ayahuasca?">
               <p>Ayahuasca contains naturally occurring MAOIs, which can interact dangerously with certain medications and substances. Medication groups that may be unsafe include antidepressants and anxiety medications such as SSRIs and SNRIs, tricyclic antidepressants, MAOIs, stimulants, sedatives, certain prescription pain medications, heart and blood pressure medications, and blood thinners. Cough, cold, and allergy medications may also be relevant, especially formulas containing DXM or pseudoephedrine. This list is not exhaustive. All current and recent medications, supplements, health history, mental health history, and substance use must be disclosed before confirmation.</p>
@@ -199,7 +200,7 @@ export default function FAQ() {
           </div>
           <div className="faq-list">
             <FAQItem question="How much does it cost?">
-              <p>Current pricing is shown in the <a href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }}>pricing section</a> of the home page.</p>
+              <p>Current pricing is shown in the <TrackedLink href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Pricing Click" properties={{ location: "faq-page", destination: "pricing" }}>pricing section</TrackedLink> of the home page.</p>
             </FAQItem>
             <FAQItem question="What is included in the price?">
               <p>Accommodation in a private, two-person, or communal thatched tambo, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support before and after your stay. Group transport from the designated city meeting point in Iquitos on the first day of your retreat and drop-off to the city of Iquitos and Iquitos airport are included for flights after 3 PM.</p>
@@ -324,7 +325,7 @@ export default function FAQ() {
             </p>
           </div>
           <div className="center" style={{ marginTop: 32 }}>
-            <TermsGateCTA />
+            <TermsGateCTA trackLocation="faq-page" />
           </div>
         </div>
       </section>

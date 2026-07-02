@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
 
 export default function Footer() {
   return (
@@ -20,35 +21,35 @@ export default function Footer() {
               +51 924 866 141
             </p>
             <p className="site-footer__social">
-              <a href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <TrackedLink href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer" event="Instagram Click" properties={{ location: "footer", destination: "instagram" }}>Instagram</TrackedLink>
               <span aria-hidden="true">·</span>
-              <a href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <TrackedLink href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer" event="YouTube Click" properties={{ location: "footer", destination: "youtube" }}>YouTube</TrackedLink>
             </p>
           </div>
           <div>
             <h4>The site</h4>
             <ul>
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/safety-preparation">Safety &amp; Preparation</Link></li>
-              <li><Link href="/what-to-expect">What to Expect</Link></li>
-              <li><Link href="/faq">FAQ</Link></li>
-              <li><Link href="/apply">Apply</Link></li>
+              <li><TrackedLink href="/safety-preparation" event="Safety Click" properties={{ location: "footer", destination: "safety" }}>Safety &amp; Preparation</TrackedLink></li>
+              <li><TrackedLink href="/what-to-expect" event="Experience Click" properties={{ location: "footer", destination: "what-to-expect" }}>What to Expect</TrackedLink></li>
+              <li><TrackedLink href="/faq" event="FAQ Click" properties={{ location: "footer", destination: "faq" }}>FAQ</TrackedLink></li>
+              <li><TrackedLink href="/apply" event="Apply Click" properties={{ location: "footer", destination: "apply" }}>Apply</TrackedLink></li>
               <li><Link href="/terms-and-conditions">Terms and Conditions</Link></li>
             </ul>
           </div>
           <div>
             <h4>Reviews</h4>
             <ul>
-              <li><a href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener">Google Reviews →</a></li>
+              <li><TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "footer", destination: "google-reviews" }}>Google Reviews →</TrackedLink></li>
               <li><Link href="/#reviews">Guest reflections</Link></li>
             </ul>
           </div>
           <div>
             <h4>The retreat</h4>
             <ul>
-              <li><Link href="/#about">About</Link></li>
+              <li><TrackedLink href="/#about" event="About Click" properties={{ location: "footer", destination: "about" }}>About</TrackedLink></li>
               <li><Link href="/#healers">The healers</Link></li>
-              <li><Link href="/#pricing">Pricing</Link></li>
+              <li><TrackedLink href="/#pricing" event="Pricing Click" properties={{ location: "footer", destination: "pricing" }}>Pricing</TrackedLink></li>
               <li><Link href="/#availability">2026 availability</Link></li>
             </ul>
           </div>

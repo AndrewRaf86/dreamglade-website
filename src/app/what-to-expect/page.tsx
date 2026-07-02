@@ -174,7 +174,7 @@ export default function WhatToExpect() {
             </article>
           </div>
           <div style={{ marginTop: "clamp(48px, 5vw, 64px)", textAlign: "center" }}>
-            <TermsGateCTA />
+            <TermsGateCTA trackLocation="experience-page" />
           </div>
         </div>
       </section>

@@ -8,6 +8,8 @@ export type TrackedEventName =
   | "Safety Click"
   | "FAQ Click"
   | "Experience Click"
+  | "Pricing Click"
+  | "About Click"
   | "YouTube Click"
   | "Instagram Click"
   | "Google Reviews Click";
@@ -20,6 +22,8 @@ const GA4_EVENT_NAMES: Record<TrackedEventName, string> = {
   "Safety Click": "safety_click",
   "FAQ Click": "faq_click",
   "Experience Click": "experience_click",
+  "Pricing Click": "pricing_click",
+  "About Click": "about_click",
   "YouTube Click": "youtube_click",
   "Instagram Click": "instagram_click",
   "Google Reviews Click": "google_reviews_click",

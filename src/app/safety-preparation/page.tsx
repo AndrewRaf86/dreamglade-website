@@ -149,7 +149,7 @@ export default function SafetyPreparation() {
             </p>
           </div>
           <div className="center" style={{ marginTop: 40 }}>
-            <TermsGateCTA />
+            <TermsGateCTA trackLocation="safety-page" />
           </div>
         </div>
       </section>

@@ -46,25 +46,42 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
           id="primary-nav"
           aria-label="Primary"
         >
-          <Link href="/#about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link
+            href="/#about"
+            onClick={() => {
+              trackEvent("About Click", { location: "nav", destination: "about" });
+              setMenuOpen(false);
+            }}
+          >
+            About
+          </Link>
           <Link
             href="/safety-preparation"
             aria-current={pathname === "/safety-preparation" ? "page" : undefined}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              trackEvent("Safety Click", { location: "nav", destination: "safety" });
+              setMenuOpen(false);
+            }}
           >
             Safety
           </Link>
           <Link
             href="/what-to-expect"
             aria-current={pathname === "/what-to-expect" ? "page" : undefined}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              trackEvent("Experience Click", { location: "nav", destination: "what-to-expect" });
+              setMenuOpen(false);
+            }}
           >
             Experience
           </Link>
           <Link
             href="/faq"
             aria-current={pathname === "/faq" ? "page" : undefined}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              trackEvent("FAQ Click", { location: "nav", destination: "faq" });
+              setMenuOpen(false);
+            }}
           >
             FAQ
           </Link>
