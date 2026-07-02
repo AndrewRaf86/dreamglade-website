@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Begin Your Inquiry",
@@ -29,7 +30,7 @@ export default function Apply() {
             Paul reviews every application personally. This is the first step in a conversation.
           </p>
           <div style={{ marginTop: 16 }}>
-            <TermsGateCTA />
+            <TermsGateCTA trackLocation="apply" />
           </div>
         </div>
       </section>
@@ -66,7 +67,7 @@ export default function Apply() {
             <span className="stars" aria-label="5 out of 5 stars" />
             <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 verified Google reviews</span>
             <span aria-hidden="true">·</span>
-            <a href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener">Read them on Google</a>
+            <TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "apply", destination: "google-reviews" }}>Read them on Google</TrackedLink>
           </div>
         </div>
       </section>
@@ -75,7 +76,7 @@ export default function Apply() {
         <div className="container container--narrow center">
           <span className="eyebrow eyebrow--center" style={{ justifySelf: "center" }}>Ready when you are</span>
           <h2 className="display" style={{ color: "var(--cream)", marginTop: 16, marginBottom: 40 }}>The first <em>step.</em></h2>
-          <TermsGateCTA />
+          <TermsGateCTA trackLocation="apply" />
           <p style={{ marginTop: 32, fontSize: 14, color: "var(--beige)", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>
             After your application is reviewed, Paul will email you the full registration and signed agreement before your arrival date is confirmed.
           </p>

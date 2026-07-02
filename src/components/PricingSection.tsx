@@ -1,5 +1,5 @@
 import { getPricing } from "@/lib/pricing";
-import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
 
 export default async function PricingSection() {
   const { usd, pen, penRate } = await getPricing();
@@ -120,7 +120,7 @@ export default async function PricingSection() {
             Helpful travel tip: Uber is available in Iquitos, but it is smart to bring soles cash in case Uber is not working or you need to pay a motor taxi in cash. Motor taxis from the airport to hotels in Iquitos usually cost about 30–70 soles.
           </p>
           <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>
-            <Link href="/apply" style={{ color: "var(--gold-deep)", borderBottom: "1px solid var(--gold-deep)" }}>Begin an inquiry</Link> to confirm availability and pricing.
+            <TrackedLink href="/apply" event="Apply Click" properties={{ location: "pricing", destination: "apply" }} style={{ color: "var(--gold-deep)", borderBottom: "1px solid var(--gold-deep)" }}>Begin an inquiry</TrackedLink> to confirm availability and pricing.
             No deposit is taken until Paul has reviewed your application and sent the full registration.
           </p>
         </div>

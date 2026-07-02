@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { track } from "@vercel/analytics";
 
 export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
   const [scrolled, setScrolled] = useState(false);
@@ -70,7 +71,10 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
           <Link
             href="/apply"
             className="is-cta"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => {
+              track("Apply Click", { location: "nav", destination: "apply" });
+              setMenuOpen(false);
+            }}
           >
             Apply
           </Link>

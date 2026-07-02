@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Script from "next/script";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import PricingSection from "@/components/PricingSection";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Ayahuasca Retreat Near Iquitos, Peru | Dreamglade",
@@ -71,14 +71,14 @@ export default function Home() {
                 Dreamglade is a small-group ayahuasca and plant dieta retreat near Iquitos, Peru — with no more than ten guests, traditional Shipibo-led ceremonies, personal preparation, and 25 hectares of rainforest around a quiet lake.
               </p>
               <div className="hero__actions">
-                <TermsGateCTA />
+                <TermsGateCTA trackLocation="hero" />
                 <a href="#about" className="ghost-link">Read more first</a>
               </div>
               <div className="hero__social">
                 <span className="hero__social-label">Follow along</span>
-                <a href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <TrackedLink href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer" event="Instagram Click" properties={{ location: "hero", destination: "instagram" }}>Instagram</TrackedLink>
                 <span aria-hidden="true">·</span>
-                <a href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <TrackedLink href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer" event="YouTube Click" properties={{ location: "hero", destination: "youtube" }}>YouTube</TrackedLink>
               </div>
             </div>
           </div>
@@ -226,9 +226,9 @@ export default function Home() {
             </article>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
-            <Link href="/safety-preparation" className="link-arrow">
+            <TrackedLink href="/safety-preparation" className="link-arrow" event="Safety Click" properties={{ location: "safety-section", destination: "safety" }}>
               Read the full safety &amp; preparation page
-            </Link>
+            </TrackedLink>
           </div>
         </div>
       </section>
@@ -333,7 +333,7 @@ export default function Home() {
             </article>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
-            <Link href="/what-to-expect" className="link-arrow">See the full experience</Link>
+            <TrackedLink href="/what-to-expect" className="link-arrow" event="Experience Click" properties={{ location: "experience-section", destination: "what-to-expect" }}>See the full experience</TrackedLink>
           </div>
         </div>
       </section>
@@ -397,17 +397,22 @@ export default function Home() {
                 <p className="avail-card__detail">Max 2 weeks if approved</p>
                 <div className="avail-card__spots">
                   <span className="avail-card__spots-label">Spots left</span>
-                  <a
+                  <TrackedLink
                     href={`mailto:booking@dreamglade.com?subject=${encodeURIComponent(`Dreamglade availability inquiry: ${dates}`)}`}
                     className="avail-card__verify"
+                    event="Availability Click"
+                    properties={{ location: "availability", retreat: dates }}
                   >
                     VERIFY WITH PAUL
-                  </a>
+                  </TrackedLink>
                 </div>
                 <TermsGateCTA
                   label="Ask About This Retreat"
                   subject={`Dreamglade availability inquiry: ${dates}`}
                   className="avail-card__cta"
+                  trackEvent="Availability Click"
+                  trackLocation="availability"
+                  trackProperties={{ location: "availability", retreat: dates }}
                 />
               </article>
             ))}
@@ -432,9 +437,9 @@ export default function Home() {
             <span className="stars" aria-label="5 out of 5 stars" />
             <span className="rating-block__num">5.0</span>
             <span className="rating-block__count">from 182 Google reviews</span>
-            <a className="rating-block__cta link-arrow" href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener">
+            <TrackedLink className="rating-block__cta link-arrow" href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "reviews", destination: "google-reviews" }}>
               Read all Google reviews
-            </a>
+            </TrackedLink>
           </div>
           <div className="review-grid">
             {[
@@ -473,26 +478,30 @@ export default function Home() {
             </p>
           </div>
           <div className="video-grid">
-            <a
+            <TrackedLink
               className="video-card"
               href="https://www.youtube.com/watch?v=FoADvPQmqEc&t=138s"
               target="_blank"
               rel="noopener noreferrer"
+              event="YouTube Click"
+              properties={{ location: "reviews-videos", destination: "youtube" }}
             >
               <span className="video-card__eyebrow">YouTube</span>
               <h3 className="video-card__title">Guest reflection</h3>
               <span className="video-card__cta">Watch on YouTube →</span>
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
               className="video-card"
               href="https://www.youtube.com/watch?v=Sqe3KnHJFN4&t=38s"
               target="_blank"
               rel="noopener noreferrer"
+              event="YouTube Click"
+              properties={{ location: "reviews-videos", destination: "youtube" }}
             >
               <span className="video-card__eyebrow">YouTube</span>
               <h3 className="video-card__title">Guest reflection</h3>
               <span className="video-card__cta">Watch on YouTube →</span>
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </section>
@@ -522,7 +531,7 @@ export default function Home() {
             </FAQItem>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
-            <Link href="/faq" className="link-arrow">All frequently asked questions</Link>
+            <TrackedLink href="/faq" className="link-arrow" event="FAQ Click" properties={{ location: "faq-section", destination: "faq" }}>All frequently asked questions</TrackedLink>
           </div>
         </div>
       </section>
@@ -538,15 +547,15 @@ export default function Home() {
           <p className="bleed-cta__sub">
             Paul reads every inquiry. A short inquiry is all it takes to get started — no medical history at this stage.
           </p>
-          <TermsGateCTA />
+          <TermsGateCTA trackLocation="bottom-cta" />
           <p className="bleed-cta__note">
             After your application is reviewed, Paul will email you the full registration and signed agreement before your arrival date is confirmed.
           </p>
           <p className="bleed-cta__note">
             You can also follow Dreamglade on{" "}
-            <a href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <TrackedLink href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer" event="Instagram Click" properties={{ location: "bottom-cta", destination: "instagram" }}>Instagram</TrackedLink>
             {" "}and{" "}
-            <a href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <TrackedLink href="https://www.youtube.com/@dreamgladeamazon" target="_blank" rel="noopener noreferrer" event="YouTube Click" properties={{ location: "bottom-cta", destination: "youtube" }}>YouTube</TrackedLink>
             {" "}for recent photos, videos, and everyday moments from the land.
           </p>
         </div>
