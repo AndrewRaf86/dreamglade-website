@@ -103,8 +103,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 1a. TRUST STRIP + BEFORE YOU APPLY ── */}
-      <section className="section section--cream" id="homepage-trust-strip" style={{ paddingBottom: "clamp(28px, 4vw, 40px)" }}>
+      {/* ── 1a. TRUST BRIDGE ── */}
+      <section className="trust-bridge" id="homepage-trust-strip">
         <div className="container">
           <div className="trust-module">
             <div className="trust-strip">
@@ -117,14 +117,16 @@ export default function Home() {
             </div>
             <div className="before-apply">
               <p className="before-apply__lede">
-                Before you apply, you can read how preparation, safety, and the retreat experience work.
+                Before you apply, read how preparation, safety, and the retreat experience work.
               </p>
               <div className="before-apply__links">
                 <TrackedLink href="/safety-preparation" className="link-arrow" event="Safety Click" properties={{ location: "homepage-before-apply", destination: "safety-preparation" }}>Safety &amp; Preparation</TrackedLink>
                 <TrackedLink href="/what-to-expect" className="link-arrow" event="Experience Click" properties={{ location: "homepage-before-apply", destination: "what-to-expect" }}>What to Expect</TrackedLink>
                 <TrackedLink href="/faq" className="link-arrow" event="FAQ Click" properties={{ location: "homepage-before-apply", destination: "faq" }}>FAQ</TrackedLink>
               </div>
-              <TermsGateCTA label="Begin your inquiry" className="link-arrow before-apply__cta" trackLocation="homepage-before-apply" />
+              <div className="before-apply__cta-wrap">
+                <TermsGateCTA label="Begin your inquiry" className="link-arrow" trackLocation="homepage-before-apply" />
+              </div>
             </div>
           </div>
         </div>
