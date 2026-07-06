@@ -106,24 +106,26 @@ export default function Home() {
       {/* ── 1a. TRUST STRIP + BEFORE YOU APPLY ── */}
       <section className="section section--cream" id="homepage-trust-strip" style={{ paddingBottom: "clamp(28px, 4vw, 40px)" }}>
         <div className="container">
-          <div className="trust-strip">
-            <span className="stars" aria-label="5 out of 5 stars" />
-            <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 Google reviews</span>
-            <span aria-hidden="true">·</span>
-            <TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "homepage-trust-strip", destination: "google-reviews" }}>
-              Read Google reviews
-            </TrackedLink>
-          </div>
-          <div className="before-apply">
-            <p className="before-apply__lede">
-              Before you apply, you can read how preparation, safety, and the retreat experience work.
-            </p>
-            <div className="before-apply__links">
-              <TrackedLink href="/safety-preparation" className="link-arrow" event="Safety Click" properties={{ location: "homepage-before-apply", destination: "safety-preparation" }}>Safety &amp; Preparation</TrackedLink>
-              <TrackedLink href="/what-to-expect" className="link-arrow" event="Experience Click" properties={{ location: "homepage-before-apply", destination: "what-to-expect" }}>What to Expect</TrackedLink>
-              <TrackedLink href="/faq" className="link-arrow" event="FAQ Click" properties={{ location: "homepage-before-apply", destination: "faq" }}>FAQ</TrackedLink>
+          <div className="trust-module">
+            <div className="trust-strip">
+              <span className="stars" aria-label="5 out of 5 stars" />
+              <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 Google reviews</span>
+              <span aria-hidden="true">·</span>
+              <TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "homepage-trust-strip", destination: "google-reviews" }}>
+                Read Google reviews
+              </TrackedLink>
             </div>
-            <TermsGateCTA label="Begin your inquiry" className="link-arrow" trackLocation="homepage-before-apply" />
+            <div className="before-apply">
+              <p className="before-apply__lede">
+                Before you apply, you can read how preparation, safety, and the retreat experience work.
+              </p>
+              <div className="before-apply__links">
+                <TrackedLink href="/safety-preparation" className="link-arrow" event="Safety Click" properties={{ location: "homepage-before-apply", destination: "safety-preparation" }}>Safety &amp; Preparation</TrackedLink>
+                <TrackedLink href="/what-to-expect" className="link-arrow" event="Experience Click" properties={{ location: "homepage-before-apply", destination: "what-to-expect" }}>What to Expect</TrackedLink>
+                <TrackedLink href="/faq" className="link-arrow" event="FAQ Click" properties={{ location: "homepage-before-apply", destination: "faq" }}>FAQ</TrackedLink>
+              </div>
+              <TermsGateCTA label="Begin your inquiry" className="link-arrow before-apply__cta" trackLocation="homepage-before-apply" />
+            </div>
           </div>
         </div>
       </section>
