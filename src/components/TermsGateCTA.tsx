@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { trackEvent, type TrackedEventName } from "@/lib/analytics";
 
 export default function TermsGateCTA({
@@ -19,6 +19,8 @@ export default function TermsGateCTA({
 }) {
   const [open, setOpen] = useState(false);
   const [checked, setChecked] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   function handleOpen() {
     trackEvent(openEvent, trackProperties ?? { location: trackLocation, destination: "apply" });
@@ -29,7 +31,40 @@ export default function TermsGateCTA({
   function handleClose() {
     setOpen(false);
     setChecked(false);
+    triggerRef.current?.focus();
   }
+
+  useEffect(() => {
+    if (!open) return;
+
+    const modal = modalRef.current;
+    modal?.focus();
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        handleClose();
+        return;
+      }
+      if (e.key !== "Tab" || !modal) return;
+      const focusable = modal.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   function handleContinue() {
     trackEvent("Email Click", { location: trackLocation, destination: "booking" });
@@ -40,7 +75,7 @@ export default function TermsGateCTA({
 
   return (
     <>
-      <button className={className ?? "cta-button"} onClick={handleOpen}>
+      <button ref={triggerRef} className={className ?? "cta-button"} onClick={handleOpen}>
         {label}
         <span className="arrow" aria-hidden="true" />
       </button>
@@ -53,7 +88,7 @@ export default function TermsGateCTA({
           aria-labelledby="terms-gate-title"
           onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
         >
-          <div className="terms-gate-modal">
+          <div className="terms-gate-modal" ref={modalRef} tabIndex={-1}>
             <p className="terms-gate-eyebrow">Before continuing</p>
             <h2 id="terms-gate-title" className="terms-gate-title">
               Please review the Terms &amp; Conditions

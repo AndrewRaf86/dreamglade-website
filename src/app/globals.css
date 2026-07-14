@@ -167,15 +167,18 @@ p + p { margin-top: 0.6em; }
   border-bottom-color: var(--rule);
 }
 .site-header.is-scrolled .site-header__wordmark,
-.site-header.is-scrolled .site-header__nav a {
+.site-header.is-scrolled .site-header__nav a,
+.site-header.is-scrolled .site-header__menu-btn {
   color: var(--ink);
 }
 .site-header.theme-light .site-header__wordmark,
-.site-header.theme-light .site-header__nav a {
+.site-header.theme-light .site-header__nav a,
+.site-header.theme-light .site-header__menu-btn {
   color: var(--cream);
 }
 .site-header.theme-light.is-scrolled .site-header__wordmark,
-.site-header.theme-light.is-scrolled .site-header__nav a {
+.site-header.theme-light.is-scrolled .site-header__nav a,
+.site-header.theme-light.is-scrolled .site-header__menu-btn {
   color: var(--ink);
 }
 .site-header__inner {

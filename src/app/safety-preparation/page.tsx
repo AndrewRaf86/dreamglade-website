@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 
 export const metadata: Metadata = {
-  title: "Safety & Preparation",
+  title: "Safety, Screening & Preparation for Ayahuasca",
   description:
     "Learn about ayahuasca safety, medication screening, preparation, and how Dreamglade reviews each guest before confirmation.",
   alternates: { canonical: "https://dreamglade.com/safety-preparation" },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function SafetyPreparation() {
   return (
     <>
-      <Nav />
+      <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">

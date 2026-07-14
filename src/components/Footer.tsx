@@ -16,9 +16,9 @@ export default function Footer() {
               Ctra Iquitos-Nauta, 16000<br />
               Iquitos, Peru<br />
               <br />
-              <strong>booking@dreamglade.com</strong><br />
-              +51 920 478 240<br />
-              +51 924 866 141
+              <strong><a href="mailto:booking@dreamglade.com">booking@dreamglade.com</a></strong><br />
+              <a href="tel:+51920478240">+51 920 478 240</a><br />
+              <a href="tel:+51924866141">+51 924 866 141</a>
             </p>
             <p className="site-footer__social">
               <TrackedLink href="https://www.instagram.com/dreamglade/" target="_blank" rel="noopener noreferrer" event="Instagram Click" properties={{ location: "footer", destination: "instagram" }}>Instagram</TrackedLink>

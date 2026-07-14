@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 
 export const metadata: Metadata = {
-  title: "What to Expect",
+  title: "What to Expect at an Ayahuasca Retreat",
   description:
     "A typical week at Dreamglade: arrival from Iquitos, ceremonies, dieta days, accommodation in private tambos, food, sauna, and integration support.",
   alternates: { canonical: "https://dreamglade.com/what-to-expect" },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function WhatToExpect() {
   return (
     <>
-      <Nav />
+      <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">

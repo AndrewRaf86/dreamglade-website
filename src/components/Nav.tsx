@@ -28,7 +28,7 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
   return (
     <header className={headerClass}>
       <div className="container site-header__inner">
-        <Link className="site-header__wordmark" href="/" aria-label="Dreamglade — home">
+        <Link className="site-header__wordmark" href="/" aria-label="Dreamglade — home" prefetch={false}>
           <img src="/images/logo.svg" alt="Dreamglade" />
         </Link>
 

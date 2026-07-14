@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function TermsAndConditions() {
   return (
     <>
-      <Nav />
+      <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">
@@ -74,12 +74,6 @@ export default function TermsAndConditions() {
             <p>
               A <strong>50% deposit</strong> is required to confirm a place at a retreat. The remaining balance is due before or on arrival, in accordance with the terms set out in the signed Stage 2 agreement.
             </p>
-            <div className="notice notice--medical" style={{ margin: "16px 0" }}>
-              <span className="notice__label">Placeholder — needs legal confirmation</span>
-              <p style={{ margin: 0 }}>
-                The cancellation policy below is provisional and has not yet been legally confirmed. The figures shown (7-day window, 100 USD fee) should be verified by Wade, Clarisa, or legal counsel before this page is relied upon. The binding cancellation terms are those in the signed Stage 2 agreement.
-              </p>
-            </div>
             <p>
               Cancellations made <strong>within seven (7) days of the deposit being paid</strong> are eligible for a refund of the deposit less a 100 USD administrative fee.
             </p>

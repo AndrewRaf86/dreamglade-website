@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function Apply() {
   return (
     <>
-      <Nav />
+      <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">

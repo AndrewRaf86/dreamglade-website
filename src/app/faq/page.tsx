@@ -71,7 +71,7 @@ export default function FAQ() {
         {JSON.stringify(faqJsonLd)}
       </Script>
 
-      <Nav />
+      <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">
