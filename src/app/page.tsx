@@ -401,7 +401,7 @@ export default function Home() {
             <span className="eyebrow">Availability — 2026–2027</span>
             <h2 className="display">Open <em>windows.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              Each window below is a continuous retreat period. Guests join the retreat on Monday or Friday and can stay up to 2 weeks. Dates outside these windows are closed.
+              A new retreat begins every week within each window below — guests join on Monday or Friday and stay 5 nights up to 2 weeks, not the whole window. Dates outside these windows are closed.
             </p>
           </div>
           <div className="avail-grid">
@@ -425,16 +425,16 @@ export default function Home() {
                   <span className="dot" /> {limited ? "Limited availability" : "Available"}
                 </span>
                 <h3 className="avail-card__dates">{dates}</h3>
-                <p className="avail-card__detail">Guests join Monday or Friday</p>
-                <p className="avail-card__detail">Max 2 weeks if approved</p>
-                <TermsGateCTA
-                  label="Ask About This Retreat"
-                  subject={`Dreamglade availability inquiry: ${dates}`}
+                <p className="avail-card__detail">A new retreat begins every week</p>
+                <p className="avail-card__detail">Join Monday or Friday, stay up to 2 weeks</p>
+                <TrackedLink
+                  href={`mailto:booking@dreamglade.com?subject=${encodeURIComponent(`Dreamglade availability inquiry: ${dates}`)}`}
                   className="avail-card__cta"
-                  trackEvent="Availability Click"
-                  trackLocation="availability"
-                  trackProperties={{ location: "availability", retreat: dates }}
-                />
+                  event="Availability Click"
+                  properties={{ location: "availability", retreat: dates }}
+                >
+                  VERIFY WITH PAUL
+                </TrackedLink>
               </article>
             ))}
           </div>
