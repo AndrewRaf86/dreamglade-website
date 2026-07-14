@@ -670,24 +670,6 @@ p + p { margin-top: 0.6em; }
 .avail-card__nights { font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
 .avail-card__detail { margin: 0; font-size: 14px; color: var(--body); line-height: 1.45; }
 .avail-card__detail + .avail-card__detail { margin-top: 4px; }
-.avail-card__spots {
-  margin: 20px 0;
-  padding: 14px 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  display: flex; justify-content: space-between; align-items: center;
-}
-.avail-card__spots-label { text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); font-size: 11px; }
-.avail-card__verify {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-  background: rgba(201, 169, 97, 0.15);
-  padding: 3px 8px;
-  border: 1px solid rgba(201, 169, 97, 0.45);
-}
 .avail-card__cta {
   margin-top: auto;
   display: inline-flex; align-items: center; gap: 10px;

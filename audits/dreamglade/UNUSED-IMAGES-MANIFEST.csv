@@ -1,0 +1,211 @@
+Filename,CurrentPath,SizeBytes,SizeMB,DuplicateStatus,DuplicateOf
+TAJIN2.jpg,images2/TAJIN2.jpg,24300260,23.17,no duplicate found,
+people-dominga-hug.jpg,images/people-dominga-hug.jpg,16286997,15.53,exact duplicate (byte-identical),images2/HUGDOMINGA.jpg
+HUGDOMINGA.jpg,images2/HUGDOMINGA.jpg,16286997,15.53,exact duplicate (byte-identical),images/people-dominga-hug.jpg
+HUG3.jpg,images2/HUG3.jpg,16218958,15.47,no duplicate found,
+people-raul-normal.jpg,images/people-raul-normal.jpg,15924953,15.19,exact duplicate (byte-identical),images2/RAULNORMAL.jpg
+RAULNORMAL.jpg,images2/RAULNORMAL.jpg,15924953,15.19,exact duplicate (byte-identical),images/people-raul-normal.jpg
+PLATBATH3.jpg,images2/PLATBATH3.jpg,15739386,15.01,no duplicate found,
+people-raul-5.jpg,images/people-raul-5.jpg,15192471,14.49,exact duplicate (byte-identical),images2/RAUL5.jpg
+RAUL5.jpg,images2/RAUL5.jpg,15192471,14.49,exact duplicate (byte-identical),images/people-raul-5.jpg
+HUGRAUL2.jpg,images2/HUGRAUL2.jpg,14702951,14.02,no duplicate found,
+logo-dreamglade.png,images/logo-dreamglade.png,7804486,7.44,no duplicate found,
+VIEWLAKE2.jpg,images2/VIEWLAKE2.jpg,7707349,7.35,no duplicate found,
+tambo5-lakeview.jpg,images/tambo5-lakeview.jpg,7681871,7.33,exact duplicate (byte-identical),images2/TAMBO 5 LAKE VIEW.jpg
+TAMBO 5 LAKE VIEW.jpg,images2/TAMBO 5 LAKE VIEW.jpg,7681871,7.33,exact duplicate (byte-identical),images/tambo5-lakeview.jpg
+bobinsana-2.jpg,images/bobinsana-2.jpg,7369051,7.03,exact duplicate (byte-identical),images2/BOBINSANA-2.jpg
+BOBINSANA-2.jpg,images2/BOBINSANA-2.jpg,7369051,7.03,exact duplicate (byte-identical),images/bobinsana-2.jpg
+placeholder-tambo-single.jpg,images/placeholder-tambo-single.jpg,7242610,6.91,exact duplicate (byte-identical),images2/TAMBO 1-LEFT SIDE.jpg
+TAMBO 1-LEFT SIDE.jpg,images2/TAMBO 1-LEFT SIDE.jpg,7242610,6.91,exact duplicate (byte-identical),images/placeholder-tambo-single.jpg
+planta-de-vida.jpg,images/planta-de-vida.jpg,7112193,6.78,exact duplicate (byte-identical),images2/PLANTA DE VIDA.jpg
+PLANTA DE VIDA.jpg,images2/PLANTA DE VIDA.jpg,7112193,6.78,exact duplicate (byte-identical),images/planta-de-vida.jpg
+placeholder-tambo-shared.jpg,images/placeholder-tambo-shared.jpg,6594343,6.29,exact duplicate (byte-identical),images/sharetambo-front.jpg;images2/SHARETAMBO-FRONT-MAPACHO.jpg
+sharetambo-front.jpg,images/sharetambo-front.jpg,6594343,6.29,exact duplicate (byte-identical),images/placeholder-tambo-shared.jpg;images2/SHARETAMBO-FRONT-MAPACHO.jpg
+SHARETAMBO-FRONT-MAPACHO.jpg,images2/SHARETAMBO-FRONT-MAPACHO.jpg,6594343,6.29,exact duplicate (byte-identical),images/placeholder-tambo-shared.jpg;images/sharetambo-front.jpg
+LAKE FROM BIGHS.jpg,images2/LAKE FROM BIGHS.jpg,6367602,6.07,exact duplicate (byte-identical),images/lake-from-bighouse.jpg
+SHARE TAMBO- MAPACHO.jpg,images2/SHARE TAMBO- MAPACHO.jpg,6137447,5.85,no duplicate found,
+people-raul-normal-2.jpg,images/people-raul-normal-2.jpg,5583699,5.33,exact duplicate (byte-identical),images2/RAULNORMAL2.jpg
+RAULNORMAL2.jpg,images2/RAULNORMAL2.jpg,5583699,5.33,exact duplicate (byte-identical),images/people-raul-normal-2.jpg
+placeholder-sauna.jpg,images/placeholder-sauna.jpg,5545754,5.29,exact duplicate (byte-identical),images/sauna.jpg;images2/SAUNALEFTSIDE.jpg
+SAUNALEFTSIDE.jpg,images2/SAUNALEFTSIDE.jpg,5545754,5.29,exact duplicate (byte-identical),images/sauna.jpg;images/placeholder-sauna.jpg
+tambo5-entry.jpg,images/tambo5-entry.jpg,5531216,5.27,exact duplicate (byte-identical),images2/TAMBO 5 - ENTRY.jpg
+TAMBO 5 - ENTRY.jpg,images2/TAMBO 5 - ENTRY.jpg,5531216,5.27,exact duplicate (byte-identical),images/tambo5-entry.jpg
+VALENTINA3.jpg,images2/VALENTINA3.jpg,5526012,5.27,no duplicate found,
+placeholder-maloka.jpg,images/placeholder-maloka.jpg,5363477,5.12,exact duplicate (byte-identical),images/maloka-exterior.jpg;images/maloka1.jpg;images2/MALOKA1.jpg
+maloka1.jpg,images/maloka1.jpg,5363477,5.12,exact duplicate (byte-identical),images/placeholder-maloka.jpg;images/maloka-exterior.jpg;images2/MALOKA1.jpg
+MALOKA1.jpg,images2/MALOKA1.jpg,5363477,5.12,exact duplicate (byte-identical),images/placeholder-maloka.jpg;images/maloka-exterior.jpg;images/maloka1.jpg
+TAMBO 6 - FRONT.jpg,images2/TAMBO 6 - FRONT.jpg,5352405,5.10,no duplicate found,
+TAJINBIGHOUSE.jpg,images2/TAJINBIGHOUSE.jpg,5168229,4.93,no duplicate found,
+TAMBO 5-LEFT SIDE.jpg,images2/TAMBO 5-LEFT SIDE.jpg,4788891,4.57,no duplicate found,
+GROUP46.jpg,images2/GROUP46.jpg,4786127,4.56,no duplicate found,
+placeholder-tambo-interior.jpg,images/placeholder-tambo-interior.jpg,4274190,4.08,exact duplicate (byte-identical),images/tambo1-bed.jpg;images2/TAMBO1-BED.jpg
+tambo1-bed.jpg,images/tambo1-bed.jpg,4274190,4.08,exact duplicate (byte-identical),images/placeholder-tambo-interior.jpg;images2/TAMBO1-BED.jpg
+TAMBO1-BED.jpg,images2/TAMBO1-BED.jpg,4274190,4.08,exact duplicate (byte-identical),images/placeholder-tambo-interior.jpg;images/tambo1-bed.jpg
+TAMBO 7 - DOOR.jpg,images2/TAMBO 7 - DOOR.jpg,4203560,4.01,no duplicate found,
+maloka-bathroom.jpg,images/maloka-bathroom.jpg,4190616,4.00,exact duplicate (byte-identical),images2/BATHROOM-MALOKA.jpg
+BATHROOM-MALOKA.jpg,images2/BATHROOM-MALOKA.jpg,4190616,4.00,exact duplicate (byte-identical),images/maloka-bathroom.jpg
+manta-hallway.jpg,images/manta-hallway.jpg,4171419,3.98,exact duplicate (byte-identical),images2/MANTA PASILLO.jpg
+MANTA PASILLO.jpg,images2/MANTA PASILLO.jpg,4171419,3.98,exact duplicate (byte-identical),images/manta-hallway.jpg
+SAUL&TAJIN.jpg,images2/SAUL&TAJIN.jpg,4152029,3.96,no duplicate found,
+TOILET TAMBO1.jpg,images2/TOILET TAMBO1.jpg,3769659,3.60,no duplicate found,
+maloka-beds.jpg,images/maloka-beds.jpg,3658451,3.49,exact duplicate (byte-identical),images2/MALOKABEDS.jpg
+maloka-bed.jpg,images/maloka-bed.jpg,3518105,3.36,exact duplicate (byte-identical),images2/BEDMALOKA.jpg
+BEDMALOKA.jpg,images2/BEDMALOKA.jpg,3518105,3.36,exact duplicate (byte-identical),images/maloka-bed.jpg
+people-clarisa-wade-ns.jpg,images/people-clarisa-wade-ns.jpg,3474521,3.31,exact duplicate (byte-identical),images2/CLARISA&WADE-NS.jpg
+CLARISA&WADE-NS.jpg,images2/CLARISA&WADE-NS.jpg,3474521,3.31,exact duplicate (byte-identical),images/people-clarisa-wade-ns.jpg
+CATS-MAX-MANGO.jpg,images2/CATS-MAX-MANGO.jpg,2738319,2.61,no duplicate found,
+sharetambo-beds.jpg,images/sharetambo-beds.jpg,2733110,2.61,exact duplicate (byte-identical),images2/BEDS-MAPACHO-SHARETAMBO.jpg
+BEDS-MAPACHO-SHARETAMBO.jpg,images2/BEDS-MAPACHO-SHARETAMBO.jpg,2733110,2.61,exact duplicate (byte-identical),images/sharetambo-beds.jpg
+tambo7-beds.jpg,images/tambo7-beds.jpg,2687122,2.56,exact duplicate (byte-identical),images2/TAMBO 7 - BEDS.jpg
+TAMBO 7 - BEDS.jpg,images2/TAMBO 7 - BEDS.jpg,2687122,2.56,exact duplicate (byte-identical),images/tambo7-beds.jpg
+SINKBATHR-MAIN.jpg,images2/SINKBATHR-MAIN.jpg,2629354,2.51,no duplicate found,
+SOPLAJORDAN.jpg,images2/SOPLAJORDAN.jpg,2269051,2.16,no duplicate found,
+placeholder-lake-alt.jpg,images/placeholder-lake-alt.jpg,2233405,2.13,exact duplicate (byte-identical),images/antoherlake-tambo3.jpg;images2/antoherlake-tambo3.jpg
+antoherlake-tambo3.jpg,images/antoherlake-tambo3.jpg,2233405,2.13,exact duplicate (byte-identical),images/placeholder-lake-alt.jpg;images2/antoherlake-tambo3.jpg
+antoherlake-tambo3.jpg,images2/antoherlake-tambo3.jpg,2233405,2.13,exact duplicate (byte-identical),images/placeholder-lake-alt.jpg;images/antoherlake-tambo3.jpg
+GROUP- april26.jpg,images2/GROUP- april26.jpg,1762267,1.68,no duplicate found,
+IMG-20250513-WA0002.jpg,images2/IMG-20250513-WA0002.jpg,1491491,1.42,no duplicate found,
+TAMBO 3-PROFS.jpg,images2/TAMBO 3-PROFS.jpg,1001324,0.95,no duplicate found,
+Raul LAKE.jpg,images2/Raul LAKE.jpg,866543,0.83,no duplicate found,
+tambo1-view.jpg,images/tambo1-view.jpg,853684,0.81,exact duplicate (byte-identical),images2/TAMBO1- another view.jpg
+TAMBO1- another view.jpg,images2/TAMBO1- another view.jpg,853684,0.81,exact duplicate (byte-identical),images/tambo1-view.jpg
+TAMBO7 - PROFESS.jpg,images2/TAMBO7 - PROFESS.jpg,778342,0.74,no duplicate found,
+people-dominga.jpg,images/people-dominga.jpg,770472,0.73,no duplicate found,
+bighouse-sunlight.jpg,images/bighouse-sunlight.jpg,736185,0.70,exact duplicate (byte-identical),images2/bighouse-sunligh.jpg
+bighouse-sunligh.jpg,images2/bighouse-sunligh.jpg,736185,0.70,exact duplicate (byte-identical),images/bighouse-sunlight.jpg
+tambo7-lakeview.jpg,images/tambo7-lakeview.jpg,692379,0.66,exact duplicate (byte-identical),images2/TAMBO7 LAKE VIEW.jpg;images2/TAMBO4-ELLI.jpg;images2/TAMBO-6Y7 - ELLI.jpg
+TAMBO7 LAKE VIEW.jpg,images2/TAMBO7 LAKE VIEW.jpg,692379,0.66,exact duplicate (byte-identical),images/tambo7-lakeview.jpg;images2/TAMBO4-ELLI.jpg;images2/TAMBO-6Y7 - ELLI.jpg
+TAMBO4-ELLI.jpg,images2/TAMBO4-ELLI.jpg,692379,0.66,exact duplicate (byte-identical),images/tambo7-lakeview.jpg;images2/TAMBO7 LAKE VIEW.jpg;images2/TAMBO-6Y7 - ELLI.jpg
+TAMBO-6Y7 - ELLI.jpg,images2/TAMBO-6Y7 - ELLI.jpg,692379,0.66,exact duplicate (byte-identical),images/tambo7-lakeview.jpg;images2/TAMBO7 LAKE VIEW.jpg;images2/TAMBO4-ELLI.jpg
+LAKE2-IEVETA.jpg,images2/LAKE2-IEVETA.jpg,688092,0.66,no duplicate found,
+TAMBO-6Y5-REMI.jpg,images2/TAMBO-6Y5-REMI.jpg,668779,0.64,no duplicate found,
+dogs-puente.jpg,images/dogs-puente.jpg,654181,0.62,exact duplicate (byte-identical),images2/DOGS - Puente.jpg
+TAMBONUM7-REMI.jpg,images2/TAMBONUM7-REMI.jpg,650970,0.62,no duplicate found,
+private tambo outside view.jpeg,images2/private tambo outside view.jpeg,631804,0.60,no duplicate found,
+TAMBO7 - REMI.jpg,images2/TAMBO7 - REMI.jpg,625982,0.60,no duplicate found,
+tambo4-quino.jpg,images2/tambo4-quino.jpg,612120,0.58,no duplicate found,
+TAMBO3-DESS.jpg,images2/TAMBO3-DESS.jpg,598145,0.57,no duplicate found,
+tambo-lakeview.jpg,images/tambo-lakeview.jpg,577955,0.55,exact duplicate (byte-identical),images2/TAMBO 4 LAKE VIEW.jpg;images2/IMG-20240709-WA0000.jpg
+TAMBO 4 LAKE VIEW.jpg,images2/TAMBO 4 LAKE VIEW.jpg,577955,0.55,exact duplicate (byte-identical),images/tambo-lakeview.jpg;images2/IMG-20240709-WA0000.jpg
+IMG-20240709-WA0000.jpg,images2/IMG-20240709-WA0000.jpg,577955,0.55,exact duplicate (byte-identical),images/tambo-lakeview.jpg;images2/TAMBO 4 LAKE VIEW.jpg
+LAKE-TMABO1-REMI.jpg,images2/LAKE-TMABO1-REMI.jpg,574557,0.55,no duplicate found,
+mapacho sunny view.jpeg,images2/mapacho sunny view.jpeg,556985,0.53,exact duplicate (byte-identical),images2/dreamglade-sunny-communal-area.jpeg
+MALOKA2 - JONH IRISH.jpg,images2/MALOKA2 - JONH IRISH.jpg,556035,0.53,no duplicate found,
+BIGHOUSE-JEFF.jpg,images2/BIGHOUSE-JEFF.jpg,545895,0.52,no duplicate found,
+IMG-20240326-WA0011.jpg,images2/IMG-20240326-WA0011.jpg,521590,0.50,no duplicate found,
+bighouse-rain.jpg,images/bighouse-rain.jpg,518735,0.49,exact duplicate (byte-identical),images/hero-alt-bighouse-rain.jpg;images2/BIG HOUS-RAIN.jpg
+BIG HOUS-RAIN.jpg,images2/BIG HOUS-RAIN.jpg,518735,0.49,exact duplicate (byte-identical),images/bighouse-rain.jpg;images/hero-alt-bighouse-rain.jpg
+shower area.jpeg,images2/shower area.jpeg,517040,0.49,no duplicate found,
+MAIR-DIETA-MELISSA.jpg,images2/MAIR-DIETA-MELISSA.jpg,489398,0.47,no duplicate found,
+retreat view.jpeg,images2/retreat view.jpeg,483086,0.46,exact duplicate (byte-identical),images2/dreamglade-lake-tambo-view.jpeg
+lake-tambo3.jpg,images/lake-tambo3.jpg,480348,0.46,exact duplicate (byte-identical),images2/LAKE - TAMBO3.jpg
+LAKE VIEW- TAMBO 3.jpg,images2/LAKE VIEW- TAMBO 3.jpg,476519,0.45,exact duplicate (byte-identical),images2/MALOKA-BIGHOUSE-DESS.jpg
+MALOKA-BIGHOUSE-DESS.jpg,images2/MALOKA-BIGHOUSE-DESS.jpg,476519,0.45,exact duplicate (byte-identical),images2/LAKE VIEW- TAMBO 3.jpg
+overview-lake-tambo5.jpg,images/overview-lake-tambo5.jpg,475564,0.45,exact duplicate (byte-identical),images/hero-alt-overview.jpg;images/placeholder-hero-lake.jpg;images2/Overview lake - tambo5.jpg
+placeholder-hero-lake.jpg,images/placeholder-hero-lake.jpg,475564,0.45,exact duplicate (byte-identical),images/hero-alt-overview.jpg;images/overview-lake-tambo5.jpg;images2/Overview lake - tambo5.jpg
+Overview lake - tambo5.jpg,images2/Overview lake - tambo5.jpg,475564,0.45,exact duplicate (byte-identical),images/hero-alt-overview.jpg;images/overview-lake-tambo5.jpg;images/placeholder-hero-lake.jpg
+jungle-jeff.jpg,images/jungle-jeff.jpg,466128,0.44,exact duplicate (byte-identical),images/jungle-sun.jpg;images2/IMG-20240708-WA0035.jpg;images2/JUNGLE-JEFF.jpg
+jungle-sun.jpg,images/jungle-sun.jpg,466128,0.44,exact duplicate (byte-identical),images/jungle-jeff.jpg;images2/IMG-20240708-WA0035.jpg;images2/JUNGLE-JEFF.jpg
+IMG-20240708-WA0035.jpg,images2/IMG-20240708-WA0035.jpg,466128,0.44,exact duplicate (byte-identical),images/jungle-jeff.jpg;images/jungle-sun.jpg;images2/JUNGLE-JEFF.jpg
+JUNGLE-JEFF.jpg,images2/JUNGLE-JEFF.jpg,466128,0.44,exact duplicate (byte-identical),images/jungle-jeff.jpg;images/jungle-sun.jpg;images2/IMG-20240708-WA0035.jpg
+LAKE3-DESS.jpg,images2/LAKE3-DESS.jpg,464977,0.44,no duplicate found,
+MANTAS-LIDIARAUL-KENTA.jpg,images2/MANTAS-LIDIARAUL-KENTA.jpg,461756,0.44,no duplicate found,
+tambo6.jpg,images2/tambo6.jpg,454667,0.43,exact duplicate (byte-identical),images2/overview TAMBO6_7.jpg
+overview TAMBO6_7.jpg,images2/overview TAMBO6_7.jpg,454667,0.43,exact duplicate (byte-identical),images2/tambo6.jpg
+TAJIN-KENTA.jpg,images2/TAJIN-KENTA.jpg,448618,0.43,no duplicate found,
+TAMBO-JESSICA.jpg,images2/TAMBO-JESSICA.jpg,436941,0.42,no duplicate found,
+MALOKA - JONH IRISH.jpg,images2/MALOKA - JONH IRISH.jpg,431005,0.41,no duplicate found,
+BAÑOMALOKA-REMI.jpg,images2/BAÑOMALOKA-REMI.jpg,429573,0.41,no duplicate found,
+people-raul-domi.jpg,images/people-raul-domi.jpg,429496,0.41,exact duplicate (byte-identical),images2/Guest - RAUL_DOMI.jpg
+Guest - RAUL_DOMI.jpg,images2/Guest - RAUL_DOMI.jpg,429496,0.41,exact duplicate (byte-identical),images/people-raul-domi.jpg
+outside single tambo pic.jpeg,images2/outside single tambo pic.jpeg,420331,0.40,exact duplicate (byte-identical),images2/dreamglade-outside-single-tambo.jpeg
+IMG-20240801-WA0010.jpg,images2/IMG-20240801-WA0010.jpg,401826,0.38,no duplicate found,
+IMG-20240801-WA0012.jpg,images2/IMG-20240801-WA0012.jpg,399183,0.38,no duplicate found,
+lakeview-tambo4.jpg,images/lakeview-tambo4.jpg,388676,0.37,exact duplicate (byte-identical),images/placeholder-tambo-lakeview.jpg;images2/LAKEVIEW TAMBO4.jpg
+placeholder-tambo-lakeview.jpg,images/placeholder-tambo-lakeview.jpg,388676,0.37,exact duplicate (byte-identical),images/lakeview-tambo4.jpg;images2/LAKEVIEW TAMBO4.jpg
+LAKEVIEW TAMBO4.jpg,images2/LAKEVIEW TAMBO4.jpg,388676,0.37,exact duplicate (byte-identical),images/lakeview-tambo4.jpg;images/placeholder-tambo-lakeview.jpg
+LAKE2-DESS.jpg,images2/LAKE2-DESS.jpg,386016,0.37,exact duplicate (byte-identical),images2/IMG-20240708-WA0016.jpg
+IMG-20240708-WA0016.jpg,images2/IMG-20240708-WA0016.jpg,386016,0.37,exact duplicate (byte-identical),images2/LAKE2-DESS.jpg
+IMG-20240801-WA0017.jpg,images2/IMG-20240801-WA0017.jpg,379937,0.36,no duplicate found,
+overview LAKE.jpg,images2/overview LAKE.jpg,377377,0.36,exact duplicate (byte-identical),images/lake-overview.jpg
+placeholder-bridge-overview.jpg,images/placeholder-bridge-overview.jpg,376110,0.36,exact duplicate (byte-identical),images/bridge-overview.jpg;images2/overview Bridge_.jpg
+overview Bridge_.jpg,images2/overview Bridge_.jpg,376110,0.36,exact duplicate (byte-identical),images/bridge-overview.jpg;images/placeholder-bridge-overview.jpg
+property-bighouse-overview.jpg,images/property-bighouse-overview.jpg,369809,0.35,exact duplicate (byte-identical),images2/overview - BIG HOUSE_.jpg
+overview - BIG HOUSE_.jpg,images2/overview - BIG HOUSE_.jpg,369809,0.35,exact duplicate (byte-identical),images/property-bighouse-overview.jpg
+IMG-20250603-WA0021.jpg,images2/IMG-20250603-WA0021.jpg,366824,0.35,no duplicate found,
+deck-rockingchairs.jpg,images/deck-rockingchairs.jpg,364483,0.35,exact duplicate (byte-identical),images2/DECK-MALOKA-REMI.jpg
+hero-alt-mapacho.jpg,images/hero-alt-mapacho.jpg,364087,0.35,exact duplicate (byte-identical),images/mapacho-mainhouse.jpg;images/placeholder-main-house.jpg;images2/MAIN HOUSE.jpg;images2/BIGHOUSE-KENTA.jpg
+placeholder-main-house.jpg,images/placeholder-main-house.jpg,364087,0.35,exact duplicate (byte-identical),images/hero-alt-mapacho.jpg;images/mapacho-mainhouse.jpg;images2/MAIN HOUSE.jpg;images2/BIGHOUSE-KENTA.jpg
+MAIN HOUSE.jpg,images2/MAIN HOUSE.jpg,364087,0.35,exact duplicate (byte-identical),images/hero-alt-mapacho.jpg;images/mapacho-mainhouse.jpg;images/placeholder-main-house.jpg;images2/BIGHOUSE-KENTA.jpg
+IMG-20250430-WA0001.jpg,images2/IMG-20250430-WA0001.jpg,356348,0.34,no duplicate found,
+NS1.jpg,images2/NS1.jpg,342308,0.33,no duplicate found,
+IMG-20240801-WA0007.jpg,images2/IMG-20240801-WA0007.jpg,342037,0.33,no duplicate found,
+TAJIN-VALENTINA-BRIDGE-REMI.jpg,images2/TAJIN-VALENTINA-BRIDGE-REMI.jpg,341157,0.33,no duplicate found,
+TRAMPOLIN-ERIN.jpg,images2/TRAMPOLIN-ERIN.jpg,328111,0.31,exact duplicate (byte-identical),images2/IMG-20240708-WA0067.jpg
+IMG-20240708-WA0067.jpg,images2/IMG-20240708-WA0067.jpg,328111,0.31,exact duplicate (byte-identical),images2/TRAMPOLIN-ERIN.jpg
+TAMBO 2-3.jpg,images2/TAMBO 2-3.jpg,321227,0.31,no duplicate found,
+puente.jpg,images/puente.jpg,315886,0.30,exact duplicate (byte-identical),images/placeholder-bridge.jpg;images/bridge.jpg;images2/PUENTE.jpg
+placeholder-bridge.jpg,images/placeholder-bridge.jpg,315886,0.30,exact duplicate (byte-identical),images/puente.jpg;images/bridge.jpg;images2/PUENTE.jpg
+bridge.jpg,images/bridge.jpg,315886,0.30,exact duplicate (byte-identical),images/puente.jpg;images/placeholder-bridge.jpg;images2/PUENTE.jpg
+PUENTE.jpg,images2/PUENTE.jpg,315886,0.30,exact duplicate (byte-identical),images/puente.jpg;images/placeholder-bridge.jpg;images/bridge.jpg
+lake-rightside.jpg,images/lake-rightside.jpg,312934,0.30,exact duplicate (byte-identical),images2/rightsideLAKE.jpg
+rightsideLAKE.jpg,images2/rightsideLAKE.jpg,312934,0.30,exact duplicate (byte-identical),images/lake-rightside.jpg
+placeholder-solar.jpg,images/placeholder-solar.jpg,310892,0.30,exact duplicate (byte-identical),images/solar.jpg;images2/SOLAR PANELS.jpg
+SOLAR PANELS.jpg,images2/SOLAR PANELS.jpg,310892,0.30,exact duplicate (byte-identical),images/placeholder-solar.jpg;images/solar.jpg
+people-clarisa-mapacho.jpg,images/people-clarisa-mapacho.jpg,309851,0.30,exact duplicate (byte-identical),images2/MAPACHO-CLARISA.jpg
+MAPACHO-CLARISA.jpg,images2/MAPACHO-CLARISA.jpg,309851,0.30,exact duplicate (byte-identical),images/people-clarisa-mapacho.jpg
+IMG-20240801-WA0006.jpg,images2/IMG-20240801-WA0006.jpg,302935,0.29,no duplicate found,
+placeholder-lake-side.jpg,images/placeholder-lake-side.jpg,301529,0.29,exact duplicate (byte-identical),images/lake-leftside.jpg;images2/Lake - Left side_.jpg
+lake-leftside.jpg,images/lake-leftside.jpg,301529,0.29,exact duplicate (byte-identical),images/placeholder-lake-side.jpg;images2/Lake - Left side_.jpg
+Lake - Left side_.jpg,images2/Lake - Left side_.jpg,301529,0.29,exact duplicate (byte-identical),images/placeholder-lake-side.jpg;images/lake-leftside.jpg
+communal tambo inside.jpeg,images2/communal tambo inside.jpeg,299119,0.29,exact duplicate (byte-identical),images2/dreamglade-communal-tambo-inside.jpeg;images2/communal tambo.jpeg
+communal tambo.jpeg,images2/communal tambo.jpeg,299119,0.29,exact duplicate (byte-identical),images2/dreamglade-communal-tambo-inside.jpeg;images2/communal tambo inside.jpeg
+IMG-20240708-WA0041.jpg,images2/IMG-20240708-WA0041.jpg,290724,0.28,exact duplicate (byte-identical),images2/bighouse-WILLIAM.jpg
+bighouse-WILLIAM.jpg,images2/bighouse-WILLIAM.jpg,290724,0.28,exact duplicate (byte-identical),images2/IMG-20240708-WA0041.jpg
+IMG-20240801-WA0014.jpg,images2/IMG-20240801-WA0014.jpg,284240,0.27,no duplicate found,
+IMG-20250603-WA0022.jpg,images2/IMG-20250603-WA0022.jpg,282619,0.27,no duplicate found,
+Valentina_.jpg,images2/Valentina_.jpg,277629,0.26,no duplicate found,
+tambo-screened.jpg,images/tambo-screened.jpg,263060,0.25,exact duplicate (byte-identical),images2/MAPACHO2-CLARISA.jpg
+MAPACHO2-CLARISA.jpg,images2/MAPACHO2-CLARISA.jpg,263060,0.25,exact duplicate (byte-identical),images/tambo-screened.jpg
+GRUPO 25.jpg,images2/GRUPO 25.jpg,256064,0.24,no duplicate found,
+tambo7-bed.jpg,images/tambo7-bed.jpg,252655,0.24,exact duplicate (byte-identical),images2/TAMBOINSEDE-JEFF.jpg;images2/TAMBO7 BED-.jpg
+TAMBOINSEDE-JEFF.jpg,images2/TAMBOINSEDE-JEFF.jpg,252655,0.24,exact duplicate (byte-identical),images/tambo7-bed.jpg;images2/TAMBO7 BED-.jpg
+TAMBO7 BED-.jpg,images2/TAMBO7 BED-.jpg,252655,0.24,exact duplicate (byte-identical),images/tambo7-bed.jpg;images2/TAMBOINSEDE-JEFF.jpg
+TRAMPOLINE.jpg,images2/TRAMPOLINE.jpg,249487,0.24,no duplicate found,
+private tambo.jpeg,images2/private tambo.jpeg,247010,0.24,exact duplicate (byte-identical),images2/single tambo inside.jpeg;images2/dreamglade-single-tambo-inside.jpeg
+single tambo inside.jpeg,images2/single tambo inside.jpeg,247010,0.24,exact duplicate (byte-identical),images2/private tambo.jpeg;images2/dreamglade-single-tambo-inside.jpeg
+placeholder-bobinsana.jpg,images/placeholder-bobinsana.jpg,246254,0.23,exact duplicate (byte-identical),images/bobinsana-flower.jpg;images2/Bobinsana Flower.jpg
+Bobinsana Flower.jpg,images2/Bobinsana Flower.jpg,246254,0.23,exact duplicate (byte-identical),images/bobinsana-flower.jpg;images/placeholder-bobinsana.jpg
+TRAMPOLIN-WILLIAM.jpg,images2/TRAMPOLIN-WILLIAM.jpg,241233,0.23,exact duplicate (byte-identical),images/trampoline-pillows.jpg
+property-overview.jpg,images/property-overview.jpg,229207,0.22,exact duplicate (byte-identical),images2/OVERVIEW.jpg
+OVERVIEW.jpg,images2/OVERVIEW.jpg,229207,0.22,exact duplicate (byte-identical),images/property-overview.jpg
+MANWALKIN-ERIN.jpg,images2/MANWALKIN-ERIN.jpg,222465,0.21,no duplicate found,
+corredor.jpg,images/corredor.jpg,221861,0.21,exact duplicate (byte-identical),images/corredor-william.jpg;images2/CORREDOR-WILLIAM.jpg;images2/IMG-20240708-WA0039.jpg
+corredor-william.jpg,images/corredor-william.jpg,221861,0.21,exact duplicate (byte-identical),images/corredor.jpg;images2/CORREDOR-WILLIAM.jpg;images2/IMG-20240708-WA0039.jpg
+IMG-20240708-WA0039.jpg,images2/IMG-20240708-WA0039.jpg,221861,0.21,exact duplicate (byte-identical),images/corredor.jpg;images/corredor-william.jpg;images2/CORREDOR-WILLIAM.jpg
+GRUPO25FAB.jpg,images2/GRUPO25FAB.jpg,221763,0.21,no duplicate found,
+lake-main.jpg,images/lake-main.jpg,206879,0.20,exact duplicate (byte-identical),images2/LAKE_.jpg
+LAKE_.jpg,images2/LAKE_.jpg,206879,0.20,exact duplicate (byte-identical),images/lake-main.jpg
+double tambo inside.jpeg,images2/double tambo inside.jpeg,199034,0.19,exact duplicate (byte-identical),images2/dreamglade-double-tambo-inside.jpeg;images2/inside double tambo.jpeg
+inside double tambo.jpeg,images2/inside double tambo.jpeg,199034,0.19,exact duplicate (byte-identical),images2/dreamglade-double-tambo-inside.jpeg;images2/double tambo inside.jpeg
+shower view.jpeg,images2/shower view.jpeg,179276,0.17,no duplicate found,
+people-raul-website.jpg,images/people-raul-website.jpg,178708,0.17,exact duplicate (byte-identical),images2/RAUL WEBSITE PLANT BATH.jpg
+RAUL WEBSITE PLANT BATH.jpg,images2/RAUL WEBSITE PLANT BATH.jpg,178708,0.17,exact duplicate (byte-identical),images/people-raul-website.jpg
+cat-max.jpg,images/cat-max.jpg,163813,0.16,exact duplicate (byte-identical),images2/CAT MAX.jpg
+CAT MAX.jpg,images2/CAT MAX.jpg,163813,0.16,exact duplicate (byte-identical),images/cat-max.jpg
+tajin-deck.jpg,images/tajin-deck.jpg,158804,0.15,exact duplicate (byte-identical),images2/TAJIN6.jpg
+TAJIN6.jpg,images2/TAJIN6.jpg,158804,0.15,exact duplicate (byte-identical),images/tajin-deck.jpg
+HANDPANF.jpg,images2/HANDPANF.jpg,157856,0.15,no duplicate found,
+KAMBO CLARA.jpg,images2/KAMBO CLARA.jpg,157559,0.15,no duplicate found,
+placeholder-jungle-flower.jpg,images/placeholder-jungle-flower.jpg,154554,0.15,exact duplicate (byte-identical),images/jungle-flower.jpg;images/jungle-flower2.jpg;images2/JUNGLE FLOWER.jpg
+jungle-flower.jpg,images/jungle-flower.jpg,154554,0.15,exact duplicate (byte-identical),images/placeholder-jungle-flower.jpg;images/jungle-flower2.jpg;images2/JUNGLE FLOWER.jpg
+jungle-flower2.jpg,images/jungle-flower2.jpg,154554,0.15,exact duplicate (byte-identical),images/placeholder-jungle-flower.jpg;images/jungle-flower.jpg;images2/JUNGLE FLOWER.jpg
+JUNGLE FLOWER.jpg,images2/JUNGLE FLOWER.jpg,154554,0.15,exact duplicate (byte-identical),images/placeholder-jungle-flower.jpg;images/jungle-flower.jpg;images/jungle-flower2.jpg
+BATH.jpg,images2/BATH.jpg,149550,0.14,no duplicate found,
+IMG-20240801-WA0013.jpg,images2/IMG-20240801-WA0013.jpg,135170,0.13,no duplicate found,
+IMG-20250603-WA0020.jpg,images2/IMG-20250603-WA0020.jpg,120162,0.11,no duplicate found,
+people-wade-clara.jpg,images/people-wade-clara.jpg,98513,0.09,exact duplicate (byte-identical),images2/WADE Y CLARA.jpg
+WADE Y CLARA.jpg,images2/WADE Y CLARA.jpg,98513,0.09,exact duplicate (byte-identical),images/people-wade-clara.jpg
+logo-footer.jpg,images/logo-footer.jpg,91395,0.09,no duplicate found,
+mapacho-burn.jpg,images/mapacho-burn.jpg,46734,0.04,exact duplicate (byte-identical),images2/MAPACHO BURN.jpg
+MAPACHO BURN.jpg,images2/MAPACHO BURN.jpg,46734,0.04,exact duplicate (byte-identical),images/mapacho-burn.jpg

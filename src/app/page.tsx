@@ -208,7 +208,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="facts__num">02</span>
-                  <span className="facts__text"><strong>Near Moralillo,</strong> under an hour's drive from Iquitos.</span>
+                  <span className="facts__text"><strong>Near Moralillo,</strong> under an hour&apos;s drive from Iquitos.</span>
                 </li>
                 <li>
                   <span className="facts__num">03</span>
@@ -427,17 +427,6 @@ export default function Home() {
                 <h3 className="avail-card__dates">{dates}</h3>
                 <p className="avail-card__detail">Guests join Monday or Friday</p>
                 <p className="avail-card__detail">Max 2 weeks if approved</p>
-                <div className="avail-card__spots">
-                  <span className="avail-card__spots-label">Spots left</span>
-                  <TrackedLink
-                    href={`mailto:booking@dreamglade.com?subject=${encodeURIComponent(`Dreamglade availability inquiry: ${dates}`)}`}
-                    className="avail-card__verify"
-                    event="Availability Click"
-                    properties={{ location: "availability", retreat: dates }}
-                  >
-                    VERIFY WITH PAUL
-                  </TrackedLink>
-                </div>
                 <TermsGateCTA
                   label="Ask About This Retreat"
                   subject={`Dreamglade availability inquiry: ${dates}`}
@@ -559,7 +548,7 @@ export default function Home() {
               <p>The first step is a short inquiry — no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
             </FAQItem>
             <FAQItem question="Where exactly is Dreamglade?">
-              <p>Dreamglade is near Moralillo, under an hour's drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside. Guest rooms have no electricity or Wi-Fi by design. Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life.</p>
+              <p>Dreamglade is near Moralillo, under an hour&apos;s drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside. Guest rooms have no electricity or Wi-Fi by design. Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life.</p>
             </FAQItem>
           </div>
           <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>

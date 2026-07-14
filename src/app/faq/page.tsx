@@ -95,7 +95,7 @@ export default function FAQ() {
               <p>Dreamglade was founded by Stacy Povey in 2013 and later came under the care of Wade Bucher and Clarisa Gutierrez in 2023. Paul reviews every application personally.</p>
             </FAQItem>
             <FAQItem question="Where is Dreamglade located?">
-              <p>Dreamglade is near Moralillo, under an hour's drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside.</p>
+              <p>Dreamglade is near Moralillo, under an hour&apos;s drive from Iquitos in the Peruvian Amazon. The property is 25 hectares of rainforest lakeside.</p>
             </FAQItem>
             <FAQItem question="How many guests are at a retreat?">
               <p>A maximum of ten guests per retreat. We do not run larger groups.</p>
