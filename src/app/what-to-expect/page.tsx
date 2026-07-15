@@ -102,6 +102,53 @@ export default function WhatToExpect() {
         </div>
       </section>
 
+      {/* ── BETWEEN CEREMONIES ── */}
+      <section className="section section--beige">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Between ceremonies</span>
+            <h2 className="display">Time to <em>rest and settle in.</em></h2>
+            <p className="lede" style={{ marginTop: 12 }}>
+              Retreat days are not filled with a schedule. There is time to rest, walk, read, speak, and sit by the lake between ceremonies.
+            </p>
+          </div>
+          <div className="grid-3">
+            <article className="col-item">
+              <h3>Rainforest &amp; Plant Walks</h3>
+              <p>Trails through the jungle on the property, open to explore during the unstructured hours between ceremonies.</p>
+            </article>
+            <article className="col-item">
+              <h3>Lake Time</h3>
+              <p>Long, quiet hours by the lake — sitting, resting, or watching the water between ceremony days.</p>
+            </article>
+            <article className="col-item">
+              <h3>Plant Baths</h3>
+              <p>Traditional plant baths are part of the retreat rhythm, usually offered in the mornings.</p>
+            </article>
+            <article className="col-item">
+              <h3>Breathwork</h3>
+              <p>Gentle breathwork, usually in the afternoon, as one of the ways to come back into the body.</p>
+            </article>
+            <article className="col-item">
+              <h3>Sauna &amp; Rest</h3>
+              <p>Time for heat, rest, and quiet recovery in the wood sauna by the trees.</p>
+            </article>
+            <article className="col-item">
+              <h3>Time in the Big House</h3>
+              <p>The communal big house is the gathering point for meals, conversation, and reading, with no electricity or Wi-Fi to pull attention away.</p>
+            </article>
+            <article className="col-item">
+              <h3>Sharing &amp; Integration Circles</h3>
+              <p>Share circles are part of the rhythm, including a final circle together on the last morning.</p>
+            </article>
+            <article className="col-item">
+              <h3>Personal Check-Ins</h3>
+              <p>Paul is personally available throughout your stay, and reaches out again within a month after you leave.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="section section--cream">
         <div className="container">
           <div className="section-head">
@@ -161,13 +208,13 @@ export default function WhatToExpect() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "clamp(24px, 4vw, 48px)", maxWidth: 760, margin: "0 auto" }}>
             <article className="col-item">
-              <div style={{ aspectRatio: "4/3", width: "100%", background: "linear-gradient(135deg, var(--cream-warm) 0%, #E4D9C3 100%)", marginBottom: 4 }} aria-hidden="true" />
+              <img src="/images2/dreamglade-last-morning-bridge.jpg" alt="Quiet morning on the land at Dreamglade before returning to Iquitos" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">01 / Last morning</span>
               <h3>A final circle, then transport</h3>
               <p>We close the retreat with a final share circle on the last morning, then a group transfer back to Iquitos airport for flights after 3 PM, or to the city if you are staying on.</p>
             </article>
             <article className="col-item">
-              <div style={{ aspectRatio: "4/3", width: "100%", background: "linear-gradient(135deg, var(--cream-warm) 0%, #E4D9C3 100%)", marginBottom: 4 }} aria-hidden="true" />
+              <img src="/images2/dreamglade-big-house-integration-space.jpeg" alt="Shared Big House space for meals, conversation, and quiet integration at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">02 / Integration support</span>
               <h3>Paul writes to you</h3>
               <p>Paul reaches out within a month of you leaving — a short note to see how the landing has been and to answer anything that has come up. Ongoing support by WhatsApp or email is available if you want it.</p>
