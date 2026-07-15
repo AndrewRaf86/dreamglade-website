@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local raw asset archives (not part of the deployed site)
+FOTOS DREAMGLADE GUESTS/
+*.heic
+*.mov
+*.mp4
+*.zip
+*.pdf
+*.psd
+*.ai
+*.sketch
+*.fig
