@@ -263,6 +263,9 @@ export default function FAQ() {
             <FAQItem question="Are there other activities besides ceremony?">
               <p>Yes. Plant baths, plant dietas, breathwork, jungle trails to explore and sauna are included.</p>
             </FAQItem>
+            <FAQItem question="Can I choose which master plant dieta I do?">
+              <p>Dreamglade offers several traditional master plant dietas, including Marosa, Ajo Sacha, and Planta de Vida. The specific plant is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive. It is not usually chosen from a menu in advance.</p>
+            </FAQItem>
           </div>
         </div>
       </section>

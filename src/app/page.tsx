@@ -453,7 +453,7 @@ export default function Home() {
             <article className="col-item">
               <span className="col-item__num">11</span>
               <h3>Master Plant Dietas</h3>
-              <p>For guests seeking deeper traditional work, master plant dietas may be available under the guidance of the Shipibo healers and can be discussed during the inquiry process.</p>
+              <p>Dreamglade offers several traditional master plant dietas. The specific plant is selected with Maestro Raúl based on the guest, their preparation, and what is appropriate when they arrive.</p>
             </article>
             <article className="col-item">
               <span className="col-item__num">12</span>

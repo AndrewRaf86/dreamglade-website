@@ -153,6 +153,10 @@ export default function WhatToExpect() {
               <h3>Optional Kambo Add-On</h3>
               <p>Kambo may be available as an optional add-on for an additional cost when appropriate, and can be discussed during the inquiry process.</p>
             </article>
+            <article className="col-item">
+              <h3>Master Plant Dietas</h3>
+              <p>Dreamglade offers several traditional master plant dietas, including Marosa, Ajo Sacha, and Planta de Vida. The specific plant is not chosen from a menu in advance. It is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land. Some guests may be guided toward one of these plants, while others may be guided differently depending on the work they are coming for.</p>
+            </article>
           </div>
         </div>
       </section>
