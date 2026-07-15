@@ -358,7 +358,7 @@ export default function Home() {
               <p>Off-days are where the work settles — sauna, plant baths, and long unhurried hours by the lake with a book or a journal. No phones, no signal. Most guests find the quiet to be the most unexpected gift of the week.</p>
             </article>
             <article className="col-item">
-              <img src="/images2/dreamglade-lake-viewlake.jpg" alt="Lake and rainforest land at Dreamglade near the communal big house" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <img src="/images2/dreamglade-land-big-house-lake-reflection.jpg" alt="Dreamglade lake and rainforest setting beside the Big House" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">03 / The land</span>
               <h3>Lake, jungle, communal big house</h3>
               <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal big house where meals and conversation happen.</p>
