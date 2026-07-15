@@ -391,6 +391,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── 5c. BETWEEN CEREMONIES ── */}
+      <section className="section section--cream" id="between-ceremonies">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Time on the land</span>
+            <h2 className="display">Between <em>ceremonies.</em></h2>
+            <p>We have a lot to do, but we do not over-schedule you. Retreat days are not filled with schedules. There is time to walk, swim, read, create, rest by the lake, speak with support, and settle into the rhythm of the land.</p>
+          </div>
+          <div className="grid-3">
+            <article className="col-item">
+              <span className="col-item__num">01</span>
+              <h3>Rainforest &amp; Plant Walks</h3>
+              <p>Slow walks through the forest paths around Dreamglade, with time to notice the plants, trees, sounds, and daily life of the land.</p>
+            </article>
+            <article className="col-item">
+              <span className="col-item__num">02</span>
+              <h3>Lake Time &amp; Rest</h3>
+              <p>Quiet time by the lake for cooling off, resting, journaling, or simply sitting near the water between ceremony days.</p>
+            </article>
+            <article className="col-item">
+              <span className="col-item__num">03</span>
+              <h3>Time in the Big House</h3>
+              <p>A shared space for meals, tea, reading, conversation, and quiet time between ceremonies.</p>
+            </article>
+            <article className="col-item">
+              <span className="col-item__num">04</span>
+              <h3>Plant Baths</h3>
+              <p>Plant baths offered as part of the retreat rhythm when appropriate.</p>
+            </article>
+            <article className="col-item">
+              <span className="col-item__num">05</span>
+              <h3>Sauna &amp; Rest</h3>
+              <p>Time for heat, quiet, and rest in the natural sauna between ceremony days.</p>
+            </article>
+            <article className="col-item">
+              <span className="col-item__num">06</span>
+              <h3>Quiet Rest &amp; Reflection</h3>
+              <p>Unstructured time to slow down, journal, or simply be still between ceremony nights.</p>
+            </article>
+            <article className="col-item">
+              <span className="col-item__num">07</span>
+              <h3>Wildlife &amp; Amazon Nature</h3>
+              <p>Guests may see birds, insects, frogs, monkeys, sloths, and other Amazon life around the land.</p>
+            </article>
+            <article className="col-item">
+              <span className="col-item__num">08</span>
+              <h3>Sharing &amp; Integration Circles</h3>
+              <p>Group time to speak, listen, ask questions, and begin making sense of the retreat experience in a supportive setting.</p>
+            </article>
+          </div>
+          <div style={{ marginTop: "clamp(40px, 5vw, 64px)" }}>
+            <TrackedLink href="/what-to-expect" className="link-arrow" event="Experience Click" properties={{ location: "between-ceremonies-section", destination: "what-to-expect" }}>See the full experience</TrackedLink>
+          </div>
+        </div>
+      </section>
+
       {/* ── 6. PRICING ── */}
       <PricingSection />
 

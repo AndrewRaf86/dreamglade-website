@@ -145,6 +145,14 @@ export default function WhatToExpect() {
               <h3>Personal Check-Ins</h3>
               <p>Paul is personally available throughout your stay, and reaches out again within a month after you leave.</p>
             </article>
+            <article className="col-item">
+              <h3>Sunrise, Sunset &amp; Stargazing</h3>
+              <p>Simple moments on the land — morning light over the lake, sunset from the deck, and dark Amazon nights with little outside light.</p>
+            </article>
+            <article className="col-item">
+              <h3>Optional Kambo Add-On</h3>
+              <p>Kambo may be available as an optional add-on for an additional cost when appropriate, and can be discussed during the inquiry process.</p>
+            </article>
           </div>
         </div>
       </section>
