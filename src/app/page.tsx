@@ -379,7 +379,7 @@ export default function Home() {
             <figure><img src="/images2/IMG-20240708-WA0018.jpg" alt="Simple dieta meal at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/DOGS%20-%20Puente.jpg" alt="Dogs on the bridge at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/dreamglade-wade-sloth.jpeg" alt="Wade holding a baby sloth in the rainforest near Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/LAKE%20-%20TAMBO3.jpg" alt="Lake and tambo at Dreamglade" loading="lazy" /></figure>
+            <figure><img src="/images2/dreamglade-lake-viewlake.jpg" alt="Lily-pad lake and thatched structures at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/MALOKABEDS.jpg" alt="Maloka beds at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/PAINT-TAMBOS-JESSICA.jpg" alt="Painted tambos at Dreamglade" loading="lazy" /></figure>
             <figure><img src="/images2/CORREDOR-WILLIAM.jpg" alt="Open-air corridor at Dreamglade" loading="lazy" /></figure>
