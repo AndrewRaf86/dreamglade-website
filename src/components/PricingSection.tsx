@@ -120,6 +120,9 @@ export default async function PricingSection() {
             Helpful travel tip: Uber is available in Iquitos, but it is smart to bring soles cash in case Uber is not working or you need to pay a motor taxi in cash. Motor taxis from the airport to hotels in Iquitos usually cost about 30–70 soles.
           </p>
           <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>
+            Optional add-ons, such as Kambo when appropriate, are not included in the daily rate and can be discussed during the inquiry process.
+          </p>
+          <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>
             <TrackedLink href="/apply" event="Apply Click" properties={{ location: "pricing", destination: "apply" }} style={{ color: "var(--gold-deep)", borderBottom: "1px solid var(--gold-deep)" }}>Begin an inquiry</TrackedLink> to confirm availability and pricing.
             No deposit is taken until Paul has reviewed your application and sent the full registration.
           </p>

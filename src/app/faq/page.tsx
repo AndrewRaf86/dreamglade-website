@@ -204,7 +204,7 @@ export default function FAQ() {
             </FAQItem>
             <FAQItem question="What is included in the price?">
               <p>Accommodation in a private, two-person, or communal thatched tambo, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support before and after your stay. Group transport from the designated city meeting point in Iquitos on the first day of your retreat and drop-off to the city of Iquitos and Iquitos airport are included for flights after 3 PM.</p>
-              <p>Not included: international and domestic flights, airport pickup on arrival, travel insurance, visas, and vaccinations.</p>
+              <p>Not included: international and domestic flights, airport pickup on arrival, travel insurance, visas, and vaccinations. Kambo is not included in the daily rate. It may be available as an optional add-on for an additional cost when appropriate, and can be discussed during the inquiry process.</p>
             </FAQItem>
             <FAQItem question="Should I book my flights before my application is confirmed?">
               <p>No — we recommend waiting until Paul has reviewed your application and confirmed your dates before you book flights. Once your place is confirmed and your deposit is in, you can book with confidence.</p>

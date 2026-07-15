@@ -358,7 +358,7 @@ export default function Home() {
               <p>Off-days are where the work settles — sauna, plant baths, and long unhurried hours by the lake with a book or a journal. No phones, no signal. Most guests find the quiet to be the most unexpected gift of the week.</p>
             </article>
             <article className="col-item">
-              <img src="/images2/dreamglade-big-house-chairs.jpeg" alt="Interior of the big house dining and gathering room at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <img src="/images2/dreamglade-lake-viewlake.jpg" alt="Lake and rainforest land at Dreamglade near the communal big house" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">03 / The land</span>
               <h3>Lake, jungle, communal big house</h3>
               <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal big house where meals and conversation happen.</p>
@@ -542,7 +542,7 @@ export default function Home() {
               <p>The minimum stay is five nights, which includes three ceremonies. The maximum is two weeks, with up to six ceremonies. Ceremonies are held on Monday, Wednesday and Friday nights. Preparation for ceremony begins at 6pm and ceremony starts shortly after, running for five to six hours.</p>
             </FAQItem>
             <FAQItem question="What does the price include?">
-              <p>Current pricing is shown in the <TrackedLink href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Pricing Click" properties={{ location: "faq-section", destination: "pricing" }}>pricing section</TrackedLink> of the home page. All tambos include accommodation, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included.</p>
+              <p>Current pricing is shown in the <TrackedLink href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Pricing Click" properties={{ location: "faq-section", destination: "pricing" }}>pricing section</TrackedLink> of the home page. All tambos include accommodation, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support. Group transport from the city meeting point in Iquitos is included, and drop-off at Iquitos airport is included for flights after 3 PM. Airport pickup on arrival is not included. Kambo is not included in the daily rate; it may be available as an optional add-on for an additional cost when appropriate, and can be discussed during the inquiry process.</p>
             </FAQItem>
             <FAQItem question="How do I apply?">
               <p>The first step is a short inquiry — no medical history. Paul reads every one personally. If it looks like a fit, he writes back to start a conversation. The full registration and signed agreement come later, by email, before your arrival date is confirmed.</p>
