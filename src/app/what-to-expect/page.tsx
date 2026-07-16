@@ -180,7 +180,7 @@ export default function WhatToExpect() {
             </div>
             <div style={{ padding: "24px 28px", background: "var(--cream)", borderLeft: "3px solid var(--gold)", borderRadius: 4 }}>
               <h3 style={{ marginTop: 0 }}>How the plant is chosen</h3>
-              <p style={{ margin: 0, fontSize: 15, opacity: 0.92 }}>Dreamglade offers several traditional master plant dietas. The specific plant is not chosen from a menu in advance. It is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land.</p>
+              <p style={{ margin: 0, fontSize: 15, opacity: 0.92 }}>A plant dieta is included in the retreat. The specific plant is not chosen from a menu in advance; it is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land.</p>
             </div>
           </div>
 
@@ -200,10 +200,10 @@ export default function WhatToExpect() {
           </div>
 
           <p style={{ marginTop: "clamp(32px, 4vw, 48px)", fontSize: 14, color: "var(--muted)", textAlign: "center", maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
-            Other plants may be used depending on the guest and the guidance of the healers. Plant dietas are not automatic for every guest and can be discussed during the inquiry process.
+            A plant dieta is included in the retreat price. The specific plant is chosen with guidance from Maestro Raúl and the healers, based on the guest, their preparation, and what is appropriate once they arrive on the land.
           </p>
           <div style={{ marginTop: 16, textAlign: "center" }}>
-            <TrackedLink href="/apply" className="link-arrow" event="Experience Click" properties={{ location: "plant-dietas-section", destination: "apply" }}>Ask about plant dietas in your inquiry</TrackedLink>
+            <TrackedLink href="/apply" className="link-arrow" event="Experience Click" properties={{ location: "plant-dietas-section", destination: "apply" }}>Discuss your plant dieta in your inquiry</TrackedLink>
           </div>
         </div>
       </section>
