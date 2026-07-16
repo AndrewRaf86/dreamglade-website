@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "What to Expect at an Ayahuasca Retreat",
@@ -157,6 +158,52 @@ export default function WhatToExpect() {
               <h3>Master Plant Dietas</h3>
               <p>Dreamglade offers several traditional master plant dietas, including Marosa, Ajo Sacha, and Planta de Vida. The specific plant is not chosen from a menu in advance. It is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land. Some guests may be guided toward one of these plants, while others may be guided differently depending on the work they are coming for.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PLANT DIETAS ── */}
+      <section className="section section--cream-warm" id="plant-dietas">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Traditional plant dietas</span>
+            <h2 className="display">Plant dietas at <em>Dreamglade.</em></h2>
+            <p className="lede" style={{ marginTop: 12 }}>
+              A dieta is not simply a food restriction. In the Amazonian tradition, it is a quiet period of simplicity, attention, and relationship with a master plant.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gap: "clamp(20px, 3vw, 32px)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", maxWidth: 900, margin: "0 auto clamp(40px, 5vw, 56px)" }}>
+            <div style={{ padding: "24px 28px", background: "var(--cream)", borderLeft: "3px solid var(--gold)", borderRadius: 4 }}>
+              <h3 style={{ marginTop: 0 }}>What a dieta involves</h3>
+              <p style={{ margin: 0, fontSize: 15, opacity: 0.92 }}>This may include simple food, rest, time alone, ceremony, and guidance from the healers. The purpose is to create a quieter container for working with a specific plant.</p>
+            </div>
+            <div style={{ padding: "24px 28px", background: "var(--cream)", borderLeft: "3px solid var(--gold)", borderRadius: 4 }}>
+              <h3 style={{ marginTop: 0 }}>How the plant is chosen</h3>
+              <p style={{ margin: 0, fontSize: 15, opacity: 0.92 }}>Dreamglade offers several traditional master plant dietas. The specific plant is not chosen from a menu in advance. It is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land.</p>
+            </div>
+          </div>
+
+          <div className="grid-3">
+            <article className="col-item">
+              <h3>Marosa</h3>
+              <p>Often described in the tradition as a gentle heart-opening plant, Marosa is associated with softness, emotional clarity, and a more receptive inner state.</p>
+            </article>
+            <article className="col-item">
+              <h3>Ajo Sacha</h3>
+              <p>Ajo Sacha is traditionally associated with strength, protection, clarity, and clearing heavy or stagnant energy.</p>
+            </article>
+            <article className="col-item">
+              <h3>Planta de Vida</h3>
+              <p>Planta de Vida is approached with great respect and is traditionally associated with protection, grounding, and resilience.</p>
+            </article>
+          </div>
+
+          <p style={{ marginTop: "clamp(32px, 4vw, 48px)", fontSize: 14, color: "var(--muted)", textAlign: "center", maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
+            Other plants may be used depending on the guest and the guidance of the healers. Plant dietas are not automatic for every guest and can be discussed during the inquiry process.
+          </p>
+          <div style={{ marginTop: 16, textAlign: "center" }}>
+            <TrackedLink href="/apply" className="link-arrow" event="Experience Click" properties={{ location: "plant-dietas-section", destination: "apply" }}>Ask about plant dietas in your inquiry</TrackedLink>
           </div>
         </div>
       </section>
