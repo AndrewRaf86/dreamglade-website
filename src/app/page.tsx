@@ -417,7 +417,7 @@ export default function Home() {
           <div className="section-head">
             <span className="eyebrow">Time on the land</span>
             <h2 className="display">Between <em>ceremonies.</em></h2>
-            <p>We have a lot to do, but we do not over-schedule you. Retreat days are not filled with schedules. There is time to walk, swim, canoe, practice gentle movement, create, rest by the lake, speak with support, and settle into the rhythm of the land.</p>
+            <p>We have a lot to do, but we do not over-schedule you. Retreat days are not filled with schedules. There is time to walk, swim, practice gentle movement, create, rest by the lake, speak with support, and settle into the rhythm of the land.</p>
           </div>
           <div className="grid-3">
             <article className="col-item">
@@ -432,51 +432,46 @@ export default function Home() {
             </article>
             <article className="col-item">
               <span className="col-item__num">03</span>
-              <h3>Canoeing on the Lake</h3>
-              <p>A peaceful way to spend time on the water and see the land from a slower perspective.</p>
-            </article>
-            <article className="col-item">
-              <span className="col-item__num">04</span>
               <h3>Time in the Big House</h3>
               <p>A shared space for meals, tea, reading, conversation, and quiet time between ceremonies.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">05</span>
+              <span className="col-item__num">04</span>
               <h3>Traditional Flower Baths</h3>
               <p>Plant and flower baths offered as part of the retreat rhythm when appropriate.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">06</span>
+              <span className="col-item__num">05</span>
               <h3>Sauna &amp; Rest</h3>
               <p>Time for heat, quiet, and rest in the natural sauna between ceremony days.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">07</span>
+              <span className="col-item__num">06</span>
               <h3>Yoga &amp; Breathwork</h3>
               <p>Simple, gentle movement and breathwork sessions offered to help guests settle into their bodies before ceremony nights.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">08</span>
+              <span className="col-item__num">07</span>
               <h3>Art Room</h3>
               <p>A quiet space for drawing, painting, writing, or letting the experience take shape creatively.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">09</span>
+              <span className="col-item__num">08</span>
               <h3>Music Room</h3>
               <p>A relaxed space for playing instruments, singing, or spending time with music in a simple, grounded way.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">10</span>
+              <span className="col-item__num">09</span>
               <h3>Wildlife &amp; Amazon Nature</h3>
               <p>Guests may see birds, insects, frogs, monkeys, sloths, and other Amazon life around the land.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">11</span>
+              <span className="col-item__num">10</span>
               <h3>Master Plant Dietas</h3>
               <p>A dieta includes a small tea or plant decoction prepared by the healers from the chosen master plant, which may be a tree, vine, or shrub. The specific plant is selected with Maestro Raúl based on the guest, their preparation, and what is appropriate when they arrive.</p>
             </article>
             <article className="col-item">
-              <span className="col-item__num">12</span>
+              <span className="col-item__num">11</span>
               <h3>Sharing &amp; Integration Circles</h3>
               <p>Group time to speak, listen, ask questions, and begin making sense of the retreat experience in a supportive setting.</p>
             </article>
