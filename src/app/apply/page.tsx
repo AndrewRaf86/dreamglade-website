@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
+import SiteImage from "@/components/SiteImage";
 
 export const metadata: Metadata = {
   title: "Begin Your Inquiry",
@@ -64,7 +65,7 @@ export default function Apply() {
             </div>
           </div>
           <div className="trust-strip">
-            <span className="stars" aria-label="5 out of 5 stars" />
+            <span className="stars" role="img" aria-label="5 out of 5 stars" />
             <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 verified Google reviews</span>
             <span aria-hidden="true">·</span>
             <TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "apply", destination: "google-reviews" }}>Read them on Google</TrackedLink>
@@ -87,7 +88,7 @@ export default function Apply() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img src="/images/lake-from-bighouse.jpg" alt="The maloka at Dreamglade, looking across the still lake" />
+              <SiteImage src="/images/lake-from-bighouse.jpg" alt="The maloka at Dreamglade, looking across the still lake" width={3072} height={4096} />
               <p className="two-col__caption">The maloka, looking across the lake</p>
             </div>
             <div>

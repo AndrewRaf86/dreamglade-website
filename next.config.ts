@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
       { source: "/contact-us", destination: "/apply", permanent: true },
       { source: "/testimonials-3/written-testimonials", destination: "/#reviews", permanent: true },
       { source: "/testimonials-3/videos", destination: "/#reviews", permanent: true },
+      { source: "/testimonials-3/:path*", destination: "/#reviews", permanent: true },
       { source: "/resources/recommended-reading", destination: "/faq", permanent: true },
       { source: "/resources/films", destination: "/faq", permanent: true },
       { source: "/resources/links", destination: "/faq", permanent: true },

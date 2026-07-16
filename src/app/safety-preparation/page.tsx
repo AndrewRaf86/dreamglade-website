@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
+import SiteImage from "@/components/SiteImage";
 
 export const metadata: Metadata = {
   title: "Safety, Screening & Preparation for Ayahuasca",
@@ -65,7 +66,7 @@ export default function SafetyPreparation() {
               </p>
             </div>
             <div className="two-col__media two-col__media--wide">
-              <img src="/images/bobinsana-flower.jpg" alt="Bobinsana flower at Dreamglade" />
+              <SiteImage src="/images/bobinsana-flower.jpg" alt="Bobinsana flower at Dreamglade" />
               <p className="two-col__caption">Bobinsana, in flower near the maloka</p>
             </div>
           </div>
@@ -123,7 +124,7 @@ export default function SafetyPreparation() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img src="/images/maloka-exterior.jpg" alt="The ceremony maloka at Dreamglade, raised on stilts with a thatched roof" />
+              <SiteImage src="/images/maloka-exterior.jpg" alt="The ceremony maloka at Dreamglade, raised on stilts with a thatched roof" width={4096} height={3072} />
               <p className="two-col__caption">The maloka, where ceremony is held</p>
             </div>
             <div>

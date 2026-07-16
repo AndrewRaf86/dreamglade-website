@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
+import SiteImage from "@/components/SiteImage";
 
 export const metadata: Metadata = {
   title: "What to Expect at an Ayahuasca Retreat",
@@ -36,7 +37,7 @@ export default function WhatToExpect() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img src="/images/bridge-overview.jpg" alt="A wooden bridge crossing the lake at Dreamglade, surrounded by palms and rainforest" />
+              <SiteImage src="/images/bridge-overview.jpg" alt="A wooden bridge crossing the lake at Dreamglade, surrounded by palms and rainforest" width={960} height={1280} />
               <p className="two-col__caption">The bridge across the lake, on arrival</p>
             </div>
             <div>
@@ -96,7 +97,7 @@ export default function WhatToExpect() {
               </div>
             </div>
             <div className="two-col__media two-col__media--wide">
-              <img src="/images/sauna.jpg" alt="The sauna at Dreamglade, built of natural wood beside the trees" />
+              <SiteImage src="/images/sauna.jpg" alt="The sauna at Dreamglade, built of natural wood beside the trees" width={3060} height={4080} />
               <p className="two-col__caption">The sauna, by the trees</p>
             </div>
           </div>
@@ -219,17 +220,17 @@ export default function WhatToExpect() {
           </div>
           <div className="grid-3">
             <article className="col-item">
-              <img src="/images2/dreamglade-outside-single-tambo.jpeg" alt="Private tambo cabin surrounded by rainforest at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", objectPosition: "center bottom", width: "100%" }} />
+              <SiteImage src="/images2/dreamglade-outside-single-tambo.jpeg" alt="Private tambo cabin surrounded by rainforest at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", objectPosition: "center bottom", width: "100%" }} />
               <h3 style={{ marginTop: 6 }}>Private tambos</h3>
               <p>Single and double thatched cabins, raised off the ground, each with mosquito-screened sleeping. Most have lake or jungle views. All are quiet, with the forest right outside.</p>
             </article>
             <article className="col-item">
-              <img src="/images/mapacho-mainhouse.jpg" alt="The communal big house at Dreamglade, with thatched roof and palm surroundings" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <SiteImage src="/images/mapacho-mainhouse.jpg" alt="The communal big house at Dreamglade, with thatched roof and palm surroundings" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <h3 style={{ marginTop: 6 }}>The communal big house</h3>
               <p>The center of the day. Meals, conversation, and reading happen here. There is no electricity or Wi-Fi in guest rooms or anywhere on the property — the communal big house is the gathering point, and the quiet is part of what people come for.</p>
             </article>
             <article className="col-item">
-              <img src="/images/solar.jpg" alt="The simple, limited electricity setup at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <SiteImage src="/images/solar.jpg" alt="The simple, limited electricity setup at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <h3 style={{ marginTop: 6 }}>Limited electricity</h3>
               <p>Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life. Guest rooms have no outlets and no signal — and most guests, by the second day, are very glad about that. Some cellphone carriers have limited service around the retreat. We have a generator that runs once a day; this is the time to charge your devices.</p>
             </article>
@@ -241,7 +242,7 @@ export default function WhatToExpect() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img src="/images/food.jpg" alt="A simple meal at Dreamglade — a bowl of light noodle soup and fresh watermelon, served by the lake" />
+              <SiteImage src="/images/food.jpg" alt="A simple meal at Dreamglade — a bowl of light noodle soup and fresh watermelon, served by the lake" />
               <p className="two-col__caption">A light breakfast by the lake</p>
             </div>
             <div>
@@ -267,13 +268,13 @@ export default function WhatToExpect() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "clamp(24px, 4vw, 48px)", maxWidth: 760, margin: "0 auto" }}>
             <article className="col-item">
-              <img src="/images2/dreamglade-last-morning-bridge.jpg" alt="Quiet morning on the land at Dreamglade before returning to Iquitos" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <SiteImage src="/images2/dreamglade-last-morning-bridge.jpg" alt="Quiet morning on the land at Dreamglade before returning to Iquitos" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">01 / Last morning</span>
               <h3>A final circle, then transport</h3>
               <p>We close the retreat with a final share circle on the last morning, then a group transfer back to Iquitos airport for flights after 3 PM, or to the city if you are staying on.</p>
             </article>
             <article className="col-item">
-              <img src="/images2/dreamglade-big-house-integration-space.jpeg" alt="Shared Big House space for meals, conversation, and quiet integration at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <SiteImage src="/images2/dreamglade-big-house-integration-space.jpeg" alt="Shared Big House space for meals, conversation, and quiet integration at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">02 / Integration support</span>
               <h3>Paul writes to you</h3>
               <p>Paul reaches out within a month of you leaving — a short note to see how the landing has been and to answer anything that has come up. Ongoing support by WhatsApp or email is available if you want it.</p>

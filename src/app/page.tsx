@@ -5,6 +5,7 @@ import FAQItem from "@/components/FAQItem";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import PricingSection from "@/components/PricingSection";
 import TrackedLink from "@/components/TrackedLink";
+import SiteImage from "@/components/SiteImage";
 
 export const metadata: Metadata = {
   title: "Ayahuasca Retreat Near Iquitos, Peru | Dreamglade",
@@ -22,14 +23,20 @@ export const metadata: Metadata = {
 
 const orgJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   name: "Dreamglade",
   description:
     "A small-group ayahuasca retreat near Iquitos, Peru. Traditional Shipibo-led ceremonies on 25 hectares of Amazon rainforest.",
   url: "https://dreamglade.com",
   logo: "https://dreamglade.com/images/logo-original.jpeg",
+  image: "https://dreamglade.com/images/lake-overview.jpg",
   email: "booking@dreamglade.com",
   telephone: "+51 920 478 240",
+  foundingDate: "2013",
+  founder: {
+    "@type": "Person",
+    name: "Stacy Povey",
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "Caserio Moralillo Parcela 21, Ctra Iquitos-Nauta",
@@ -37,7 +44,11 @@ const orgJsonLd = {
     addressLocality: "Iquitos",
     addressCountry: "PE",
   },
-  sameAs: ["https://share.google/tiFj2NeKbOzgqksP4"],
+  sameAs: [
+    "https://share.google/tiFj2NeKbOzgqksP4",
+    "https://www.instagram.com/dreamglade/",
+    "https://www.youtube.com/@dreamgladeamazon",
+  ],
 };
 
 export default function Home() {
@@ -53,9 +64,13 @@ export default function Home() {
       {/* ── 1. HERO ── */}
       <section className="hero">
         <div className="hero__media">
-          <img
+          <SiteImage
             src="/images/hero-alt-bighouse-rain.jpg"
             alt="Rain falling on the lake at Dreamglade, with thatched malokas and palms in soft Amazon light"
+            width={2048}
+            height={1358}
+            sizes="100vw"
+            priority
           />
         </div>
         <div className="container hero__inner">
@@ -109,7 +124,7 @@ export default function Home() {
           <div className="homepage-trust-card">
             <div className="homepage-trust-review">
               <div className="homepage-trust-review__rating">
-                <span className="stars" aria-label="5 out of 5 stars" />
+                <span className="stars" role="img" aria-label="5 out of 5 stars" />
                 <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 Google reviews</span>
               </div>
               <TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" className="homepage-trust-review__link" event="Google Reviews Click" properties={{ location: "homepage-trust-strip", destination: "google-reviews" }}>
@@ -117,7 +132,7 @@ export default function Home() {
               </TrackedLink>
             </div>
 
-            <h3 className="homepage-trust-heading">Before you apply</h3>
+            <h2 className="homepage-trust-heading">Before you apply</h2>
             <p className="homepage-trust-lede">
               Read the practical pages guests usually check before sending an inquiry.
             </p>
@@ -179,9 +194,11 @@ export default function Home() {
         <div className="container">
           <div className="two-col">
             <div className="two-col__media">
-              <img
+              <SiteImage
                 src="/images2/dreamglade-wade-clarisa-best-pic.jpeg"
                 alt="Wade and Clarisa walking together on the land at Dreamglade"
+                width={738}
+                height={1600}
                 style={{ objectPosition: "center 20%" }}
               />
               <p className="two-col__caption">Wade and Clarisa</p>
@@ -285,7 +302,7 @@ export default function Home() {
             <div className="healer-pair__photos">
               <div className="healer-pair__photo">
                 <figure className="healer-pair__portrait">
-                  <img src="/images/dominga2.jpg" alt="Maestra Dominga at Dreamglade" />
+                  <SiteImage src="/images/dominga2.jpg" alt="Maestra Dominga at Dreamglade" width={960} height={1280} />
                 </figure>
                 <div>
                   <p className="healer-pair__name">Maestra <em>Dominga</em></p>
@@ -294,7 +311,7 @@ export default function Home() {
               </div>
               <div className="healer-pair__photo">
                 <figure className="healer-pair__portrait">
-                  <img src="/images/raul-old-website-photo.jpg" alt="Maestro Raúl at Dreamglade" />
+                  <SiteImage src="/images/raul-old-website-photo.jpg" alt="Maestro Raúl at Dreamglade" width={960} height={1280} />
                 </figure>
                 <div>
                   <p className="healer-pair__name">Maestro <em>Raúl</em></p>
@@ -306,18 +323,20 @@ export default function Home() {
           {/* Image strip between healers and Paul */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(12px, 2vw, 24px)", margin: "clamp(40px, 5vw, 64px) 0" }}>
             <figure style={{ margin: 0 }}>
-              <img
+              <SiteImage
                 src="/images2/PLANTBATHGUEST5.jpg"
                 alt="Plant bath at Dreamglade"
-                loading="lazy"
+                width={3060}
+                height={4080}
                 style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
               />
             </figure>
             <figure style={{ margin: 0 }}>
-              <img
+              <SiteImage
                 src="/images2/HUG4.jpg"
                 alt="Ceremonial support at Dreamglade"
-                loading="lazy"
+                width={3060}
+                height={4080}
                 style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }}
               />
             </figure>
@@ -325,7 +344,7 @@ export default function Home() {
 
           <div className="team-aside">
             <figure className="team-aside__portrait">
-              <img src="/images/people-paul.png" alt="Paul" />
+              <SiteImage src="/images/people-paul.png" alt="Paul" width={960} height={1280} />
             </figure>
             <div>
               <h3><em>Paul</em></h3>
@@ -347,19 +366,19 @@ export default function Home() {
           </div>
           <div className="grid-3">
             <article className="col-item">
-              <img src="/images/maloka-exterior.jpg" alt="The maloka ceremony house at Dreamglade, raised on stilts beside the lake" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <SiteImage src="/images/maloka-exterior.jpg" alt="The maloka ceremony house at Dreamglade, raised on stilts beside the lake" width={4096} height={3072} style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">01 / Ceremony nights</span>
               <h3>Monday, Wednesday, Friday</h3>
               <p>Preparation for ceremony begins at 6pm. Ceremony starts shortly after. Each ceremony runs five to six hours in the maloka, led by the healers.</p>
             </article>
             <article className="col-item">
-              <img src="/images/trampoline-pillows.jpg" alt="A canopied trampoline-deck with pillows looking out across the lake at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <SiteImage src="/images/trampoline-pillows.jpg" alt="A canopied trampoline-deck with pillows looking out across the lake at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">02 / Off-days</span>
               <h3>Quiet time to process</h3>
               <p>Off-days are where the work settles — sauna, plant baths, and long unhurried hours by the lake with a book or a journal. No phones, no signal. Most guests find the quiet to be the most unexpected gift of the week.</p>
             </article>
             <article className="col-item">
-              <img src="/images2/dreamglade-land-big-house-lake-reflection.jpg" alt="Dreamglade lake and rainforest setting beside the Big House" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
+              <SiteImage src="/images2/dreamglade-land-big-house-lake-reflection.jpg" alt="Dreamglade lake and rainforest setting beside the Big House" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <span className="col-item__num">03 / The land</span>
               <h3>Lake, jungle, communal big house</h3>
               <p>25 hectares of forest, the still lake at the center, private thatched tambos to sleep in, and the communal big house where meals and conversation happen.</p>
@@ -375,18 +394,18 @@ export default function Home() {
       <section className="section section--cream-warm" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="gallery-strip">
-            <figure><img src="/images2/BIGHOUSE-KENTA.jpg" alt="Communal big house at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/DECK-MALOKA-REMI.jpg" alt="Deck near the maloka at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/IMG-20240708-WA0018.jpg" alt="Simple dieta meal at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/DOGS%20-%20Puente.jpg" alt="Dogs on the bridge at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/dreamglade-wade-sloth.jpeg" alt="Wade holding a baby sloth in the rainforest near Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/dreamglade-big-house-chairs.jpeg" alt="Interior of the big house dining and gathering room at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/MALOKABEDS.jpg" alt="Maloka beds at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/PAINT-TAMBOS-JESSICA.jpg" alt="Painted tambos at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/CORREDOR-WILLIAM.jpg" alt="Open-air corridor at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/dreamglade-sunny-communal-area.jpeg" alt="Sunny view of the communal area at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/TAMBO%205%20_%20CAT.jpg" alt="Cat near a tambo at Dreamglade" loading="lazy" /></figure>
-            <figure><img src="/images2/LAKE3-IVETA.jpg" alt="Lake at Dreamglade" loading="lazy" /></figure>
+            <figure><SiteImage src="/images2/BIGHOUSE-KENTA.jpg" alt="Communal big house at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/DECK-MALOKA-REMI.jpg" alt="Deck near the maloka at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/IMG-20240708-WA0018.jpg" alt="Simple dieta meal at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/DOGS - Puente.jpg" alt="Dogs on the bridge at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/dreamglade-wade-sloth.jpeg" alt="Wade holding a baby sloth in the rainforest near Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/dreamglade-big-house-chairs.jpeg" alt="Interior of the big house dining and gathering room at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/MALOKABEDS.jpg" alt="Maloka beds at Dreamglade" width={4096} height={3072} /></figure>
+            <figure><SiteImage src="/images2/PAINT-TAMBOS-JESSICA.jpg" alt="Painted tambos at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/CORREDOR-WILLIAM.jpg" alt="Open-air corridor at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/dreamglade-sunny-communal-area.jpeg" alt="Sunny view of the communal area at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/TAMBO 5 _ CAT.jpg" alt="Cat near a tambo at Dreamglade" /></figure>
+            <figure><SiteImage src="/images2/LAKE3-IVETA.jpg" alt="Lake at Dreamglade" /></figure>
           </div>
           <p className="gallery-strip__caption">Daily life on the land</p>
         </div>
@@ -532,7 +551,7 @@ export default function Home() {
             </p>
           </div>
           <div className="rating-block">
-            <span className="stars" aria-label="5 out of 5 stars" />
+            <span className="stars" role="img" aria-label="5 out of 5 stars" />
             <span className="rating-block__num">5.0</span>
             <span className="rating-block__count">from 182 Google reviews</span>
             <TrackedLink className="rating-block__cta link-arrow" href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "reviews", destination: "google-reviews" }}>
@@ -552,7 +571,7 @@ export default function Home() {
               { name: "Brian Y", time: "a year ago", excerpt: "Dreamglade is not a glamorous retreat. What you get is time to work with the medicine and yourself, with caring facilitators and a quiet jungle setting." },
             ].map(({ name, time, excerpt }, i) => (
               <article key={i} className="review-card" aria-label={`Google review from ${name}`}>
-                <span style={{ color: "#E6A700", fontSize: "16px", letterSpacing: "0.08em" }} aria-label="5 out of 5 stars">★★★★★</span>
+                <span style={{ color: "var(--gold-deep)", fontSize: "16px", letterSpacing: "0.08em" }} role="img" aria-label="5 out of 5 stars">★★★★★</span>
                 <p className="review-card__quote">&ldquo;{excerpt}&rdquo;</p>
                 <div className="review-card__meta">
                   <span>{name}</span>
@@ -611,7 +630,7 @@ export default function Home() {
             <span className="eyebrow">Common questions</span>
             <h2 className="display" style={{ color: "var(--cream)" }}>Before you <em>ask.</em></h2>
           </div>
-          <div className="faq-list" role="list">
+          <div className="faq-list">
             <FAQItem question="Is Dreamglade right for me?">
               <p>Dreamglade is a small-group retreat — a maximum of ten guests at a time. It tends to suit people who want a quiet, grounded setting, who are willing to do real preparation before they arrive, and who are open to a traditional Shipibo-led ceremony rather than a Western program. Paul reviews every application personally to talk this through with you.</p>
             </FAQItem>
@@ -637,7 +656,7 @@ export default function Home() {
       {/* ── 10. APPLY CTA ── */}
       <section className="bleed-cta" id="apply-cta">
         <div className="bleed-cta__media">
-          <img src="/images/hero-alt-overview.jpg" alt="An overview of Dreamglade — thatched structures beside the lake, surrounded by Amazon rainforest" />
+          <SiteImage src="/images/hero-alt-overview.jpg" alt="An overview of Dreamglade — thatched structures beside the lake, surrounded by Amazon rainforest" width={1616} height={1080} sizes="100vw" />
         </div>
         <div>
           <span className="bleed-cta__eyebrow">The first step is a conversation</span>

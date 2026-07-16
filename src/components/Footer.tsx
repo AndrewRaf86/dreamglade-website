@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import TrackedLink from "@/components/TrackedLink";
 
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="site-footer__top">
           <div>
-            <p className="site-footer__brand"><img src="/images/logo.svg" alt="Dreamglade" /></p>
+            <p className="site-footer__brand"><Image src="/images/logo.svg" alt="Dreamglade" width={520} height={120} /></p>
             <p className="site-footer__desc">
               A small-group ayahuasca retreat near Iquitos, Peru. Shipibo-led ceremonies on 25 hectares of lakeside Amazon rainforest.
             </p>
@@ -27,7 +28,7 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h4>The site</h4>
+            <h2 className="site-footer__heading">The site</h2>
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><TrackedLink href="/safety-preparation" event="Safety Click" properties={{ location: "footer", destination: "safety" }}>Safety &amp; Preparation</TrackedLink></li>
@@ -38,14 +39,14 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4>Reviews</h4>
+            <h2 className="site-footer__heading">Reviews</h2>
             <ul>
               <li><TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "footer", destination: "google-reviews" }}>Google Reviews →</TrackedLink></li>
               <li><Link href="/#reviews">Guest reflections</Link></li>
             </ul>
           </div>
           <div>
-            <h4>The retreat</h4>
+            <h2 className="site-footer__heading">The retreat</h2>
             <ul>
               <li><TrackedLink href="/#about" event="About Click" properties={{ location: "footer", destination: "about" }}>About</TrackedLink></li>
               <li><Link href="/#healers">The healers</Link></li>

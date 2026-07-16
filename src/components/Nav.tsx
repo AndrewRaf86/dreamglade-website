@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -29,7 +30,7 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
     <header className={headerClass}>
       <div className="container site-header__inner">
         <Link className="site-header__wordmark" href="/" aria-label="Dreamglade — home" prefetch={false}>
-          <img src="/images/logo.svg" alt="Dreamglade" />
+          <Image src="/images/logo.svg" alt="Dreamglade" width={520} height={120} priority />
         </Link>
 
         <button

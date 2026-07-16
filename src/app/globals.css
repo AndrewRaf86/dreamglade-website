@@ -15,8 +15,8 @@
   --cream-warm: #F4EDDB;
   --brown: #6B5444;
   --brown-dark: #4A3A2E;
-  --gold: #C4922E;
-  --gold-deep: #9A6C1C;
+  --gold: #C99A3A;
+  --gold-deep: #7F5614;
   --ink: var(--forest);
   --body: #3F352B;
   --muted: var(--brown);
@@ -244,10 +244,10 @@ p + p { margin-top: 0.6em; }
   gap: 10px;
   padding: 16px 28px;
   background: var(--gold);
-  color: var(--cream);
+  color: var(--forest-deep);
   font-family: var(--font-body);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.04em;
   border-radius: 1px;
   transition: background 240ms ease, color 240ms ease, transform 240ms ease;
@@ -899,7 +899,7 @@ p + p { margin-top: 0.6em; }
 @media (min-width: 880px) {
   .site-footer__top { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 56px; }
 }
-.site-footer h4 {
+.site-footer__heading {
   font-family: var(--font-body);
   font-size: 11px;
   letter-spacing: 0.22em;
@@ -916,6 +916,11 @@ p + p { margin-top: 0.6em; }
 .site-footer__desc { font-size: 14px; color: var(--beige); line-height: 1.6; max-width: 380px; margin: 0 0 24px; opacity: 0.85; }
 .site-footer__contact { font-size: 13px; line-height: 1.7; color: var(--beige-warm); }
 .site-footer__contact strong { color: var(--cream); font-weight: 500; }
+.site-footer__contact a {
+  display: inline-block;
+  min-height: 30px;
+  padding: 3px 0;
+}
 .site-footer__bottom {
   border-top: 1px solid rgba(250, 247, 240, 0.12);
   padding-top: 28px;
@@ -1083,6 +1088,7 @@ p + p { margin-top: 0.6em; }
 
 .homepage-trust-heading {
   margin-bottom: 10px;
+  font-size: clamp(24px, 2.2vw, 32px);
 }
 .homepage-trust-lede {
   font-size: 15px;
