@@ -180,8 +180,9 @@ export default function Home() {
           <div className="two-col">
             <div className="two-col__media">
               <img
-                src="/images2/IMG-20240820-WA0003.jpg"
-                alt="Wade and Clarisa"
+                src="/images2/dreamglade-wade-clarisa-best-pic.jpeg"
+                alt="Wade and Clarisa walking together on the land at Dreamglade"
+                style={{ objectPosition: "center 20%" }}
               />
               <p className="two-col__caption">Wade and Clarisa</p>
             </div>
