@@ -176,7 +176,7 @@ export default function WhatToExpect() {
           <div style={{ display: "grid", gap: "clamp(20px, 3vw, 32px)", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", maxWidth: 900, margin: "0 auto clamp(40px, 5vw, 56px)" }}>
             <div style={{ padding: "24px 28px", background: "var(--cream)", borderLeft: "3px solid var(--gold)", borderRadius: 4 }}>
               <h3 style={{ marginTop: 0 }}>What a dieta involves</h3>
-              <p style={{ margin: 0, fontSize: 15, opacity: 0.92 }}>This may include simple food, rest, time alone, ceremony, and guidance from the healers. The purpose is to create a quieter container for working with a specific plant.</p>
+              <p style={{ margin: 0, fontSize: 15, opacity: 0.92 }}>At Dreamglade, the healers prepare a small tea or plant decoction from the chosen master plant, which may be a tree, vine, or shrub, for the guest to drink. The dieta may also include simple food, rest, time alone, ceremony, and guidance, creating a quieter container for working with that plant.</p>
             </div>
             <div style={{ padding: "24px 28px", background: "var(--cream)", borderLeft: "3px solid var(--gold)", borderRadius: 4 }}>
               <h3 style={{ marginTop: 0 }}>How the plant is chosen</h3>

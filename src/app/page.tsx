@@ -454,7 +454,7 @@ export default function Home() {
             <article className="col-item">
               <span className="col-item__num">11</span>
               <h3>Master Plant Dietas</h3>
-              <p>Dreamglade offers several traditional master plant dietas. The specific plant is selected with Maestro Raúl based on the guest, their preparation, and what is appropriate when they arrive.</p>
+              <p>A dieta includes a small tea or plant decoction prepared by the healers from the chosen master plant, which may be a tree, vine, or shrub. The specific plant is selected with Maestro Raúl based on the guest, their preparation, and what is appropriate when they arrive.</p>
             </article>
             <article className="col-item">
               <span className="col-item__num">12</span>
