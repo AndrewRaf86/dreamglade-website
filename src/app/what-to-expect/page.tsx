@@ -157,7 +157,7 @@ export default function WhatToExpect() {
             </article>
             <article className="col-item">
               <h3>Master Plant Dietas</h3>
-              <p>Dreamglade offers several traditional master plant dietas, including Marosa, Ajo Sacha, and Planta de Vida. The specific plant is not chosen from a menu in advance. It is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land. Some guests may be guided toward one of these plants, while others may be guided differently depending on the work they are coming for.</p>
+              <p>Dreamglade offers six traditional master plant dietas — Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida. The specific plant is not chosen from a menu in advance. It is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land.</p>
             </article>
           </div>
         </div>
@@ -185,26 +185,11 @@ export default function WhatToExpect() {
             </div>
           </div>
 
-          <div className="grid-3">
-            <article className="col-item">
-              <h3>Marosa</h3>
-              <p>Often described in the tradition as a gentle heart-opening plant, Marosa is associated with softness, emotional clarity, and a more receptive inner state.</p>
-            </article>
-            <article className="col-item">
-              <h3>Ajo Sacha</h3>
-              <p>Ajo Sacha is traditionally associated with strength, protection, clarity, and clearing heavy or stagnant energy.</p>
-            </article>
-            <article className="col-item">
-              <h3>Planta de Vida</h3>
-              <p>Planta de Vida is approached with great respect and is traditionally associated with protection, grounding, and resilience.</p>
-            </article>
-          </div>
-
-          <p style={{ marginTop: "clamp(32px, 4vw, 48px)", fontSize: 14, color: "var(--muted)", textAlign: "center", maxWidth: 640, marginLeft: "auto", marginRight: "auto" }}>
-            The plant dieta itself is included in the retreat price. If you are curious about what it may involve for your stay, mention it in your inquiry and the team can explain the process before you arrive.
+          <p style={{ textAlign: "center", maxWidth: 640, marginLeft: "auto", marginRight: "auto", fontSize: 16 }}>
+            Dreamglade works with six master plants — Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida — each with its own character in the tradition. The plant dieta itself is included in the retreat price.
           </p>
-          <div style={{ marginTop: 16, textAlign: "center" }}>
-            <TrackedLink href="/apply" className="link-arrow" event="Experience Click" properties={{ location: "plant-dietas-section", destination: "apply" }}>Discuss your plant dieta in your inquiry</TrackedLink>
+          <div style={{ marginTop: 20, textAlign: "center" }}>
+            <TrackedLink href="/master-plants" className="link-arrow" event="Plants Click" properties={{ location: "plant-dietas-section", destination: "master-plants" }}>See what each plant is known for</TrackedLink>
           </div>
         </div>
       </section>

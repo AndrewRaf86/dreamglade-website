@@ -33,6 +33,7 @@ export default function Footer() {
               <li><Link href="/">Home</Link></li>
               <li><TrackedLink href="/safety-preparation" event="Safety Click" properties={{ location: "footer", destination: "safety" }}>Safety &amp; Preparation</TrackedLink></li>
               <li><TrackedLink href="/what-to-expect" event="Experience Click" properties={{ location: "footer", destination: "what-to-expect" }}>What to Expect</TrackedLink></li>
+              <li><TrackedLink href="/master-plants" event="Plants Click" properties={{ location: "footer", destination: "master-plants" }}>Master Plants</TrackedLink></li>
               <li><TrackedLink href="/faq" event="FAQ Click" properties={{ location: "footer", destination: "faq" }}>FAQ</TrackedLink></li>
               <li><TrackedLink href="/apply" event="Apply Click" properties={{ location: "footer", destination: "apply" }}>Apply</TrackedLink></li>
               <li><Link href="/terms-and-conditions">Terms and Conditions</Link></li>

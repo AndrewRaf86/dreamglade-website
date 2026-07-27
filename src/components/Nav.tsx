@@ -77,6 +77,16 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
             Experience
           </Link>
           <Link
+            href="/master-plants"
+            aria-current={pathname === "/master-plants" ? "page" : undefined}
+            onClick={() => {
+              trackEvent("Plants Click", { location: "nav", destination: "master-plants" });
+              setMenuOpen(false);
+            }}
+          >
+            Plants
+          </Link>
+          <Link
             href="/faq"
             aria-current={pathname === "/faq" ? "page" : undefined}
             onClick={() => {
