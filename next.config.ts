@@ -95,6 +95,11 @@ const nextConfig: NextConfig = {
       { source: "/gallery/:path*", destination: "/#about", permanent: true },
       { source: "/privacy-policy", destination: "/terms-and-conditions", permanent: true },
       { source: "/terms", destination: "/terms-and-conditions", permanent: true },
+      { source: "/narinder-s-thailand", destination: "/#reviews", permanent: true },
+      { source: "/isabella-h-perth-australia", destination: "/#reviews", permanent: true },
+      { source: "/andy-w-bristol-u-k", destination: "/#reviews", permanent: true },
+      { source: "/matt-h-massachusetts-u-s-a", destination: "/#reviews", permanent: true },
+      { source: "/about/location/ayahuasca-retreat-iquitos-peru-moloka", destination: "/#about", permanent: true },
     ];
   },
 };
