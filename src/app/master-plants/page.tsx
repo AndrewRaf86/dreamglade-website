@@ -7,7 +7,7 @@ import SiteImage from "@/components/SiteImage";
 export const metadata: Metadata = {
   title: "Master Plants & Plant Dietas",
   description:
-    "The master plant dietas Dreamglade works with — Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida — plus Kambo, and what a traditional dieta involves.",
+    "The master plant dietas Dreamglade works with — Marosa, Ajo Sacha, Bobinsana, Clavo Huasca, and Planta de Vida — plus Kambo, and what a traditional dieta involves.",
   alternates: { canonical: "https://dreamglade.com/master-plants" },
   openGraph: {
     title: "Master Plants & Plant Dietas — Dreamglade",
@@ -70,7 +70,7 @@ export default function MasterPlants() {
       <section className="section section--cream-warm" id="the-plants">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Six master plants</span>
+            <span className="eyebrow">Five master plants</span>
             <h2 className="display">The plants Dreamglade <em>dietas with.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
               Each has its own character in the tradition. None is chosen for its intensity — the right one depends on the guest, their preparation, and what Maestro Raúl observes once they arrive.
@@ -95,11 +95,6 @@ export default function MasterPlants() {
             </article>
 
             <article className="col-item">
-              <h3>Machinga</h3>
-              <p>One of the more intense master plants in the tradition — known for a strong physical purge that is understood as inseparable from emotional release. Where gentler plants like Marosa work quietly, Machinga works decisively: the purging itself is seen as the visible side of letting go of old grief or stuck emotional weight. Because of its intensity, a Machinga dieta is only undertaken with an experienced healer&apos;s guidance, and Maestro Raúl decides whether and when it is appropriate for a guest.</p>
-            </article>
-
-            <article className="col-item">
               <h3>Clavo Huasca</h3>
               <p>A woody vine that smells distinctly of cloves when its bark is cut, used a little differently from the other plants here — less a formal isolation dieta, more a warming tonic taken to awaken energy and vitality. Traditionally it is known as a plant that helps people reconnect with enthusiasm, creativity, and confidence, and it has long been used in Amazonian folk tradition as a tonic for stamina. Ask Maestro Raúl about Clavo Huasca if it feels relevant to your dieta.</p>
             </article>
@@ -115,7 +110,7 @@ export default function MasterPlants() {
             The plant dieta itself is included in the retreat price. If you are curious what it may involve for your stay, mention it in your inquiry and the team can explain the process before you arrive.
           </p>
           <div style={{ marginTop: 16, textAlign: "center" }}>
-            <TrackedLink href="/apply" className="link-arrow" event="Experience Click" properties={{ location: "master-plants-section", destination: "apply" }}>Discuss your plant dieta in your inquiry</TrackedLink>
+            <TrackedLink href="/apply" className="link-arrow" event="Apply Click" properties={{ location: "master-plants-section", destination: "apply" }}>Discuss your plant dieta in your inquiry</TrackedLink>
           </div>
         </div>
       </section>
