@@ -38,7 +38,7 @@ export default function SafetyPreparation() {
             <span className="notice__label">Medical disclaimer</span>
             <h3>Dreamglade is a retreat center, not a medical provider.</h3>
             <p>
-              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, detox, or cures for any physical or mental health condition. Paul reviews every inquiry manually, but he is not a substitute for medical advice: any decision about your medications or a medical condition must come from Paul together with a qualified healthcare professional. Participants are responsible for consulting their own doctor before applying.
+              Dreamglade provides traditional ayahuasca ceremonies in a ceremonial and cultural context. We do not offer medical treatment, therapy, detox, or cures for any physical or mental health condition, and nothing on this site is medical advice. Any decision about your medications, diagnoses, or medical care is between you and your own qualified healthcare professional — not Dreamglade. Paul reviews every inquiry personally, but that review is only to decide whether Dreamglade can safely host you based on what you disclose; it is not a medical opinion and does not replace your doctor&apos;s guidance. Participants are responsible for consulting their own doctor before applying.
             </p>
           </div>
         </div>

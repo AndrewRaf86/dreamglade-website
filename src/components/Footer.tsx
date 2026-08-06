@@ -17,7 +17,7 @@ export default function Footer() {
               Ctra Iquitos-Nauta, 16000<br />
               Iquitos, Peru<br />
               <br />
-              <strong><a href="mailto:booking@dreamglade.com">booking@dreamglade.com</a></strong><br />
+              <strong><TrackedLink href="mailto:booking@dreamglade.com" event="Email Click" properties={{ location: "footer", destination: "booking" }}>booking@dreamglade.com</TrackedLink></strong><br />
               <a href="tel:+51920478240">+51 920 478 240</a><br />
               <a href="tel:+51924866141">+51 924 866 141</a>
             </p>
