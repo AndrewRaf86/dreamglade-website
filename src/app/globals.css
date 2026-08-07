@@ -1031,6 +1031,57 @@ p + p { margin-top: 0.6em; }
   }
 }
 
+/* ── Step entrance + connector draw-in (motion) ── */
+.step {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.step.is-visible { opacity: 1; transform: translateY(0); }
+.steps > .step:nth-child(1) { transition-delay: 0ms; }
+.steps > .step:nth-child(2) { transition-delay: 80ms; }
+.steps > .step:nth-child(3) { transition-delay: 160ms; }
+
+@media (min-width: 760px) {
+  .step__connector {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .step__connector.is-visible { transform: scaleX(1); }
+  .step__connector::after {
+    opacity: 0;
+    transition: opacity 200ms ease 650ms;
+  }
+  .step__connector.is-visible::after { opacity: 1; }
+}
+
+/* Mobile: a real connector — previously .step__connector simply disappeared here,
+   leaving three disconnected boxes at the page's highest-leverage moment. */
+@media (max-width: 759px) {
+  .steps { position: relative; padding-left: 34px; gap: 28px; }
+  .steps::before {
+    content: "";
+    position: absolute; left: 15px; top: 22px; bottom: 22px; width: 1px;
+    background: var(--rule);
+    transform-origin: top center;
+    transform: scaleY(0);
+    transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .steps.spine-visible::before { transform: scaleY(1); }
+  .step { padding-left: 12px; }
+  .step__num {
+    position: absolute; left: -34px; top: 26px;
+    width: 30px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; font-style: normal; font-family: var(--font-mono);
+    background: var(--cream); border: 1px solid var(--gold-deep); color: var(--gold-deep);
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+}
+
 .trust-strip {
   display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;
   padding: 18px 0;
@@ -1301,3 +1352,51 @@ p + p { margin-top: 0.6em; }
   font-size: 14px;
 }
 .site-footer__social span[aria-hidden] { opacity: 0.5; }
+
+/* ── Journey map (what-to-expect: arrival → departure, in one glance) ── */
+.map-wrap { position: relative; }
+.map-svg { width: 100%; height: auto; display: block; }
+.map-path { fill: none; stroke: var(--gold-deep); stroke-width: 2; stroke-linecap: round; }
+.map-dot {
+  fill: var(--cream); stroke: var(--gold-deep); stroke-width: 2; opacity: 0;
+  transform-box: fill-box; transform-origin: center; transform: scale(0.4);
+  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.map-dot.is-visible { opacity: 1; transform: scale(1); }
+.map-num {
+  font-family: var(--font-mono); font-size: 13px; fill: var(--forest-deep);
+  text-anchor: middle; dominant-baseline: central; opacity: 0; transition: opacity 300ms ease;
+}
+.map-num.is-visible { opacity: 1; }
+.stages {
+  margin-top: 32px; display: grid; grid-template-columns: 1fr; gap: clamp(20px, 3vw, 32px);
+}
+@media (min-width: 720px) { .stages { grid-template-columns: repeat(5, 1fr); } }
+.stage {
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stage.is-visible { opacity: 1; transform: translateY(0); }
+.stage__num {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em;
+  color: var(--gold-deep); display: block; margin-bottom: 8px;
+}
+.stage h3 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 18px; margin: 0 0 6px; color: var(--ink); }
+.stage p { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+/* ── Reduced motion: collapse the two entrance-animated components above to their
+   fully-visible resting state. Scoped to just these new classes, not a blanket
+   rule, so it doesn't touch any existing hover/color transitions elsewhere. ── */
+@media (prefers-reduced-motion: reduce) {
+  .step,
+  .step__connector,
+  .step__connector::after,
+  .steps::before,
+  .map-dot,
+  .map-num,
+  .stage {
+    transition-duration: 0.01ms !important;
+  }
+}

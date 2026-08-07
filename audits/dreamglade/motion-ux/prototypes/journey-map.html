@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prototype — Iquitos to Dreamglade Journey Map</title>
+<style>
+  /*
+    Prototype notes:
+    - Standalone file. Not wired into the Next.js app / production routes.
+    - Copy taken verbatim/paraphrased from src/app/what-to-expect/page.tsx and faq/page.tsx.
+    - The path is a single inline <svg><path>; length is measured at runtime with the
+      native getTotalLength() API and animated via stroke-dashoffset (a paint-only SVG
+      property — it does not trigger layout or repaint of surrounding content).
+    - No map tiles, no external map API, no image assets — a drawn line, honestly
+      labeled as a schematic, not a literal map.
+  */
+  :root {
+    --forest: #1F3A2E;
+    --forest-deep: #16291F;
+    --cream: #FAF7F0;
+    --cream-warm: #F4EDDB;
+    --brown: #6B5444;
+    --gold: #C99A3A;
+    --gold-deep: #7F5614;
+    --ink: var(--forest);
+    --body: #3F352B;
+    --muted: var(--brown);
+    --rule: rgba(31, 58, 46, 0.18);
+    --font-display: Georgia, "Times New Roman", serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+    --gutter: clamp(20px, 4vw, 56px);
+    --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-body); background: var(--cream); color: var(--body); line-height: 1.6; }
+  .note { background: var(--forest-deep); color: var(--cream-warm); font-size: 13px; padding: 10px var(--gutter); text-align: center; }
+  .note strong { color: var(--gold); }
+  .section { padding: clamp(56px, 8vw, 110px) 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+  .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 600; color: var(--muted); display: inline-flex; align-items: center; gap: 12px; }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold-deep); }
+  h2.display { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; color: var(--ink); margin: 14px 0 12px; }
+  .lede { font-family: var(--font-display); font-style: italic; font-size: clamp(16px, 1.4vw, 20px); color: var(--ink); max-width: 680px; margin: 0 0 40px; }
+
+  .map-wrap { position: relative; }
+  .map-svg { width: 100%; height: auto; display: block; }
+  .map-path {
+    fill: none;
+    stroke: var(--gold-deep);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  .map-dot {
+    fill: var(--cream);
+    stroke: var(--gold-deep);
+    stroke-width: 2;
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(0.4);
+    transition: opacity 400ms var(--ease-entrance), transform 400ms var(--ease-entrance);
+  }
+  .map-dot.is-visible { opacity: 1; transform: scale(1); }
+  .map-num {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    fill: var(--forest-deep);
+    text-anchor: middle;
+    dominant-baseline: central;
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+  .map-num.is-visible { opacity: 1; }
+
+  .stages {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 3vw, 32px);
+    list-style: none;
+    padding: 0;
+  }
+  @media (min-width: 720px) {
+    .stages { grid-template-columns: repeat(5, 1fr); }
+  }
+  .stage {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 500ms var(--ease-entrance), transform 500ms var(--ease-entrance);
+  }
+  .stage.is-visible { opacity: 1; transform: translateY(0); }
+  .stage__num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--gold-deep);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .stage h3 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 18px; margin: 0 0 6px; color: var(--ink); }
+  .stage p { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+  .legend-text { margin-top: 40px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 20px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .map-dot, .map-num, .stage { transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+  <p class="note">
+    Isolated prototype — <strong>not wired into production</strong>. This is a
+    <strong>schematic</strong> of the route, not a literal map — deliberately, so it
+    doesn't overclaim geographic precision. Scroll it into view to see the line draw in.
+  </p>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Getting there and back</span>
+      <h2 class="display">From <em>Iquitos</em> to the land — and home again.</h2>
+      <p class="lede">
+        You make your own way to Iquitos. From the moment you land, here is exactly what
+        happens next — and how you get home again.
+      </p>
+
+      <div class="map-wrap">
+        <svg class="map-svg" viewBox="0 0 1000 200" id="mapSvg" role="img" aria-label="Schematic route: Iquitos airport, city meeting point, drive to Dreamglade, arrival, and return transfer">
+          <path class="map-path" id="mapPath"
+            d="M 40,150 C 160,150 160,60 280,60 S 400,150 500,150 S 620,60 740,60 S 860,150 960,100" />
+          <!-- dots injected by script at points along the path -->
+        </svg>
+      </div>
+
+      <ol class="stages" id="stages">
+        <li class="stage">
+          <span class="stage__num">01 / Fly in</span>
+          <h3>Land in Iquitos</h3>
+          <p>You arrange your own flights. We recommend arriving 1–2 nights early to rest and avoid a delayed flight risking the transfer.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__num">02 / Meeting point</span>
+          <h3>City meeting point, 1pm</h3>
+          <p>On your first retreat day, we meet you at a designated point in Iquitos — no public route runs to the centre.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__num">03 / The drive</span>
+          <h3>~1hr by 4x4</h3>
+          <p>Past Moralillo, toward Nauta. Included in your stay — arranged by us, not booked separately.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__num">04 / Arrival</span>
+          <h3>Settle into your tambo</h3>
+          <p>Meet the team, see your tambo, find your bearings. The first ceremony is held that night.</p>
+        </li>
+        <li class="stage">
+          <span class="stage__num">05 / Departure</span>
+          <h3>Transfer home</h3>
+          <p>A final circle, then a group transfer to Iquitos. Airport drop-off is included for flights after 3pm.</p>
+        </li>
+      </ol>
+
+      <p class="legend-text">
+        Prototype behavior: the line's length is measured at runtime
+        (<code>path.getTotalLength()</code>) and drawn in via
+        <code>stroke-dashoffset</code> — a paint-only SVG property, not a layout
+        property — triggered once by <code>IntersectionObserver</code>. Stage dots and
+        the five text cards below fade/lift in afterward. This turns four paragraphs of
+        transport logistics (airport pickup, cash-in-soles advice, 1pm cutoff, drop-off
+        timing) into one glance-able sequence; the full prose detail still lives on the
+        What to Expect and FAQ pages for anyone who wants it — this doesn't replace that
+        text, it previews it.
+      </p>
+    </div>
+  </section>
+
+<script>
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var svg = document.getElementById("mapSvg");
+  var path = document.getElementById("mapPath");
+  var len = path.getTotalLength();
+
+  path.style.strokeDasharray = len;
+  path.style.strokeDashoffset = reduce ? 0 : len;
+  path.style.transition = reduce ? "none" : "stroke-dashoffset 1400ms cubic-bezier(0.16, 1, 0.3, 1)";
+
+  // Place 5 dots evenly along the path
+  var count = 5;
+  var dots = [];
+  for (var i = 0; i < count; i++) {
+    var frac = count === 1 ? 0 : i / (count - 1);
+    var pt = path.getPointAtLength(frac * len);
+    var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    dot.setAttribute("class", "map-dot");
+    dot.setAttribute("cx", pt.x);
+    dot.setAttribute("cy", pt.y);
+    dot.setAttribute("r", 9);
+    svg.appendChild(dot);
+
+    var num = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    num.setAttribute("class", "map-num");
+    num.setAttribute("x", pt.x);
+    num.setAttribute("y", pt.y);
+    num.textContent = i + 1;
+    svg.appendChild(num);
+
+    dots.push({ dot: dot, num: num });
+  }
+
+  var stages = document.querySelectorAll(".stage");
+
+  function reveal() {
+    if (!reduce) path.style.strokeDashoffset = 0;
+    dots.forEach(function (d, i) {
+      setTimeout(function () {
+        d.dot.classList.add("is-visible");
+        d.num.classList.add("is-visible");
+      }, reduce ? 0 : i * 120 + 300);
+    });
+    stages.forEach(function (s, i) {
+      setTimeout(function () {
+        s.classList.add("is-visible");
+      }, reduce ? 0 : i * 80 + 200);
+    });
+  }
+
+  if (reduce) {
+    reveal();
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        reveal();
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.3 });
+    io.observe(svg);
+  }
+})();
+</script>
+</body>
+</html>

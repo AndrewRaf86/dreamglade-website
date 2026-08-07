@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
+import JourneyMap from "@/components/JourneyMap";
 
 export const metadata: Metadata = {
   title: "What to Expect at an Ayahuasca Retreat",
@@ -51,6 +52,20 @@ export default function WhatToExpect() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section section--cream-warm">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Getting there and back</span>
+            <h2 className="display">From <em>Iquitos</em> to the land — and home again.</h2>
+            <p className="lede" style={{ marginTop: 12 }}>
+              You make your own way to Iquitos. From the moment you land, here is exactly
+              what happens next — and how you get home again.
+            </p>
+          </div>
+          <JourneyMap />
         </div>
       </section>
 

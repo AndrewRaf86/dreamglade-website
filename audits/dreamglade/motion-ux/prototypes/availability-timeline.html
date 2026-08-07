@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prototype — Interactive Availability Timeline</title>
+<style>
+  /*
+    Prototype notes:
+    - Standalone file. Not wired into the Next.js app / production routes.
+    - Real copy and real 2026-2027 window dates, taken from src/app/page.tsx as-is.
+    - Fonts: system fallback stacks mirroring the production font stack fallbacks.
+    - Motion: transform + opacity only, plus one `stroke`-free CSS-only spine
+      (a scaleX transform on a div, not an SVG) — no layout-triggering animation.
+  */
+  :root {
+    --forest: #1F3A2E;
+    --forest-deep: #16291F;
+    --cream: #FAF7F0;
+    --cream-warm: #F4EDDB;
+    --beige: #E8D9BE;
+    --brown: #6B5444;
+    --gold: #C99A3A;
+    --gold-deep: #7F5614;
+    --ink: var(--forest);
+    --body: #3F352B;
+    --muted: var(--brown);
+    --rule: rgba(31, 58, 46, 0.18);
+    --font-display: Georgia, "Times New Roman", serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+    --gutter: clamp(20px, 4vw, 56px);
+    --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-body); background: var(--cream); color: var(--body); line-height: 1.6; }
+  .note { background: var(--forest-deep); color: var(--cream-warm); font-size: 13px; padding: 10px var(--gutter); text-align: center; }
+  .note strong { color: var(--gold); }
+  .section { padding: clamp(56px, 8vw, 110px) 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--gutter); }
+  .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 600; color: var(--muted); display: inline-flex; align-items: center; gap: 12px; }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold-deep); }
+  h2.display { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; color: var(--ink); margin: 14px 0 12px; }
+  .lede { font-family: var(--font-display); font-style: italic; font-size: clamp(16px, 1.4vw, 20px); color: var(--ink); max-width: 680px; margin: 0 0 40px; }
+
+  /* ── Timeline ── */
+  .timeline-wrap { overflow-x: auto; padding-bottom: 14px; -webkit-overflow-scrolling: touch; }
+  .timeline {
+    position: relative;
+    min-width: 1400px;
+    height: 108px;
+    margin: 20px 0 8px;
+  }
+  .timeline__spine {
+    position: absolute; left: 0; right: 0; top: 46px; height: 2px;
+    background: var(--rule);
+  }
+  .timeline__fill {
+    position: absolute; left: 0; top: 46px; height: 2px;
+    background: var(--gold-deep);
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 1100ms var(--ease-entrance);
+  }
+  .timeline__fill.is-visible { transform: scaleX(1); }
+
+  .window {
+    position: absolute;
+    top: 32px;
+    height: 32px;
+    background: var(--gold);
+    border: 1px solid var(--gold-deep);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 500ms var(--ease-entrance), transform 500ms var(--ease-entrance), background 180ms ease;
+    padding: 0;
+  }
+  .window.is-visible { opacity: 1; transform: translateY(0); }
+  .window:hover, .window:focus-visible { background: var(--forest); border-color: var(--forest); }
+  .window:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .window[aria-pressed="true"] { background: var(--forest); border-color: var(--forest); }
+  .window .tick { position: absolute; top: -6px; width: 1px; height: 6px; background: rgba(255,255,255,0.7); }
+
+  .month-label {
+    position: absolute;
+    top: 74px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    white-space: nowrap;
+    transform: translateX(-50%);
+  }
+  .month-tick { position: absolute; top: 44px; width: 1px; height: 6px; background: var(--rule); }
+
+  .timeline-legend {
+    display: flex; gap: 24px; flex-wrap: wrap; margin-top: 8px; font-size: 12px; color: var(--muted);
+  }
+  .timeline-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; display: inline-block; }
+  .swatch.open { background: var(--gold); border: 1px solid var(--gold-deep); }
+  .swatch.closed { background: transparent; border: 1px solid var(--rule); }
+
+  /* ── Detail panel (replaces 13 always-visible cards with one focused panel) ── */
+  .detail {
+    margin-top: 32px;
+    border: 1px solid var(--rule);
+    background: var(--cream-warm);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 420ms var(--ease-entrance);
+  }
+  .detail.is-open { max-height: 280px; }
+  .detail__inner { padding: 28px 30px; }
+  .detail__status { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+  .detail__status .dot { width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+  .detail__dates { font-family: var(--font-display); font-style: italic; font-size: clamp(22px, 2.4vw, 30px); margin: 10px 0 6px; color: var(--ink); }
+  .detail__note { font-size: 14px; color: var(--body); margin: 4px 0; }
+  .detail__cta {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;
+    font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600;
+    color: var(--ink); border-bottom: 1px solid var(--gold-deep); padding-bottom: 3px;
+  }
+  .placeholder { padding: 28px 30px; color: var(--muted); font-size: 14px; font-style: italic; }
+
+  .legend-text { margin-top: 40px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 20px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .timeline__fill, .window, .detail { transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+  <p class="note">
+    Isolated prototype — <strong>not wired into production</strong>. Scroll the timeline
+    horizontally, then click/tap a gold window to see its detail (also reachable by
+    Tab + Enter/Space). This replaces 13 always-expanded cards with one focused
+    timeline + on-demand detail — same information, clearer relationship between
+    "the window is open" and "you pick one week inside it."
+  </p>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Availability — 2026–2027</span>
+      <h2 class="display">Open <em>windows.</em></h2>
+      <p class="lede">
+        A new retreat begins every week within each window below — guests join on Monday
+        or Friday and stay 5 nights up to 2 weeks, not the whole window. Dates outside
+        these windows are closed.
+      </p>
+
+      <div class="timeline-wrap">
+        <div class="timeline" id="timeline">
+          <div class="timeline__spine"></div>
+          <div class="timeline__fill" id="fill"></div>
+          <!-- windows + month labels injected by script from real data below -->
+        </div>
+      </div>
+
+      <div class="timeline-legend">
+        <span><span class="swatch open"></span> Open window (pick any Mon/Fri start inside)</span>
+        <span><span class="swatch closed"></span> Closed</span>
+      </div>
+
+      <div class="detail" id="detail">
+        <div class="placeholder" id="placeholder">Select a window above to see dates and next steps.</div>
+        <div class="detail__inner" id="detailInner" style="display:none;">
+          <span class="detail__status"><span class="dot"></span> Available</span>
+          <h3 class="detail__dates" id="detailDates"></h3>
+          <p class="detail__note">A new retreat begins every week</p>
+          <p class="detail__note">Join Monday or Friday, stay up to 2 weeks</p>
+          <a class="detail__cta" href="#" id="detailCta">Verify with Paul →</a>
+        </div>
+      </div>
+
+      <p class="legend-text">
+        Prototype behavior: the spine draws in once on scroll-into-view, then windows
+        fade in with a small stagger. Selecting a window expands one shared detail panel
+        via <code>max-height</code> (same technique the live FAQ accordion already uses)
+        instead of adding a 14th always-visible card. Weekly tick marks inside each window
+        show where a Monday/Friday start actually falls.
+      </p>
+    </div>
+  </section>
+
+<script>
+(function () {
+  var windows = [
+    { start: "2026-07-27", end: "2026-08-22", label: "July 27 – August 22, 2026" },
+    { start: "2026-08-31", end: "2026-09-26", label: "Aug 31 – Sept 26, 2026" },
+    { start: "2026-10-19", end: "2026-11-14", label: "Oct 19 – Nov 14, 2026" },
+    { start: "2026-11-23", end: "2026-12-19", label: "Nov 23 – Dec 19, 2026" },
+    { start: "2027-01-11", end: "2027-02-06", label: "January 11 – February 6, 2027" },
+    { start: "2027-02-15", end: "2027-03-13", label: "February 15 – March 13, 2027" },
+    { start: "2027-03-22", end: "2027-04-17", label: "March 22 – April 17, 2027" },
+    { start: "2027-05-03", end: "2027-05-29", label: "May 3 – May 29, 2027" },
+    { start: "2027-06-21", end: "2027-07-17", label: "June 21 – July 17, 2027" },
+    { start: "2027-07-26", end: "2027-08-21", label: "July 26 – August 21, 2027" },
+    { start: "2027-09-06", end: "2027-10-02", label: "September 6 – October 2, 2027" },
+    { start: "2027-10-11", end: "2027-11-06", label: "October 11 – November 6, 2027" },
+    { start: "2027-11-15", end: "2027-12-11", label: "November 15 – December 11, 2027" }
+  ];
+
+  var rangeStart = new Date("2026-07-01");
+  var rangeEnd = new Date("2027-12-31");
+  var totalDays = (rangeEnd - rangeStart) / 86400000;
+  var timelineWidth = 1400;
+
+  function dayOffset(d) { return (new Date(d) - rangeStart) / 86400000; }
+  function xFor(d) { return (dayOffset(d) / totalDays) * timelineWidth; }
+
+  var timeline = document.getElementById("timeline");
+  var fill = document.getElementById("fill");
+
+  // Month gridlines + labels
+  var cursor = new Date(rangeStart);
+  cursor.setDate(1);
+  while (cursor <= rangeEnd) {
+    var x = xFor(cursor);
+    var tick = document.createElement("div");
+    tick.className = "month-tick";
+    tick.style.left = x + "px";
+    timeline.appendChild(tick);
+
+    var label = document.createElement("div");
+    label.className = "month-label";
+    label.style.left = x + "px";
+    label.textContent = cursor.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
+    timeline.appendChild(label);
+
+    cursor.setMonth(cursor.getMonth() + 1);
+  }
+
+  // Window bars with weekly Mon/Fri tick marks
+  windows.forEach(function (w, i) {
+    var x1 = xFor(w.start);
+    var x2 = xFor(w.end);
+    var btn = document.createElement("button");
+    btn.className = "window";
+    btn.type = "button";
+    btn.style.left = x1 + "px";
+    btn.style.width = Math.max(x2 - x1, 8) + "px";
+    btn.setAttribute("aria-pressed", "false");
+    btn.setAttribute("aria-label", w.label + " — open, pick a Monday or Friday start");
+    btn.dataset.index = i;
+
+    // weekly start ticks (every 3-4 days alternating Mon/Fri, illustrative)
+    var d = new Date(w.start);
+    while (d <= new Date(w.end)) {
+      var tx = xFor(d) - x1;
+      if (tx >= 0 && tx <= (x2 - x1)) {
+        var t = document.createElement("span");
+        t.className = "tick";
+        t.style.left = tx + "px";
+        btn.appendChild(t);
+      }
+      d.setDate(d.getDate() + 4); // illustrative Mon/Fri cadence
+    }
+
+    btn.addEventListener("click", function () {
+      document.querySelectorAll(".window").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+      btn.setAttribute("aria-pressed", "true");
+      showDetail(w);
+    });
+
+    timeline.appendChild(btn);
+  });
+
+  function showDetail(w) {
+    document.getElementById("placeholder").style.display = "none";
+    document.getElementById("detailInner").style.display = "block";
+    document.getElementById("detailDates").textContent = w.label;
+    document.getElementById("detailCta").href =
+      "mailto:booking@dreamglade.com?subject=" + encodeURIComponent("Dreamglade availability inquiry: " + w.label);
+    document.getElementById("detail").classList.add("is-open");
+  }
+
+  // Entrance animation
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var windowEls = document.querySelectorAll(".window");
+
+  if (reduce) {
+    fill.classList.add("is-visible");
+    windowEls.forEach(function (w) { w.classList.add("is-visible"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        fill.classList.add("is-visible");
+        windowEls.forEach(function (w, i) {
+          setTimeout(function () { w.classList.add("is-visible"); }, i * 40);
+        });
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.2 });
+    io.observe(timeline);
+  }
+})();
+</script>
+</body>
+</html>
