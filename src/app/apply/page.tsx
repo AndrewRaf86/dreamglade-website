@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
+import ProcessSteps from "@/components/ProcessSteps";
 
 export const metadata: Metadata = {
   title: "Begin Your Inquiry",
@@ -45,25 +46,7 @@ export default function Apply() {
               We do not lock dates on a calendar or take a payment up front. The first thing is a short inquiry — no medical history at this stage.
             </p>
           </div>
-          <div className="steps">
-            <div className="step">
-              <span className="step__num">01</span>
-              <h3>Apply</h3>
-              <p>Let us know the dates and accommodation you would like to join us for.</p>
-              <span className="step__connector" aria-hidden="true" />
-            </div>
-            <div className="step">
-              <span className="step__num">02</span>
-              <h3>Review</h3>
-              <p>Paul reads every inquiry personally — usually within a day. If something needs a closer look before we go further, he will tell you, gently and clearly.</p>
-              <span className="step__connector" aria-hidden="true" />
-            </div>
-            <div className="step">
-              <span className="step__num">03</span>
-              <h3>Conversation</h3>
-              <p>Paul writes back — by email, on your time. From there, the full registration, terms and conditions agreement, and deposit come later, also by email.</p>
-            </div>
-          </div>
+          <ProcessSteps />
           <div className="trust-strip">
             <span className="stars" role="img" aria-label="5 out of 5 stars" />
             <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 verified Google reviews</span>
