@@ -10,6 +10,14 @@
 // Run against a deployed URL:
 //   SMOKE_TEST_BASE_URL=https://your-preview-url.vercel.app npm run smoke-test
 //
+// If the URL is behind Vercel's Deployment Protection (SSO wall — the
+// default for preview deployments), also pass a share-link bypass token
+// (e.g. from the "get_access_to_vercel_url" MCP tool, or Vercel's own
+// "Protection Bypass for Automation" secret if the project has one):
+//   SMOKE_TEST_BASE_URL=https://preview.vercel.app SMOKE_TEST_VERCEL_BYPASS=<token> npm run smoke-test
+// This fetches the base URL with ?_vercel_share=<token> once to obtain the
+// resulting _vercel_jwt cookie, then sends that cookie on every check.
+//
 // This specifically covers the /md/[slug] Object.prototype edge cases
 // (toString, constructor, hasOwnProperty, proto, __proto__, valueOf) found
 // during independent review — a plain-object lookup table let several of
@@ -17,6 +25,22 @@
 // clean 404. The fix uses a real Map; this test is what keeps that fixed.
 
 const BASE_URL = process.env.SMOKE_TEST_BASE_URL ?? "http://localhost:3000";
+const BYPASS_TOKEN = process.env.SMOKE_TEST_VERCEL_BYPASS;
+let bypassCookie: string | undefined;
+
+async function ensureBypassCookie(): Promise<void> {
+  if (!BYPASS_TOKEN || bypassCookie) return;
+  // The share-token URL itself responds with a 307 that carries the
+  // Set-Cookie header — redirect: "manual" is required to read it; with
+  // "follow", the fetch implementation follows the redirect internally and
+  // does not expose that intermediate hop's Set-Cookie to this response.
+  const res = await fetch(`${BASE_URL}/?_vercel_share=${encodeURIComponent(BYPASS_TOKEN)}`, {
+    redirect: "manual",
+  });
+  const setCookies = res.headers.getSetCookie?.() ?? [];
+  const jwt = setCookies.find((c) => c.startsWith("_vercel_jwt="));
+  if (jwt) bypassCookie = jwt.split(";")[0];
+}
 
 type Check = {
   path: string;
@@ -47,7 +71,10 @@ async function runCheck(check: Check): Promise<{ ok: boolean; message: string }>
   const url = `${BASE_URL}${check.path}`;
   let res: Response;
   try {
-    res = await fetch(url, { redirect: "manual" });
+    res = await fetch(url, {
+      redirect: "manual",
+      headers: bypassCookie ? { Cookie: bypassCookie } : {},
+    });
   } catch (err) {
     return { ok: false, message: `FETCH FAILED — ${(err as Error).message}` };
   }
@@ -67,7 +94,10 @@ async function runCheck(check: Check): Promise<{ ok: boolean; message: string }>
 }
 
 async function main() {
-  console.log(`\nDreamglade route smoke test — base URL: ${BASE_URL}\n`);
+  await ensureBypassCookie();
+  console.log(
+    `\nDreamglade route smoke test — base URL: ${BASE_URL}${bypassCookie ? " (with protection-bypass cookie)" : ""}\n`,
+  );
   let failures = 0;
   for (const check of CHECKS) {
     const result = await runCheck(check);

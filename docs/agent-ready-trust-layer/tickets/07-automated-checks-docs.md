@@ -1,10 +1,13 @@
 # Ticket 7 — Add automated tests and documentation
 
 **Status: ✅ Complete.** `docs/agent-ready-trust-layer/README.md` (non-developer-
-friendly) and `AI_TOOLING.md` §5 written. CI decision resolved: local/manual
-command only — no CI system exists in this repo to integrate into (recorded
-in `DECISIONS.md`, 2026-08-13). Docs updated post-review to also cover
-`npm run typecheck` and `npm run smoke-test`, added alongside `audit:facts`.
+friendly) and `AI_TOOLING.md` §5 written. CI decision: kept local/manual
+rather than added to the repo's existing PR-triggered `ci.yml` (which
+currently only runs `npm run build`) — see `DECISIONS.md`, 2026-08-13, which
+also corrects an earlier, inaccurate claim in this ticket's original
+implementation that no CI pipeline existed at all. Docs updated post-review
+to also cover `npm run typecheck` and `npm run smoke-test`, added alongside
+`audit:facts`.
 
 ## Objective
 Wire the consistency audit into the project's normal workflow (at minimum

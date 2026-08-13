@@ -107,9 +107,10 @@ language, arrival-pickup policy, ceremony schedule) appear on their specific
 canonical page, not just somewhere. This is regex-based, targeted coverage
 of known-important facts and known-wrong phrasings — it is not a general
 fact-checker and cannot catch every possible wrong wording. It is a local
-command — it is not currently wired into any automated CI system, because
-this repository doesn't have one yet (see `DECISIONS.md`). Run it by hand
-before deploying any change that touches facts or public-page copy.
+command — it is not currently wired into `.github/workflows/ci.yml` (the
+repo's one PR-triggered CI check, which currently only runs
+`npm run build`); see `DECISIONS.md` for why. Run it by hand before
+deploying any change that touches facts or public-page copy.
 
 Two related commands:
 ```bash

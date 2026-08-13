@@ -145,15 +145,25 @@ notice for `src/lib/facts.ts` specifically, since that file lives outside
 `scripts/audit-facts.ts`'s header rather than worked around further.
 **Who:** Andrew.
 
-## 2026-08-13 — Facts audit stays local/manual; no CI pipeline exists
+## 2026-08-13 — Facts audit stays local/manual; not added to CI
 **Decision:** `npm run audit:facts` (and `npm run typecheck`,
 `npm run smoke-test`) remain local/manual commands, documented in
-`README.md` and `DEPLOYMENT-CHECKLIST.md`, not wired into any CI system.
-**Why:** this repository has no conventional CI pipeline at all (the one
-existing GitHub Actions workflow, `site-health-report`, is manual-dispatch-
-only by design — see `AI_TOOLING.md`). Adding CI enforcement for this one
-feature would mean building CI from scratch for this repo, which is out of
-scope for this project. Closes `OPEN-QUESTIONS.md` item 2.
+`README.md` and `DEPLOYMENT-CHECKLIST.md`, not wired into `.github/workflows/ci.yml`.
+**Why:** while implementing this feature on a local `main` that turned out to
+be one commit behind `origin/main`, this decision was originally recorded as
+"the repo has no conventional CI pipeline at all." That was **inaccurate** —
+`origin/main` already has `.github/workflows/ci.yml` (PR-triggered, runs
+`npm run build` on every PR to `main`), added in a commit
+(`446a59b`) that predates this branch but wasn't in the local checkout this
+work started from. Correcting the record here: a real, PR-triggered CI
+pipeline does exist; it currently only runs `npm run build`. The decision to
+**not** add `audit:facts`/`typecheck`/`smoke-test` to it stands, but for a
+different reason than originally written: doing so is a small, reasonable
+follow-up (not "building CI from scratch"), just out of scope for this PR —
+it touches shared CI config that deserves its own explicit request rather
+than being bundled into this feature. The separate `site-health-report`
+gh-aw workflow remains manual-dispatch-only, unrelated to `ci.yml`. Closes
+`OPEN-QUESTIONS.md` item 2.
 **Who:** Andrew.
 
 ## 2026-08-13 — `/llms-full.txt` deferred
