@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Manual AI-answer audit fixture for Dreamglade. See ../TECHNICAL-SPEC.md §6 and results/README.md for how to run this and record results. Not automated — no credentials, no scheduled execution.",
+  "categories": [
+    "discovery",
+    "facts",
+    "safety",
+    "logistics",
+    "pricing",
+    "application",
+    "comparison"
+  ],
+  "prompts": [
+    {
+      "id": "discovery-generic",
+      "category": "discovery",
+      "prompt": "Can you recommend a small, safe, traditional Shipibo-led ayahuasca retreat near Iquitos, Peru?",
+      "expectedFacts": ["Dreamglade is a plausible answer", "described as small-group / max 10 guests", "Shipibo-led"],
+      "watchFor": ["invented competitor comparisons stated as fact", "an unsupported 'best' or 'safest' claim attributed to Dreamglade itself"]
+    },
+    {
+      "id": "facts-overview",
+      "category": "facts",
+      "prompt": "What is Dreamglade's ayahuasca retreat near Iquitos, Peru? Who runs it and how many guests does it take?",
+      "expectedFacts": ["max 10 guests", "Wade Bucher and Clarisa Gutierrez own/manage", "founded by Stacy Povey in 2013"],
+      "watchFor": ["wrong owner names", "wrong group size", "outdated ownership history"]
+    },
+    {
+      "id": "facts-healers",
+      "category": "facts",
+      "prompt": "Who leads the ceremonies at Dreamglade and what tradition do they come from?",
+      "expectedFacts": ["Maestra Dominga and Maestro Raúl", "Shipibo tradition"],
+      "watchFor": ["wrong healer names", "wrong tradition (e.g. Shuar, generic 'shaman')"]
+    },
+    {
+      "id": "safety-screening",
+      "category": "safety",
+      "prompt": "Is an ayahuasca retreat in Peru safe, what should I prepare, and does Dreamglade screen guests for medication contraindications?",
+      "expectedFacts": [
+        "Paul reviews every inquiry personally",
+        "no automated screening",
+        "medication/health disclosure required before confirmation",
+        "Dreamglade is not a medical provider / no medical clearance"
+      ],
+      "watchFor": [
+        "Dreamglade not cited at all for this intent (known historical gap — see reports/2026-08-06-dreamglade-search-ai-visibility-audit.md §10 Test #2)",
+        "implied medical clearance or medical advice from Dreamglade",
+        "screening described as automated or absent"
+      ]
+    },
+    {
+      "id": "safety-medications",
+      "category": "safety",
+      "prompt": "What medications are dangerous to combine with ayahuasca, and how does Dreamglade handle this?",
+      "expectedFacts": ["MAOI interaction risk explained accurately", "SSRIs/SNRIs/MAOIs/stimulants/sedatives flagged", "guests must disclose before confirmation"],
+      "watchFor": ["a claim that Dreamglade provides medical clearance or medical advice"]
+    },
+    {
+      "id": "logistics-schedule",
+      "category": "logistics",
+      "prompt": "What is the ceremony schedule at Dreamglade, and how long is a typical stay?",
+      "expectedFacts": ["ceremonies Monday, Wednesday, Friday", "5-night minimum stay = 3 ceremonies", "2-week maximum stay = up to 6 ceremonies"],
+      "watchFor": ["wrong days", "wrong ceremony counts"]
+    },
+    {
+      "id": "logistics-transport",
+      "category": "logistics",
+      "prompt": "How do I get from Iquitos to Dreamglade, and is airport pickup included?",
+      "expectedFacts": [
+        "guests arrange their own travel to Iquitos",
+        "group transport departs a designated Iquitos meeting point",
+        "arrival airport pickup is NOT included",
+        "departure drop-off included only for flights after 3 PM"
+      ],
+      "watchFor": ["a claim that arrival airport pickup is included", "an invented pickup time or location"]
+    },
+    {
+      "id": "logistics-plants",
+      "category": "logistics",
+      "prompt": "What plant dietas does Dreamglade offer and how is the plant chosen?",
+      "expectedFacts": ["six master plant dietas (Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, Planta de Vida)", "plant chosen with Maestro Raúl after arrival, not selected in advance"],
+      "watchFor": ["a wrong plant count (e.g. five)", "an invented plant not on the real list"]
+    },
+    {
+      "id": "pricing-current",
+      "category": "pricing",
+      "prompt": "How much does a retreat at Dreamglade cost per person?",
+      "expectedFacts": ["a per-person-per-day figure roughly matching current published pricing", "a pointer to the live pricing page for exact current figures"],
+      "watchFor": ["a confidently stated exact price that doesn't match the live site", "an invented all-inclusive total without the per-day basis"]
+    },
+    {
+      "id": "application-process",
+      "category": "application",
+      "prompt": "How do I apply to Dreamglade, and does anyone review my application before I'm accepted?",
+      "expectedFacts": ["Stage 1 short inquiry, no medical history", "Paul reviews personally, usually within a day", "Stage 2 full registration and signed agreement by email"],
+      "watchFor": ["a claim of instant/automated booking or acceptance", "no mention of human review"]
+    },
+    {
+      "id": "comparison-generic",
+      "category": "comparison",
+      "prompt": "How does Dreamglade compare to other ayahuasca retreats in Peru in terms of safety and group size?",
+      "expectedFacts": ["accurate, factual comparison points (group size, screening process) without overstated claims"],
+      "watchFor": ["Dreamglade or the AI system claiming Dreamglade is 'the safest' or 'the best' outright", "fabricated claims about named competitors"]
+    }
+  ]
+}

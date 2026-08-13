@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "audit:facts": "node --experimental-strip-types scripts/audit-facts.ts",
+    "audit": "npm run audit:facts",
+    "typecheck": "tsc --noEmit -p scripts/tsconfig.json",
+    "smoke-test": "node --experimental-strip-types scripts/smoke-test-routes.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
