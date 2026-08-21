@@ -12,7 +12,9 @@ const nextConfig: NextConfig = {
       { source: "/about/ayahuasca-and-amazonian-shamanism", destination: "/what-to-expect", permanent: true },
       { source: "/about/ceremony", destination: "/what-to-expect", permanent: true },
       { source: "/services/accommodation", destination: "/what-to-expect", permanent: true },
+      { source: "/services/accommodation/:path*", destination: "/what-to-expect", permanent: true },
       { source: "/services/the-communal-house", destination: "/what-to-expect", permanent: true },
+      { source: "/services/the-communal-house/:path*", destination: "/what-to-expect", permanent: true },
       { source: "/services/retreat-services", destination: "/what-to-expect", permanent: true },
       { source: "/about/sauna-sweat-lodge", destination: "/what-to-expect", permanent: true },
       { source: "/come-prepared", destination: "/safety-preparation", permanent: true },
@@ -125,6 +127,8 @@ const nextConfig: NextConfig = {
       { source: "/services/jungle-sunset-dreamglade", destination: "/what-to-expect", permanent: true },
       { source: "/cookie-policy", destination: "/terms-and-conditions", permanent: true },
       { source: "/the-dream-team/yoga-breathwork-teacher-mair-breen", destination: "/what-to-expect", permanent: true },
+      { source: "/paige-s-new-york-state-u-s-a", destination: "/#reviews", permanent: true },
+      { source: "/home/:path*", destination: "/", permanent: true },
     ];
   },
 };
