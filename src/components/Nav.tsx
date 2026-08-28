@@ -64,7 +64,7 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
               setMenuOpen(false);
             }}
           >
-            Safety
+            Safety &amp; Preparation
           </Link>
           <Link
             href="/what-to-expect"
@@ -74,7 +74,7 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
               setMenuOpen(false);
             }}
           >
-            Experience
+            What to Expect
           </Link>
           <Link
             href="/master-plants"
@@ -84,7 +84,7 @@ export default function Nav({ theme = "dark" }: { theme?: "dark" | "light" }) {
               setMenuOpen(false);
             }}
           >
-            Plants
+            Master Plants
           </Link>
           <Link
             href="/faq"

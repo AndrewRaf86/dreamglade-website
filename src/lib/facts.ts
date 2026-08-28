@@ -6,14 +6,35 @@
 // - Only verified facts already published somewhere on dreamglade.com.
 // - Never availability dates, applications, guest data, health information,
 //   internal notes, or credentials.
-// - Pricing numbers live in ./pricing.ts (live exchange-rate dependency) —
-//   this file references them, never duplicates the figures.
+// - Stable USD pricing numbers live in ./pricing-data.ts; ./pricing.ts adds
+//   the live exchange-rate dependency. This file never duplicates the figures.
 // - Must stay importable by plain Node (no `next`/`react`/JSX imports) so
 //   scripts/audit-facts.ts can read it directly.
 
 export const FACTS = {
   name: "Dreamglade",
   tagline: "Small-group ayahuasca and plant dieta retreat near Iquitos, Peru",
+
+  contact: {
+    email: "booking@dreamglade.com",
+    phones: ["+51 920 478 240", "+51 924 866 141"] as const,
+    address: {
+      street: "Caserio Moralillo Parcela 21, Ctra Iquitos-Nauta",
+      postalCode: "16000",
+      locality: "Iquitos",
+      countryCode: "PE",
+      countryName: "Peru",
+    },
+    statement:
+      "Public inquiries go to booking@dreamglade.com. Paul reads and responds personally; the website does not book, accept, screen, or take payment automatically.",
+    source: "/apply",
+  },
+
+  socialProfiles: [
+    "https://share.google/tiFj2NeKbOzgqksP4",
+    "https://www.instagram.com/dreamglade/",
+    "https://www.youtube.com/@dreamgladeamazon",
+  ] as const,
 
   location: {
     summary: "Near Moralillo, under an hour's drive from Iquitos, Peru",
@@ -81,6 +102,32 @@ export const FACTS = {
     source: "/faq",
   },
 
+  retreatFormat: {
+    included: [
+      "accommodation",
+      "meals",
+      "ceremonies",
+      "plant dieta",
+      "breathwork",
+      "sauna",
+      "integration support during and after the stay",
+      "group transport from the designated Iquitos city meeting point",
+      "departure drop-off in Iquitos, including the airport for flights after 3 PM",
+    ] as const,
+    notIncluded: [
+      "flights",
+      "arrival airport pickup",
+      "travel insurance",
+      "visas",
+      "vaccinations",
+      "personal expenses",
+      "optional add-ons such as Kambo",
+    ] as const,
+    statement:
+      "The daily retreat price includes accommodation, meals, ceremonies, plant dieta, breathwork, sauna, integration support, group transport from the designated Iquitos meeting point, and conditional departure drop-off. Flights and arrival airport pickup are not included.",
+    source: "/#pricing",
+  },
+
   plantDietas: {
     count: 5,
     names: [
@@ -131,7 +178,7 @@ export const FACTS = {
 
   pricing: {
     statement:
-      "Current per-person-per-day pricing is published at dreamglade.com/#pricing. Figures are not restated here because the published PEN equivalent changes with the live exchange rate — see src/lib/pricing.ts for the stable USD source values.",
+      "Current per-person-per-day pricing is published at dreamglade.com/#pricing. The published PEN equivalent changes with the live exchange rate; stable USD source values live in src/lib/pricing-data.ts.",
     volatile: true,
     source: "/",
   },
@@ -157,8 +204,12 @@ export const FACTS = {
   // /llms.txt generates its "Markdown mirrors" section from this list, so
   // adding a third mirror only requires a route entry + an item here.
   markdownMirrors: [
+    { slug: "overview", mirrorOf: "/", purpose: "Verified overview, people, format, pricing, and human-led process" },
     { slug: "safety-preparation", mirrorOf: "/safety-preparation", purpose: "Clean-text version of Safety & Preparation" },
     { slug: "faq", mirrorOf: "/faq", purpose: "Clean-text version of the FAQ" },
+    { slug: "what-to-expect", mirrorOf: "/what-to-expect", purpose: "Clean-text retreat format and logistics guide" },
+    { slug: "apply", mirrorOf: "/apply", purpose: "Clean-text application and human handoff guide" },
+    { slug: "master-plants", mirrorOf: "/master-plants", purpose: "Clean-text guide to the five current plant dietas" },
   ] as const,
 
   // Facts that can change without this file being wrong — call these out

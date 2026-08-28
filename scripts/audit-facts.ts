@@ -184,7 +184,7 @@ presence(
 );
 presence("meeting-point", /(?:designated )?(?:city )?meeting point in Iquitos/i, "the Iquitos city meeting-point transport language");
 
-// ---- Pricing (reference only — numbers live in pricing.ts) ----
+// ---- Pricing (reference only — stable numbers live in pricing-data.ts) ----
 presence(
   "pricing-source-import",
   /from ["']@\/lib\/pricing["']/,
@@ -200,7 +200,8 @@ presence(
 absence(
   "pricing-hardcoded",
   /\$(?:19\d|2[0-4]\d)(?:\.\d\d)?\s*(?:USD)?\s*(?:per person|\/\s?day|\/person)/i,
-  "a hardcoded per-day USD figure duplicated outside pricing.ts",
+  "a hardcoded per-day USD figure duplicated outside pricing-data.ts",
+  files.filter((f) => !f.relPath.endsWith("src/lib/pricing-data.ts")),
 );
 
 // ---- Application process ----
@@ -217,7 +218,7 @@ presence(
 presence("stage-2-registration", /Stage 2 registration/i, "the two-stage application process (Stage 2 registration)");
 absence(
   "automated-booking-language",
-  /\bbook (?:instantly|now)\b|\binstant booking\b|\bautomated booking\b/i,
+  /\bbook (?:instantly|now)\b|(?<!no )(?<!not )\binstant booking\b|(?<!no )(?<!not )\bautomated booking\b/i,
   "language implying automated/instant booking",
 );
 

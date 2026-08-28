@@ -18,10 +18,9 @@ things for AI systems to read, on top of the normal website:
 2. **`/llms.txt`** — a plain-text page at `dreamglade.com/llms.txt` that
    summarizes those facts and links to the real pages, in a format AI
    systems are designed to read.
-3. **Two "clean" Markdown pages** — `dreamglade.com/md/safety-preparation`
-   and `dreamglade.com/md/faq`, plain-text mirrors of the two pages most
-   important to get right, easier for some AI systems to parse cleanly than
-   full HTML.
+3. **Six "clean" Markdown pages** — overview, FAQ, safety/preparation,
+   what-to-expect, application, and master-plants guides that are easier for
+   some AI systems to parse cleanly than full HTML.
 4. **A consistency checker** (`npm run audit:facts`) — a script that reads
    through the website's code and confirms the facts file and the actual
    page text agree. It's not a person double-checking; it's a tool that
@@ -55,9 +54,9 @@ groupSize: {
   ...
 ```
 
-Pricing is deliberately **not** in this file — it lives in
-`src/lib/pricing.ts` (the same place the pricing shown on the homepage comes
-from), so there's only ever one place a price can be wrong.
+Pricing is deliberately **not** in this file. Stable USD values live in
+`src/lib/pricing-data.ts`; `src/lib/pricing.ts` adds the live PEN conversion
+used on the homepage. There is still only one source for each USD price.
 
 ## How to update a fact
 
@@ -73,14 +72,11 @@ from), so there's only ever one place a price can be wrong.
 
 ## How the generated files stay synchronized
 
-`/llms.txt` and `/md/faq` are **generated**, not hand-written — every time
-they're requested, the code builds their text fresh from `facts.ts` (and, for
-the FAQ, from the same question/answer list the FAQ page uses for its
-structured data). `/llms.txt`'s list of Markdown mirrors is itself generated
-from `facts.ts`'s `markdownMirrors` list, so adding a third mirror later is a
-one-line addition, not a hand-edit of the `/llms.txt` route. This means you
-cannot accidentally let these go stale by forgetting to update a second copy
-— there is no second copy.
+`/llms.txt` and five of the six Markdown guides are **generated**, not
+hand-written. The code builds their text from `facts.ts`, `pricing-data.ts`,
+and (for the FAQ) the same question/answer list used by the visible FAQ and
+its structured data. `/llms.txt`'s mirror list is generated from
+`facts.ts`'s `markdownMirrors` list.
 
 `/md/safety-preparation` is the one exception: its content is hand-written,
 in `src/lib/safety-markdown.ts` (a plain TypeScript string, imported by the
@@ -93,7 +89,9 @@ doesn't get updated to match, the audit will catch it.
 ## How to run the consistency audit
 
 ```bash
-npm run audit:facts   # or: npm run audit (same thing)
+npm run audit:facts   # canonical public-fact consistency
+npm run audit:agent   # AI content, boundary, mirror, and schema contracts
+npm run audit         # runs both audits
 ```
 
 This prints a pass/fail line for each fact it checks (group size, owners,
@@ -106,11 +104,10 @@ specific high-stakes facts (group size, the medical disclaimer, screening
 language, arrival-pickup policy, ceremony schedule) appear on their specific
 canonical page, not just somewhere. This is regex-based, targeted coverage
 of known-important facts and known-wrong phrasings — it is not a general
-fact-checker and cannot catch every possible wrong wording. It is a local
-command — it is not currently wired into `.github/workflows/ci.yml` (the
-repo's one PR-triggered CI check, which currently only runs
-`npm run build`); see `DECISIONS.md` for why. Run it by hand before
-deploying any change that touches facts or public-page copy.
+fact-checker and cannot catch every possible wrong wording. Both audits are
+required gates in `.github/workflows/ci.yml`, alongside lint, both TypeScript
+checks, dependency audit, build, and route smoke testing. Run them locally
+before deploying any change that touches facts or public-page copy.
 
 Two related commands:
 ```bash
@@ -149,7 +146,9 @@ npm run lint           # no lint errors
 npx tsc --noEmit       # app code type-checks
 npm run typecheck      # scripts/ type-checks (separate tsconfig — see DEPLOYMENT-CHECKLIST.md)
 npm run audit:facts    # facts and page copy agree
+npm run audit:agent    # AI content, schema, mirrors, and safety contracts agree
 npm run build          # production build succeeds
+npm audit              # dependency vulnerability report
 npm run smoke-test     # route-level check (needs a running server — see above)
 ```
 

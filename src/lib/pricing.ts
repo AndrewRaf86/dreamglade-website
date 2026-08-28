@@ -1,10 +1,6 @@
-// Official prices confirmed — quoted in USD per person per day.
 // PEN equivalent is calculated at the live exchange rate and is approximate.
-export const USD_PRICES = {
-  communal: 200,
-  twoPersonTambo: 210,
-  single: 220,
-} as const;
+import { USD_PRICES } from "./pricing-data.ts";
+export { USD_PRICES } from "./pricing-data.ts";
 
 export type PricingData = {
   usd: typeof USD_PRICES;

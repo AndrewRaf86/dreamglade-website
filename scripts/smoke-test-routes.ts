@@ -46,16 +46,24 @@ type Check = {
   path: string;
   expectStatus: number;
   expectContentType?: string; // substring match
+  expectBody?: string[];
+  rejectBody?: string[];
 };
 
 const CHECKS: Check[] = [
-  { path: "/", expectStatus: 200, expectContentType: "text/html" },
-  { path: "/faq", expectStatus: 200, expectContentType: "text/html" },
+  { path: "/", expectStatus: 200, expectContentType: "text/html", expectBody: ["site-entity-graph", "home-page-graph", "#retreat-service"] },
+  { path: "/faq", expectStatus: 200, expectContentType: "text/html", expectBody: ["FAQPage", "faq-page-graph", "five traditional master plant dietas"], rejectBody: ["Machinga"] },
   { path: "/safety-preparation", expectStatus: 200, expectContentType: "text/html" },
   { path: "/apply", expectStatus: 200, expectContentType: "text/html" },
-  { path: "/llms.txt", expectStatus: 200, expectContentType: "text/plain" },
+  { path: "/master-plants", expectStatus: 200, expectContentType: "text/html", expectBody: ["Five master plant dietas", "master-plants-page-graph"], rejectBody: ["Machinga"] },
+  { path: "/what-to-expect", expectStatus: 200, expectContentType: "text/html" },
+  { path: "/llms.txt", expectStatus: 200, expectContentType: "text/plain", expectBody: ["$200 USD communal tambo", "Never infer that someone qualifies", "/md/overview"], rejectBody: ["Machinga"] },
+  { path: "/md/overview", expectStatus: 200, expectContentType: "text/markdown", expectBody: ["Verified Overview", "$200 USD communal tambo", "not a medical provider"] },
   { path: "/md/faq", expectStatus: 200, expectContentType: "text/markdown" },
   { path: "/md/safety-preparation", expectStatus: 200, expectContentType: "text/markdown" },
+  { path: "/md/what-to-expect", expectStatus: 200, expectContentType: "text/markdown", expectBody: ["Arrival and transport", "Airport pickup on arrival is not included"] },
+  { path: "/md/apply", expectStatus: 200, expectContentType: "text/markdown", expectBody: ["No automated screening", "No instant booking", "No payment"] },
+  { path: "/md/master-plants", expectStatus: 200, expectContentType: "text/markdown", expectBody: ["five traditional master plant dietas", "Planta de Vida"], rejectBody: ["Machinga"] },
   { path: "/md/toString", expectStatus: 404 },
   { path: "/md/constructor", expectStatus: 404 },
   { path: "/md/hasOwnProperty", expectStatus: 404 },
@@ -82,14 +90,20 @@ async function runCheck(check: Check): Promise<{ ok: boolean; message: string }>
   const statusOk = res.status === check.expectStatus;
   const contentType = res.headers.get("content-type") ?? "";
   const typeOk = !check.expectContentType || contentType.includes(check.expectContentType);
+  const body = check.expectBody || check.rejectBody ? await res.text() : "";
+  const missing = (check.expectBody ?? []).filter((value) => !body.includes(value));
+  const rejected = (check.rejectBody ?? []).filter((value) => body.includes(value));
+  const bodyOk = missing.length === 0 && rejected.length === 0;
 
-  if (statusOk && typeOk) {
+  if (statusOk && typeOk && bodyOk) {
     return { ok: true, message: `OK — ${res.status}${check.expectContentType ? `, ${contentType}` : ""}` };
   }
 
   const problems: string[] = [];
   if (!statusOk) problems.push(`expected status ${check.expectStatus}, got ${res.status}`);
   if (!typeOk) problems.push(`expected content-type containing "${check.expectContentType}", got "${contentType}"`);
+  if (missing.length) problems.push(`missing body text: ${missing.map((value) => JSON.stringify(value)).join(", ")}`);
+  if (rejected.length) problems.push(`found prohibited body text: ${rejected.map((value) => JSON.stringify(value)).join(", ")}`);
   return { ok: false, message: `FAIL — ${problems.join("; ")}` };
 }
 

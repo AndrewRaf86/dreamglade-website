@@ -52,7 +52,7 @@ export default function Footer() {
               <li><TrackedLink href="/#about" event="About Click" properties={{ location: "footer", destination: "about" }}>About</TrackedLink></li>
               <li><Link href="/#healers">The healers</Link></li>
               <li><TrackedLink href="/#pricing" event="Pricing Click" properties={{ location: "footer", destination: "pricing" }}>Pricing</TrackedLink></li>
-              <li><Link href="/#availability">2026 availability</Link></li>
+              <li><Link href="/#availability">Retreat dates &amp; availability</Link></li>
             </ul>
           </div>
         </div>

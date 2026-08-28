@@ -1,5 +1,11 @@
 import { FAQ_ITEMS } from "@/lib/faq-data";
 import { SAFETY_PREPARATION_MARKDOWN } from "@/lib/safety-markdown";
+import {
+  buildApplyMarkdown,
+  buildMasterPlantsMarkdown,
+  buildOverviewMarkdown,
+  buildWhatToExpectMarkdown,
+} from "@/lib/ai-content";
 
 function buildFaqMarkdown(): string {
   const lines: string[] = [];
@@ -28,8 +34,12 @@ function buildFaqMarkdown(): string {
 // /md/toString, /md/constructor, /md/hasOwnProperty, /md/__proto__, and
 // /md/valueOf all misbehaved against the old Record<string, ...> lookup).
 const MARKDOWN_SOURCES = new Map<string, () => string>([
+  ["overview", buildOverviewMarkdown],
   ["safety-preparation", () => SAFETY_PREPARATION_MARKDOWN],
   ["faq", buildFaqMarkdown],
+  ["what-to-expect", buildWhatToExpectMarkdown],
+  ["apply", buildApplyMarkdown],
+  ["master-plants", buildMasterPlantsMarkdown],
 ]);
 
 export async function GET(_request: Request, { params }: { params: Promise<{ slug: string }> }) {

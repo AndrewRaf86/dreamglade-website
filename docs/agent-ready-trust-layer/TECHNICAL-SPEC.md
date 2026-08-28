@@ -15,10 +15,10 @@ Companion to `PRD.md`. Covers how, not why.
   `/safety-preparation`, `/terms-and-conditions`, `/what-to-expect`, `/apply`.
   `robots.ts` and `sitemap.ts` already use Next's native `MetadataRoute`
   convention — no static `public/robots.txt`.
-- **Existing single-source-of-truth precedent:** `src/lib/pricing.ts` exports
-  `USD_PRICES` (communal $200 / two-person tambo $210 / single $220, per person
-  per day) and `getPricing()`, consumed by `PricingSection.tsx`. This is the
-  pattern to extend, not replace.
+- **Existing single-source-of-truth precedent:** `src/lib/pricing-data.ts`
+  exports `USD_PRICES` (communal $200 / two-person tambo $210 / single $220,
+  per person per day); `src/lib/pricing.ts` re-exports it and adds
+  `getPricing()`, consumed by `PricingSection.tsx`.
 - **No chatbot, booking system, automated screening, or guest-communication
   automation exists anywhere in `src/` today** (confirmed by repo-wide search).
   `TermsGateCTA.tsx` gates the "Begin Your Application" CTA behind a Terms &
@@ -97,7 +97,7 @@ export const FACTS = {
     categories: ["medications", "supplements", "physical health history", "mental health history", "substance use"],
   },
   medicalDisclaimer: "Dreamglade is not a medical provider and does not provide medical treatment, therapy, detox, cures, or medical clearance.",
-  pricingRef: "see src/lib/pricing.ts USD_PRICES for current per-person-per-day rates",
+  pricingRef: "see src/lib/pricing-data.ts USD_PRICES for current per-person-per-day rates",
   canonicalPages: [
     { path: "/", purpose: "Overview, pricing, availability" },
     { path: "/safety-preparation", purpose: "Screening, medication disclosure, preparation" },
@@ -110,9 +110,9 @@ export const FACTS = {
 ```
 
 Notes:
-- Pricing stays in `pricing.ts` (it has a live network dependency the facts
-  module shouldn't have); `facts.ts` only references it, doesn't duplicate the
-  numbers, to avoid a second place for pricing to drift.
+- Stable USD pricing stays in `pricing-data.ts`; `pricing.ts` adds the live
+  network conversion that the facts and audit modules should not import.
+  `facts.ts` references the source without duplicating the numbers.
 - `as const` gives literal types for free, useful for the consistency check.
 - This does **not** require refactoring existing page copy to import from
   `facts.ts` — pages keep their natural prose. `facts.ts` is the *reference*
@@ -277,7 +277,7 @@ strip types — not needed upfront.
    This list should be seeded from the Aug 6 audit's own findings and this
    session's Phase 1 fact-check, and extended over time as real drift is
    caught.
-3. **Pricing parity** — the numbers in `pricing.ts`'s `USD_PRICES` match what
+3. **Pricing parity** — the numbers in `pricing-data.ts`'s `USD_PRICES` match what
    `PricingSection.tsx` and the FAQ's explicit pricing mention (if present)
    display, to catch a repeat of the Aug 6 audit's "pricing not explicit in
    FAQ" gap resurfacing differently.
@@ -352,7 +352,7 @@ fixture + a documented manual process, matching PRD §5's non-goal.
 - `/llms.txt` and `/md/*` deploy automatically with the existing Vercel
   pipeline — no separate deploy step.
 - Because `/llms.txt` is generated at request time from `facts.ts` +
-  `pricing.ts`, a content update requires a normal code deploy (same as any
+  `pricing-data.ts`, a content update requires a normal code deploy (same as any
   other page) — there is no separate CMS or admin panel to keep in sync,
   which is consistent with "no database unless already required."
 

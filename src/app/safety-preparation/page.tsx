@@ -2,24 +2,37 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import SiteImage from "@/components/SiteImage";
+import StructuredData from "@/components/StructuredData";
+import { buildPageGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Safety, Screening & Preparation for Ayahuasca",
   description:
     "Learn about ayahuasca safety, medication screening, preparation, and how Dreamglade reviews each guest before confirmation.",
-  alternates: { canonical: "https://dreamglade.com/safety-preparation" },
+  alternates: {
+    canonical: "https://dreamglade.com/safety-preparation",
+    types: { "text/markdown": "https://dreamglade.com/md/safety-preparation" },
+  },
   openGraph: {
     title: "Safety & Preparation — Dreamglade",
     description:
       "How Dreamglade screens guests, reviews medications and contraindications, and prepares you safely for a Shipibo-led ayahuasca retreat near Iquitos, Peru.",
     url: "https://dreamglade.com/safety-preparation",
-    images: [{ url: "/images/maloka-exterior.jpg" }],
+    images: [{ url: "/images/maloka-exterior.jpg", alt: "Thatched ceremony maloka at Dreamglade" }],
   },
 };
+
+const safetyJsonLd = buildPageGraph({
+  path: "/safety-preparation",
+  name: "Safety, Screening & Preparation for Ayahuasca",
+  description: "Dreamglade's human-led screening, medication disclosure, preparation guidance, and medical boundaries.",
+  about: [SCHEMA_IDS.organization, SCHEMA_IDS.service],
+});
 
 export default function SafetyPreparation() {
   return (
     <>
+      <StructuredData id="safety-page-graph" data={safetyJsonLd} />
       <Nav theme="light" />
 
       <section className="page-hero">

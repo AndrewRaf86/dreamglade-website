@@ -4,30 +4,43 @@ import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
 import ProcessSteps from "@/components/ProcessSteps";
+import StructuredData from "@/components/StructuredData";
+import { buildPageGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Begin Your Inquiry",
   description:
     "Begin your Dreamglade inquiry. Paul reviews every application personally. This is the first step in a conversation.",
-  alternates: { canonical: "https://dreamglade.com/apply" },
+  alternates: {
+    canonical: "https://dreamglade.com/apply",
+    types: { "text/markdown": "https://dreamglade.com/md/apply" },
+  },
   openGraph: {
     title: "Begin Your Inquiry — Dreamglade",
     description:
       "Start your Dreamglade inquiry. A short first-stage application, read personally by Paul. Safety-first screening before any deposit.",
     url: "https://dreamglade.com/apply",
-    images: [{ url: "/images/lake-overview.jpg" }],
+    images: [{ url: "/images/lake-overview.jpg", alt: "Dreamglade retreat center and lake near Iquitos, Peru" }],
   },
 };
+
+const applyJsonLd = buildPageGraph({
+  path: "/apply",
+  name: "Begin a Dreamglade Retreat Inquiry",
+  description: "Dreamglade's short Stage 1 inquiry and personal handoff to Paul; no automated screening, booking, acceptance, or payment.",
+  about: [SCHEMA_IDS.organization, SCHEMA_IDS.service],
+});
 
 export default function Apply() {
   return (
     <>
+      <StructuredData id="apply-page-graph" data={applyJsonLd} />
       <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">Stage 1 — inquiry</span>
-          <h1>Begin your <em>inquiry.</em></h1>
+          <h1>Begin your Dreamglade <em>retreat inquiry.</em></h1>
           <p className="page-hero__sub">
             Paul reviews every application personally. This is the first step in a conversation.
           </p>

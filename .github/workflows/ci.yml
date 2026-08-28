@@ -32,6 +32,8 @@ jobs:
         run: npm run typecheck
       - name: Audit canonical facts
         run: npm run audit:facts
+      - name: Audit AI-readiness contracts
+        run: npm run audit:agent
       - name: Audit high-severity dependencies
         run: npm audit --audit-level=high
       - name: Build production application
