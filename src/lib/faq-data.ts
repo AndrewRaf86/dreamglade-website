@@ -6,6 +6,7 @@
 // (those stay hand-authored in page.tsx for editorial structure) — it's the
 // flat, structured version already needed for schema.org markup.
 
+import { FACTS } from "./facts";
 import { USD_PRICES } from "./pricing";
 
 export type FaqItem = { question: string; answer: string };
@@ -35,6 +36,13 @@ export const SOLO_WOMEN_FAQ_QUESTION = "Is Dreamglade suitable for women traveli
 export const SOLO_WOMEN_FAQ_ANSWER =
   "Many guests come on their own, including women traveling solo. Dreamglade is a small retreat with a human-led intake, continuous staff presence, and a calm, respectful setting. This general description is not an individual safety or suitability guarantee; raise any personal concern with Paul before making travel plans.";
 
+export const HEALERS_FAQ_QUESTION = "Who leads the ceremonies?";
+export const HEALERS_FAQ_ANSWER = `${FACTS.healers.statement} They have shared ${FACTS.healers.sharedYears}.`;
+
+export const PLANT_DIETAS_FAQ_QUESTION = "Can I choose which master plant dieta I do?";
+export const PLANT_DIETAS_FAQ_ANSWER =
+  `${FACTS.plantDietas.statement} It is not chosen from a menu in advance.`;
+
 export const FAQ_ITEMS: FaqItem[] = [
   { question: "Who runs Dreamglade?", answer: "Dreamglade was founded by Stacy Povey in 2013 and later came under the care of Wade Bucher and Clarisa Gutierrez in 2023. Paul reviews every application personally." },
   { question: "How many guests are at a retreat?", answer: "A maximum of ten guests per retreat. We do not run larger groups." },
@@ -43,7 +51,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   { question: "Is airport pickup included?", answer: "No. Airport pickup when you fly into Iquitos is not included. Uber is available in Iquitos, but it is smart to bring cash in soles in case Uber is not working or a driver asks for cash. Motor taxis from the airport to hotels in Iquitos usually cost about 30–70 soles. You then meet us at the designated city meeting point in Iquitos on your first retreat day." },
   { question: "How do I get to Dreamglade from Iquitos?", answer: "You make your own way to Iquitos, and we take it from there. After your application is confirmed, we meet you at a designated city meeting point in Iquitos and drive you to the property by 4x4, under an hour from the city. There is no public route to the centre — arrival transport is arranged by us and included." },
   { question: "What are the accommodations like?", answer: "Guests sleep in private, two-person, or communal thatched tambos, all raised off the ground, with mosquito-screened sleeping and most overlooking the lake or jungle. Comfort is simple and clean rather than luxury: a real bed, quiet, and the forest right outside. Meals and gathering happen at the communal big house." },
-  { question: "Who leads the ceremonies?", answer: "Ceremonies are led by Maestra Dominga and Maestro Raúl in the traditional Shipibo ceremonial lineage. A support team is in the room throughout." },
+  { question: HEALERS_FAQ_QUESTION, answer: HEALERS_FAQ_ANSWER },
   { question: "How many ceremonies will I have, and when?", answer: "Ceremonies are held on Monday, Wednesday, and Friday nights. The minimum stay of five nights includes three ceremonies. A Friday start typically means a six-night stay with three ceremonies. The maximum stay of two weeks includes up to six ceremonies." },
   { question: "How long does a ceremony last?", answer: "Preparation for ceremony begins at 6pm. Ceremony starts shortly after. Each ceremony runs five to six hours, with the healers and a support team present throughout." },
   { question: "How many ceremonies do you recommend?", answer: "The minimum is three ceremonies. For any deeper, longer-arc work, we strongly recommend five or six." },
@@ -58,7 +66,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   { question: "Is there Wi-Fi at Dreamglade?", answer: "There is no Wi-Fi in guest rooms or anywhere at the centre, by design. Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life. Most guests find the disconnection is part of what makes the week work. Some cellphone carriers have limited service around the retreat. We have a generator that runs once a day; this is the time to charge your devices." },
   { question: "What food is served?", answer: "The retreat dieta is light, low-salt, plant-forward, and built around what grows here. Rice, sweet potatoes, yuca, grains and fresh fruit. Nothing fried, and no added sugars." },
   { question: "What is a plant dieta?", answer: "A plant dieta is not just a food diet. In the Amazonian tradition, it is a quiet period of simplicity, attention, and relationship with a master plant. At Dreamglade, the healers prepare a small tea or plant decoction from the selected master plant, which may be a tree, vine, or shrub, for the guest to drink, and the guest follows a simple retreat rhythm around that work." },
-  { question: "Can I choose which master plant dieta I do?", answer: "Dreamglade offers six traditional master plant dietas: Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida. The specific plant is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive. It is not usually chosen from a menu in advance." },
+  { question: PLANT_DIETAS_FAQ_QUESTION, answer: PLANT_DIETAS_FAQ_ANSWER },
   { question: "Does Dreamglade follow up after the retreat?", answer: "Yes. Paul reaches out within a month of you leaving to see how the landing has been, and ongoing support by email is available if you want it." },
   { question: "Should I stay in Iquitos after the retreat?", answer: "If you can, yes — one or two nights in Iquitos before flying home is worth it. It gives you a softer re-entry: simple food and time to put words to what happened before the bigger noise of normal life starts again." },
   { question: "Can I come on my own?", answer: "No. All bookings are handled through the website or by email with Paul. You cannot show up and join a retreat without going through the booking process." },

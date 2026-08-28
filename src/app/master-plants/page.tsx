@@ -3,11 +3,11 @@ import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
+import { FACTS } from "@/lib/facts";
 
 export const metadata: Metadata = {
   title: "Master Plants & Plant Dietas",
-  description:
-    "The master plant dietas Dreamglade works with — Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida — plus Kambo, and what a traditional dieta involves.",
+  description: `The five master plant dietas Dreamglade works with — ${FACTS.plantDietas.names.join(", ")} — plus Kambo, and what a traditional dieta involves.`,
   alternates: { canonical: "https://dreamglade.com/master-plants" },
   openGraph: {
     title: "Master Plants & Plant Dietas — Dreamglade",
@@ -70,7 +70,7 @@ export default function MasterPlants() {
       <section className="section section--cream-warm" id="the-plants">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Six master plants</span>
+            <span className="eyebrow">{FACTS.plantDietas.count} master plants</span>
             <h2 className="display">The plants Dreamglade <em>dietas with.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
               Each has its own character in the tradition. None is chosen for its intensity — the right one depends on the guest, their preparation, and what Maestro Raúl observes once they arrive.
@@ -92,11 +92,6 @@ export default function MasterPlants() {
               <SiteImage src="/images/bobinsana-flower.jpg" alt="Bobinsana in flower, a soft pink brush-like blossom, growing at Dreamglade" style={{ aspectRatio: "4/3", objectFit: "cover", width: "100%" }} />
               <h3 style={{ marginTop: 6 }}>Bobinsana</h3>
               <p>Easy to recognize by its soft pink, brush-like flowers, and it grows right on the land at Dreamglade, near the maloka. In the Shipibo tradition it is known as a heart-opening plant and, distinctively, a dream plant — guests on a Bobinsana dieta often report unusually vivid, memorable dreams. Emotionally it is associated with heartbreak, grief, and a resilience the tradition describes as bending without breaking, the way its own branches move in the wind.</p>
-            </article>
-
-            <article className="col-item">
-              <h3>Machinga</h3>
-              <p>One of the more intense master plants in the tradition — known for a strong physical purge that is understood as inseparable from emotional release. Where gentler plants like Marosa work quietly, Machinga works decisively: the purging itself is seen as the visible side of letting go of old grief or stuck emotional weight. Because of its intensity, a Machinga dieta is only undertaken with an experienced healer&apos;s guidance, and Maestro Raúl decides whether and when it is appropriate for a guest.</p>
             </article>
 
             <article className="col-item">

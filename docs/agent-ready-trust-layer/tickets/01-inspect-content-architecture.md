@@ -42,12 +42,10 @@ None.
 - [x] Read the most recent site-health/AI-visibility audit
       (`reports/2026-08-06-dreamglade-search-ai-visibility-audit.md`) for
       known gaps and any previously-flagged drift.
-- [ ] **Andrew/Paul spot-check:** confirm the departure-airport policy
-      ("flights after 3 PM") and the six-plant list (including Machinga) are
-      still current as of today — both were confirmed consistent in code
-      during this session, but the Aug 6 audit shows this exact area (plant
-      count) has drifted before, so a quick human confirmation is cheap
-      insurance before it's baked into `facts.ts`.
+- [x] **Andrew/Paul spot-check:** the departure-airport policy remains
+      "flights after 3 PM." On 2026-08-27 Andrew confirmed the current list is
+      five plants and that Machinga is not currently offered; `facts.ts` and
+      all derived surfaces were updated together.
 
 ## Validation commands
 ```bash

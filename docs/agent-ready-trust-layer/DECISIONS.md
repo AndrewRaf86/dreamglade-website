@@ -237,6 +237,23 @@ windows remain volatile and are not copied into AI summaries.
 **Who:** direct mission constitution supplied by Andrew; current date verified
 in the run environment.
 
+## 2026-08-27 — Human confirmation resolves plant count and healer biography
+**Decision / Context:** Andrew explicitly confirmed that Dreamglade currently
+offers **five** master plant dietas and that Machinga is not currently offered.
+He also approved the Dominga/Raúl biography details from PR #15: they are a
+married Shipibo ceremonial couple from Vista Alegre, upriver from Pucallpa,
+and have shared more than 40 years of life, family, and service to their
+community. This supersedes the unresolved classification recorded earlier on
+2026-08-27 and the older six-plant decision from 2026-08-12.
+
+**Implementation:** `facts.ts` is the canonical source. Visible plant pages,
+FAQ copy, FAQPage JSON-LD, `/llms.txt`, `/md/faq`, the AI-answer fixture, and
+the fact audit must all derive from or agree with the five-plant list. Machinga
+may remain in historical decision/run documentation only, not in current
+public or AI-facing source.
+
+**Who:** Andrew, by direct human authorization.
+
 ## Template for new entries
 ```
 ## YYYY-MM-DD — <short title>

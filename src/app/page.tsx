@@ -293,7 +293,7 @@ export default function Home() {
               <span className="eyebrow">Traditional Shipibo ceremonial lineage</span>
               <h2 className="display">Maestra Dominga <em>&amp; Maestro Raúl</em></h2>
               <p className="healer-pair__bio">
-                Maestra Dominga and Maestro Raúl are a married Shipibo ceremonial couple who have shared more than 40 years of life, family, and service to their community. They come from Vista Alegre, a small village upriver from Pucallpa, and both were raised in families where plant medicine, ceremonial song, and spiritual healing traditions were passed down through parents and grandparents. Their work carries the balance of their shared path: Dominga brings softness, grounding, and feminine strength, while Raúl brings steadiness, protection, and ceremonial depth. Through their icaros and limpiezas, they help hold a careful ceremonial space rooted in lineage, humility, and respect for the traditions that came before them.
+                {FACTS.healers.biography}
               </p>
               <p className="healer-pair__note">
                 Together, they carry a living Shipibo tradition shaped by family, community, song, and decades of practice.

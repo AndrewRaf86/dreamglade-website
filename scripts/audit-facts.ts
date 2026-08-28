@@ -124,6 +124,9 @@ for (const healer of FACTS.healers.names) {
   presence(`healer-${healer.replace(/\s+/g, "-").toLowerCase()}`, new RegExp(esc(healer)), `healer name "${healer}"`);
 }
 presence("healers-tradition", /Shipibo/i, `ceremonial tradition "${FACTS.healers.tradition}"`);
+presence("healers-relationship", /married Shipibo ceremonial couple/i, "the approved Dominga/Raúl relationship");
+presence("healers-community", /Vista Alegre[^.]{0,80}upriver from Pucallpa/i, "the approved Dominga/Raúl home community");
+presence("healers-shared-years", /more than 40 years of life, family, and service/i, "the approved Dominga/Raúl shared history");
 
 // ---- Ceremony schedule ----
 presence(
@@ -150,14 +153,15 @@ presence(
 // ---- Plant dietas ----
 presence(
   "plant-count",
-  /six (?:traditional )?master plant dietas|six master plants/i,
+  /five (?:traditional )?master plant dietas|five master plants/i,
   `plant dieta count "${FACTS.plantDietas.count}"`,
 );
 absence(
   "plant-count-wrong",
-  /five (?:traditional )?master plant dietas|five master plants/i,
-  "an outdated five-plant count — see DECISIONS.md's 2026-08-12 entry",
+  /six (?:traditional )?master plant dietas|six master plants/i,
+  "the superseded six-plant count — see DECISIONS.md's 2026-08-27 confirmation entry",
 );
+absence("plant-machinga-removed", /\bMachinga\b/i, "Machinga, which is not currently offered");
 for (const plant of FACTS.plantDietas.names) {
   presence(`plant-${plant.toLowerCase().replace(/\s+/g, "-")}`, new RegExp(esc(plant)), `plant name "${plant}"`);
 }

@@ -10,8 +10,12 @@ import {
   FAQ_ITEMS,
   FIRST_TIME_FAQ_ANSWER,
   FIRST_TIME_FAQ_QUESTION,
+  HEALERS_FAQ_ANSWER,
+  HEALERS_FAQ_QUESTION,
   MENSTRUAL_CYCLE_FAQ_ANSWER,
   MENSTRUAL_CYCLE_FAQ_QUESTION,
+  PLANT_DIETAS_FAQ_ANSWER,
+  PLANT_DIETAS_FAQ_QUESTION,
   PRICING_FAQ_ANSWER,
   PRICING_FAQ_QUESTION,
   SOLO_WOMEN_FAQ_ANSWER,
@@ -90,8 +94,8 @@ export default function FAQ() {
             <h2 className="display">The <em>ceremonies.</em></h2>
           </div>
           <div className="faq-list">
-            <FAQItem question="Who leads the ceremonies?">
-              <p>Ceremonies are led by Maestra Dominga and Maestro Raúl in the Shipibo tradition. A support team is in the room throughout.</p>
+            <FAQItem question={HEALERS_FAQ_QUESTION}>
+              <p>{HEALERS_FAQ_ANSWER}</p>
             </FAQItem>
             <FAQItem question="How many ceremonies will I have, and when?">
               <p>Ceremonies are held on Monday, Wednesday, and Friday nights. The minimum stay of five nights includes three ceremonies (for example, arriving Monday and leaving Saturday morning). A Friday start typically means a six-night stay with three ceremonies, because of the weekend in the middle. The maximum stay of two weeks includes up to six ceremonies.</p>
@@ -244,8 +248,8 @@ export default function FAQ() {
             <FAQItem question="Are there other activities besides ceremony?">
               <p>Yes. Plant baths, plant dietas, breathwork, jungle trails to explore and sauna are included.</p>
             </FAQItem>
-            <FAQItem question="Can I choose which master plant dieta I do?">
-              <p>Dreamglade offers six traditional master plant dietas: Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida. The specific plant is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive. It is not usually chosen from a menu in advance. See <TrackedLink href="/master-plants" event="Plants Click" properties={{ location: "faq-page", destination: "master-plants" }}>Master Plants</TrackedLink> for what each one is known for.</p>
+            <FAQItem question={PLANT_DIETAS_FAQ_QUESTION}>
+              <p>{PLANT_DIETAS_FAQ_ANSWER} See <TrackedLink href="/master-plants" event="Plants Click" properties={{ location: "faq-page", destination: "master-plants" }}>Master Plants</TrackedLink> for what each one is known for.</p>
             </FAQItem>
           </div>
         </div>

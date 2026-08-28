@@ -172,3 +172,77 @@ Local browser verification used the production build at `http://localhost:3187`:
 - Implementation SHA: `9d016853bdbfe112ad6ff5452fed9ee4c1772301`
 - Pre-existing user-owned change still present and excluded: `AGENTS.md`
 - No push, PR, merge, or deployment occurred.
+
+## Authorized continuation — confirmed facts and delivery
+
+The earlier `STOP A` snapshot above records the state before Andrew supplied
+direct human confirmation. On 2026-08-27, Andrew explicitly authorized the
+mission to continue through Run A, Run B, and Run C, including focused pushes,
+pull requests, merges after successful checks, normal Vercel production
+deployment, and production verification. That authorization supersedes the
+earlier no-push boundary for this mission; the human-led safety constitution
+remains unchanged.
+
+### Human-confirmed resolutions
+
+- Dreamglade currently offers **five** master plant dietas: Marosa, Ajo Sacha,
+  Bobinsana, Clavo Huasca, and Planta de Vida.
+- Machinga is not currently offered and must not appear in current public or
+  AI-facing source material.
+- The Dominga/Raúl biography from PR #15 is approved: they are a married
+  Shipibo ceremonial couple from Vista Alegre, a small village upriver from
+  Pucallpa, and have shared more than 40 years of life, family, and service to
+  their community.
+
+These direct human confirmations replace the `UNRESOLVED` and `HOLD` statuses
+in the earlier Fact Conflict Report.
+
+### Continuation implementation
+
+- Centralized the approved healer relationship, community, shared history, and
+  full biography in `src/lib/facts.ts`; the homepage and FAQ-derived structured
+  surfaces now use that source.
+- Changed the canonical plant count from six to five, removed Machinga from the
+  canonical list, removed its public plant card, and generated plant copy from
+  the canonical facts where appropriate.
+- Updated current AI-answer fixtures and trust-layer tickets to expect five
+  plants and flag the superseded six-plant/Machinga claims.
+- Expanded `audit:facts` from 48 to 51 checks. It now requires the approved
+  healer facts and rejects both the six-plant claim and Machinga in current
+  application/component/library source.
+- Added a dated decision entry and removed the resolved plant-count question
+  from `OPEN-QUESTIONS.md`.
+
+### Continuation verification
+
+| Command/check | Observed result |
+|---|---|
+| `npm ci` | PASS — 368 packages installed; 369 audited; 0 vulnerabilities. The existing non-failing allow-scripts notice for `unrs-resolver@1.12.2` remained. |
+| `npm run lint` | PASS — exit 0, no findings. |
+| `npx tsc --noEmit` | PASS — application TypeScript check, exit 0. |
+| `npm run typecheck` | PASS — scripts TypeScript check, exit 0. |
+| `npm run audit:facts` | PASS — 51/51. The pre-existing non-failing `MODULE_TYPELESS_PACKAGE_JSON` warning remained. |
+| `npm run build` | PASS — Next.js 16.3.1 production build; 13 routes generated. |
+| `SMOKE_TEST_BASE_URL=http://localhost:3188 npm run smoke-test` | PASS — 16/16 routes. |
+| Rendered-source assertions | PASS — `/faq`, `/master-plants`, `/what-to-expect`, `/llms.txt`, and `/md/faq` expose the five-plant facts; Machinga is absent from all checked current routes; the homepage, FAQ, and `/md/faq` expose the approved healer facts. |
+| `npm audit --audit-level=high` | PASS — 0 vulnerabilities. |
+
+Local browser verification used the production build at
+`http://localhost:3188`:
+
+- Desktop 1280×720: homepage rendered correctly, included the approved healer
+  biography, and had no horizontal overflow.
+- Mobile 390×844: homepage, FAQ, master-plants, and what-to-expect rendered
+  without horizontal overflow.
+- The master-plants page contained exactly the five approved plant headings:
+  Marosa, Ajo Sacha, Bobinsana, Clavo Huasca, and Planta de Vida; Machinga was
+  absent.
+- Browser console warnings/errors: none.
+
+### Continuation verdict before remote delivery
+
+**GO.** The previously unresolved facts now have direct human confirmation,
+the current public and AI-facing sources agree, the human-only medical,
+screening, booking, payment, and communication boundaries remain intact, and
+all local checks pass. Remote PR/CI, merge, and production evidence is recorded
+below once completed.

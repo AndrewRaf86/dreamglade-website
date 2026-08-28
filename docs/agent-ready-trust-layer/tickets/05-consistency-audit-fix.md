@@ -43,10 +43,9 @@ Ticket 2.
 - [ ] Build the script per `TECHNICAL-SPEC.md` §5: presence checks, banned-
       phrase checks, pricing parity, markdown-mirror parity (once ticket 4
       exists — stub this check gracefully if the mirrors don't exist yet).
-- [ ] Seed the banned-phrase denylist from the Aug 6 audit's own findings
-      (the historical "five plants, remove Machinga" proposal that did *not*
-      ship — confirm current six-plant copy is intentional, not drifted; see
-      `DECISIONS.md`) plus this session's fact list.
+- [x] Seed the banned-phrase denylist from confirmed fact changes. As of
+      2026-08-27, the superseded six-plant list and Machinga are banned from
+      current public/AI-facing source; see `DECISIONS.md`.
 - [ ] Add `"audit:facts": "node --experimental-strip-types scripts/audit-facts.ts"`
       to `package.json`.
 - [ ] Run it. If it finds real drift (not expected, but possible if something
