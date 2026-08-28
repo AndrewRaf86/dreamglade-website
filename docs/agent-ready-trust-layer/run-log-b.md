@@ -82,8 +82,23 @@ run.
 
 ### Remote verification
 
-Pull-request checks, merge evidence, and the post-merge main-branch run are
-recorded after GitHub executes the new workflow.
+- Primary pull request: [#22](https://github.com/AndrewRaf86/dreamglade-website/pull/22)
+- PR head: `2d856475fd05499fc5f2f3ed204fd01bfb994352`
+- Merge commit: `33d5a0cc4c37b4d18c47f4e73c7fb5ea01ccf65e`
+- PR workflow run `33136584092`: PASS in 37 seconds. Every named gate,
+  including production build and production-server smoke test, passed.
+- Post-merge push workflow run `33136632534`: PASS in 44 seconds. Every named
+  gate passed on `main`.
+- Compared with Run A's build-only PR baseline of 29 seconds, the complete new
+  PR workflow added eight seconds in that GitHub-hosted run.
+
+The first post-merge run emitted an infrastructure annotation because the
+pre-existing `actions/checkout@v4` and `actions/setup-node@v4` releases target
+the deprecated Node 20 action runtime. GitHub successfully forced them onto
+Node 24, so this was not a failed gate. Official release metadata showed
+`actions/checkout` v7.0.1 (published 2026-07-20) and `actions/setup-node` v7.0.0
+(published 2026-07-14); both v7 action manifests declare `node24`. The workflow
+was therefore updated to the current v7 major in a small Run B follow-up.
 
 ## Pre-PR verdict
 
