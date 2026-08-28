@@ -3,6 +3,15 @@ name: CI
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -13,5 +22,39 @@ jobs:
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
-      - run: npm run build
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Type-check application
+        run: npm run typecheck:app
+      - name: Type-check scripts
+        run: npm run typecheck
+      - name: Audit canonical facts
+        run: npm run audit:facts
+      - name: Audit high-severity dependencies
+        run: npm audit --audit-level=high
+      - name: Build production application
+        run: npm run build
+      - name: Smoke-test production server
+        shell: bash
+        run: |
+          npm run start -- --port 3000 > /tmp/dreamglade-next.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+
+          ready=0
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error http://localhost:3000/ > /dev/null; then
+              ready=1
+              break
+            fi
+            sleep 1
+          done
+
+          if [ "$ready" -ne 1 ]; then
+            cat /tmp/dreamglade-next.log
+            exit 1
+          fi
+
+          SMOKE_TEST_BASE_URL=http://localhost:3000 npm run smoke-test
