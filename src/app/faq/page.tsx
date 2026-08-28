@@ -4,12 +4,24 @@ import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
-import { FAQ_ITEMS } from "@/lib/faq-data";
+import {
+  CANNABIS_FAQ_ANSWER,
+  CANNABIS_FAQ_QUESTION,
+  FAQ_ITEMS,
+  FIRST_TIME_FAQ_ANSWER,
+  FIRST_TIME_FAQ_QUESTION,
+  MENSTRUAL_CYCLE_FAQ_ANSWER,
+  MENSTRUAL_CYCLE_FAQ_QUESTION,
+  PRICING_FAQ_ANSWER,
+  PRICING_FAQ_QUESTION,
+  SOLO_WOMEN_FAQ_ANSWER,
+  SOLO_WOMEN_FAQ_QUESTION,
+} from "@/lib/faq-data";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Answers about Dreamglade: a safe small-group ayahuasca retreat near Iquitos, Peru. Ceremonies, screening, cost, transport, accommodation, and integration.",
+    "Answers about Dreamglade's small-group ayahuasca retreats near Iquitos, Peru: safety process, ceremonies, cost, transport, accommodation, and integration.",
   alternates: { canonical: "https://dreamglade.com/faq" },
   openGraph: {
     title: "Frequently Asked Questions — Dreamglade",
@@ -105,14 +117,14 @@ export default function FAQ() {
             <FAQItem question="Is Dreamglade right for me?">
               <p>Dreamglade tends to suit people who want a small, quiet, grounded setting and are willing to do real preparation before they arrive. Paul reviews every application personally to talk this through with you.</p>
             </FAQItem>
-            <FAQItem question="Is Dreamglade good for first-time ayahuasca guests?">
-              <p>Yes. Many guests come to Dreamglade for their first ayahuasca experience. The small group of no more than ten, the traditional Shipibo-led ceremonies, and Paul&apos;s personal screening and preparation are designed to make a first time feel safe and well supported.</p>
+            <FAQItem question={FIRST_TIME_FAQ_QUESTION}>
+              <p>{FIRST_TIME_FAQ_ANSWER}</p>
             </FAQItem>
             <FAQItem question="What is the minimum age?">
               <p>Eighteen. Dreamglade does not accept guests under the age of 18.</p>
             </FAQItem>
-            <FAQItem question="Is it okay to participate in ceremony during my menstrual cycle?">
-              <p>Yes, this is a common concern and it is safe. We have had many guests come and join during that time of the month.</p>
+            <FAQItem question={MENSTRUAL_CYCLE_FAQ_QUESTION}>
+              <p>{MENSTRUAL_CYCLE_FAQ_ANSWER}</p>
             </FAQItem>
             <FAQItem question="What medical conditions or medications need to be disclosed?">
               <p>Guests should disclose current medications, medical history, mental health history, and recent substance use. Paul reviews this information before confirmation and may ask follow-up questions. Dreamglade does not provide medical advice or medical clearance. See <TrackedLink href="/safety-preparation" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Safety Click" properties={{ location: "faq-page", destination: "safety" }}>Safety &amp; Preparation</TrackedLink> for the kinds of things we look at most closely.</p>
@@ -129,8 +141,8 @@ export default function FAQ() {
             <FAQItem question="Who handles my health information?">
               <p>Paul, our integration support specialist.</p>
             </FAQItem>
-            <FAQItem question="I use cannabis regularly. Can I still attend?">
-              <p>Yes, but be honest about it on your application. For habitual users — daily use over a long period — we recommend stopping cannabis four to six weeks before the retreat and staying off it for two weeks afterward.</p>
+            <FAQItem question={CANNABIS_FAQ_QUESTION}>
+              <p>{CANNABIS_FAQ_ANSWER}</p>
             </FAQItem>
             <FAQItem question="What about cannabis, alcohol, or recreational substances?">
               <p>Alcohol, cannabis, recreational drugs, and other substances may affect preparation and safety. Guests are asked to disclose substance use honestly during the intake process so Paul can review the situation and ask follow-up questions if needed.</p>
@@ -165,8 +177,8 @@ export default function FAQ() {
             <h2 className="display">Logistics and <em>booking.</em></h2>
           </div>
           <div className="faq-list">
-            <FAQItem question="How much does it cost?">
-              <p>Current pricing is shown in the <TrackedLink href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Pricing Click" properties={{ location: "faq-page", destination: "pricing" }}>pricing section</TrackedLink> of the home page.</p>
+            <FAQItem question={PRICING_FAQ_QUESTION}>
+              <p>{PRICING_FAQ_ANSWER} <TrackedLink href="/#pricing" style={{ color: "var(--gold)", borderBottom: "1px solid var(--gold)" }} event="Pricing Click" properties={{ location: "faq-page", destination: "pricing" }}>View current pricing.</TrackedLink></p>
             </FAQItem>
             <FAQItem question="What is included in the price?">
               <p>Accommodation in a private, two-person, or communal thatched tambo, all meals, ceremonies, plant dieta, breathwork, sauna, and integration support before and after your stay. Group transport from the designated city meeting point in Iquitos on the first day of your retreat and drop-off to the city of Iquitos and Iquitos airport are included for flights after 3 PM.</p>
@@ -277,8 +289,8 @@ export default function FAQ() {
             <FAQItem question="What if I want to leave early?">
               <p>You can leave whenever you want. We will help you arrange transport back to Iquitos. Refund terms for an early departure are in the Stage 2 agreement.</p>
             </FAQItem>
-            <FAQItem question="Is Dreamglade suitable for women traveling alone?">
-              <p>Yes. Many guests come on their own, including women traveling solo. Dreamglade is a small retreat with personal screening, continuous staff presence, and a calm, respectful setting designed to help guests feel at ease.</p>
+            <FAQItem question={SOLO_WOMEN_FAQ_QUESTION}>
+              <p>{SOLO_WOMEN_FAQ_ANSWER}</p>
             </FAQItem>
             <FAQItem question="I am worried about being without my phone. Is that a problem?">
               <p>It is often one of the bigger adjustments at the start of the retreat, especially in the first couple of days. But most guests find that once they settle in, the quiet becomes part of what they value most. If you need to check in with a family member to let them know you are safe, please let a team member know and we will help make that happen.</p>

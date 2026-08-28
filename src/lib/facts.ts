@@ -132,6 +132,13 @@ export const FACTS = {
     source: "/",
   },
 
+  availability: {
+    guaranteedBySite: false,
+    statement:
+      "Published retreat windows are inquiry windows, not guaranteed availability. Paul confirms dates and spaces personally after reviewing an inquiry.",
+    source: "/",
+  },
+
   canonicalPages: [
     { path: "/", purpose: "Overview, pricing, availability windows" },
     { path: "/safety-preparation", purpose: "Screening, medication disclosure, preparation" },
@@ -154,7 +161,7 @@ export const FACTS = {
   // explicitly so an AI system (or a human) doesn't treat them as fixed.
   volatileFacts: [
     "Pricing (live PEN/USD exchange rate; USD base rate rarely changes) — see /#pricing",
-    "Availability windows and specific retreat dates — see / and ask Paul directly",
+    "Availability windows and specific retreat dates — see / and verify with Paul; the website does not guarantee a date or space",
   ] as const,
 } as const;
 

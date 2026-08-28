@@ -24,11 +24,13 @@ kept in sync.
 Dreamglade is a retreat center, not a medical provider. Dreamglade provides
 traditional ayahuasca ceremonies in a ceremonial and cultural context. It
 does not offer medical treatment, therapy, detox, or cures for any physical
-or mental health condition. Paul reviews every inquiry manually, but he is
-not a substitute for medical advice: any decision about medications or a
-medical condition must come from Paul together with a qualified healthcare
-professional. Participants are responsible for consulting their own doctor
-before applying.
+or mental health condition, and nothing on the site is medical advice.
+Decisions about medications, diagnoses, or medical care belong to the guest
+and their own qualified healthcare professional — not Dreamglade or Paul.
+Paul reviews every inquiry personally, but his review is only a human hosting
+decision based on what an applicant discloses; it is not a medical opinion,
+medical clearance, or a guarantee of suitability or safety. Participants are
+responsible for consulting their own healthcare professional before applying.
 
 ## Contraindication review — who this isn't for
 

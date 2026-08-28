@@ -187,6 +187,12 @@ presence(
   "PricingSection importing from @/lib/pricing (single source of truth for pricing)",
   files.filter((f) => f.relPath.includes("PricingSection")),
 );
+presence(
+  "pricing-faq-source-import",
+  /import\s+\{\s*USD_PRICES\s*\}\s+from ["']\.\/pricing["']/,
+  "FAQ structured answer importing USD_PRICES from pricing.ts",
+  files.filter((f) => f.relPath.endsWith("src/lib/faq-data.ts")),
+);
 absence(
   "pricing-hardcoded",
   /\$(?:19\d|2[0-4]\d)(?:\.\d\d)?\s*(?:USD)?\s*(?:per person|\/\s?day|\/person)/i,
@@ -214,6 +220,28 @@ absence(
 // ---- Medical / safety disclaimers ----
 presence("not-medical-provider", /not a medical provider/i, "the medical disclaimer (\"not a medical provider\")");
 presence("no-medical-clearance", /medical clearance/i, "the medical-clearance disclaimer");
+absence(
+  "paul-medication-decision",
+  /decision about (?:your )?medications?[^.]{0,80}must come from Paul/i,
+  "language assigning medication decisions to Paul",
+);
+presence(
+  "paul-review-not-medical-opinion",
+  /Paul[^.]{0,160}not a medical opinion/i,
+  "the boundary that Paul's review is not a medical opinion",
+);
+absence(
+  "faq-no-automated-eligibility-answer",
+  /I use cannabis regularly[\s\S]{0,500}answer:\s*["']Yes\b/i,
+  "an affirmative automated eligibility answer for regular cannabis use",
+  files.filter((f) => f.relPath.endsWith("src/lib/faq-data.ts")),
+);
+presence(
+  "faq-human-review-boundary",
+  /website cannot determine whether someone may attend/i,
+  "the deterministic human-review boundary in the cannabis FAQ answer",
+  files.filter((f) => f.relPath.endsWith("src/lib/faq-data.ts")),
+);
 // This check is intentionally narrow: it only flags an explicit affirmative
 // subject+claim ("Dreamglade cures...", "ayahuasca treats..."), not a bare
 // "cures"/"treats" substring — the site's own correct disclaimer language
@@ -278,6 +306,19 @@ presence(
   /Monday,?\s+Wednesday,?\s+(?:and\s+)?Friday/i,
   `the ceremony schedule specifically on the FAQ page (${FACTS.ceremonies.source})`,
   canonicalPageFile(FACTS.ceremonies.source),
+);
+
+presence(
+  "page-scoped:availability-not-guaranteed-on-homepage",
+  /FACTS\.availability\.statement/,
+  `the availability boundary specifically on the homepage (${FACTS.availability.source})`,
+  canonicalPageFile(FACTS.availability.source),
+);
+absence(
+  "page-scoped:availability-status-not-asserted",
+  /["'](?:Limited availability|Available)["']/,
+  "a hardcoded availability-status assertion",
+  canonicalPageFile(FACTS.availability.source),
 );
 
 // ---- Report ----
