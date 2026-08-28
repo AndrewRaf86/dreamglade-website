@@ -37,6 +37,7 @@ function buildLlmsTxt(): string {
   lines.push(`- Health disclosure: ${FACTS.healthDisclosure.statement}`);
   lines.push(`- Medical disclaimer: ${FACTS.medicalDisclaimer.statement}`);
   lines.push(`- Pricing: ${FACTS.pricing.statement}`);
+  lines.push(`- Availability: ${FACTS.availability.statement}`);
   lines.push("");
 
   lines.push("## Facts that change over time");

@@ -78,8 +78,8 @@
       "id": "logistics-plants",
       "category": "logistics",
       "prompt": "What plant dietas does Dreamglade offer and how is the plant chosen?",
-      "expectedFacts": ["six master plant dietas (Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, Planta de Vida)", "plant chosen with Maestro Raúl after arrival, not selected in advance"],
-      "watchFor": ["a wrong plant count (e.g. five)", "an invented plant not on the real list"]
+      "expectedFacts": ["five master plant dietas (Marosa, Ajo Sacha, Bobinsana, Clavo Huasca, Planta de Vida)", "plant chosen with Maestro Raúl after arrival, not selected in advance"],
+      "watchFor": ["a wrong plant count (e.g. six)", "Machinga or another plant not on the current list"]
     },
     {
       "id": "pricing-current",

@@ -6,6 +6,7 @@ import TermsGateCTA from "@/components/TermsGateCTA";
 import PricingSection from "@/components/PricingSection";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
+import { FACTS } from "@/lib/facts";
 
 export const metadata: Metadata = {
   title: "Ayahuasca Retreat Near Iquitos, Peru | Dreamglade",
@@ -292,7 +293,7 @@ export default function Home() {
               <span className="eyebrow">Traditional Shipibo ceremonial lineage</span>
               <h2 className="display">Maestra Dominga <em>&amp; Maestro Raúl</em></h2>
               <p className="healer-pair__bio">
-                Maestra Dominga and Maestro Raúl are a married Shipibo ceremonial couple who have shared more than 40 years of life, family, and service to their community. They come from Vista Alegre, a small village upriver from Pucallpa, and both were raised in families where plant medicine, ceremonial song, and spiritual healing traditions were passed down through parents and grandparents. Their work carries the balance of their shared path: Dominga brings softness, grounding, and feminine strength, while Raúl brings steadiness, protection, and ceremonial depth. Through their icaros and limpiezas, they help hold a careful ceremonial space rooted in lineage, humility, and respect for the traditions that came before them.
+                {FACTS.healers.biography}
               </p>
               <p className="healer-pair__note">
                 Together, they carry a living Shipibo tradition shaped by family, community, song, and decades of practice.
@@ -492,28 +493,27 @@ export default function Home() {
             <span className="eyebrow">Availability — 2026–2027</span>
             <h2 className="display">Open <em>windows.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
-              A new retreat begins every week within each window below — guests join on Monday or Friday and stay 5 nights up to 2 weeks, not the whole window. Dates outside these windows are closed.
+              Published retreat windows are for inquiries only. Guests typically join on Monday or Friday and stay 5 nights up to 2 weeks, not the whole window. Dates and spaces are not confirmed until Paul replies.
             </p>
           </div>
           <div className="avail-grid">
             {[
-              { dates: "July 27 – August 22, 2026", limited: false },
-              { dates: "Aug 31 – Sept 26, 2026", limited: false },
-              { dates: "Oct 19 – Nov 14, 2026", limited: false },
-              { dates: "Nov 23 – Dec 19, 2026", limited: false },
-              { dates: "January 11 – February 6, 2027", limited: false },
-              { dates: "February 15 – March 13, 2027", limited: false },
-              { dates: "March 22 – April 17, 2027", limited: false },
-              { dates: "May 3 – May 29, 2027", limited: false },
-              { dates: "June 21 – July 17, 2027", limited: false },
-              { dates: "July 26 – August 21, 2027", limited: false },
-              { dates: "September 6 – October 2, 2027", limited: false },
-              { dates: "October 11 – November 6, 2027", limited: false },
-              { dates: "November 15 – December 11, 2027", limited: false },
-            ].map(({ dates, limited }) => (
+              "Aug 31 – Sept 26, 2026",
+              "Oct 19 – Nov 14, 2026",
+              "Nov 23 – Dec 19, 2026",
+              "January 11 – February 6, 2027",
+              "February 15 – March 13, 2027",
+              "March 22 – April 17, 2027",
+              "May 3 – May 29, 2027",
+              "June 21 – July 17, 2027",
+              "July 26 – August 21, 2027",
+              "September 6 – October 2, 2027",
+              "October 11 – November 6, 2027",
+              "November 15 – December 11, 2027",
+            ].map((dates) => (
               <article key={dates} className="avail-card">
-                <span className={`avail-card__status${limited ? " avail-card__status--limited" : ""}`}>
-                  <span className="dot" /> {limited ? "Limited availability" : "Available"}
+                <span className="avail-card__status avail-card__status--limited">
+                  <span className="dot" /> Verify with Paul
                 </span>
                 <h3 className="avail-card__dates">{dates}</h3>
                 <p className="avail-card__detail">A new retreat begins every week</p>
@@ -530,7 +530,7 @@ export default function Home() {
             ))}
           </div>
           <p style={{ marginTop: 40, fontSize: 13, color: "var(--muted)", maxWidth: 760, letterSpacing: "0.02em" }}>
-            Maximum 10 guests on the land at any time. Guests join the retreat on Monday or Friday and can stay up to 2 weeks if approved. Dates between the windows above are closed. Paul confirms all dates and spaces personally after reviewing your inquiry.
+            Maximum 10 guests on the land at any time. Guests typically join on Monday or Friday and can stay up to 2 weeks after Paul confirms the inquiry. {FACTS.availability.statement}
           </p>
         </div>
       </section>

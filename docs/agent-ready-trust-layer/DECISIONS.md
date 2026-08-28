@@ -185,6 +185,75 @@ look before deploy. This is a lightweight self-check, not a sign-off gate
 blocking a specific person's calendar.
 **Who:** Andrew.
 
+## 2026-08-27 — Plant count remains a live unresolved conflict
+**Context/conflict found:** the 2026-08-12 entry above treated the historical
+five-plant proposal as no longer live. A fresh GitHub inspection found that
+PR #15 (`content/five-plants-pricing-disclaimer`, commit `2aeaba2`) is still
+open. It removes Machinga and changes six plants to five, while current
+`main`, production, `facts.ts`, the FAQ JSON-LD/Markdown mirror, and
+`/llms.txt` all publish six. PR #15 has no human reviews, is ten commits
+behind `main`, conflicts with `main`, and provides no cited owner or operator
+confirmation for the five-plant claim. Conversely, the July 27 commit that
+introduced six calls them "confirmed" but does not preserve the underlying
+human-source evidence.
+
+**Decision:** classify five versus six as **UNRESOLVED** pending confirmation
+from Paul, Wade, or Clarisa. Do not merge or reproduce PR #15's five-plant
+claim. Preserve the current approved production value (six) and its existing
+audit coverage until a human confirms a change; this is preservation of the
+published state, not a conclusion that the disputed business fact has been
+re-proven. If the answer is five, update `facts.ts`, all visible surfaces,
+FAQ structured data/Markdown, `/llms.txt`, and the audit together.
+
+**Who:** requires Paul, Wade, or Clarisa confirmation.
+
+## 2026-08-27 — Paul is the human hosting decision layer, not a medical decision-maker
+**Decision / Context:** the safety page and its Markdown mirror said that a
+decision about medication or a medical condition must come from Paul together
+with a healthcare professional. That wording incorrectly assigned Paul a role
+in medical decisions. It now states that medication, diagnosis, and medical-
+care decisions belong to the guest and their qualified healthcare
+professional. Paul's personal review is a human hosting decision only, not a
+medical opinion, medical clearance, or guarantee of suitability or safety.
+Static FAQ answers that previously answered individual safety/eligibility
+questions with "Yes" now return the same human-review boundary.
+
+**Why:** Dreamglade may explain its human-led intake process, but its software
+must not decide eligibility, provide individualized medical advice, or present
+Paul as a medical authority.
+
+**Who:** direct mission constitution supplied by Andrew.
+
+## 2026-08-27 — Website availability is never a guarantee
+**Decision:** availability cards describe published inquiry windows and use
+"Verify with Paul" instead of "Available" or "Limited availability." The
+elapsed July 27–August 22, 2026 window was removed on August 27, 2026. A stable
+policy in `facts.ts` states that only Paul confirms dates and spaces; specific
+windows remain volatile and are not copied into AI summaries.
+
+**Why:** the prior production page labelled an already-ended window
+"Available," and the website must never guarantee a date or space.
+
+**Who:** direct mission constitution supplied by Andrew; current date verified
+in the run environment.
+
+## 2026-08-27 — Human confirmation resolves plant count and healer biography
+**Decision / Context:** Andrew explicitly confirmed that Dreamglade currently
+offers **five** master plant dietas and that Machinga is not currently offered.
+He also approved the Dominga/Raúl biography details from PR #15: they are a
+married Shipibo ceremonial couple from Vista Alegre, upriver from Pucallpa,
+and have shared more than 40 years of life, family, and service to their
+community. This supersedes the unresolved classification recorded earlier on
+2026-08-27 and the older six-plant decision from 2026-08-12.
+
+**Implementation:** `facts.ts` is the canonical source. Visible plant pages,
+FAQ copy, FAQPage JSON-LD, `/llms.txt`, `/md/faq`, the AI-answer fixture, and
+the fact audit must all derive from or agree with the five-plant list. Machinga
+may remain in historical decision/run documentation only, not in current
+public or AI-facing source.
+
+**Who:** Andrew, by direct human authorization.
+
 ## Template for new entries
 ```
 ## YYYY-MM-DD — <short title>

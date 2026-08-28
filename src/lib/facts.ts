@@ -40,8 +40,13 @@ export const FACTS = {
   healers: {
     names: ["Maestra Dominga", "Maestro Raúl"] as const,
     tradition: "Shipibo",
+    relationship: "married ceremonial couple",
+    homeCommunity: "Vista Alegre, a small village upriver from Pucallpa",
+    sharedYears: "more than 40 years of life, family, and service to their community",
     statement:
-      "Ceremonies are led by Maestra Dominga and Maestro Raúl in the traditional Shipibo lineage, with a support team present throughout.",
+      "Ceremonies are led by Maestra Dominga and Maestro Raúl, a married Shipibo ceremonial couple from Vista Alegre, a small village upriver from Pucallpa, with a support team present throughout.",
+    biography:
+      "Maestra Dominga and Maestro Raúl are a married Shipibo ceremonial couple who have shared more than 40 years of life, family, and service to their community. They come from Vista Alegre, a small village upriver from Pucallpa, and both were raised in families where plant medicine, ceremonial song, and spiritual healing traditions were passed down through parents and grandparents. Their work carries the balance of their shared path: Dominga brings softness, grounding, and feminine strength, while Raúl brings steadiness, protection, and ceremonial depth. Through their icaros and limpiezas, they help hold a careful ceremonial space rooted in lineage, humility, and respect for the traditions that came before them.",
     source: "/",
   },
 
@@ -77,17 +82,16 @@ export const FACTS = {
   },
 
   plantDietas: {
-    count: 6,
+    count: 5,
     names: [
       "Marosa",
       "Ajo Sacha",
       "Bobinsana",
-      "Machinga",
       "Clavo Huasca",
       "Planta de Vida",
     ] as const,
     statement:
-      "Dreamglade works with six traditional master plant dietas. The specific plant is chosen with Maestro Raúl after a guest arrives, based on their preparation and what is appropriate — not selected from a menu in advance.",
+      "Dreamglade works with five traditional master plant dietas: Marosa, Ajo Sacha, Bobinsana, Clavo Huasca, and Planta de Vida. The specific plant is chosen with Maestro Raúl after a guest arrives, based on their preparation and what is appropriate — not selected from a menu in advance.",
     source: "/master-plants",
   },
 
@@ -132,6 +136,13 @@ export const FACTS = {
     source: "/",
   },
 
+  availability: {
+    guaranteedBySite: false,
+    statement:
+      "Published retreat windows are inquiry windows, not guaranteed availability. Paul confirms dates and spaces personally after reviewing an inquiry.",
+    source: "/",
+  },
+
   canonicalPages: [
     { path: "/", purpose: "Overview, pricing, availability windows" },
     { path: "/safety-preparation", purpose: "Screening, medication disclosure, preparation" },
@@ -154,7 +165,7 @@ export const FACTS = {
   // explicitly so an AI system (or a human) doesn't treat them as fixed.
   volatileFacts: [
     "Pricing (live PEN/USD exchange rate; USD base rate rarely changes) — see /#pricing",
-    "Availability windows and specific retreat dates — see / and ask Paul directly",
+    "Availability windows and specific retreat dates — see / and verify with Paul; the website does not guarantee a date or space",
   ] as const,
 } as const;
 

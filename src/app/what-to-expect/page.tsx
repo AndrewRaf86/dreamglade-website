@@ -4,6 +4,7 @@ import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
 import JourneyMap from "@/components/JourneyMap";
+import { FACTS } from "@/lib/facts";
 
 export const metadata: Metadata = {
   title: "What to Expect at an Ayahuasca Retreat",
@@ -172,7 +173,7 @@ export default function WhatToExpect() {
             </article>
             <article className="col-item">
               <h3>Master Plant Dietas</h3>
-              <p>Dreamglade offers six traditional master plant dietas — Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida. The specific plant is not chosen from a menu in advance. It is discussed and selected with Maestro Raúl based on the guest, their preparation, and what is appropriate once they arrive on the land.</p>
+              <p>{FACTS.plantDietas.statement}</p>
             </article>
           </div>
         </div>
@@ -201,7 +202,7 @@ export default function WhatToExpect() {
           </div>
 
           <p style={{ textAlign: "center", maxWidth: 640, marginLeft: "auto", marginRight: "auto", fontSize: 16 }}>
-            Dreamglade works with six master plants — Marosa, Ajo Sacha, Bobinsana, Machinga, Clavo Huasca, and Planta de Vida — each with its own character in the tradition. The plant dieta itself is included in the retreat price.
+            Dreamglade works with {FACTS.plantDietas.count} master plants — {FACTS.plantDietas.names.join(", ")} — each with its own character in the tradition. The plant dieta itself is included in the retreat price.
           </p>
           <div style={{ marginTop: 20, textAlign: "center" }}>
             <TrackedLink href="/master-plants" className="link-arrow" event="Plants Click" properties={{ location: "plant-dietas-section", destination: "master-plants" }}>See what each plant is known for</TrackedLink>
