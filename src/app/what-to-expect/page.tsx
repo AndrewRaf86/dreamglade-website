@@ -4,31 +4,44 @@ import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
 import JourneyMap from "@/components/JourneyMap";
+import StructuredData from "@/components/StructuredData";
 import { FACTS } from "@/lib/facts";
+import { buildPageGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "What to Expect at an Ayahuasca Retreat",
   description:
     "A typical week at Dreamglade: arrival from Iquitos, ceremonies, dieta days, accommodation in private tambos, food, sauna, and integration support.",
-  alternates: { canonical: "https://dreamglade.com/what-to-expect" },
+  alternates: {
+    canonical: "https://dreamglade.com/what-to-expect",
+    types: { "text/markdown": "https://dreamglade.com/md/what-to-expect" },
+  },
   openGraph: {
     title: "What to Expect — Dreamglade",
     description:
       "A typical week at Dreamglade: meeting in Iquitos, transport to the centre, Monday/Wednesday/Friday ceremonies, private tambos, food, sauna, and integration.",
     url: "https://dreamglade.com/what-to-expect",
-    images: [{ url: "/images/maloka-exterior.jpg" }],
+    images: [{ url: "/images/maloka-exterior.jpg", alt: "Thatched ceremony maloka at Dreamglade" }],
   },
 };
+
+const experienceJsonLd = buildPageGraph({
+  path: "/what-to-expect",
+  name: "What to Expect at Dreamglade",
+  description: "The retreat rhythm, ceremonies, arrival from Iquitos, accommodation, food, plant dietas, and integration support.",
+  about: [SCHEMA_IDS.service, SCHEMA_IDS.place],
+});
 
 export default function WhatToExpect() {
   return (
     <>
+      <StructuredData id="experience-page-graph" data={experienceJsonLd} />
       <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">What to expect</span>
-          <h1>What the retreat <em>experience is like.</em></h1>
+          <h1>What a retreat at Dreamglade <em>is like.</em></h1>
           <p className="page-hero__sub">
             No two retreats are the same, but the shape is steady. Ceremonies on Monday, Wednesday and Friday; slow days in between; private tambos to sleep in; meals together at the communal big house.
           </p>

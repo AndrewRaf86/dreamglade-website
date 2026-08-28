@@ -1,63 +1,44 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import PricingSection from "@/components/PricingSection";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
+import StructuredData from "@/components/StructuredData";
 import { FACTS } from "@/lib/facts";
+import { buildPageGraph, buildSiteGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Ayahuasca Retreat Near Iquitos, Peru | Dreamglade",
   description:
     "Dreamglade is a small-group ayahuasca retreat near Iquitos, Peru — max 10 guests, traditional Shipibo-led ceremonies, 25 hectares of Amazon rainforest.",
-  alternates: { canonical: "https://dreamglade.com" },
+  alternates: {
+    canonical: "https://dreamglade.com",
+    types: { "text/markdown": "https://dreamglade.com/md/overview" },
+  },
   openGraph: {
     title: "Dreamglade — Small-Group Ayahuasca Retreat Near Iquitos, Peru",
     description:
       "A small-group, traditional Shipibo-led ayahuasca retreat near Iquitos, Peru. Maximum 10 guests, 25 hectares of Amazon rainforest, every inquiry reviewed personally.",
     url: "https://dreamglade.com",
-    images: [{ url: "/images/lake-overview.jpg" }],
+    images: [{ url: "/images/lake-overview.jpg", alt: "Dreamglade retreat center and lake near Iquitos, Peru" }],
   },
 };
 
-const orgJsonLd = {
-  "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
-  name: "Dreamglade",
-  description:
-    "A small-group ayahuasca retreat near Iquitos, Peru. Traditional Shipibo-led ceremonies on 25 hectares of Amazon rainforest.",
-  url: "https://dreamglade.com",
-  logo: "https://dreamglade.com/images/logo-original.jpeg",
-  image: "https://dreamglade.com/images/lake-overview.jpg",
-  email: "booking@dreamglade.com",
-  telephone: "+51 920 478 240",
-  foundingDate: "2013",
-  founder: {
-    "@type": "Person",
-    name: "Stacy Povey",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Caserio Moralillo Parcela 21, Ctra Iquitos-Nauta",
-    postalCode: "16000",
-    addressLocality: "Iquitos",
-    addressCountry: "PE",
-  },
-  sameAs: [
-    "https://share.google/tiFj2NeKbOzgqksP4",
-    "https://www.instagram.com/dreamglade/",
-    "https://www.youtube.com/@dreamgladeamazon",
-  ],
-};
+const homeJsonLd = buildPageGraph({
+  path: "",
+  name: "Dreamglade — Small-Group Ayahuasca Retreat Near Iquitos, Peru",
+  description: "A small-group ayahuasca and plant dieta retreat near Iquitos, Peru, with a maximum of ten guests and Shipibo-led ceremonies.",
+  about: [SCHEMA_IDS.organization, SCHEMA_IDS.place, SCHEMA_IDS.service, SCHEMA_IDS.healerDominga, SCHEMA_IDS.healerRaul],
+});
+const siteJsonLd = buildSiteGraph();
 
 export default function Home() {
   return (
     <>
-      <Script id="org-jsonld" type="application/ld+json">
-        {JSON.stringify(orgJsonLd)}
-      </Script>
+      <StructuredData id="site-entity-graph" data={siteJsonLd} />
+      <StructuredData id="home-page-graph" data={homeJsonLd} />
 
       {/* Nav — light theme for hero */}
       <Nav theme="light" />
@@ -79,7 +60,7 @@ export default function Home() {
           <div className="hero__layout">
             <div>
               <h1 className="hero__title">
-                A small place,<br /><em>held carefully.</em>
+                A small-group retreat,<br /><em>near Iquitos.</em>
               </h1>
             </div>
             <div>
@@ -88,7 +69,7 @@ export default function Home() {
               </p>
               <div className="hero__actions">
                 <TermsGateCTA trackLocation="hero" />
-                <TrackedLink href="#about" className="ghost-link" event="About Click" properties={{ location: "hero", destination: "about" }}>Read more first</TrackedLink>
+                <TrackedLink href="#about" className="ghost-link" event="About Click" properties={{ location: "hero", destination: "about" }}>Learn about Dreamglade</TrackedLink>
               </div>
               <div className="hero__social">
                 <span className="hero__social-label">Follow along</span>

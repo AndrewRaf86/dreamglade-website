@@ -48,9 +48,15 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Dreamglade",
     locale: "en_US",
-    images: [{ url: "/images/lake-overview.jpg" }],
+    images: [{ url: "/images/lake-overview.jpg", alt: "Dreamglade retreat center and lake in the Peruvian Amazon" }],
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dreamglade — Small-Group Ayahuasca Retreat near Iquitos, Peru",
+    description: "Shipibo-led ceremonies, maximum 10 guests, and a human-led application process near Iquitos, Peru.",
+    images: ["/images/lake-overview.jpg"],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 };
 
 export default function RootLayout({

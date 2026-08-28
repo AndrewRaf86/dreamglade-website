@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import StructuredData from "@/components/StructuredData";
+import { buildPageGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
@@ -15,9 +17,17 @@ export const metadata: Metadata = {
   },
 };
 
+const termsJsonLd = buildPageGraph({
+  path: "/terms-and-conditions",
+  name: "Dreamglade Terms and Conditions",
+  description: "Public-readable Dreamglade terms; the binding agreement is sent and signed during the private Stage 2 registration process.",
+  about: [SCHEMA_IDS.organization, SCHEMA_IDS.service],
+});
+
 export default function TermsAndConditions() {
   return (
     <>
+      <StructuredData id="terms-page-graph" data={termsJsonLd} />
       <Nav theme="light" />
 
       <section className="page-hero">

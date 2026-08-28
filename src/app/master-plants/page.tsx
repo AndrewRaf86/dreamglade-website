@@ -3,30 +3,43 @@ import Nav from "@/components/Nav";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
+import StructuredData from "@/components/StructuredData";
 import { FACTS } from "@/lib/facts";
+import { buildPageGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Master Plants & Plant Dietas",
   description: `The five master plant dietas Dreamglade works with — ${FACTS.plantDietas.names.join(", ")} — plus Kambo, and what a traditional dieta involves.`,
-  alternates: { canonical: "https://dreamglade.com/master-plants" },
+  alternates: {
+    canonical: "https://dreamglade.com/master-plants",
+    types: { "text/markdown": "https://dreamglade.com/md/master-plants" },
+  },
   openGraph: {
     title: "Master Plants & Plant Dietas — Dreamglade",
     description:
       "What each master plant is traditionally known for, how a dieta works, and how Maestro Raúl chooses the right plant for each guest.",
     url: "https://dreamglade.com/master-plants",
-    images: [{ url: "/images/bobinsana-flower.jpg" }],
+    images: [{ url: "/images/bobinsana-flower.jpg", alt: "Bobinsana flower at Dreamglade" }],
   },
 };
+
+const plantsJsonLd = buildPageGraph({
+  path: "/master-plants",
+  name: "Five Master Plant Dietas at Dreamglade",
+  description: `Dreamglade's five current master plant dietas: ${FACTS.plantDietas.names.join(", ")}.`,
+  about: [SCHEMA_IDS.service, SCHEMA_IDS.healerRaul],
+});
 
 export default function MasterPlants() {
   return (
     <>
+      <StructuredData id="master-plants-page-graph" data={plantsJsonLd} />
       <Nav theme="light" />
 
       <section className="page-hero">
         <div className="container page-hero__inner">
           <span className="page-hero__eyebrow">Plant medicine at Dreamglade</span>
-          <h1>The master plants <em>we work with.</em></h1>
+          <h1>Five master plant dietas <em>at Dreamglade.</em></h1>
           <p className="page-hero__sub">
             Every dieta at Dreamglade is a relationship with a specific plant teacher. Here is what each one is in the Shipibo and Amazonian tradition, what a dieta involves, and how the right plant is chosen for each guest.
           </p>

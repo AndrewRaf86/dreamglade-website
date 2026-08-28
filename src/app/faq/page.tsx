@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
 import TermsGateCTA from "@/components/TermsGateCTA";
 import TrackedLink from "@/components/TrackedLink";
+import StructuredData from "@/components/StructuredData";
+import { buildPageGraph, SCHEMA_IDS } from "@/lib/structured-data";
 import {
   CANNABIS_FAQ_ANSWER,
   CANNABIS_FAQ_QUESTION,
@@ -26,32 +27,36 @@ export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
     "Answers about Dreamglade's small-group ayahuasca retreats near Iquitos, Peru: safety process, ceremonies, cost, transport, accommodation, and integration.",
-  alternates: { canonical: "https://dreamglade.com/faq" },
+  alternates: {
+    canonical: "https://dreamglade.com/faq",
+    types: { "text/markdown": "https://dreamglade.com/md/faq" },
+  },
   openGraph: {
     title: "Frequently Asked Questions — Dreamglade",
     description:
       "Common questions about Dreamglade, a small-group ayahuasca retreat near Iquitos, Peru: safety, ceremonies, cost, getting there, accommodation, and integration.",
     url: "https://dreamglade.com/faq",
-    images: [{ url: "/images/lake-overview.jpg" }],
+    images: [{ url: "/images/lake-overview.jpg", alt: "Dreamglade retreat center and lake near Iquitos, Peru" }],
   },
 };
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
+const faqJsonLd = buildPageGraph({
+  path: "/faq",
+  name: "Frequently Asked Questions",
+  description: "Answers about Dreamglade's retreat format, people, safety process, pricing, transport, accommodation, and human-led application process.",
+  type: "FAQPage",
+  about: [SCHEMA_IDS.organization, SCHEMA_IDS.service],
   mainEntity: FAQ_ITEMS.map((item) => ({
     "@type": "Question",
     name: item.question,
     acceptedAnswer: { "@type": "Answer", text: item.answer },
   })),
-};
+});
 
 export default function FAQ() {
   return (
     <>
-      <Script id="faq-jsonld" type="application/ld+json">
-        {JSON.stringify(faqJsonLd)}
-      </Script>
+      <StructuredData id="faq-page-graph" data={faqJsonLd} />
 
       <Nav theme="light" />
 

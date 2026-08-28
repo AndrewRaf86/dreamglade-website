@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "typecheck:app": "tsc --noEmit",
     "audit:facts": "node --experimental-strip-types scripts/audit-facts.ts",
-    "audit": "npm run audit:facts",
+    "audit:agent": "node --experimental-strip-types scripts/audit-agent-readiness.ts",
+    "audit": "npm run audit:facts && npm run audit:agent",
     "typecheck": "tsc --noEmit -p scripts/tsconfig.json",
     "smoke-test": "node --experimental-strip-types scripts/smoke-test-routes.ts"
   },
