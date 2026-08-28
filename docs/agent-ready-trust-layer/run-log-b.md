@@ -100,7 +100,12 @@ Node 24, so this was not a failed gate. Official release metadata showed
 (published 2026-07-14); both v7 action manifests declare `node24`. The workflow
 was therefore updated to the current v7 major in a small Run B follow-up.
 
-## Pre-PR verdict
+- Follow-up pull request: [#23](https://github.com/AndrewRaf86/dreamglade-website/pull/23)
+- Follow-up merge: `35023bf61373629deb3f36173bf3d6ae5ddd477c`
+- Follow-up PR workflow `33136737060`: PASS in 32 seconds.
+- Final push-to-main workflow `33136789509`: PASS in 38 seconds; every v7
+  setup, quality, build, and smoke step passed with no annotations.
 
-**GO.** The workflow is syntactically valid and the complete intended command
-sequence passes locally, including the production-server smoke suite.
+## Final verdict
+
+**GO — merged, active on main, and verified on both PR and push events.**

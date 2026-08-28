@@ -11,7 +11,8 @@ change, schedule change, etc.), not just this initial build.
 npm run lint
 npx tsc --noEmit
 npm run typecheck      # type-checks scripts/ — a separate tsconfig, not covered by npx tsc --noEmit; see "Why two typechecks" below
-npm run audit:facts    # alias: npm run audit
+npm run audit:facts
+npm run audit:agent
 npm run build
 ```
 All must pass (exit 0) before proceeding.
@@ -30,8 +31,8 @@ With `npm run dev` running (or `npm run build && npm run start`):
 ```bash
 npm run smoke-test
 ```
-This checks `/`, `/faq`, `/safety-preparation`, `/apply`, `/llms.txt`,
-`/md/faq`, `/md/safety-preparation`, `/robots.txt`, `/sitemap.xml`, and every
+This checks the six canonical content pages, `/llms.txt`, all six `/md/*`
+guides, `/robots.txt`, `/sitemap.xml`, and every
 `/md/[slug]` edge case that matters (`does-not-exist`, `toString`,
 `constructor`, `hasOwnProperty`, `proto`, `__proto__`, `valueOf` — all must
 be `404`, not `200` with garbage content or a `500`; see `DECISIONS.md`
@@ -39,7 +40,7 @@ be `404`, not `200` with garbage content or a `500`; see `DECISIONS.md`
 server with `SMOKE_TEST_BASE_URL=<url> npm run smoke-test`.
 
 ```bash
-curl -s http://localhost:3000/llms.txt | grep -c "^- \[" # expect 9 links (7 pages + 2 mirrors)
+curl -s http://localhost:3000/llms.txt | grep -c "^- \[" # expect 13 links (7 pages + 6 mirrors)
 ```
 
 ## 3. On a preview deployment (normal PR flow)
@@ -55,8 +56,9 @@ curl -s http://localhost:3000/llms.txt | grep -c "^- \[" # expect 9 links (7 pag
       so on a `*.vercel.app` preview URL they will point to production, not
       the preview itself. That's expected, not a bug.
 - [ ] `npm run lint`, `npx tsc --noEmit`, `npm run typecheck`,
-      `npm run audit:facts`, `npm run build` all pass against the same commit.
-- [ ] Read the full generated `/llms.txt` and both `/md/*` outputs once —
+      `npm run audit:facts`, `npm run audit:agent`, `npm run build` all pass
+      against the same commit.
+- [ ] Read the full generated `/llms.txt` and all six `/md/*` outputs once —
       confirm no private data (guest names, application details, health
       data, payment info, internal emails) appears anywhere.
 - [ ] Spot-check `/sitemap.xml` and `/robots.txt` still render correctly and
