@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "typecheck:app": "tsc --noEmit",
     "audit:facts": "node --experimental-strip-types scripts/audit-facts.ts",
     "audit": "npm run audit:facts",
     "typecheck": "tsc --noEmit -p scripts/tsconfig.json",

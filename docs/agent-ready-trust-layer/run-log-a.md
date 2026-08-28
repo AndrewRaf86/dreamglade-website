@@ -246,3 +246,25 @@ the current public and AI-facing sources agree, the human-only medical,
 screening, booking, payment, and communication boundaries remain intact, and
 all local checks pass. Remote PR/CI, merge, and production evidence is recorded
 below once completed.
+
+### Remote delivery and production evidence
+
+- Pull request: [#21](https://github.com/AndrewRaf86/dreamglade-website/pull/21)
+- PR head: `3049dfa0b6f5ebd95cdb9dfc11908b446aa9a0d2`
+- Merge commit: `e4c938ddff606ad5e0a5170c5a921041308c8e23`
+- GitHub CI `build`: PASS (29 seconds).
+- Vercel preview: PASS.
+- Production deployment: `dpl_BAKEQhwL7N75wiJshAGeSm5WnCMN`, target
+  `production`, status `Ready`, aliased to `dreamglade.com` and
+  `www.dreamglade.com`.
+- Direct production checks returned HTTP 200 with expected content types for
+  `/`, `/faq`, `/master-plants`, `/what-to-expect`, `/llms.txt`, and `/md/faq`.
+  The five-plant facts were live, Machinga was absent, and the approved healer
+  biography was live on the intended surfaces.
+- Production browser checks at 1280×720 and 390×844 found no horizontal
+  overflow or console warnings/errors. The live master-plants page contained
+  exactly the five approved plant headings.
+- Vercel error-log scan for the production deployment over the prior hour:
+  no logs found; no runtime errors observed during verification requests.
+
+**Final Run A verdict: GO — merged and verified in production.**
