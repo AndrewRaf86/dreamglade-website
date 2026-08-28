@@ -154,5 +154,16 @@ Additional checks:
 
 ## Remote delivery
 
-PR, GitHub CI, merge SHA, Vercel deployment, and production verification are
-recorded after the branch is pushed and the real remote gates complete.
+- Pull request: [#24](https://github.com/AndrewRaf86/dreamglade-website/pull/24),
+  base `35023bf61373629deb3f36173bf3d6ae5ddd477c`.
+- Initial PR workflow `33138133308`: PASS in 33 seconds, including the new
+  AI-readiness audit and production-server smoke test.
+- Vercel preview `dpl_Bb2JKxvTakkwhNuny1Fywd1r8nao`: Ready in 17 seconds.
+  Protected-preview checks through authenticated Vercel CLI confirmed 200
+  responses for `/llms.txt`, `/md/master-plants`, and `/faq`; expected content
+  and FAQPage graph were present and Machinga was absent.
+- The remote PR file list was inspected: 34 mission files, 1,045 additions,
+  196 deletions; the pre-existing user-owned `AGENTS.md` change is absent.
+
+Merge SHA, final post-push CI, production deployment, and production route
+verification are recorded in the final mission report after completion.
