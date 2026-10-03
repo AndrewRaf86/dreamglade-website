@@ -5,6 +5,7 @@ import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
 import ProcessSteps from "@/components/ProcessSteps";
 import StructuredData from "@/components/StructuredData";
+import { FACTS } from "@/lib/facts";
 import { buildPageGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
@@ -62,7 +63,7 @@ export default function Apply() {
           <ProcessSteps />
           <div className="trust-strip">
             <span className="stars" role="img" aria-label="5 out of 5 stars" />
-            <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 verified Google reviews</span>
+            <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>{FACTS.reputation.google.rating}</strong> &middot; {FACTS.reputation.google.countDisplay} verified Google reviews</span>
             <span aria-hidden="true">·</span>
             <TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "apply", destination: "google-reviews" }}>Read them on Google</TrackedLink>
           </div>

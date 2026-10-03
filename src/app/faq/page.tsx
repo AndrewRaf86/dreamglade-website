@@ -289,8 +289,8 @@ export default function FAQ() {
             <h2 className="display">Common <em>concerns.</em></h2>
           </div>
           <div className="faq-list">
-            <FAQItem question="Can I come on my own?">
-              <p>No. All bookings are handled through the website or by email with Paul. You cannot show up and join a retreat without going through the booking process.</p>
+            <FAQItem question="Can I just show up without applying first?">
+              <p>No. Every retreat is arranged in advance through the inquiry process: a short first inquiry, Paul&apos;s personal review, then Stage 2 registration and a deposit before your dates are confirmed. You cannot arrive at the property without having applied and been accepted. This is about booking ahead rather than arriving unannounced — traveling on your own is fine, and many guests come solo.</p>
             </FAQItem>
             <FAQItem question="What if I get sick during ceremony?">
               <p>Purging — vomiting, sometimes diarrhea — is common and is part of the work. Each guest has their own bucket within arm&apos;s reach, and the support team is in the room throughout the night. Nothing about it is treated as shameful.</p>
