@@ -5,6 +5,19 @@ const nextConfig: NextConfig = {
   images: { formats: ["image/webp"] },
   async redirects() {
     return [
+      // Canonical host consolidation. https://www.dreamglade.com/* currently
+      // serves 200 (verified 2026-09-04) instead of redirecting to the apex,
+      // leaving a live duplicate host and legacy www attribution in Search
+      // Console. This single-hop permanent redirect preserves path and query
+      // string. Placed first so a www request consolidates before any legacy
+      // content redirect below runs. Requires www.dreamglade.com to be assigned
+      // to this Vercel project for the host match to fire in production.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.dreamglade.com" }],
+        destination: "https://dreamglade.com/:path*",
+        permanent: true,
+      },
       { source: "/about", destination: "/#about", permanent: true },
       { source: "/about/dreamglade", destination: "/#about", permanent: true },
       { source: "/about/location", destination: "/#about", permanent: true },

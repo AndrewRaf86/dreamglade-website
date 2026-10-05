@@ -190,6 +190,32 @@ export const FACTS = {
     source: "/",
   },
 
+  // Independent reputation. One place for the numbers that used to be hardcoded
+  // across page.tsx and apply/page.tsx. These are volatile — never treat them as
+  // fixed, and never merge the Google and AyaAdvisors datasets.
+  //
+  // Google: `countDisplay` is an intentionally rounded-down floor so it does not
+  // go stale as reviews accrue. `countExact` / `countConfirmed` record the last
+  // value actually confirmed against the public profile. A 2026-09-03 audit
+  // (docs/evidence-architecture/) observed roughly 192, but that was not
+  // independently re-verifiable in-session, so the floor and exact value below
+  // are unchanged. Re-verify the live profile before raising them.
+  reputation: {
+    google: {
+      rating: "5.0",
+      countExact: 182,
+      countDisplay: "180+",
+      countConfirmed: "2026-05 (repository; not re-verified against the live profile in 2026-09)",
+      profileUrl: "https://share.google/tiFj2NeKbOzgqksP4",
+    },
+    ayaAdvisors: {
+      rating: "4.9",
+      count: 124,
+      confirmed: "2026-09-03 (independent listing)",
+      listingUrl: "https://ayaadvisors.org/listing/dreamglade/",
+    },
+  },
+
   canonicalPages: [
     { path: "/", purpose: "Overview, pricing, availability windows" },
     { path: "/safety-preparation", purpose: "Screening, medication disclosure, preparation" },

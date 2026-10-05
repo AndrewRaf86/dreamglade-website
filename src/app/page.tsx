@@ -107,7 +107,7 @@ export default function Home() {
             <div className="homepage-trust-review">
               <div className="homepage-trust-review__rating">
                 <span className="stars" role="img" aria-label="5 out of 5 stars" />
-                <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>5.0</strong> &middot; 182 Google reviews</span>
+                <span><strong style={{ color: "var(--ink)", fontWeight: 600 }}>{FACTS.reputation.google.rating}</strong> &middot; {FACTS.reputation.google.countDisplay} Google reviews</span>
               </div>
               <TrackedLink href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" className="homepage-trust-review__link" event="Google Reviews Click" properties={{ location: "homepage-trust-strip", destination: "google-reviews" }}>
                 Read Google reviews
@@ -479,7 +479,6 @@ export default function Home() {
           </div>
           <div className="avail-grid">
             {[
-              "Aug 31 – Sept 26, 2026",
               "Oct 19 – Nov 14, 2026",
               "Nov 23 – Dec 19, 2026",
               "January 11 – February 6, 2027",
@@ -528,8 +527,8 @@ export default function Home() {
           </div>
           <div className="rating-block">
             <span className="stars" role="img" aria-label="5 out of 5 stars" />
-            <span className="rating-block__num">5.0</span>
-            <span className="rating-block__count">from 182 Google reviews</span>
+            <span className="rating-block__num">{FACTS.reputation.google.rating}</span>
+            <span className="rating-block__count">from {FACTS.reputation.google.countDisplay} Google reviews</span>
             <TrackedLink className="rating-block__cta link-arrow" href="https://share.google/tiFj2NeKbOzgqksP4" target="_blank" rel="noopener" event="Google Reviews Click" properties={{ location: "reviews", destination: "google-reviews" }}>
               Read all Google reviews
             </TrackedLink>

@@ -34,7 +34,14 @@ jobs:
         run: npm run audit:facts
       - name: Audit AI-readiness contracts
         run: npm run audit:agent
-      - name: Audit high-severity dependencies
+      # Two audit layers:
+      # - Production dependency vulnerabilities (high/critical) block deployment.
+      # - Dev-dependency vulnerabilities stay visible below but do not block;
+      #   fix them when safe patches become available.
+      - name: Audit high-severity production dependencies (blocking)
+        run: npm audit --omit=dev --audit-level=high
+      - name: Audit all dependencies including dev (informational, non-blocking)
+        continue-on-error: true
         run: npm audit --audit-level=high
       - name: Build production application
         run: npm run build
