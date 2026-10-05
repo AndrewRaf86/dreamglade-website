@@ -52,3 +52,7 @@ FOTOS DREAMGLADE GUESTS/
 *.sketch
 *.fig
 _computer_archive.noindex/
+
+# playwright
+/playwright-report/
+/test-results/

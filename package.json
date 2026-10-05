@@ -12,7 +12,9 @@
     "audit:agent": "node --experimental-strip-types scripts/audit-agent-readiness.ts",
     "audit": "npm run audit:facts && npm run audit:agent",
     "typecheck": "tsc --noEmit -p scripts/tsconfig.json",
-    "smoke-test": "node --experimental-strip-types scripts/smoke-test-routes.ts"
+    "smoke-test": "node --experimental-strip-types scripts/smoke-test-routes.ts",
+    "health-check": "node --experimental-strip-types scripts/health-check.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
@@ -21,6 +23,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

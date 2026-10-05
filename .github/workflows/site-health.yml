@@ -1,0 +1,61 @@
+name: Site Health
+
+# Daily deterministic check of the LIVE production site (see
+# scripts/health-check.ts). On failure it creates/updates ONE GitHub issue
+# (label: site-health) using GITHUB_TOKEN; it closes the issue when the site
+# recovers. No LLM decides pass/fail.
+
+on:
+  schedule:
+    - cron: "17 11 * * *" # 11:17 UTC = 06:17 in Iquitos
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Site to check (default: production). Use a preview URL to test."
+        required: false
+        default: "https://dreamglade.com"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: site-health
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Run production health check
+        id: check
+        continue-on-error: true
+        env:
+          HEALTH_BASE_URL: ${{ github.event.inputs.base_url || 'https://dreamglade.com' }}
+        run: node --experimental-strip-types scripts/health-check.ts --json health-report.json
+      - name: Create, update or close the health issue
+        # Preview-URL manual runs are for testing only and must not touch the issue.
+        if: always() && (github.event.inputs.base_url == '' || github.event.inputs.base_url == 'https://dreamglade.com')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f health-report.json ]; then
+            node --experimental-strip-types scripts/health-issue.ts health-report.json
+          else
+            echo '{"target":"https://dreamglade.com","generatedAt":"'"$(date -u +%FT%TZ)"'","failed":["WATCHDOG_CRASHED"],"results":[{"id":"WATCHDOG_CRASHED","status":"FAIL","detail":"health-check.ts crashed before writing a report; see the workflow log"}]}' > health-report.json
+            node --experimental-strip-types scripts/health-issue.ts health-report.json
+          fi
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: health-report
+          path: health-report.json
+          if-no-files-found: ignore
+      - name: Fail the run if a check failed
+        if: steps.check.outcome == 'failure'
+        run: exit 1
