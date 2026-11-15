@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { connection } from "next/server";
 import Nav from "@/components/Nav";
 import FAQItem from "@/components/FAQItem";
 import TermsGateCTA from "@/components/TermsGateCTA";
@@ -6,6 +7,7 @@ import PricingSection from "@/components/PricingSection";
 import TrackedLink from "@/components/TrackedLink";
 import SiteImage from "@/components/SiteImage";
 import StructuredData from "@/components/StructuredData";
+import { getRetreatWindows } from "@/lib/retreat-windows";
 import { FACTS } from "@/lib/facts";
 import { buildPageGraph, buildSiteGraph, SCHEMA_IDS } from "@/lib/structured-data";
 
@@ -34,7 +36,14 @@ const homeJsonLd = buildPageGraph({
 });
 const siteJsonLd = buildSiteGraph();
 
-export default function Home() {
+export default async function Home() {
+  // Evaluate the retreat's calendar date for each request, not at build time.
+  await connection();
+  const retreatWindows = getRetreatWindows();
+  const firstYear = retreatWindows[0]?.startsOn.slice(0, 4);
+  const lastYear = retreatWindows.at(-1)?.endsOn.slice(0, 4);
+  const availabilityYears = firstYear === lastYear ? firstYear : `${firstYear}–${lastYear}`;
+
   return (
     <>
       <StructuredData id="site-entity-graph" data={siteJsonLd} />
@@ -471,44 +480,46 @@ export default function Home() {
       <section className="section section--beige" id="availability">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Availability — 2026–2027</span>
+            <span className="eyebrow">Availability{availabilityYears && ` — ${availabilityYears}`}</span>
             <h2 className="display">Open <em>windows.</em></h2>
             <p className="lede" style={{ marginTop: 12 }}>
               Published retreat windows are for inquiries only. Guests typically join on Monday or Friday and stay 5 nights up to 2 weeks, not the whole window. Dates and spaces are not confirmed until Paul replies.
             </p>
           </div>
-          <div className="avail-grid">
-            {[
-              "Oct 19 – Nov 14, 2026",
-              "Nov 23 – Dec 19, 2026",
-              "January 11 – February 6, 2027",
-              "February 15 – March 13, 2027",
-              "March 22 – April 17, 2027",
-              "May 3 – May 29, 2027",
-              "June 21 – July 17, 2027",
-              "July 26 – August 21, 2027",
-              "September 6 – October 2, 2027",
-              "October 11 – November 6, 2027",
-              "November 15 – December 11, 2027",
-            ].map((dates) => (
-              <article key={dates} className="avail-card">
-                <span className="avail-card__status avail-card__status--limited">
-                  <span className="dot" /> Verify with Paul
-                </span>
-                <h3 className="avail-card__dates">{dates}</h3>
-                <p className="avail-card__detail">A new retreat begins every week</p>
-                <p className="avail-card__detail">Join Monday or Friday, stay up to 2 weeks</p>
-                <TrackedLink
-                  href={`mailto:booking@dreamglade.com?subject=${encodeURIComponent(`Dreamglade availability inquiry: ${dates}`)}`}
-                  className="avail-card__cta"
-                  event="Availability Click"
-                  properties={{ location: "availability", retreat: dates }}
-                >
-                  VERIFY WITH PAUL
-                </TrackedLink>
-              </article>
-            ))}
-          </div>
+          {retreatWindows.length > 0 ? (
+            <div className="avail-grid">
+              {retreatWindows.map(({ label }) => (
+                <article key={label} className="avail-card">
+                  <span className="avail-card__status avail-card__status--limited">
+                    <span className="dot" /> Verify with Paul
+                  </span>
+                  <h3 className="avail-card__dates">{label}</h3>
+                  <p className="avail-card__detail">A new retreat begins every week</p>
+                  <p className="avail-card__detail">Join Monday or Friday, stay up to 2 weeks</p>
+                  <TrackedLink
+                    href={`mailto:booking@dreamglade.com?subject=${encodeURIComponent(`Dreamglade availability inquiry: ${label}`)}`}
+                    className="avail-card__cta"
+                    event="Availability Click"
+                    properties={{ location: "availability", retreat: label }}
+                  >
+                    VERIFY WITH PAUL
+                  </TrackedLink>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p>
+              No upcoming retreat windows are currently posted.{" "}
+              <TrackedLink
+                href={`mailto:${FACTS.contact.email}`}
+                className="link-arrow"
+                event="Availability Click"
+                properties={{ location: "availability", destination: "email" }}
+              >
+                Ask Paul about upcoming dates
+              </TrackedLink>
+            </p>
+          )}
           <p style={{ marginTop: 40, fontSize: 13, color: "var(--muted)", maxWidth: 760, letterSpacing: "0.02em" }}>
             Maximum 10 guests on the land at any time. Guests typically join on Monday or Friday and can stay up to 2 weeks after Paul confirms the inquiry. {FACTS.availability.statement}
           </p>

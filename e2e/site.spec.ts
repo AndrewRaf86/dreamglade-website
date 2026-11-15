@@ -38,7 +38,11 @@ test("availability: cards render, none expired, CTA is a booking mailto and fire
   await section.scrollIntoViewIfNeeded();
   const cards = section.locator(".avail-card");
   expect(await cards.count()).toBeGreaterThan(0);
-  await expect(section).not.toContainText("Sept 26, 2026");
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "America/Lima" });
+  for (const label of await cards.locator(".avail-card__dates").allTextContents()) {
+    const end = new Date(`${label.split(" – ").at(-1)} UTC`);
+    expect(end.toISOString().slice(0, 10) >= today, `expired window: ${label}`).toBe(true);
+  }
   const first = cards.first();
   await expect(first.locator(".avail-card__dates")).toBeVisible();
   const cta = first.locator("a.avail-card__cta");
