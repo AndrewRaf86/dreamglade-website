@@ -4,6 +4,17 @@ Newest first. Field definitions and rules: [README.md](README.md).
 
 ---
 
+### DG-2026-007 — Automatically hide expired retreat windows
+- **DATE:** PROPOSED (2026-11-15)
+- **CHANGE:** Removed the expired card and moved the remaining dates to `src/lib/retreat-windows.ts`. Add future approved windows there in chronological order using ISO dates. The homepage filters on each request and offers a link to Paul when no windows remain.
+- **CATEGORY:** content-integrity
+- **HYPOTHESIS:** Filtering against the current calendar date in Lima will remove expired cards without a deployment at each date boundary.
+- **BASELINE:** One expired window on production on 2026-11-15, detected by Site Health.
+- **EXPECTED_OUTCOME:** Windows remain visible through their last day in Lima and disappear the following day.
+- **PRIMARY_METRIC:** Zero expired windows reported by the daily `AVAILABILITY_DATE_FRESHNESS` check.
+- **MEASUREMENT_WINDOW:** Daily after deployment.
+- **STATUS:** PENDING
+
 ### DG-2026-006 — Production health watchdog + browser tests
 - **DATE:** PROPOSED (on merge of the site-health PR)
 - **CHANGE:** Daily deterministic production check (`scripts/health-check.ts`, `.github/workflows/site-health.yml`) that opens/updates one `site-health` GitHub issue; Playwright desktop + mobile suite in CI.
