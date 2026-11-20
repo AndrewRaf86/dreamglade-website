@@ -426,6 +426,13 @@ p + p { margin-top: 0.6em; }
 }
 .two-col__caption::before { content: ""; width: 18px; height: 1px; background: var(--gold-deep); }
 
+/* Single wide photograph with a short caption, used inside a section */
+.wide-figure { margin: clamp(40px, 5vw, 64px) auto 0; max-width: 960px; }
+.wide-figure img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+@media (min-width: 720px) { .wide-figure img { aspect-ratio: 16 / 9; } }
+.wide-figure .two-col__caption { justify-content: center; }
+.wide-figure .two-col__caption::before { display: none; }
+
 .facts {
   display: grid;
   grid-template-columns: 1fr;

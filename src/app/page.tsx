@@ -410,6 +410,10 @@ export default async function Home() {
             <h2 className="display">Between <em>ceremonies.</em></h2>
             <p>We have a lot to do, but we do not over-schedule you. Retreat days are not filled with schedules. There is time to walk, swim, practice gentle movement, create, rest by the lake, speak with support, and settle into the rhythm of the land.</p>
           </div>
+          <figure className="wide-figure" style={{ marginTop: 0, marginBottom: "clamp(40px, 5vw, 64px)" }}>
+            <SiteImage src="/images2/1.jpg" alt="A long covered wooden walkway with thatched roofing winding through the grounds at Dreamglade, with lawn and trees on both sides" width={1600} height={1200} sizes="(min-width: 1040px) 960px, 100vw" style={{ objectPosition: "center 60%" }} />
+            <figcaption className="two-col__caption">A covered walkway across the land</figcaption>
+          </figure>
           <div className="grid-3">
             <article className="col-item">
               <span className="col-item__num">01</span>

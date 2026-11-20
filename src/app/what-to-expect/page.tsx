@@ -249,6 +249,10 @@ export default function WhatToExpect() {
               <p>Electricity is limited and simple, and the retreat is designed for quiet time away from normal digital life. Guest rooms have no outlets and no signal — and most guests, by the second day, are very glad about that. Some cellphone carriers have limited service around the retreat. We have a generator that runs once a day; this is the time to charge your devices.</p>
             </article>
           </div>
+          <figure className="wide-figure">
+            <SiteImage src="/images2/2.jpg" alt="A covered wooden walkway leading to a round, orange-walled building with a wooden door, under a thatched roof at Dreamglade" width={1600} height={1200} sizes="(min-width: 1040px) 960px, 100vw" style={{ objectPosition: "center 55%" }} />
+            <figcaption className="two-col__caption">Covered walkways link the buildings on the land</figcaption>
+          </figure>
         </div>
       </section>
 
